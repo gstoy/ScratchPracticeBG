@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Как да програмирате по-бързо - процедури &#8212; Block-based programming in Scratch - practice lessons</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Списъци" href="Scratch3 Lists.html" />
+    <link rel="prev" title="Променливи" href="Scratch3 Variables.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'Scratch_eng';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'Scratch_eng';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Block-based programming in Scratch - practice lessons</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="id1">
+<h1>Как да програмирате по-бързо - процедури<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="intro8" src="_images/intro8.png" /></p>
+
+    </p></div></div>
+<p>Проектите, които предстои да проучим, имат сложна структура.
+За да се справим с тази сложност, ще използваме подход, известен като <strong>структурирано програмиране</strong>, разработен през 60-те години. Този подход опрости процеса на писане, разбиране и поддържане на сложни програми. Вместо да пишем сложни програми, които е трудно да се пренапишат, ако има нужда от това (това се нарича поддръжка) и където грешките трудно се откриват, можем да ги разделим на малки части, всяка от които решава една част от общата проблем.</p>
+<p>За да направим проектите със сложна структура по-бързи и лесни, ще разделим големи скриптове на логически части, като всеки изпълнява една функция. Ние наричаме такива части <strong>процедури</strong>. Всяка процедура изпълнява определена функция и един скрипт, основната програма, ги извиква и свързва заедно, така че те правят цяло.</p>
+<div class="topic">
+<p class="topic-title">Реализиране на процедури в Scratch</p>
+<p>В Scratch един от начините за реализиране на процедурите и ограничаване на такива сложни алгоритми в няколко по-прости е чрез използване на съобщения, същия механизъм, който използвахме за синхронизиране на поведението на различни спрайтове. Друг начин за реализиране на процедурите е да въведете свои собствени команди.</p>
+<p><strong>Създаване на нови блокове</strong></p>
+<p>За да създадете нов блок, изберете групата <em>Моите блокове</em> (1) и след това щракнете върху бутона <em>Направете блок</em> (2). Ще се появи прозорец за диалог, който позволява създаването на нови блокове. Трябва да въведете желаното име в полето за въвеждане (3), например, <em>Начертайте триъгълник</em> и потвърдете създаването, като щракнете върху бутона <em>OK</em> (4).</p>
+<a class="reference internal image-reference" href="_images/fig8_1.png"><img alt="_images/fig8_1.png" class="align-center" src="_images/fig8_1.png" style="width: 575px;" /></a>
+<p>Новият блок `` Начертайте триъгълник`` (1) ще се появи в блоковата палитра, а новият начален блок <code class="docutils literal notranslate"><span class="pre">Определи</span></code> (2) ще се появи в областта на скриптове, други блокове, които ще бъдат използвани за изчертаване на триъгълник (3) трябва да се добави към този начален блок.</p>
+<a class="reference internal image-reference" href="_images/fig8_2.png"><img alt="_images/fig8_2.png" class="align-center" src="_images/fig8_2.png" style="width: 560px;" /></a>
+<p>Новият блок може да има и полета за въвеждане. Поради това ние можем да нарисуваме триъгълници с различна дължина на страните с един и същи блок. За да постигнем това, трябва да изберете опцията <em>Редактиране</em> от менюто за бърз достъп, която ще получим, като щракнете с десния бутон върху новия блок (1). Диалоговият прозорец <em>Направи блок</em> ще се отвори отново. От трите предлагани опции за добавяне на нови полета към блока, трябва да изберете <em>Добавяне на име за въвеждане или текст</em> (2) и полето за въвеждане ще се появи на блока (3); в този блок ще въведем <em>a</em> - името на променливата за дължината на страната на триъгълник.</p>
+<a class="reference internal image-reference" href="_images/fig8_3.png"><img alt="_images/fig8_3.png" class="align-center" src="_images/fig8_3.png" style="width: 920px;" /></a>
+<p>Ако бяхме избрали <em>Добавяне на булева информация за въвеждане</em>, полето за въвеждане щеше да има шестоъгълна форма и щеше да може да получава само логически блокове, а опцията <em>Добавяне на етикет</em> би позволила текста да се запише зад входа полета.</p>
+<p> <em>Запомнете.</em> Когато искате да използвате променливата <em>a</em> в блоковете с дефиниция, трябва да плъзнете репортера на тази променлива от заглавката на дефиницията на блока (4). Следователно, не буквата a, нито репортерът <em>a</em> от блоковата палитра, а репортерът от заглавието на дефиницията <img alt="nije_isto" src="_images/fig8_4.png" /></p>
+<p>Името <em>a</em>, което въведохме в дефиницията на процедурата <em>Начертайте триъгълник</em>, се нарича <strong>параметър</strong>. Процедурите могат да имат повече от един параметър. Например, можем да създадем процедура <em>Начертайте многоъгълник</em>, който рисува редовни многоъгълници с различен брой страни, които имат различна дължина. Вместо да дефинираме отделни блокове за изчертаване на триъгълник, четириъгълник и други многоъгълници, с дадена дължина на страните, ще дефинираме само един блок с параметрите <em>брой страни</em> и <em>дължини на страните</em>. Конкретните стойности на параметрите ще зададем като <strong>аргумент</strong> на нововъведената команда. Този аргумент ще замени всяко появяване на броя на параметрите на страните в процедурата. Можем да кажем, че параметърът е посоченият заместител на място за аргумента.</p>
+</div>
+<div class="section" id="study">
+<h2><img alt="study" src="_images/study.png" /> Разгледайте следните примери<a class="headerlink" href="#study" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>Пример 1 - Проект “Мрежа от квадрати”<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p><strong>Рисуване на хоризонтални линии</strong></p>
+<p>За да начертаем хоризонтална линия (успоредна на оста x), трябва да свържем всички точки, които имат еднаква стойност на координатата y.
+Например, ако x = 0, тогава ще нарисуваме само оста x. В началото ще поставим писалката от левия ръб на екрана в точката (-240,0), ще сложим писалката надолу, така че тя оставя отпечатък, когато се движи, и след това ще я настроим да се плъзга до точката ( 240,0).
+Там ще повдигнем химикалката (писалка нагоре) и можем да започнем да рисуваме друга линия.</p>
+<p>Ако искаме да нарисуваме всички хоризонтални линии, чиято координата y е число, завършващо с 0 (делимо на 8), ще повторим описаната по-рано процедура за y = 180, 170, …, - 180.</p>
+<a class="reference internal image-reference" href="_images/fig8_5.png"><img alt="_images/fig8_5.png" class="align-center" src="_images/fig8_5.png" style="width: 245px;" /></a>
+<p>4078/5000
+Character limit: 5000
+За да направим процеса по-ясен, ще извлечем инструкциите за изчертаване на една хоризонтална линия и ще създадем отделна част - <strong>процедура</strong>, която ще извикаме, когато е необходимо.</p>
+<a class="reference internal image-reference" href="_images/fig8_6.png"><img alt="_images/fig8_6.png" class="align-center" src="_images/fig8_6.png" style="width: 450px;" /></a>
+<p><strong>Рисуване на вертикални линии</strong></p>
+<p>Подобно на начертаването на хоризонтална линия, за да нарисуваме вертикална линия, трябва да свържем всички точки, които имат еднаква стойност на координатата x.
+В началото ще поставим писалката върху горния ръб на екрана, например в точката (0,180), ще сложим писалката надолу, така че тя оставя отпечатък, когато се движи, и след това ще я настроим да се плъзга до точката (0, -180). Там ще повдигнем химикалката (писалка нагоре) и можем да започнем да рисуваме друга линия.</p>
+<p>Ако искаме да нарисуваме всички вертикални линии, чиято координата х е число, делимо на 10, ще повторим описаната по-горе процедура за x = -240, -230, …, 240.</p>
+<a class="reference internal image-reference" href="_images/fig8_7.png"><img alt="_images/fig8_7.png" class="align-center" src="_images/fig8_7.png" style="width: 470px;" /></a>
+<p>За да запазим това изображение на решетката от квадрати, получена чрез рисуване по този начин на хоризонтални и вертикални линии, ще трябва да щракнете с десния бутон върху сцената. Ще се появи опцията <em>Запазване на изображението като</em>. Тази опция ще ни позволи да запазим това изображение като фон. (Засега тази функция може да се използва само в онлайн редактора)</p>
+<p>Запишете целия проект под името <em>Grid</em>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id3">
+<h3>Пример 2 - Проект “Различни мрежи”<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>Искаме да направим предишната програма по-обща и да я използваме, за да нарисуваме решетка, съставена от по-малки и по-големи квадрати, както и да нарисуваме решетка, която не трябва да започва в горния ляв ъгъл на екрана и да завършва в долния десен ъгъл. Ще въведем променливите <em>x min</em>, <em>x max</em>, <em>y min</em>, <em>y max</em> и <em>step</em>.
+Те ще определят горната лява точка на мрежата (x min, y max), долната дясна точка на мрежата (x max, y min) и размера на квадратите в мрежата.
+Началните стойности ще бъдат зададени от входа.</p>
+<p>По този начин можем да променим проекта <em>Grid</em>, който очертава само една решетка и получаваме по-общ проект <em>Различни мрежи</em>, който рисува различни решетки в зависимост от входните данни. Освен променливите, които споменахме по-рано, ще въведем променливата <em>end</em>, която има начална стойност 0 и която се променя само ако потребителят иска да спре да използва програмата. Всеки отговор, различен от „да“, оставя стойността непроменена.</p>
+<p>Когато потребителят отговори на въпроса “Готово (да / не)?” с “да” променливата ще промени стойността си на 1, което е условието за излизане от цикъла и програмата ще спре да се изпълнява.</p>
+<a class="reference internal image-reference" href="_images/fig8_8.png"><img alt="_images/fig8_8.png" class="align-center" src="_images/fig8_8.png" style="width: 615px;" /></a>
+</div>
+<hr class="docutils" />
+<div class="section" id="id4">
+<h3>Пример 3 - Проект “Сгради”<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>В този проект ще нарисуваме сложни изображения, като използваме само една процедура с параметри. Това е процедурата <em>Начертайте правоъгълник</em> с параметрите <em>a</em> и <em>b</em> за дължината на страните. За да направим основната програма четена, разделихме инициализацията на писалката в специална процедура <em>PenSetup</em>, която определя цвета и размера (дебелината) на писалката, която ще се използва за рисуване. Следващата фигура представя скриптите, които определят тези две процедури. Променливата <em>единица</em> е дефинирана в основната програма и тя позволява да се изчертават пропорционални правоъгълници с различни размери.</p>
+<a class="reference internal image-reference" href="_images/fig8_9.png"><img alt="_images/fig8_9.png" class="align-center" src="_images/fig8_9.png" style="width: 450px;" /></a>
+<p><strong>Създаване на проекта</strong></p>
+<p>Заредете фона <em>Xy-grid-20px</em> от фоновата библиотека. Това е решетка, съставена от 24x18 квадрата, със страни 20x20 пиксела. (Можехте сами да направите този фон, като използвате предишния проект). Този фон е подходящ, защото по него ясно виждаме пропорциите на изображенията, които искаме да създадем.</p>
+<p>Използвайки вградения векторен редактор, нарисувайте квадрат 8x8 пиксела. Използвайте инструмента <img alt="v_rectan" src="_images/v_rectan.png" />, изберете режима на рисуване, без да запълвате обекта с цвят и задайте дебелината на контура да бъде 2. Поставете центъра на костюма да бъде в средата на квадрата.</p>
+<a class="reference internal image-reference" href="_images/fig8_10.png"><img alt="_images/fig8_10.png" class="align-center" src="_images/fig8_10.png" style="width: 400px;" /></a>
+<p>Всеки спрайт може да направи рисунката, но този е удобен, защото показва как се формират рисунки и не е нужно да го крием, тъй като е достатъчно малък и не покрива рисунката.</p>
+<p>Цялата рисунка ще се състои от 4 сгради, 5 квадратни квадрата широки и 13 квадрата високи, т.е. 100х260 пиксела. В нашия скрипт променливата <em>единица</em> е равна на дължината на страната на един квадрат на фона. Променливите на програмата <em>а</em> и <em>b</em> съхраняват координатите на точката, от която ще започне чертежа на сградата.</p>
+<p>Забележка. Локалните променливи на процедурата <em>Начертайте правоъгълник</em> имат същите имена, но те са видими само в рамките на процедурата - това са <strong>локални променливи</strong>. За разлика от тях променливите <em>a</em> и <em>b</em> на основната програма са <strong>глобални променливи</strong> и те могат да се видят в целия проект.</p>
+<p>В началото основната програма инициализира променливите и след това извиква процедурата за изграждане на чертеж 4 пъти, всеки път с различни координати на точката, от която започва рисуването. Сградите са начертани една до друга, тъй като x координатата на началната точка се увеличава с ширината на сградата. Следващата фигура показва скрипта на основната програма и изображението, получено от нейното изпълнение.</p>
+<a class="reference internal image-reference" href="_images/fig8_11.png"><img alt="_images/fig8_11.png" class="align-center" src="_images/fig8_11.png" style="width: 730px;" /></a>
+<p>Процедурата <em>DrawBuilding</em> първо извиква процедурата <em>DrawRectangle</em> 2 пъти, а след това процедурата <em>DrawWindows</em>. В първия разговор процедурата <em>DrawRectangle</em> получава параметрите за начертаване на очертанията на сградата, а във второто за рисуване на вратата. Следващата фигура показва скриптите на процедурите <em>DrawBuilding</em> и <em>DrawWindows</em>.</p>
+<a class="reference internal image-reference" href="_images/fig8_12.png"><img alt="_images/fig8_12.png" class="align-center" src="_images/fig8_12.png" style="width: 405px;" /></a>
+<p>Ако бяхме задали размера да бъде 10 пиксела, щяхме да получим изображение, което е два пъти по-малко. Следващата фигура показва резултата от програмата, когато параметрите са същите като в обяснението (A) и когато стойностите на променливите се променят по следния начин: единица = 10, промяната на <em>a</em> в основната програма <em>а = а + 10 x unit</em>, промяната на височината на правоъгълника от <em>13 x unit</em> to <em>23 x unit</em> и броят повторения в процедурата <em>DrawWindows</em> от 5 на 10.</p>
+<a class="reference internal image-reference" href="_images/fig8_13.png"><img alt="_images/fig8_13.png" class="align-center" src="_images/fig8_13.png" style="width: 970px;" /></a>
+</div>
+</div>
+<div class="section" id="ask">
+<h2><img alt="ask" src="_images/ask.png" /> Отговори на следните въпроси<a class="headerlink" href="#ask" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3>Въпрос 1<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="procedure1">
+            <p>Q-49: Основната програма превъзхожда ли процедурите?</p>
+
+            <li data-component="answer" data-correct id="procedure1_opt_a">да</li><li data-component="feedback" id="procedure1_opt_a">Вярно.</li>
+            
+            <li data-component="answer"  id="procedure1_opt_b">не</li><li data-component="feedback" id="procedure1_opt_b"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id6">
+<h3>Въпрос 2<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="procedure2">
+            <p>Q-50: В Scratch процедурите реализирани ли са само по един начин?</p>
+
+            <li data-component="answer"  id="procedure2_opt_a">да</li><li data-component="feedback" id="procedure2_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="procedure2_opt_b">не</li><li data-component="feedback" id="procedure2_opt_b">Вярно.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id7">
+<h3>Въпрос 3<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="procedure3">
+            <p>Q-51: Може ли новият блок да има полета за въвеждане?</p>
+
+            <li data-component="answer" data-correct id="procedure3_opt_a">да</li><li data-component="feedback" id="procedure3_opt_a">Вярно.</li>
+            
+            <li data-component="answer"  id="procedure3_opt_b">не</li><li data-component="feedback" id="procedure3_opt_b"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id8">
+<h3>Въпрос 4<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="procedure4">
+            <p>Q-52: Вярно ли е, че стойностите, въведени във входните полета на новия блок, се наричат ​​параметри?</p>
+
+            <li data-component="answer"  id="procedure4_opt_a">да</li><li data-component="feedback" id="procedure4_opt_a">Не, това са аргументи.</li>
+            
+            <li data-component="answer" data-correct id="procedure4_opt_b">не</li><li data-component="feedback" id="procedure4_opt_b">Вярно.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id9">
+<h3>Въпрос 5<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/q8_5.png"><img alt="_images/q8_5.png" class="align-center" src="_images/q8_5.png" style="width: 590px;" /></a>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="procedure5">
+            <p>Q-53: Кой блок принадлежи към групата <em>Събития</em>? (Изберете всички верни отговори)</p>
+
+            <li data-component="answer" data-correct id="procedure5_opt_a"></li><li data-component="feedback" id="procedure5_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="procedure5_opt_b"></li><li data-component="feedback" id="procedure5_opt_b"></li>
+            
+            <li data-component="answer"  id="procedure5_opt_c"></li><li data-component="feedback" id="procedure5_opt_c"></li>
+            
+            <li data-component="answer" data-correct id="procedure5_opt_d"></li><li data-component="feedback" id="procedure5_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id10">
+<h3>Въпрос 6<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/q8_6.png"><img alt="_images/q8_6.png" class="align-center" src="_images/q8_6.png" style="width: 610px;" /></a>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="procedure6">
+            <p>Q-54: Кой блок принадлежи към групата <em>Control</em>? (Изберете всички верни отговори)</p>
+
+            <li data-component="answer"  id="procedure6_opt_a"></li><li data-component="feedback" id="procedure6_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="procedure6_opt_b"></li><li data-component="feedback" id="procedure6_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="procedure6_opt_c"></li><li data-component="feedback" id="procedure6_opt_c"></li>
+            
+            <li data-component="answer"  id="procedure6_opt_d"></li><li data-component="feedback" id="procedure6_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+<div class="section" id="try">
+<h2><img alt="try" src="_images/try.png" /> Опитай!<a class="headerlink" href="#try" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id11">
+<h3>Упражнение 1<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Създайте процедура <em>Square1</em> с параметри: координати <strong>x</strong> и <strong>y</strong> на горната лява точка и дължината на страната <strong>а</strong>.
+Процедурата трябва да нарисува квадрат със страни, успоредни на осите x и y.
+След това създайте скрипт, който извиква тази процедура няколко пъти и рисува концентрични квадратчета, както е представено на следващата фигура.</p>
+<a class="reference internal image-reference" href="_images/ex8_1.png"><img alt="_images/ex8_1.png" class="align-center" src="_images/ex8_1.png" style="width: 210px;" /></a>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id12">
+<h3>Упражнение 2<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Създайте процедурата <em>Square2</em> с параметри: координати <strong>x</strong> и <strong>y</strong> на горната лява точка, дължината на страната <strong>a</strong> и посоката на първия страничен <strong>ъгъл</strong> , която се изготвя от процедурата. След това създайте скрипт, който извиква тази процедура многократно и очертава 10 квадрата с горния ляв ъгъл на ставата, със същите страни, така че посоката на всяка следваща първа страна да се завърти на 36 градуса от посоката на първата страна на предишната квадрат.</p>
+<a class="reference internal image-reference" href="_images/ex8_2.png"><img alt="_images/ex8_2.png" class="align-center" src="_images/ex8_2.png" style="width: 290px;" /></a>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id13">
+<h3>Упражнение 3<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Създайте процедурата <strong>Правоъгълник</strong> с параметри: координати <strong>x</strong> и <strong>y</strong> на горната лява точка и дължините на страните <strong>a</strong> и <strong>b</strong>.
+Процедурата трябва да начертае правоъгълник с дължината на страната <strong>a</strong>, успоредна на оста x, и <strong>b</strong> успоредна на оста y.
+След това създайте скрипт, който извиква тази процедура и рисува правоъгълник с аргументите, които са зададени произволно, подобно на фигурата по-долу.</p>
+<a class="reference internal image-reference" href="_images/ex8_3.png"><img alt="_images/ex8_3.png" class="align-center" src="_images/ex8_3.png" style="width: 235px;" /></a>
+
+    </p></div></div>
+</div>
+</div>
+<div class="section" id="bug">
+<h2><img alt="bug" src="_images/bug.png" /> Отстранете грешката!<a class="headerlink" href="#bug" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id14">
+<h3>Грешка<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Question</dt>
+<dd class="field-odd"><p>Ученикът искаше да направи сценарий, който очертава границата около триъгълниците, както е показано на фигура А. Той направи подходящия скрипт и отдели частта, която рисува триъгълника (показана отляво, до границата). Полученият от него резултат обаче е този, показан на фигура Б. Къде е грешката?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug8_1.png"><img alt="_images/bug8_1.png" class="align-center" src="_images/bug8_1.png" style="width: 630px;" /></a>
+
+    <div data-component="reveal" id="sаkrivаnjе8_1"   data-showtitle="Покажи отговора" data-hidetitle="Скрий отговора">
+    <p><strong>Отговор:</strong></p>
+<p>Вместо репортер на параметъра <em>a</em>, студентът поставя репортера на променливата <em>a</em> от основната програма в блока <code class="docutils literal notranslate"><span class="pre">стъпки</span> <span class="pre">за</span> <span class="pre">преместване</span></code>, разположен в процедурата.</p>
+
+    </div>
+    </div>
+</div>
+<div class="section" id="book">
+<h2><img alt="book" src="_images/book.png" /> Обобщвние<a class="headerlink" href="#book" title="Permalink to this headline">¶</a></h2>
+<p>В този урок показахме как бихме могли да реализираме процедури чрез въвеждане на нови команди в Scratch. Научихме се как да правим нови блокове, със или без полета за въвеждане. Новите блокове, които имат полета за въвеждане, позволяват аргументите, въведени в тези полета за въвеждане, да бъдат препратени към дефиницията на блока, където те могат да бъдат поставени вместо към съответните параметри. По този начин един блок може да реализира множество действия, в зависимост от стойността на аргумента.</p>
+<p><strong>Примери за проекти</strong>: <a class="reference external" href="https://scratch.mit.edu/studios/25119482/">8Studio</a></p>
+<p><strong>Нови концепции</strong>: Процедура, импортирани команди, параметър.</p>
+<p><strong>New commands</strong>: <img alt="my_blocks" src="_images/my_blocks.png" /> - <img alt="custom_block" src="_images/custom_block.png" />, <img alt="define_block" src="_images/define_block.png" /></p>
+</div>
+<div class="section" id="project">
+<h2><img alt="project" src="_images/project.png" /> Създайте проект<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id15">
+<h3>Проект 1 - “Геометрични форми”<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>Създайте версия на проекта “Геометрични фигури” от урок 5, като използвате процедури. Процедурите се реализират с използването на импортирани команди.</p>
+</div>
+<div class="section" id="id16">
+<h3>Проект 2 - “Градска улица”<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>Създайте процедури за изготвяне на:</p>
+<ul class="simple">
+<li><p>сгради и врати във формата на правоъгълници с различни размери,</p></li>
+<li><p>прозорци с различни форми (квадратчета, правоъгълници, кръгове) и размери,</p></li>
+<li><p>покриви с трапецовидна форма с различни основни размери и височини.</p></li>
+</ul>
+<p>Свържете тези процедури в проекта “Градска улица”, който показва множество различни сгради.</p>
+</div>
+<div class="section" id="id17">
+<h3>Проект 2 - “Аритметика”<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>Създайте процедури, които трябва да бъдат свързани в проекта на Аритметика.
+Процедурите трябва да тестват знанията за събиране, изваждане, умножение и деление. Проектът трябва да има интерфейс, както е на следващата фигура.</p>
+<a class="reference internal image-reference" href="_images/aritmetika.png"><img alt="_images/aritmetika.png" class="align-center" src="_images/aritmetika.png" style="width: 200px;" /></a>
+<p>Двата монитора в горната част, между които е разположен аритметичният знак, трябва да показват числата, генерирани на случаен принцип, а долните четири трябва да показват числата, които биха могли да бъдат резултат, но само един трябва да бъде правилният резултат. Играчът избира отговора, който смята за правилен, като използва съответния клавиш със стрелки. Ако играчът отговори правилно, той / тя ще получи съответното съобщение и резултатът му ще се увеличи с 1. Тестът се прави, когато играчът отговори на 20 въпроса и получи съобщението, показващо процента на въпросите, отговорили правилно.</p>
+<p>Създайте проекта по следния начин:</p>
+<ol class="arabic simple">
+<li><p>В процедурата <strong>Събиране</strong> трябва да се генерират две числа на случаен принцип, сумата с от интервала [10,20] и първото добавяне от интервала [1,15]. Второто допълнение b = c - a и трите неправилни резултата от интервала [c-3, c + 3] ще бъдат установени въз основа на тези две числа.</p></li>
+<li><p>В процедурата <strong>Изваждане</strong>, две числа трябва да се генерират на случаен принцип, Минута a от интервала [10,20] и изваждане b от интервала [1, a-2]. Разликата c = a - b и трите неправилни резултата от интервала [c-2, c + 2] ще бъдат установени въз основа на тези две числа.</p></li>
+<li><p>В процедурата <strong>Умножение</strong>, два фактора от интервала [2,9] трябва да бъдат генерирани на случаен принцип. Продуктът c = a * b и трите неправилни резултата от интервала [c-10, c + 10] ще бъдат установени въз основа на тези два фактора. Уверете се, че грешните отговори са по-големи от двата фактора (например, ако един от грешните отговори, генерирани за фактори 2 и 3, е 2, резултатът трябва да се генерира отново).</p></li>
+<li><p>В процедурата <strong>Деление</strong> трябва да се генерират две числа на случаен принцип, коефициент c от интервала [2,9] и делител b от интервала [2,9]. Дивидентът a = b * c и трите неправилни резултата от интервала [c-3, c + 3] ще бъдат установени въз основа на тези две числа.</p></li>
+<li><p>В основната програма първоначалните стойности на променливите <em>точки</em> и <em>опити</em> трябва да са 0. След това в цикъла, който ще повтаря всичко, докато броят точки не достигне 20, трябва да генерирате аритметичната операция, извикайте подходяща процедура и поставете получените операнди в съответните монитори с аритметичната операция и разпределете правилните и 3 грешни отговора на случаен принцип в мониторите за отговор. (Подреждането на отговорите може да бъде постигнато и с отделна процедура)</p></li>
+</ol>
+<p>Тогава програмата трябва да приеме отговора на потребителя и в зависимост от това дали е правилна или не, да покаже съответното съобщение и да промени променливите <em>точки</em> и <em>опити</em>. След излизане от цикъла програмата трябва да отчита процента на задачите, които потребителят е решил правилно.</p>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Променливи' data-toggle="tooltip"><a href="Scratch3 Variables.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Списъци' data-toggle="tooltip"><a href="Scratch3 Lists.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Променливи' data-toggle="tooltip"><a href="Scratch3 Variables.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Списъци' data-toggle="tooltip"><a href="Scratch3 Lists.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

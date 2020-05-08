@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Да или не - вземане на решения &#8212; Block-based programming in Scratch - practice lessons</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Променливи" href="Scratch3 Variables.html" />
+    <link rel="prev" title="Повтарящи се стъпки" href="Scratch3 Repeating.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'Scratch_eng';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'Scratch_eng';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Block-based programming in Scratch - practice lessons</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="id1">
+<h1>Да или не - вземане на решения<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="intro6" src="_images/intro6.png" /></p>
+
+    </p></div></div>
+<p>В този урок ще научим как да използваме командни блокове, които позволяват разклоняване и как да изградим сложни условия, въз основа на които се вземат решения. Ще систематизираме блоковете, които дават възможност за реализиране на основните елементи на програмната логика в Scratch. Ще се запознаем с още блокове от групата <em>Sensing</em>, както и ще покажем как да използвате редактора на изображения във векторен режим.</p>
+<div class="topic">
+<p class="topic-title">Команди с разклоняване</p>
+<p>В проекти, които имат проста линейна структура, всяка команда се изпълнява само веднъж.
+В предишния урок научихме за C-блоковете - блокове, описващи цикъла, които позволяват на другите команди, които са вмъкнати в тях, да се изпълняват многократно. Освен блоковете, описващи цикъла, блоковете, които позволяват разклоняване, имат и вход за скрипт. В зависимост от това дали условието за разклоняване е изпълнено, въведените команди ще бъдат изпълнени или не.</p>
+<p>Командата за разклоняване, която съответства на C-блока, има един вход за скрипт, в допълнение към полето за въвеждане на логически изрази. Докато командата за разклоняване, която съответства на E-блока, има два входа за скрипт. Ако условието за разклоняване е изпълнено, първата команда ще позволи изпълнението на команди, въведени в <em>if…then</em> , и ако не, тези команди няма да бъдат изпълнени и програмата ще премине към <em>else</em> част от блока, която описва какво трябва да се направи в случай, че условието не е изпълнено.</p>
+<a class="reference internal image-reference" href="_images/fig6_1.png"><img alt="_images/fig6_1.png" class="align-center" src="_images/fig6_1.png" style="width: 500px;" /></a>
+<p>Втората команда за условно разклоняване пропуска някои команди в зависимост от това дали условието за разклонение е изпълнено или не. Ако условието е изпълнено, командите от клона NO няма да се изпълняват. Ако условието не е изпълнено, командите от клона ДА не се изпълняват.</p>
+<p>Следователно, за разлика от простите линейни програми, където всяка команда се изпълнява точно веднъж, и цикли, където има команди, които могат да се изпълняват многократно (в тялото на цикъла), в програми с разклоняване има команди, които няма да се изпълняват, дори и веднъж.</p>
+<a class="reference internal image-reference" href="_images/fig6_2.png"><img alt="_images/fig6_2.png" class="align-center" src="_images/fig6_2.png" style="width: 520px;" /></a>
+</div>
+<div class="topic">
+<p class="topic-title">Основните елементи на програмната логика в Scratch</p>
+<p>Както казахме по-рано, скриптите описват поведението на обектите, към които са прикачени. Всички сценарии на поведение, колкото и сложни да са, са съставени от комбинации от основни елементи на програмната логика, това са:</p>
+<ul class="simple">
+<li><p>последователности стъпки,</p></li>
+<li><p>повторение и</p></li>
+<li><p>разклоняване.</p></li>
+</ul>
+<p>В компютърните науки вместо термина <em>скрипт</em> използваме термина <strong>алгоритъм</strong>. Терминът алгоритъм е познат от векове, но той придоби специално значение с въвеждането на компютрите. Можем да кажем, че алгоритъмът е всеки набор от разбираеми и точни инструкции за решаване на дадена задача.</p>
+<p>Пресичане на улицата, приготвяне на храна, следвайки рецепта, провеждане на телефонно обаждане, решаване на математически проблем - всичко се свежда до изпълнение на отделни елементарни операции в дадена поръчка. В алгоритмите тези елементарни операции се наричат ​​**команди**, <strong>стъпки</strong> или <strong>нареждания</strong>.</p>
+<p>Алгоритъм може да бъде даден, повече или по-малко точно, чрез използване на думи. Графичният запис на алгоритъм обаче осигурява много по-добър поглед върху структурата и реда, в който се изпълняват инструкциите. Графичната схема, която обозначава със символите си естеството на отделните алгоритмични стъпки, се нарича <strong>блок-схема</strong>. Блок-диаграмите използват специални символи за запис на отделни типове алгоритмични стъпки.</p>
+</div>
+<div class="sidebar">
+<p class="sidebar-title">Символи на някои видове алгоритмични стъпки</p>
+<p><img alt="simboli" src="_images/fig6_3.png" /></p>
+</div>
+<p>Основната цел на блок-схемата е да се посочи последователността на изпълнение на отделни алгоритмични стъпки. Той осигурява ясна връзка между детайлите и целия алгоритъм и улеснява откриването на грешки в неговата структура.</p>
+<p>Структурата на един алгоритъм може да бъде линейна или може да включва разклонявания или цикли. В алгоритмите с проста линейна структура стъпките се изпълняват една след друга, от началото до края. В алгоритмите с разклоняване има няколко алтернативни маршрути за изпълнение. В зависимост от данните, някои стъпки изобщо няма да бъдат изпълнени. В алгоритмите с цикли някои стъпки могат да бъдат изпълнени многократно.</p>
+<p>Следващата фигура показва блокова схема за изчисляване на стойността на <em>x</em> въз основа на дадена входна стойност, с използването на три типа алгоритми: с прости линейни, с разклоняване и с цикли.</p>
+<a class="reference internal image-reference" href="_images/fig6_4.png"><img alt="_images/fig6_4.png" class="align-center" src="_images/fig6_4.png" style="width: 600px;" /></a>
+<p>Примерите са взети от учебника по математика за втори клас на основното училище. Опитайте се да отговорите на следните въпроси въз основа на тях.</p>
+<ul class="simple">
+<li><p>Каква ще бъде стойността на <em>х</em> след изпълнението на всеки от алгоритмите ако входните данни са <em>а=5</em>, и какво ако <em>а=16</em>?</p></li>
+<li><p>В алгоритъм с разклонение, кои от стъпките няма да бъдат изпълнение ако <em>а=5</em>, и кои ако <em>а=16</em>?</p></li>
+<li><p>Колко пъти ще бъде изпълнени събирането <em>х=х+3</em> в алгортъм с цикли ако <em>а=5</em>, и колко пъти ако <em>а=16</em>?</p></li>
+</ul>
+<p>Следващите фигури показват как тези алгоритми биха били написани в Scratch.</p>
+<p>Първият алгоритъм, който има линейна структура, съответства на скрипта, който има последователност от стъпки.</p>
+<a class="reference internal image-reference" href="_images/fig6_5.png"><img alt="_images/fig6_5.png" class="align-center" src="_images/fig6_5.png" style="width: 690px;" /></a>
+<p>Вторият алгоритъм, който има разклоняване, съответства на скрипта, който има разклоняване.</p>
+<a class="reference internal image-reference" href="_images/fig6_6.png"><img alt="_images/fig6_6.png" class="align-center" src="_images/fig6_6.png" style="width: 950px;" /></a>
+<p>Третият алгоритъм, който има цикли, съответства на скрипта, който има команди за повторение.</p>
+<a class="reference internal image-reference" href="_images/fig6_7.png"><img alt="_images/fig6_7.png" class="align-center" src="_images/fig6_7.png" style="width: 755px;" /></a>
+<p><strong>Сценариите в Scratch изглеждат като алгоритми, написани с блок-схеми.</strong></p>
+<div class="topic">
+<p class="topic-title">Функции на блокове от групата <em>Sensing</em></p>
+<p>Групата <em>Sensing</em> е съставена от блокове, които позволяват на проекта да приема принос от различни устройства, подобно на това, че хората използват сетива, за да събират информация от своята среда. Има блокове, които съхраняват данни, които съответстват на данните, които човек би събирал с усещането за допир, зрение или слух. Някои блокове в тази група позволяват да се задействат различни действия в зависимост от позицията на спрайта, както и в зависимост от времето, датата и т.н. В този урок ще ви представим блоковете, които:</p>
+<ul class="simple">
+<li><p>съхранява информация за позицията на спрайта спрямо показалеца на мишката и други обекти,</p></li>
+<li><p>активирайте входните данни с помощта на клавиатурата,</p></li>
+<li><p>съхранява информация за текущи операции, извършвани от мишката и клавиатурата.</p></li>
+</ul>
+<p>Останалите блокове от групата <em>Sensing</em> ще бъдат въведени в следващите уроци, а пълен преглед на техните функции е даден в частта <em>Приложение</em>.</p>
+</div>
+<div class="section" id="study">
+<h2><img alt="study" src="_images/study.png" /> Разгледайте следните примери<a class="headerlink" href="#study" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>Пример 1 - Проект “Избор”<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>В този проект старият съветник трябва да избере асистент.</p>
+<a class="reference internal image-reference" href="_images/fig6_8.png"><img alt="_images/fig6_8.png" class="align-center" src="_images/fig6_8.png" style="width: 300px;" /></a>
+<p>Той не може сам да реши кой помощник да избере, затова моли потребителя да му помогне, като въведе номера на един от кандидатите.</p>
+<a class="reference internal image-reference" href="_images/fig6_9.png"><img alt="_images/fig6_9.png" class="align-center" src="_images/fig6_9.png" style="width: 475px;" /></a>
+<p>Тази стойност се сравнява с условното изявление, съдържащо номера на кандидата. Ако потребителят въведе номер 1, съветникът ще се обърне вляво, към кандидат номер 1; в противен случай той ще се обърне надясно към кандидат номер 2.</p>
+<a class="reference internal image-reference" href="_images/fig6_10.png"><img alt="_images/fig6_10.png" class="align-center" src="_images/fig6_10.png" style="width: 400px;" /></a>
+<p>Пълният сценарий, описващ поведението на съветника, е представен на фигурата по-долу.</p>
+<a class="reference internal image-reference" href="_images/fig6_11.png"><img alt="_images/fig6_11.png" class="align-center" src="_images/fig6_11.png" style="width: 300px;" /></a>
+</div>
+<div class="section" id="id3">
+<h3>Пример 2 - Проект “Опасни снежинки”<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>Проектът <em>Опасни снежинки</em> е проста игра, при която потребителят се опитва да спаси Снежния човек от големи, опасни и непрекъснато падащи снежинки.
+Потребителят използва клавишите със стрелки на клавиатурата, за да насочва Снежния човек отляво надясно, като се опитва да избегне снежинки, които падат с различна скорост и ъгъл от горната част на екрана.
+Ако снежинка докосне Снежния човек, той ще се надуе, формата му ще се деформира и играта ще свърши.</p>
+<p><strong>Спрайтове и фонове</strong></p>
+<p>Когато стартирате този нов проект, заредете * Склонове * фон и спрайтове * Снежинка * и * Снежен човек * от библиотеката.
+Поставете спрайта на Снежния човек в долния десен ъгъл на сцената и можете да започнете да програмирате.</p>
+<p><strong>Поведение на снежинка</strong></p>
+<p>За да се въведе несигурност, е необходимо да се даде възможност на снежинките да се появяват на различни места и да падат с различна скорост и в различни посоки.
+Ще постигнем това, като използваме блока <img alt="pick_random" src="_images/pick_random.png" />.</p>
+<p>Снежинка трябва да се появи в горната част на сцената и да се плъзга към дъното. Следващите команди описват това движение.</p>
+<a class="reference internal image-reference" href="_images/fig6_12.png"><img alt="_images/fig6_12.png" class="align-center" src="_images/fig6_12.png" style="width: 600px;" /></a>
+<p>Първата команда поставя снежинката в положението, за което x координатата ще бъде генерирана произволно. Третата команда определя позицията, към която снежинката ще се плъзга между 0,5 и 3,5 секунди; когато достигне това положение, снежинката ще изчезне.</p>
+<p>Ще вмъкнем този стек от команди в цикъла, който ще се повтаря, докато снежинката не докосне Снежния човек. Когато снежинката докосне Снежния човек, играта ще свърши.</p>
+<a class="reference internal image-reference" href="_images/fig6_13.png"><img alt="_images/fig6_13.png" class="align-center" src="_images/fig6_13.png" style="width: 620px;" /></a>
+<p><strong>Поведение на снежния човек</strong></p>
+<p>Снежният човек има три скрипта, прикрепени към него - реакции към потребителя, щраквайки върху зеления флаг, и натискане надясно или клавиша със стрелка вляво на клавиатурата.</p>
+<p>В началото Снежният човек дава инструкции как да играе играта и във веригата завинаги проверява дали тя е докосната от снежинка.
+Ако отговорът е да, той ще излъчи, че играта е приключила и ще спре изпълнението на всички скриптове.</p>
+<a class="reference internal image-reference" href="_images/fig6_14.png"><img alt="_images/fig6_14.png" class="align-center" src="_images/fig6_14.png" style="width: 650px;" /></a>
+<p>За да направим играта по-привлекателна, ще добавим специални ефекти. Това може да стане с помощта на блоковете от групата <em>Външност</em>.</p>
+<p>Както видяхме в пример 2 от урока <em>Последователни стъпки</em>, командата <img alt="change_effect" src="_images/change_effect.png" /> може да променя спрайта по няколко начина.</p>
+<p>Когато снежинката докосне Снежния човек, ще променим размера му и ще приложим ефектите рибешко око и цвят. Ще повторим тези промени пет пъти, като правим пауза за кратко след всяка промяна (фигура А).
+За да сме сигурни, че Снежният човек не се деформира, когато програмата започне да се стартира отново, в началото ще изчистим всички графични ефекти и зададем размера на 100% (фигура Б).</p>
+<a class="reference internal image-reference" href="_images/fig6_15.png"><img alt="_images/fig6_15.png" class="align-center" src="_images/fig6_15.png" style="width: 490px;" /></a>
+</div>
+<div class="section" id="id4">
+<h3>Пример 3 - Проект “Ден и нощ”<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>В този проект два спрайта, котка и куче, се държат различно в зависимост от това дали е ден или нощ.</p>
+<p>На сцената има две малки къщички; една принадлежи на котката и една на кучето. Към тях са добавени два фона - <em>ден</em> и <em>нощ</em>.</p>
+<p>На фона <em>ден</em> можете да видите слънцето, светло синьото небе и тревата.
+На фона <em>нощ</em> всичко, с изключение на къщите, е тъмно синьо, а на небето можете да видите звезди и восъчна полумесец. Дневните и нощните фонове се редуват на всеки 5 секунди.</p>
+<p>Когато е денем, котката и кучето излизат от къщите си и се гонят помежду си. Котката тича наоколо в кръг и кучето сочи към котката и се опитва да се приближи до нея.</p>
+<p>Когато е нощно време, котката и кучето се връщат към къщите си и продължават да са неподвижни.</p>
+<a class="reference internal image-reference" href="_images/fig6_16.png"><img alt="_images/fig6_16.png" class="align-center" src="_images/fig6_16.png" style="width: 500px;" /></a>
+<p><strong>Създаване на спрайтове</strong></p>
+<p>Изтрийте <em>Sprite1</em> и след това качете спрайт <em>Dog2</em> и спрайт <em>Cat2</em> от библиотеката.
+Кучето има три костюма, но ние ще използваме само първите две, така че можете да изтриете третия. Котката има само един костюм и тъй като искаме да направим анимация за движение, ще трябва да нарисуваме още един.
+За да създадем втория костюм за котката, ще използваме редактора на боите във векторния режим. Като щракнете с десния бутон на мишката върху котешкия спрайт, ще отворим менюто за бърз достъп, от което можем да изберете опцията <em>Дублиране</em>.</p>
+<p>По този начин получаваме нов костюм, <em>Cat3</em>, който ще променим със стъпките, представени на следващата фигура.</p>
+<a class="reference internal image-reference" href="_images/fig6_17.png"><img alt="_images/fig6_17.png" class="align-center" src="_images/fig6_17.png" style="width: 380px;" /></a>
+<p><strong>Създаване на фона</strong></p>
+<p>Кликнете върху бутона <em>Изберете фон</em> (отдясно, до спирит спрайт), след което изберете опцията <em>Paint</em>.
+От палитрата, съдържаща векторни инструменти, изберете <img alt="v_rectan" src="_images/v_rectan.png" /> и режимът на рисуване трябва да изключи цвета на запълване. Начертайте малка къща, както е показано на следната фигура.</p>
+<a class="reference internal image-reference" href="_images/fig6_18.png"><img alt="_images/fig6_18.png" class="align-center" src="_images/fig6_18.png" style="width: 380px;" /></a>
+<p>Тъй като сте използвали инструмента <img alt="v_group" src="_images/v_group.png" /> за да групирате обектите, които съставляват къщата, можете да използвате инструмента <img alt="copy" src="_images/copy.png" /> да го дублирам. След като направите това, поставете копието в долния десен ъгъл на сцената, а оригиналната къща в горния ляв ъгъл.
+След това задайте размера на двата спрайта, така че да могат да се поберат вътре в къщите им.</p>
+<p>Сега ще преминем към рисуването и ще използваме инструмента <img alt="v_fill" src="_images/v_fill.png" />. Прилагането на този инструмент, когато става дума за попълване на определени области, не е същото като в растерния (растерния) режим.
+Ако зоната не е затворена, в растерен режим боята ще “изтече” върху цялото изображение. Във векторния режим това не се случва - изобщо няма да можете да го рисувате.
+Ето защо първо трябва да “затворите” зоната, която искате да рисувате.
+Това става с помощта на инструмента <img alt="v_select" src="_images/v_select.png" />, трябва да кликнете върху изображението и след това изберете частта от изображението, която не е свързана (2), и я прикрепете към останалата част от изображението (3). След това, с помощта на инструмента <img alt="v_fill" src="_images/v_fill.png" />, можете да рисувате както вътрешността (4), така и линиите, които формират областта (5).</p>
+<a class="reference internal image-reference" href="_images/fig6_19.png"><img alt="_images/fig6_19.png" class="align-center" src="_images/fig6_19.png" style="width: 500px;" /></a>
+<p>Тъй като използвахме инструмента <img alt="v_rectan" src="_images/v_rectan.png" /> за рисуване не трябва да има проблеми, когато рисуваме.
+На следващата фигура можете да видите резултата от боядисването на части от къщата и как се прави.</p>
+<a class="reference internal image-reference" href="_images/fig6_20.png"><img alt="_images/fig6_20.png" class="align-center" src="_images/fig6_20.png" style="width: 380px;" /></a>
+<p>Когато приключите с боядисването на къщите, умножете този фон.</p>
+<p>Ще добавим към първия фон, така че той представлява нощно време, а към втория, така че представлява деня.</p>
+<p><strong>Създаване на нощния фон</strong></p>
+<p>Начертайте изпълнен тъмносин правоъгълник през целия етап, след което с помощта на инструмента <em>Назад</em> <img alt="v_back" src="_images/v_back.png" /> поставете този правоъгълник зад двете къщи. Същото може да се направи и с инструмента <em>Layer back</em> <img alt="v_backward" src="_images/v_backward.png" />, но ще трябва да щракнете върху сцената толкова пъти, колкото има слоеве в изображението.
+Когато и двете къщи са видими, можете да започнете да рисувате луната и звездите.</p>
+<p>На восък полумесец може да се нарисува, като първо нарисувате напълнен жълт кръг (1) и след това частично нарисувате по-голям кръг, изпълнен с цвета на фона (2) върху него.</p>
+<p>Една звезда може да бъде създадена, като нарисуваме бял триъгълник (3), който след това можем да дублираме и завъртим (4) и накрая да запълним цялата форма с бяло (5).</p>
+<a class="reference internal image-reference" href="_images/fig6_21.png"><img alt="_images/fig6_21.png" class="align-center" src="_images/fig6_21.png" style="width: 400px;" /></a>
+<p>Сега можете да копирате готовите звезди и да ги подредите около сцената, някои от тях можете да направите по-малки, а други по-големи. С това нощният фон е завършен.</p>
+<a class="reference internal image-reference" href="_images/fig6_22.png"><img alt="_images/fig6_22.png" class="align-center" src="_images/fig6_22.png" style="width: 380px;" /></a>
+<p>** Създаване на фона през деня **</p>
+<p>Начертайте слънцето с инструмента <img alt="v_circle" src="_images/v_circle.png" />, а за лъчите можете да използвате инструмента <img alt="v_line" src="_images/v_line.png" />. След това нарисувайте голям правоъгълник, изпълнен със светло син цвят, ширината на правоъгълника трябва да бъде същата като на сцената. Поставете обратно толкова слоеве, колкото е необходимо, за да видите всички подробности на сцената.
+(Ако трябваше да нарисувате небето първо, а слънцето второ, вие бихте могли да поставите небето правоъгълник в съответния слой по-бързо. По този начин трябва да се върнете под всички лъчи на слънцето).</p>
+<p>След това нарисувайте правоъгълник, напълнен със зелено, широк като сцената, нарисувайте трева, като го изпратите на фона на изображението.</p>
+<p>Процесът на създаване на фона през деня е представен на фигурата по-долу.</p>
+<a class="reference internal image-reference" href="_images/fig6_23.png"><img alt="_images/fig6_23.png" class="align-center" src="_images/fig6_23.png" style="width: 500px;" /></a>
+<p>Тъй като приключихме със създаването на фона през деня, сега можем да започнем да пишем скрипта, който ще определи поведението на спрайта.</p>
+<p><strong>Синхронизиране на събития в деня и нощта на проекта</strong></p>
+<p>В този проект поведението е продиктувано от фона. Той излъчва съобщенията <em>ден</em> и <em>нощ</em>, на които отговарят и двамата спрайтове.</p>
+<a class="reference internal image-reference" href="_images/fig6_24.png"><img alt="_images/fig6_24.png" class="align-center" src="_images/fig6_24.png" style="width: 250px;" /></a>
+<p>Следващите фигури представляват скриптове, добавени към спрайтите, от които можете да видите как реагират на тези съобщения.</p>
+<a class="reference internal image-reference" href="_images/fig6_25.png"><img alt="_images/fig6_25.png" class="align-center" src="_images/fig6_25.png" style="width: 680px;" /></a>
+<a class="reference internal image-reference" href="_images/fig6_26.png"><img alt="_images/fig6_26.png" class="align-center" src="_images/fig6_26.png" style="width: 680px;" /></a>
+</div>
+</div>
+<div class="section" id="ask">
+<h2><img alt="ask" src="_images/ask.png" /> Разбра ли?<a class="headerlink" href="#ask" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3>Въпрос 1<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="if01">
+            <p>Q-1: Ще каже ли спрайтът <em>Здравейте</em> след изпълнението на командата за условие?</p>
+<a class="reference internal image-reference" href="_images/q6_01.png"><img alt="_images/q6_01.png" class="align-center" src="_images/q6_01.png" style="width: 250px;" /></a>
+
+            <li data-component="answer" data-correct id="if01_opt_a">да</li><li data-component="feedback" id="if01_opt_a"></li>
+            
+            <li data-component="answer"  id="if01_opt_b">не</li><li data-component="feedback" id="if01_opt_b">Условието 1=1 не е изпълнено.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id6">
+<h3>Въпрос 2<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="if02">
+            <p>Q-2: Ще каже ли спрайтът <em>Здравейте</em> след изпълнението на командата за условие?</p>
+<a class="reference internal image-reference" href="_images/q6_02.png"><img alt="_images/q6_02.png" class="align-center" src="_images/q6_02.png" style="width: 255px;" /></a>
+
+            <li data-component="answer"  id="if02_opt_a">да</li><li data-component="feedback" id="if02_opt_a">Тъй като стойността на израза 1=2 винаги е невярна, командата от разклонение YES никога няма да се изпълни.</li>
+            
+            <li data-component="answer" data-correct id="if02_opt_b">не</li><li data-component="feedback" id="if02_opt_b"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id7">
+<h3>Въпрос 3<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="if03">
+            <p>Q-3: Кой от отговорите на потребителя ще позволи изпълнението на командата в разклонение YES?</p>
+<a class="reference internal image-reference" href="_images/q6_03.png"><img alt="_images/q6_03.png" class="align-center" src="_images/q6_03.png" style="width: 215px;" /></a>
+
+            <li data-component="answer"  id="if03_opt_a">5</li><li data-component="feedback" id="if03_opt_a">Невярно 5<5</li>
+            
+            <li data-component="answer" data-correct id="if03_opt_b">-5</li><li data-component="feedback" id="if03_opt_b">Вярно.</li>
+            
+            <li data-component="answer" data-correct id="if03_opt_c">0</li><li data-component="feedback" id="if03_opt_c">Вярно.</li>
+            
+            <li data-component="answer"  id="if03_opt_d">10</li><li data-component="feedback" id="if03_opt_d">Невярно 10<5.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id8">
+<h3>Въпрос 4<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="if04">
+            <p>Q-4: Какво ще каже спрайтът, ако при запитване <em>Вали ли дъжд?</em>, Потребителят отговаря <em>Да</em>?</p>
+<a class="reference internal image-reference" href="_images/q6_04.png"><img alt="_images/q6_04.png" class="align-center" src="_images/q6_04.png" style="width: 310px;" /></a>
+
+            <li data-component="answer" data-correct id="if04_opt_a">Донеси чадър.</li><li data-component="feedback" id="if04_opt_a"></li>
+            
+            <li data-component="answer"  id="if04_opt_b">Нищо няма да се каже.</li><li data-component="feedback" id="if04_opt_b">В този случай условието за разклоняване е изпълнено.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id9">
+<h3>Въпрос 5<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="if05">
+            <p>Q-5: Какво ще каже спрайтът след изпълнението на командата за условие?</p>
+<a class="reference internal image-reference" href="_images/q6_05.png"><img alt="_images/q6_05.png" class="align-center" src="_images/q6_05.png" style="width: 315px;" /></a>
+
+            <li data-component="answer" data-correct id="if05_opt_a">Условието е изпълнено.</li><li data-component="feedback" id="if05_opt_a"></li>
+            
+            <li data-component="answer"  id="if05_opt_b">Усковието не е изпълнено.</li><li data-component="feedback" id="if05_opt_b">Тъй като стойността на израза А=А е винаги вярна, командата от разклонение YES ще бъде изпълнена.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id10">
+<h3>Въпрос 6<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="if06">
+            <p>Q-6: Ще се появи ли спрайтът след изпълнението на командата за условие?</p>
+<a class="reference internal image-reference" href="_images/q6_06.png"><img alt="_images/q6_06.png" class="align-center" src="_images/q6_06.png" style="width: 165px;" /></a>
+
+            <li data-component="answer"  id="if06_opt_a">да</li><li data-component="feedback" id="if06_opt_a">ъй като стойността на израза А=B винаги е невярна, командата от NO разклонение ще бъде изпълнена.</li>
+            
+            <li data-component="answer" data-correct id="if06_opt_b">не</li><li data-component="feedback" id="if06_opt_b">Вярно!</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id11">
+<h3>Въпрос 7<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="if07">
+            <p>Q-7: Какъв е резултатът от изпълнението на блоковите команди (А) и (В)?</p>
+<a class="reference internal image-reference" href="_images/q6_07.png"><img alt="_images/q6_07.png" class="align-center" src="_images/q6_07.png" style="width: 600px;" /></a>
+
+            <li data-component="answer"  id="if07_opt_a">различно, независимо от позицията на спрайта</li><li data-component="feedback" id="if07_opt_a">И в двата случая условието, което трябва да бъде изпълнено за изречението „Вие сте в центъра на сцената“, е едно и също.</li>
+            
+            <li data-component="answer" data-correct id="if07_opt_b">същото независимо от позицията на спрайта</li><li data-component="feedback" id="if07_opt_b">Вярно!</li>
+            
+            <li data-component="answer"  id="if07_opt_c">различно, ако y не е 0</li><li data-component="feedback" id="if07_opt_c">В този случай условието не е изпълнено в нито един от блоковете (A) или (B) и "Вие сте в центъра на сцената" няма да бъде казано.</li>
+            
+            <li data-component="answer"  id="if07_opt_d">различно, ако х не е 0</li><li data-component="feedback" id="if07_opt_d">В този случай условието не е изпълнено в нито един от блоковете (A) или (B) и "Вие сте в центъра на сцената" няма да бъде казано.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id12">
+<h3>Въпрос 8<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="if08">
+            <p>Q-8: Коя от командите за условие има правилното условие за оператора - координатите на местоположението на спрайта са (0,0), т.е. спрайтът е в центъра на етапа? (Изберете всички верни отговори)</p>
+<a class="reference internal image-reference" href="_images/q6_08.png"><img alt="_images/q6_08.png" class="align-center" src="_images/q6_08.png" style="width: 1020px;" /></a>
+
+            <li data-component="answer" data-correct id="if08_opt_a"></li><li data-component="feedback" id="if08_opt_a">Изрично определя, че х = 0 и у = 0.</li>
+            
+            <li data-component="answer"  id="if08_opt_b"></li><li data-component="feedback" id="if08_opt_b">Това са координатите на някои от точките по диагонала на координатната система, те могат да бъдат (0,0), но не трябва да бъдат.</li>
+            
+            <li data-component="answer"  id="if08_opt_c"></li><li data-component="feedback" id="if08_opt_c">Това са координатите на някои от точките по оста x или y. Може да е и точката, в която те се пресичат, но не е необходимо да бъде.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id13">
+<h3>Въпрос 9<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="if09">
+            <p>Q-9: В проекта <em>Вземане на решение</em> показахме как се използва операцията <em>mod</em>, за да се провери дали определено число може да бъде разделено на 2.
+Кое от следните условия ви позволява да проверите дали въведеното от вас число може да бъде разделено на 6? (Изберете всички верни отговори)</p>
+<a class="reference internal image-reference" href="_images/q6_09.png"><img alt="_images/q6_09.png" class="align-center" src="_images/q6_09.png" style="width: 640px;" /></a>
+
+            <li data-component="answer" data-correct id="if09_opt_a"></li><li data-component="feedback" id="if09_opt_a">Остатъкът след като числото е разделено на 6 е 0.</li>
+            
+            <li data-component="answer"  id="if09_opt_b"></li><li data-component="feedback" id="if09_opt_b">Числата 2 и 3 отговарят на това условие, но те не могат да бъдат разделени на 6.</li>
+            
+            <li data-component="answer"  id="if09_opt_c"></li><li data-component="feedback" id="if09_opt_c">Числото 11 удовлетворява това условие, но не може да бъде разделено на 6.</li>
+            
+            <li data-component="answer" data-correct id="if09_opt_d"></li><li data-component="feedback" id="if09_opt_d">Числото може да бъде разделено на двата прости коефициента на числото 6.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+<div class="section" id="try">
+<h2><img alt="try" src="_images/try.png" /> Опитай!<a class="headerlink" href="#try" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id14">
+<h3>Упражнение 1<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Когато се очаква потребителят да въведе някакъв вид информация, трябва да зададем въпрос, който предполага очакваната форма на отговора, например: „Въведете датата си на раждане (dd/mm/yy)“.
+Формулирайте входните въпроси за въвеждане:</p>
+<p>а) Число между 1 и 10.</p>
+<ol class="loweralpha simple" start="2">
+<li><p>Число между -1,0 и 2,25.</p></li>
+<li><p>Име и фамилия.</p></li>
+<li><p>Тегло.</p></li>
+<li><p>Височина.</p></li>
+</ol>
+
+    </p></div></div>
+</div>
+<div class="section" id="id15">
+<h3>Упражнение 2<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Програмата, която трябва да изчисли идеалното тегло, изисква от потребителя да въведе своето тегло (в кг) и височина (в см).
+Напишете части от програмата, които проверяват дали потребителят е въвел правилните данни за теглото, напр. от интервала [40, 160] и височината, напр. [140210].</p>
+
+    </p></div></div>
+</div>
+<div class="section" id="id16">
+<h3>Упражнение 3<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Напишете какви трябва да бъдат аргументите на операцията <img alt="pick_random" src="_images/pick_random.png" /> за него да генерира числа от множеството:</p>
+<p>а) {0, 1}</p>
+<ol class="loweralpha simple" start="2">
+<li><p>{0, 1, 2, 3, … , 10}</p></li>
+<li><p>{–2, 0, 2, 4, 6, 8}</p></li>
+<li><p>{0, 10, 20, 30, … , 100}</p></li>
+<li><p>{0, 0.1, 0.15, 0.26, 0.38, … , 1.0}</p></li>
+</ol>
+<p>Проверете отговорите си, като тествате какво ще се върне подходящата операция за всеки пример в цикъла, който трябва да се повтори 5 пъти.</p>
+
+    <div data-component="reveal" id="упутство11"   data-showtitle="Покажи инструкциите" data-hidetitle="Скрий инцструкциите">
+    <p><strong>Инструкции:</strong></p>
+<p>Целият блок от команди е даден за пример a), а за останалите само частта, която генерира числа, които трябва да бъдат вмъкнати в блока <code class="docutils literal notranslate"><span class="pre">say</span></code>.</p>
+<p>От пример д) можете да видите, че е достатъчно да поставите само една граница, която има десетична запетая, за да генерирате десетични числа.</p>
+<a class="reference internal image-reference" href="_images/ex6_3.png"><img alt="_images/ex6_3.png" class="align-center" src="_images/ex6_3.png" style="width: 400px;" /></a>
+
+    </div>
+    
+    </p></div></div>
+</div>
+<div class="section" id="id17">
+<h3>Упражнение 4<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Напишете командата за условие със сложно условие, еквивалентно на следните състави на командите за условие:</p>
+<a class="reference internal image-reference" href="_images/ex6_4.png"><img alt="_images/ex6_4.png" class="align-center" src="_images/ex6_4.png" style="width: 530px;" /></a>
+<p>Проверете отговорите си, като ги тествате в средата на Scratch.</p>
+
+    </p></div></div>
+</div>
+<div class="section" id="id18">
+<h3>Упражнение 5<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Създайте мини-проект, наречен <em>Greater</em>, в който спрайтът моли потребителя да вмъкне число между 1 и 100.
+Програмата избира число (чрез използване на операторски блок на произволни числа) също между 1 и 100 и след това казва на потребителя, чийто брой е по-голям.
+Диалогът трябва да бъде иницииран с щракване върху спрайта.</p>
+
+    <div data-component="reveal" id="упутство12"   data-showtitle="Покажи инструкциите" data-hidetitle="Скрий инцструкциите">
+    <p><strong>Инструкции:</strong></p>
+<a class="reference internal image-reference" href="_images/ex6_5.png"><img alt="_images/ex6_5.png" class="align-center" src="_images/ex6_5.png" style="width: 390px;" /></a>
+
+    </div>
+    
+    </p></div></div>
+</div>
+</div>
+<div class="section" id="bug">
+<h2><img alt="bug" src="_images/bug.png" /> Отстранете грешката!<a class="headerlink" href="#bug" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id19">
+<h3>Грешка 1<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Question</dt>
+<dd class="field-odd"><p>Ученикът искаше да създаде скрипт, който позволява движението на спрайта да се контролира от стрелки. Той / тя написа програмата, показана на фигурата вляво.
+Тогава студентът забеляза, че командата <img alt="move_steps" src="_images/move_steps.png" /> се повтаря 4 пъти, така че той / тя промени сценария в програмата, представена на фигурата вдясно. Ученикът обаче не постигна желаното поведение на спрайта. Къде ученикът направи грешка?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug6_1.png"><img alt="_images/bug6_1.png" class="align-center" src="_images/bug6_1.png" style="width: 500px;" /></a>
+
+    <div data-component="reveal" id="сакривање13"   data-showtitle="Покажи отговора" data-hidetitle="Скрий отговора">
+    <p><strong>Отговор:</strong></p>
+<p>В променената програма командата <img alt="move_steps" src="_images/move_steps.png" /> ще работи непрекъснато и спрайтът ще се движи в посоката, която е била избрана последна, независимо дали клавишът в тази посока е натиснат или не.</p>
+
+    </div>
+    </div>
+<div class="section" id="id20">
+<h3>Грешка 2<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Question</dt>
+<dd class="field-odd"><p>Студентът искаше да промени поведението на кандидатите за позицията на помощник на магьосника в проекта “Избор”. Когато магьосникът избере момичето, момчето трябва да си помисли „Защо я избра?“. Ето защо той / тя добави следния скрипт към момчето спрайт. Въпреки това, добавената мисъл беше поставена в самото начало на програмата, преди съветникът да избере някого. Как можете да координирате дейностите на момчето и магьосника?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug6_2.png"><img alt="_images/bug6_2.png" class="align-center" src="_images/bug6_2.png" style="width: 220px;" /></a>
+
+    <div data-component="reveal" id="сакривање16"   data-showtitle="Покажи отговора" data-hidetitle="Скрий отговора">
+    <p><strong>Отговор:</strong></p>
+<p>Един от начините е да накарате магьосника да излъчи съобщението, че е взел своето решение, и след това да позволи на момчето да реагира, когато получи това съобщение. Разбира се, ако не искаме момчето да реагира, когато съветникът го избере, тогава трябва да разширим тази комуникация, като добавим частта, в която програмата ще провери кой от кандидатите е избран.</p>
+<a class="reference internal image-reference" href="_images/ans6_2.png"><img alt="_images/ans6_2.png" class="align-center" src="_images/ans6_2.png" style="width: 595px;" /></a>
+
+    </div>
+    </div>
+<div class="section" id="id21">
+<h3>Грешка 3<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Question</dt>
+<dd class="field-odd"><p>Ученикът искаше неговият спрайт, който се управлява с клавишите със стрелки наляво и надясно, да продължава да изговаря думата „вляво“, докато е в лявата половина на сцената, и думата „дясно“, докато е в дясната половина на сцената. Той / тя добави следните скриптове към спрайта, но продължаваше да казва същата дума, независимо къде на сцената се намира. Какво трябва да се промени в сценариите?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug6_3.png"><img alt="_images/bug6_3.png" class="align-center" src="_images/bug6_3.png" style="width: 510px;" /></a>
+
+    <div data-component="reveal" id="сакривање17"   data-showtitle="Покажи отговора" data-hidetitle="Скрий отговора">
+    <p><strong>Отговор:</strong></p>
+<p>Програмата проверява на коя половина от етапа се намира спрайтът само в началото. Тази проверка трябва да бъде вмъкната във вечен цикъл.</p>
+<a class="reference internal image-reference" href="_images/ans6_3.png"><img alt="_images/ans6_3.png" class="align-center" src="_images/ans6_3.png" style="width: 240px;" /></a>
+
+    </div>
+    </div>
+</div>
+<div class="section" id="book">
+<h2><img alt="book" src="_images/book.png" /> Резюме<a class="headerlink" href="#book" title="Permalink to this headline">¶</a></h2>
+<p>В този урок научихме за командите за разклоняване, които ви позволяват да създавате скриптове за разклоняване. Представихме блоковете от групата * Sensing * и показахме как командата за въвеждане на данни с помощта на клавиатурата се изпълнява в Scratch. Освен това научихме как да синхронизираме поведението на спрайтите, като използваме излъчване на съобщения. Освен това показахме как да използваме инструмент във векторния режим на вградения редактор на бои.</p>
+<p><strong>Нови концепции</strong>:  структура с разклонения, сложни условия.</p>
+<p><strong>Scratch команди</strong>: <img alt="control_blocks" src="_images/control.png" /> - <img alt="if_then" src="_images/if_then.png" />, <img alt="if_then_else" src="_images/if_then_else.png" />, <img alt="wait_until" src="_images/wait_until.png" />; <img alt="looks_blocks" src="_images/looks.png" /> - <img alt="switch_backdrop" src="_images/switch_backdrop.png" />, <img alt="backdrop" src="_images/backdrop.png" />; <img alt="sensing_blocks" src="_images/sensing.png" /> - <img alt="touching" src="_images/touching.png" />; <img alt="operator_blocks" src="_images/operators.png" /> - <img alt="equal" src="_images/equal.png" /></p>
+</div>
+<div class="section" id="project">
+<h2><img alt="project" src="_images/project.png" /> Създайте проекти<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id22">
+<h3>Проект 1 - „Падащи ябълки“<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>Създайте игра със сценарий, подобен на проекта “Опасни снежинки”. Основният спрайт на този проект трябва да бъде спрайт за момче, чието движение се контролира с левия и десния клавиш със стрелки. Той трябва да избягва ябълки, които се появяват на произволни позиции в горната част на сцената и да се плъзга надолу до произволни позиции в долната част на сцената. Ако някоя ябълка докосне момчето във всеки момент, играта ще свърши, ако не го докоснат, те се скриват и отново се появяват в горната част на сцената и се плъзгат надолу. Скоростта на плъзгане също трябва да бъде настроена на случаен принцип, например между 1 и 3 секунди. За да направите играта по-вълнуваща, след като сте направили първия спрайт за ябълки, го умножете, така че има например 3 ябълки, повтарящи подходящото поведение.</p>
+</div>
+<div class="section" id="id23">
+<h3>Проект 2 - “Гладна акула”<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>Създайте проект, в който спрайтът на акулите гони риба. Акулата трябва да се движи постоянно наляво-надясно и при натискане на интервала трябва да се придвижва нагоре. Ако спрайтът на акулите докосне риба, рибата ще изчезне и след това отново ще се появи след 3 до 5 секунди в произволна позиция. Различната продължителност на паузата между изчезването и повторното появяване на риба и различни места може да се постигне с помощта на операцията * произволно число <em>. Спрайтът на акулите (Shark2) има три костюма, така че смяната на костюма може да представлява реакцията на акулата, когато докосне риба. Приписвайте различно движение на рибите спрати, спратите на раците и спратите на медузите. Медузите трябва да се движат нагоре и надолу, раците трябва да се движат наляво и надясно, а рибите трябва да се движат с различна скорост. Всички спрайтове - акула, различни видове риба, раци и медузи, както и фона могат да бъдат взети от библиотеките на спрайтове и фонове. Можете да направите различни видове риба, като използвате различни костюми на спрайта *Риба</em>.</p>
+</div>
+<div class="section" id="id24">
+<h3>Проект 3 - “Куче и котка”<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>Създайте проект, в който ще използвате два спрайта - куче и котка, както и два фона. В началото котката бавно се движи наляво и надясно между краищата на сцената и мислите й трябва да се появят в облака на блока `` мисля ‘’. След 10 секунди кучето спрайт трябва да се появи, то започва да лае и това плаши котката. Котката започва да тича и когато достигне ръба на сцената с първия фон, вторият фон трябва да се появи. Когато котката пресече целия етап с новия фон, тя трябва да изчезне, това означава, че котката е успяла да се скрие. Едва когато това е направено, кучето ще се появи на сцената, ще спре и в облака на блока `` мисля ‘’ ще се появи въпросителен знак.</p>
+<p>За да създадете този проект, трябва да:</p>
+<ul class="simple">
+<li><p>напишете скриптове, описващи поведението на котешкия спрайт,</p></li>
+<li><p>качете кучешки спрайт от библиотеката на спрайтове и добавете към него аудио файл с лай заедно със скриптове, описващи неговото поведение,</p></li>
+<li><p>качете два фона, <em>Игрално поле</em> и <em>Градинска скала</em>: първата, където котката среща кучето, и втората, където котката избяга, когато чуе лай на кучето,</p></li>
+<li><p>синхронизиране на кучешки лай и реакцията на котката към него - котката бяга,</p></li>
+<li><p>синхронизиране на “поведението” на двата фона, т.е. в момента, в който те се променят.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Повтарящи се стъпки' data-toggle="tooltip"><a href="Scratch3 Repeating.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Променливи' data-toggle="tooltip"><a href="Scratch3 Variables.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Повтарящи се стъпки' data-toggle="tooltip"><a href="Scratch3 Repeating.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Променливи' data-toggle="tooltip"><a href="Scratch3 Variables.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

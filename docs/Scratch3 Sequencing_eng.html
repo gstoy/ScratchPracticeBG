@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sequencing Steps &#8212; Block-based programming in Scratch - practice lessons</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Let’s Draw - Turtle Graphics" href="Scratch3 Graphics_eng.html" />
+    <link rel="prev" title="Tell Me Where To Go - Coordinates And Direction" href="Scratch3 Coordinates_eng.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'Scratch_eng';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'Scratch_eng';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Block-based programming in Scratch - practice lessons</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="sequencing-steps">
+<h1>Sequencing Steps<a class="headerlink" href="#sequencing-steps" title="Permalink to this headline">¶</a></h1>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="intro3" src="_images/intro3.png" /></p>
+
+    </p></div></div>
+<p>In the previous lesson we learned about motion commands, and now we will see how we can use the commands from the <em>Looks</em> and <em>Events</em> group. We will show how we assign a particular behavior to our sprite by connecting blocks to form a script. The projects in this lesson consist of scripts made up from a series of consecutive steps. We can say that this type of scripts have a <strong>simple linear structure</strong>.</p>
+<div class="topic">
+<p class="topic-title first">The Terminology and the Visual Grammar of the Scratch Language</p>
+<p>Sprites can execute more that 100 commands. The blocks which correspond to commands represent the vocabulary of the Scratch language, and the rules by which they are linked correspond to its grammar. The blocks are kept in the Blocks Palette, and they are divided into 10 different colours:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><img alt="motion_blocks" src="_images/motion.png" /> Motion,</p></li>
+<li><p><img alt="looks_blocks" src="_images/looks.png" /> Looks,</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><img alt="sound_blocks" src="_images/sound.png" /> Sound,</p></li>
+<li><p><img alt="events_blocks" src="_images/events.png" /> Events,</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><img alt="control_blocks" src="_images/control.png" /> Control,</p></li>
+<li><p><img alt="sensing_blocks" src="_images/sensing.png" /> Sensing,</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><img alt="operator_blocks" src="_images/operators.png" /> Operators,</p></li>
+<li><p><img alt="variables_blocks" src="_images/variables.png" /> Variables,</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><img alt="my_blocks" src="_images/my_blocks.png" /> My Blocks</p></li>
+<li><p><img alt="extensions" src="_images/extension.png" /> Extensions.</p></li>
+</ul>
+</td></tr></table>
+<p>Blocks are grouped together to make it easier for users to create scripts. Regardless of how complex the behavior of a certain sprite is, the script that describes it is made up of a set of simple operations contained in these 10 types. If you know which type of activity the sprite should perform, you can easily choose the right group and take from it the corresponding block.</p>
+<p>There are independent and function blocks.</p>
+<p><strong>Independent</strong> blocks correspond to language commands, that is, they correspond to algorithm steps. Some of them have input fields where the user can set a specific value.</p>
+<p><strong>Function</strong> blocks return values.  They cannot stand independently in a script, they have to be inserted into block fields which receive values and specify their actions.</p>
+<p>The blocks are shaped so that only those which form a correct language construction can be connected, that is to say, Scratch has a visual grammar which does not allow making syntax mistakes.</p>
+<a class="reference internal image-reference" href="_images/fig3_1.png"><img alt="_images/fig3_1.png" class="align-center" src="_images/fig3_1.png" style="width: 300px;" /></a>
+<p><strong>Independent Blocks</strong></p>
+<p>In the text, we will refer to blocks which correspond to processing steps as <strong>stack blocks</strong>. Every stack block corresponds to one activity, that is, it answers the question WHAT should be done. For example, the <img alt="move_steps" src="_images/move_steps.png" /> block commands the sprite to move a certain number of steps in its current direction. The shape of this block looks like a Lego brick, and the entire script looks like a stack of bricks.</p>
+<p>The specified number of steps is entered into the white circle - <strong>input field</strong> of the block.</p>
+<p>In the <img alt="say_sec" src="_images/say_sec.png" /> block one input field has a shape similar to a rounded rectangle, and the other has a shape of a circle. Rounded rectangle input fields can receive both text and number values, while the circle ones can only receive number values.</p>
+<p>The <img alt="glide_xy" src="_images/glide_xy.png" /> block has three input fields.</p>
+<p>Some of the blocks have hexagonal input fields, for example the control block <img alt="wait_until" src="_images/wait_until.png" />. These input fields can only receive logical values (true or false).</p>
+<p>In the <em>Control</em> group of blocks there are C-shaped blocks called <strong>С-blocks</strong>. The slot inside the C-block is a specific type of an input field where you can insert the entire script. The <img alt="repeat" src="_images/repeat.png" /> block has two input fields: one for the number and one for the script.</p>
+<p>The is also one control block which is E-shaped and it has three input fields, one for the condition (logical value), and two for the scripts. The first input field for the scripts gives the command for what should be done if the condition has been fulfilled, and the other what should be done if it hasn’t.</p>
+<p><strong>Hat blocks</strong> correspond to the initial algorithm step. They answer the question WHEN will the script run. These blocks have rounded tops, they are placed on the top of the stack, and they are connected with the block below through a bump at the bottom. Hat blocks define what should be done in order for the stack below it to start running.  You can, for example, click on the green flag or press a specific key on the keyboard.</p>
+<p><strong>Cap blocks</strong> correspond to the final algorithm step. They have a notch on the top, but they don’t have a bump on the bottom. Since there can be more than one script associated with a single object in Scratch, a cap block can stop the running of all activated scripts.</p>
+<p><strong>Function blocks</strong></p>
+<p>Function blocks hold information for other blocks. They are often called <strong>reporters</strong> because they report the current value of a variable. In the previous chapter we introduced the reporter blocks that hold the current coordinates and direction of the sprite. Some reporter blocks also have circular and rounded rectangular input fields, for example <img alt="plus" src="_images/plus.png" /> and <img alt="join" src="_images/join.png" />.</p>
+<p><strong>Boolean blocks</strong> hold the logical values (true or false). They have a hexagonal shape and they can only be placed into the input fields of the corresponding shape (hexagonal or rectangular). Like for example, the <img alt="equal" src="_images/equal.png" /> block. In Scratch, complex logical conditions can easily be constructed by inserting boolean blocks into the input fields of other boolean blocks.</p>
+</div>
+<div class="sidebar">
+<p class="sidebar-title">Event Lead Programming</p>
+<p>Sometimes watching programs run is like watching cartoons. These are the programs that always run the same way, that is to say, the running does not depend on the user. However, there are programs which depend on the events created by the user or by the objects of the project - the sprites and the stage. The user, for example, can click the mouse or press one of the keys on the keyboard, while sprites and the stage can send and receive messages. The blocks that activate scripts associated with these types of <strong>actions</strong> and <strong>messages</strong> are located in the <em>Events</em> group of blocks.</p>
+</div>
+<div class="topic">
+<p class="topic-title first">Functions of the <em>Looks</em> and <em>Events</em> Blocks</p>
+<p>The <em>Motion</em> blocks we elaborated in the previous lesson can only be used for sprites. Unlike them, you can use the blocks from the <em>Looks</em> group to manage the appearance of the sprite and the backdrop, i.e. the appearance of the stage. However, this does not this does not apply to all blocks of this group. Among them there are the ones that only apply to sprites, and the ones that only apply to the stage. The blocks from the <em>Events</em> group initiate the running of the scripts.</p>
+<p>In the previous lessons we already learn about the effects of some of the <em>Looks</em> and <em>Events</em> blocks, for example, <code class="docutils literal notranslate"><span class="pre">say</span></code> and <code class="docutils literal notranslate"><span class="pre">press</span> <span class="pre">a</span> <span class="pre">key</span></code>. In this lesson, we will introduce, in more detail, the blocks that allow easy animation with the application of built-in graphic effects, and expand the Scratch vocabulary by using new commands.</p>
+</div>
+<div class="section" id="study-study-the-following-examples">
+<h2><img alt="study" src="_images/study.png" /> Study the following examples<a class="headerlink" href="#study-study-the-following-examples" title="Permalink to this headline">¶</a></h2>
+<p>We can entertain our friends by telling jokes, and also by showing them mathematical tricks. The following project illustrates one of them. It has only one script with a simple linear structure.</p>
+<div class="section" id="example-1-project-math-trick">
+<h3>Example 1 - Project “Math Trick”<a class="headerlink" href="#example-1-project-math-trick" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<ul class="simple">
+<li><p>Step 1: Think of a single three-digit number where all digits are the same, e.g. 111, 222.</p></li>
+<li><p>Step 2: Add those digits together.</p></li>
+<li><p>Step 3: Divide the three-digit number form Step 1 by the sum obtained in the Step 2.</p></li>
+<li><p>Step 4: The result is 37.</p></li>
+</ul>
+<p>The script of this project is quite simple. The sprite uses the <img alt="say_sec" src="_images/say_sec.png" /> block to give the user the first three requests, and the <img alt="say" src="_images/say.png" /> block to communicate the result.</p>
+<p>We will use the sprite of a girl called Avery from the sprite library, this sprite has two costumes (click on the <em>Costumes</em> tab to see them) and after each request we will give a command for changing the costume by using the <img alt="next_costume" src="_images/next_costume.png" /> block.</p>
+<p>Because the user needs time to calculate what is required of him/her, in the first two blocks we will put that the sprite should say the given text for 3 seconds, and in the third we will put 5 seconds. The <img alt="say" src="_images/say.png" /> block leaves the last text on the screen until we stop the running of the program by clicking the <em>stop</em> sign - the red octagon above the upper right corner of the stage.</p>
+<p>The script of this project is presented on the following Figure.</p>
+<a class="reference internal image-reference" href="_images/fig3_2.png"><img alt="_images/fig3_2.png" class="align-center" src="_images/fig3_2.png" style="width: 435px;" /></a>
+</div>
+<hr class="docutils" />
+<div class="section" id="example-2-project-conversation">
+<h3>Example 2 - Project “Conversation”<a class="headerlink" href="#example-2-project-conversation" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>This project represents an upgrade of the “Mathematician” project. In it, the girl Avery and the boy Devin present the same mathematical trick through a conversation in which Devin thinks of a number 222 and performs the required calculations, and in the end he asks “How did you know?”. The behavior of both sprites is determined by the scripts, which have a simple linear structure. To make it look like they are really talking, the girl’s script should include blocks for waiting while the boy thinks, and the boy’s script should include blocks for waiting while the girls asks the questions.</p>
+<p>The script of this project is presented on the following Figure.</p>
+<a class="reference internal image-reference" href="_images/fig3_3.png"><img alt="_images/fig3_3.png" class="align-center" src="_images/fig3_3.png" style="width: 980px;" /></a>
+<p><strong>Creating the Project</strong></p>
+<p><img alt="1" src="_images/1.png" /> Open the <em>Mathematician</em> project.</p>
+<p><img alt="2" src="_images/2.png" /> Save this project under the new name <em>Conversation</em>.</p>
+<p><strong>Advice. When you are creating a new version of an existing project, save it under a new name at the very beginning. That way you won’t loose the old version.</strong></p>
+<p><img alt="3" src="_images/3.png" /> From the sprite library choose the sprite of a boy called <em>Devin</em>.</p>
+<p><img alt="4" src="_images/4.png" /> Place the boy sprite next to the right edge of the stage and change his direction in the sprite information window to -90, so that he is facing the girl sprite.</p>
+<p><img alt="5" src="_images/5.png" /> Add the following scripts to the sprites.</p>
+<a class="reference internal image-reference" href="_images/fig3_4.png"><img alt="_images/fig3_4.png" class="align-center" src="_images/fig3_4.png" style="width: 695px;" /></a>
+<p>In the <em>Mathematician</em> project, the girl says 4 sentences, and she changes her costume 3 times (she has 2 costumes). This means that if we run the project two consecutive times, the girl will not appear wearing the same costume at the beginning of both runs. Because we want the girl to appear at the beginning wearing the same costume both times, we add the appropriate command at the top of the script.</p>
+<p><strong>Advice. Put commands at the beginning of the project that initialize the sprites (specify where and in which costume they should appear), especially if the sprites are moving during the running of the project.</strong></p>
+<p>We coordinated the behavior of the sprites by inserting commands for waiting into their scripts.</p>
+<a class="reference internal image-reference" href="_images/fig3_5.png"><img alt="_images/fig3_5.png" class="align-center" src="_images/fig3_5.png" style="width: 800px;" /></a>
+<p><img alt="6" src="_images/6.png" /> Save the changed version of the project.</p>
+<p>If you want to know the answer to the boy’s question “How did you know?”, click on the <em>Show the Instruction</em> icon.</p>
+
+    <div data-component="reveal" id="instruction"   data-showtitle="Show the instruction" data-hidetitle="Hide the instruction">
+    <p><strong>Instruction:</strong></p>
+<p>The girl asked him to think of a three-digit number with the same digits. Let’s call this repeating digit x. In this case the unknown number can be presented as 111х, and the sum of its digits as 3х. The result of the operation of dividing the number with the sum of its digits is 111/3=37, regardless of the initial number.</p>
+
+    </div>
+    <hr class="docutils" />
+<div class="sidebar">
+<p class="sidebar-title">Arithmetic Expressions in Scratch</p>
+<p>The group <em>Operators</em> contains blocks that enable arithmetic operations to be performed. For example, the <img alt="plus" src="_images/plus.png" /> block enables addition. If you put numbers into the input fields of this block, it will calculate their sum. Operators cannot stand alone in the script, they need to be inserted into the input field of an independent block. For example, if you insert them into the input field of a <code class="docutils literal notranslate"><span class="pre">say</span></code> or <code class="docutils literal notranslate"><span class="pre">think</span></code> block, the value they calculate will be displayed.</p>
+</div>
+</div>
+<div class="section" id="example-3-project-calculation">
+<h3>Example 3 - Project “Calculation”<a class="headerlink" href="#example-3-project-calculation" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>The following project is also an upgrade of the previous one. In it, instead of the fixed number 222, the boy chooses another three-digit number with all three equal digits, and uses it to perform the required operations. This can be programmes thanks to the possibility of generating a <strong>random number</strong> from the given interval.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Generating Random Numbers</strong></p>
+<p>Among the <em>Operators</em> blocks the is a command <img alt="pick_random" src="_images/pick_random.png" />. Generating a random number means randomly selecting a number from an interval. The lowest and the highest number of this interval are inserted into the input fields of this reporter block. So, if those numbers were 1 and 10, any number from the interval [1,10] would be selected, and, for example, if it were -100 and 100, then a number from the interval [-100,100] would be generated.</p>
+
+    </p></div></div>
+<p>In our example, in the first field you should enter number 1, and in the second number 9.</p>
+<p>In this project we used <strong>variables</strong> which will be introduced in the eighth lesson. This is why it is marked as difficult. You can skip it and come back to it later.</p>
+<p>If on the other hand you like a challenge, let’s say something about this topic in advance. When we say variable we mean the area of computer memory where the program stores the current values ​​of the data it is working with. This area is called <strong>Name of the Variable</strong>, and <strong>value of the variable</strong> is what is stored in it.</p>
+<p><strong>Creation of the Project</strong></p>
+<div class="sidebar">
+<p class="sidebar-title">Part of the script added to the boy</p>
+<p><img alt="Devin" src="_images/fig3_6.png" /></p>
+</div>
+<p><img alt="1" src="_images/1.png" /> Open the <em>Conversation</em> project and save it under a new name <em>Calculation</em>.</p>
+<p><img alt="2" src="_images/2.png" /> Create the variable <em>x</em> which corresponds to the digits of a three-digit number and set a random number from the interval [1,9] as its initial value.</p>
+<p><img alt="3" src="_images/3.png" /> Create the variable <em>number</em>, and as the initial value set the value of the expression 111*x.</p>
+<p><img alt="4" src="_images/4.png" /> In the first <code class="docutils literal notranslate"><span class="pre">think</span></code> block of the boy’s script insert the reporter block of the variable <em>number</em> instead of the number 222.</p>
+<p><img alt="n1" src="_images/n1.png" /> <img alt="!=" src="_images/not_equal.png" /> <img alt="n2" src="_images/n2.png" /></p>
+<p><img alt="5" src="_images/5.png" /> Create the variable <em>sum</em> and as it initial value set the value of the expression x+x+x. Since the block for addition has only two input fields, we will insert one block for addition into the input field of another addition block. (Of course, we could have done the same thing by using one multiplication block, because х+х+х=3*х)</p>
+<a class="reference internal image-reference" href="_images/fig3_7.png"><img alt="_images/fig3_7.png" class="align-center" src="_images/fig3_7.png" style="width: 350px;" /></a>
+<p><img alt="6" src="_images/6.png" /> In the second <code class="docutils literal notranslate"><span class="pre">think</span></code> block of the boy’s script insert the reporter of the variable <em>sum</em> instead of the text <em>2+2+2</em>.</p>
+<p><img alt="7" src="_images/7.png" /> Create the variable <em>result</em> and as the initial value set the value of the expression number/sum.</p>
+<p><img alt="8" src="_images/8.png" /> In the third block of the boy’s script insert the reporter of the variable <em>result</em> instead of the number 37.</p>
+<p><img alt="9" src="_images/9.png" /> Run the project a few times to check if it generates different three-digit numbers.</p>
+<p><img alt="10" src="_images/10.png" /> Save the changed version of the project.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="example-4-project-sprite-effects">
+<h3>Example 4 - Project “Sprite Effects”<a class="headerlink" href="#example-4-project-sprite-effects" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>The following project shows how the <img alt="change_effect" src="_images/change_effect.png" /> command from the <em>Looks</em> group can affect sprite’s appearance. It also shows the event block <em>when this sprite is clicked</em> can start the running of the script.</p>
+<p><strong>Project Script</strong></p>
+<p>There are 7 copies of the same sprite on the stage. Clicking on one of them changes the sprite using one of the seven graphic effects. This is enabled by the <img alt="change_effect" src="_images/change_effect.png" /> command. The sprite also says which effect was used.</p>
+<div class="sidebar">
+<p class="sidebar-title">Graphic Effects</p>
+<p>By clicking on the white triangle in the input field
+you will open the drop-down list containing the following
+7 different effects.</p>
+<p><img alt="efekti" src="_images/fig3_8.png" /></p>
+</div>
+<p><strong>Creation of the Project</strong></p>
+<p><img alt="1" src="_images/1.png" /> Start a new project.</p>
+<p><img alt="2" src="_images/2.png" /> Delete the cat sprite and choose the <em>Singer1</em> sprite from the sprite library.</p>
+<p><img alt="3" src="_images/3.png" /> Add the following script to the sprite.</p>
+<a class="reference internal image-reference" href="_images/fig3_9.png"><img alt="_images/fig3_9.png" class="align-center" src="_images/fig3_9.png" style="width: 240px;" /></a>
+<p><img alt="4" src="_images/4.png" /> Right-click on the sprite in the sprite list to open the shortcut menu, and select the option <em>duplicate</em>. The <em>Singer2</em> sprite will appear in the sprite list, and it will have the same script as the sprite used to create it.</p>
+<p><img alt="5" src="_images/5.png" /> Change the effect in the <img alt="change_effect" src="_images/change_effect.png" /> block to the на <em>fisheye</em>, and in the <img alt="say_sec" src="_images/say_sec.png" /> block change the text so it says <em>fisheye</em>.</p>
+<p><img alt="6" src="_images/6.png" /> Do the same thing 5 more times, but every time choose another effect from the drop-down list and change the message that the sprite says when you click on it.</p>
+<p><img alt="7" src="_images/7.png" /> Arrange the sprites on the stage evenly and test whether the project is doing what was intended, by clicking on each sprite .</p>
+<p><img alt="8" src="_images/8.png" /> Each time you click on one of the sprites, the appropriate effect will appear.</p>
+<p><img alt="9" src="_images/9.png" /> Therefore, a script should be added to the stage which, when clicked on the green flag, will undo changes by using the <img alt="clear_effects" src="_images/clear_effects.png" /> block.</p>
+<p>The following Figure shows the appearance of the sprites after one or more applications of the corresponding effect.</p>
+<a class="reference internal image-reference" href="_images/fig3_10.png"><img alt="_images/fig3_10.png" class="align-center" src="_images/fig3_10.png" style="width: 435px;" /></a>
+</div>
+<hr class="docutils" />
+<div class="section" id="example-5-project-stage-effects">
+<h3>Example 5 - Project “Stage Effects”<a class="headerlink" href="#example-5-project-stage-effects" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>Unlike the <em>Motion</em> blocks, the <em>Looks</em> blocks can also be applied to the stage. All scripts in this project will be added to the stage. The purpose of this project is to show how the <img alt="change_effect" src="_images/change_effect.png" /> command affects the look of the stage, and to give you ideas on how you can use it in your future projects. To put everything back to normal, we will add the block for clearing all graphic effects to the <em>when green flag is clicked</em> event block.</p>
+<p><strong>Project Script</strong></p>
+<p>The cat is in the middle of the desert. The user can change the look of the backdrop by pressing on of the keys with the numbers from 1 to 3 on it. Each of these events corresponds to one of the graphic effects on the backdrop. The following Figure shows what the stage looks like at the beginning (0) and after the keys were pressed a few times: 1 - effect <em>color</em>, 2 - effect <em>fisheye</em>, 3 - effect <em>whirl</em> and 4 - effect <em>pixelate</em>.</p>
+<a class="reference internal image-reference" href="_images/fig3_11.png"><img alt="_images/fig3_11.png" class="align-center" src="_images/fig3_11.png" style="width: 735px;" /></a>
+</div>
+</div>
+<div class="section" id="ask-did-you-understand">
+<h2><img alt="ask" src="_images/ask.png" /> Did you understand?<a class="headerlink" href="#ask-did-you-understand" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="question-1">
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="commands_looks">
+            <p>Q-40: Which of the blocks belong to the <em>Looks</em> group of commands?
+(Select all correct answers)</p>
+<a class="reference internal image-reference" href="_images/q3_1.png"><img alt="_images/q3_1.png" class="align-center" src="_images/q3_1.png" style="width: 410px;" /></a>
+
+            <li data-component="answer"  id="commands_looks_opt_a"></li><li data-component="feedback" id="commands_looks_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="commands_looks_opt_b"></li><li data-component="feedback" id="commands_looks_opt_b"></li>
+            
+            <li data-component="answer"  id="commands_looks_opt_c"></li><li data-component="feedback" id="commands_looks_opt_c"></li>
+            
+            <li data-component="answer" data-correct id="commands_looks_opt_d"></li><li data-component="feedback" id="commands_looks_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-2">
+<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="commands_events">
+            <p>Q-41: Which of the blocks belong to the <em>Events</em> group of commands?
+(Select all correct answers)</p>
+<a class="reference internal image-reference" href="_images/q3_2.png"><img alt="_images/q3_2.png" class="align-center" src="_images/q3_2.png" style="width: 520px;" /></a>
+
+            <li data-component="answer" data-correct id="commands_events_opt_a"></li><li data-component="feedback" id="commands_events_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="commands_events_opt_b"></li><li data-component="feedback" id="commands_events_opt_b"></li>
+            
+            <li data-component="answer"  id="commands_events_opt_c"></li><li data-component="feedback" id="commands_events_opt_c"></li>
+            
+            <li data-component="answer"  id="commands_events_opt_d"></li><li data-component="feedback" id="commands_events_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-3">
+<h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="commands_control">
+            <p>Q-42: Which of the blocks belong to the <em>Control</em> group of commands?
+(Select all correct answers)</p>
+<a class="reference internal image-reference" href="_images/q3_3.png"><img alt="_images/q3_3.png" class="align-center" src="_images/q3_3.png" style="width: 505px;" /></a>
+
+            <li data-component="answer" data-correct id="commands_control_opt_a"></li><li data-component="feedback" id="commands_control_opt_a"></li>
+            
+            <li data-component="answer"  id="commands_control_opt_b"></li><li data-component="feedback" id="commands_control_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="commands_control_opt_c"></li><li data-component="feedback" id="commands_control_opt_c"></li>
+            
+            <li data-component="answer"  id="commands_control_opt_d"></li><li data-component="feedback" id="commands_control_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-4">
+<h3>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="blocks2">
+            <p>Q-43: Can one script have multiple hat blocks?</p>
+
+            <li data-component="answer"  id="blocks2_opt_a">yes</li><li data-component="feedback" id="blocks2_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="blocks2_opt_b">no</li><li data-component="feedback" id="blocks2_opt_b">Correct.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-5">
+<h3>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="blocks3">
+            <p>Q-44: What do we call the blocks which have a notch at the top and a bump on the bottom?</p>
+
+            <li data-component="answer"  id="blocks3_opt_a">reporter blocks</li><li data-component="feedback" id="blocks3_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="blocks3_opt_b">stack blocks</li><li data-component="feedback" id="blocks3_opt_b">Correct.</li>
+            
+            <li data-component="answer"  id="blocks3_opt_c">hat blocks</li><li data-component="feedback" id="blocks3_opt_c"></li>
+            
+            <li data-component="answer"  id="blocks3_opt_d">cap blocks</li><li data-component="feedback" id="blocks3_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-6">
+<h3>Question 6<a class="headerlink" href="#question-6" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="blocks4">
+            <p>Q-45: What do we call blocks that hold the values and cannot stand independently in a script, but they have to be inserted into the input fields of other blocks?</p>
+
+            <li data-component="answer" data-correct id="blocks4_opt_a">reporter blocks</li><li data-component="feedback" id="blocks4_opt_a">Correct.</li>
+            
+            <li data-component="answer"  id="blocks4_opt_b">stack blocks</li><li data-component="feedback" id="blocks4_opt_b"></li>
+            
+            <li data-component="answer"  id="blocks4_opt_c">hat blocks</li><li data-component="feedback" id="blocks4_opt_c"></li>
+            
+            <li data-component="answer"  id="blocks4_opt_d">C-blocks</li><li data-component="feedback" id="blocks4_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-7">
+<h3>Question 7<a class="headerlink" href="#question-7" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="groups_commands">
+    <span data-component="question">By dragging the rectangles, pair the blocks with their role in Scratch.</span>
+	<span data-component=feedback>Try again</span>
+
+    <li data-component="draggable" id="groups_commands_drag1">hat</li>
+    <li data-component="dropzone" for="groups_commands_drag1">define WHEN the script will run</li>
+
+    <li data-component="draggable" id="groups_commands_drag2">reporters</li>
+    <li data-component="dropzone" for="groups_commands_drag2">hold values</li>
+
+    <li data-component="draggable" id="groups_commands_drag3">C-blocks</li>
+    <li data-component="dropzone" for="groups_commands_drag3">receive the script as input</li>
+
+    <li data-component="draggable" id="groups_commands_drag4">stack blocks</li>
+    <li data-component="dropzone" for="groups_commands_drag4">define WHAT should be done</li>
+</ul></div></div>
+<div class="section" id="question-8">
+<h3>Question 8<a class="headerlink" href="#question-8" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="аi01">
+            <p>Q-46: Do the expressions <img alt="q3_8a" src="_images/q3_8a.png" /> and <img alt="q3_8b" src="_images/q3_8b.png" /> have the same value?</p>
+
+            <li data-component="answer"  id="аi01_opt_a">yes</li><li data-component="feedback" id="аi01_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="аi01_opt_b">no</li><li data-component="feedback" id="аi01_opt_b">Correct.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-9">
+<h3>Question 9<a class="headerlink" href="#question-9" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="аi02">
+            <p>Q-47: Which of the expressions <img alt="q3_9a" src="_images/q3_9a.png" /> and <img alt="q3_9b" src="_images/q3_9b.png" /> has a negative value?</p>
+
+            <li data-component="answer"  id="аi02_opt_a">none</li><li data-component="feedback" id="аi02_opt_a">False. The second has the value 10/(-1)=-10</li>
+            
+            <li data-component="answer"  id="аi02_opt_b">the first</li><li data-component="feedback" id="аi02_opt_b">False. The first has the value 5-3=2</li>
+            
+            <li data-component="answer" data-correct id="аi02_opt_c">the second</li><li data-component="feedback" id="аi02_opt_c">Correct.</li>
+            
+            <li data-component="answer"  id="аi02_opt_d">both</li><li data-component="feedback" id="аi02_opt_d">False. The first has the value 2.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-10">
+<h3>Question 10<a class="headerlink" href="#question-10" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+        <div class="course-box course-box-question course-content">
+        <div data-component="fillintheblank" id="ai03">
+            <p>What is the value of the expression <img alt="q3_10" src="_images/q3_10.png" /> ? <input type="text"></p>
+
+        <script type="application/json">
+            [[{"number": [19, 19], "feedback": "<p>Correct.</p>\n"}, {"regex": "^ *x *$", "regexFlags": "", "feedback": "<p>False. (7+(8*2))-4 = (7+16)-4 = 23-4 = 19</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </div>
+<div class="section" id="question-11">
+<h3>Question 11<a class="headerlink" href="#question-11" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="ai04">
+            <p>Q-48: What is the value of the expression <img alt="q3_11" src="_images/q3_11.png" />?</p>
+
+            <li data-component="answer"  id="ai04_opt_a">45</li><li data-component="feedback" id="ai04_opt_a">False. 5+(2*(7-4)) = 5+2*3 = 5+6 = 11</li>
+            
+            <li data-component="answer" data-correct id="ai04_opt_b">11</li><li data-component="feedback" id="ai04_opt_b">Correct.</li>
+            
+            <li data-component="answer"  id="ai04_opt_c">15</li><li data-component="feedback" id="ai04_opt_c">False. 5+(2*(7-4)) = 5+2*3 = 5+6 = 11</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-12">
+<h3>Question 12<a class="headerlink" href="#question-12" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="ai05">
+            <p>Q-49: What is the value of the expression <img alt="q3_12" src="_images/q3_12.png" />?</p>
+
+            <li data-component="answer"  id="ai05_opt_a">3</li><li data-component="feedback" id="ai05_opt_a">False. ((2+1)*(9-5))/2 = 3*4/2 = 6</li>
+            
+            <li data-component="answer"  id="ai05_opt_b">11</li><li data-component="feedback" id="ai05_opt_b">False. ((2+1)*(9-5))/2 = 3*4/2 = 6</li>
+            
+            <li data-component="answer" data-correct id="ai05_opt_c">6</li><li data-component="feedback" id="ai05_opt_c">Correct.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+<div class="section" id="try-try-it">
+<h2><img alt="try" src="_images/try.png" /> Try it!<a class="headerlink" href="#try-try-it" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-1-enlargement">
+<h3>Exercise 1 - Enlargement<a class="headerlink" href="#exercise-1-enlargement" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Create a project in which the sprite will get bigger and smaller on the stage. The <em>up arrow</em> key should make it bigger, and the <em>down arrow</em> should make it smaller. Make it so that when the green flag is clicked, the sprite goes back to its normal size.</p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="exercise 3_1"   data-showtitle="Show the Instruction" data-hidetitle="Hide the Instruction">
+    <p><strong>Instruction:</strong></p>
+<p>The following scripts should be added to the sprite: <img alt="ex3_1" src="_images/ex3_1.png" /></p>
+
+    </div>
+    </div>
+<hr class="docutils" />
+<div class="section" id="exercise-2-turning">
+<h3>Exercise 2 - Turning<a class="headerlink" href="#exercise-2-turning" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>To the cat sprite add two more sprites from the sprite library: the girl <em>Avery</em> and the boy <em>Devin</em>. Place the sprite to the left, and the boy sprite to the right in relation to the cat. Create a project which will allow the cat sprite to turn left in the direction of the girl, and right in the direction of the boy. Turning to the left should be controlled with the <em>left arrow</em> key, and turning to the right with the <em>right arrow</em> key. Make sure that the cat is not upside down when it turns to the left.</p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="exercise 3_2"   data-showtitle="Show the Instruction" data-hidetitle="Hide the Instruction">
+    <p><strong>Instruction:</strong></p>
+<p>The following scripts should be added to the cat sprite: <img alt="ex3_2" src="_images/ex3_2.png" /></p>
+
+    </div>
+    </div>
+<hr class="docutils" />
+<div class="section" id="exercise-3-changing-the-color-of-the-backdrop">
+<h3>Exercise 3 - Changing the Color of the Backdrop<a class="headerlink" href="#exercise-3-changing-the-color-of-the-backdrop" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Create a project which allows the color of the stage to change every time you click on it. Use the <em>color</em> effect, and make sure that clicking on the green flag removes graphic effects.</p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="exercise 3_3"   data-showtitle="Show the Instruction" data-hidetitle="Hide the Instruction">
+    <p><strong>Instruction:</strong></p>
+<p>The following scripts should be added to the stage: <img alt="ex3_3" src="_images/ex3_3.png" /></p>
+
+    </div>
+    </div>
+<hr class="docutils" />
+<div class="section" id="exercise-4-coding-the-arithmetic-expressions-with-parentheses-1">
+<h3>Exercise 4 - Coding the Arithmetic Expressions with Parentheses (1)<a class="headerlink" href="#exercise-4-coding-the-arithmetic-expressions-with-parentheses-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Create an arithmetic expression in Scratch which corresponds to the following mathematical expression: (5*(5+4))-(2*(2+3)). By inserting the appropriate reporter block into the input field of the <code class="docutils literal notranslate"><span class="pre">say</span></code> block check that you are getting the correct value: (5*(5+4))-(2*(2+3)) = 5*9-2*5 = 45-10 = 35</p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="exercise 3_4"   data-showtitle="Show the Answer" data-hidetitle="Hide the Answer">
+    <p><strong>Answer:</strong></p>
+<p><img alt="ex3_4" src="_images/ex3_4.png" /></p>
+
+    </div>
+    </div>
+<hr class="docutils" />
+<div class="section" id="exercise-5-coding-the-arithmetic-expressions-with-parentheses-2">
+<h3>Exercise 5 - Coding the Arithmetic Expressions with Parentheses (2)<a class="headerlink" href="#exercise-5-coding-the-arithmetic-expressions-with-parentheses-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Create an arithmetic expression in Scratch which corresponds to the following mathematical expression:  (8/(4-2))*(8-(6/2)) By inserting the appropriate reporter block into the input field of the <code class="docutils literal notranslate"><span class="pre">say</span></code> block check that you are getting the correct value:  (8/(4-2))*(8-(6/2)) = 8/2*(8-3) = 4*5 = 20.</p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="exercise 3_5"   data-showtitle="Show the Answer" data-hidetitle="Hide the Answer">
+    <p><strong>Answer:</strong></p>
+<p><img alt="ex3_5" src="_images/ex3_5.png" /></p>
+
+    </div>
+    </div>
+</div>
+<div class="section" id="bug-debug-it">
+<h2><img alt="bug" src="_images/bug.png" /> Debug it!<a class="headerlink" href="#bug-debug-it" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bug-1">
+<h3>Bug 1<a class="headerlink" href="#bug-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Question</dt>
+<dd class="field-odd"><p>Is the following conversation synchronized correctly?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug3_1.png"><img alt="_images/bug3_1.png" class="align-center" src="_images/bug3_1.png" style="width: 650px;" /></a>
+
+    <div data-component="reveal" id="bug3_1"   data-showtitle="Show the Answer" data-hidetitle="Hide the Answer">
+    <p><strong>Answer:</strong></p>
+<p>The timing is not set appropriately. The commands <code class="docutils literal notranslate"><span class="pre">wait</span></code> and <code class="docutils literal notranslate"><span class="pre">say</span></code> should have the same amount of seconds in the input fields for the conversation to be appropriately synchronized.</p>
+
+    </div>
+    </div>
+<div class="section" id="bug-2">
+<h3>Bug 2<a class="headerlink" href="#bug-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Question</dt>
+<dd class="field-odd"><p>The pupil likes to do everything according to the rules and therefore wants to add the stop command to each program. So he/she added the <img alt="stop" src="_images/stop.png" /> block to the end of the script in the Mathematician project. However, the text of the last <img alt="say" src="_images/say.png" /> block was not visible at all. How can the pupil correct this bug, and still have the stop command at the end?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug3_2.png"><img alt="_images/bug3_2.png" class="align-center" src="_images/bug3_2.png" style="width: 430px;" /></a>
+
+    <div data-component="reveal" id="bug3_2"   data-showtitle="Show the Answer" data-hidetitle="Hide the Answer">
+    <p><strong>Answer:</strong></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">say</span> <span class="pre">The</span> <span class="pre">result</span> <span class="pre">is</span> <span class="pre">37</span></code> command is instantly executed and the <code class="docutils literal notranslate"><span class="pre">stop</span> <span class="pre">all</span></code> command runs immediately after it, which is why we are practically unable to see the effect of the <code class="docutils literal notranslate"><span class="pre">say</span></code> block. Therefore, this block should be replaced with the <code class="docutils literal notranslate"><span class="pre">say__for__seconds</span></code> block where the text should, for example, be visible for 5 second.</p>
+
+    </div>
+    </div>
+<div class="section" id="bug-3">
+<h3>Bug 3<a class="headerlink" href="#bug-3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Question</dt>
+<dd class="field-odd"><p>The pupil wants the sprite to rotate when he presses the space key. But this is not happening. Where is the bug?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug3_3.png"><img alt="_images/bug3_3.png" class="align-center" src="_images/bug3_3.png" style="width: 180px;" /></a>
+
+    <div data-component="reveal" id="bug3_3"   data-showtitle="Show the Answer" data-hidetitle="Hide the Answer">
+    <p><strong>Answer:</strong></p>
+<p>The sprite is rotating, but it happens too quickly, at the speed with which the computer executes commands, so the human eye is not able to register the movement. If you want to see when the sprite rotates you need to put a wait command between the <code class="docutils literal notranslate"><span class="pre">turn</span> <span class="pre">right</span></code> commands. This is haw we will be able to see the sprite turn.</p>
+
+    </div>
+    </div>
+</div>
+<div class="section" id="book-summary">
+<h2><img alt="book" src="_images/book.png" /> Summary<a class="headerlink" href="#book-summary" title="Permalink to this headline">¶</a></h2>
+<p>In this lesson we got to know the groups and the shapes of blocks from the block palette, which are used to give programming language commands in Scratch. Scratch’s visual vocabulary contains more than 100 blocks divided into 10 groups. The visual grammar of Scratch is realized through the specific shape the blocks have, which doesn’t allow them to connect if their functions are not compatible. Independent blocks are connected in such a way that they form scripts, which define the behavior of corresponding objects, and function blocks set the required values.</p>
+<p><strong>Scratch projects</strong>: <a class="reference external" href="https://scratch.mit.edu/studios/25119441/">3Studio</a></p>
+<p><strong>New concepts</strong>:  events, actions, arithmetic operators, random numbers, linear structure of the script.</p>
+<p><strong>Scratch commands</strong>: <img alt="events_blocks" src="_images/events.png" /> - <img alt="clicked_sprite" src="_images/clicked_sprite.png" />, <img alt="clicked_stage" src="_images/clicked_stage.png" />; <img alt="control_blocks" src="_images/control.png" /> - <img alt="wait_sec" src="_images/wait_sec.png" />, <img alt="stop" src="_images/stop.png" />;</p>
+<p><img alt="looks_blocks" src="_images/looks.png" /> - <img alt="think_sec" src="_images/think_sec.png" />, <img alt="next_costume" src="_images/next_costume.png" />, <img alt="change_effect" src="_images/change_effect.png" />, <img alt="clear_effects" src="_images/clear_effects.png" />, <img alt="set_size" src="_images/set_size.png" />, <img alt="change_size" src="_images/change_size.png" />;</p>
+<p><img alt="operator_blocks" src="_images/operators.png" /> - <img alt="plus" src="_images/plus.png" />, <img alt="minus" src="_images/minus.png" />, <img alt="multiply" src="_images/multiply.png" />, <img alt="divide" src="_images/divide.png" />, <img alt="pick_random" src="_images/pick_random.png" />; <img alt="variables_blocks" src="_images/variables.png" /> - <img alt="*" src="_images/asterix.png" /> <img alt="set_var" src="_images/set_var.png" />.</p>
+<p>Note. Blocks marked with the <img alt="*" src="_images/asterix.png" /> sign will be discussed in the lessons that follow.</p>
+</div>
+<div class="section" id="project-create-a-projects">
+<h2><img alt="project" src="_images/project.png" /> Create a projects<a class="headerlink" href="#project-create-a-projects" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="project-1-genius">
+<h3>Project 1 - “Genius”<a class="headerlink" href="#project-1-genius" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>Create this project based on the example <em>Mathematician</em>.</p>
+<p>Start a new project, which you will call <em>Genius</em>. Select the main sprite form the sprite library, and the backdrop from the backdrop library. The sprite should give the following tasks.</p>
+<ol class="arabic simple">
+<li><p>“Think of any three-digit number.”</p></li>
+<li><p>“Arrange the digits from the highest to the lowest - that will be the first number.”</p></li>
+<li><p>“Arrange the digits from the lowest to the highest - that will be the second number.”</p></li>
+<li><p>“Subtract the second number from the first number.”</p></li>
+<li><p>“Remember the result, and than flip its digits.”</p></li>
+<li><p>“This new number add to the result you previously remembered.”</p></li>
+<li><p>“The number you got is 1089.”</p></li>
+</ol>
+</div>
+<div class="section" id="project-2-chocolate-cake">
+<h3>Project 2 - “Chocolate Cake”<a class="headerlink" href="#project-2-chocolate-cake" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>Start a new project, which you will call <em>Chocolate Cake</em>. This should be an animation where a baker explains a recipe (algorithm) for making chocolate cake.</p>
+<p>For this animation you will need the following sprites: baker, eggs, flour, sugar, chocolate, bowl, mixer,an oven, cakes. Find the right images on your computer or on the Internet, and and customize them to fit your project (clear the background, make them larger or smaller…).</p>
+<p>Ensure the synchronization of the scripts by adding the <code class="docutils literal notranslate"><span class="pre">wait</span></code> command to all objects and setting the appropriate time. The only sprite that needs to be on the stage the whole time is the baker sprite. He is reading the recipe (algorithm) and determines when other sprites will appear or disappear.</p>
+<ol class="arabic simple">
+<li><p>The baker is alone on the stage. He says: “Here is the ALGORITHM for making a chocolate cake!” (2 seconds)</p></li>
+<li><p>The baker says the following: “Take your eggs, flour, sugar and chocolate.” At that moment eggs, flour, sugar and chocolate should appear on the stage. This scene should last 2 seconds.</p></li>
+<li><p>The baker says the following: “Put everything in a bowl and combine with the mixer.” At that moment eggs, flour, sugar and chocolate disappear from the stage, and the bowl and the mixer appear. This scene should last 2 seconds.</p></li>
+<li><p>The baker says the following: “Put the bowl into the heated oven.” At that moment the bowl and the mixer disappear from the stage, and the oven appears. This scene should last 2 seconds.</p></li>
+<li><p>The baker says the following: “Bake the cake for 30 minutes.” Nothing changes on the stage. This scene should last 2 seconds.</p></li>
+<li><p>The baker says the following: “Serve the cake.” At that moment the oven disappears from the stage, and the cake appears. This scene should last 2 seconds.</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Tell Me Where To Go - Coordinates And Direction' data-toggle="tooltip"><a href="Scratch3 Coordinates_eng.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Let’s Draw - Turtle Graphics' data-toggle="tooltip"><a href="Scratch3 Graphics_eng.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Tell Me Where To Go - Coordinates And Direction' data-toggle="tooltip"><a href="Scratch3 Coordinates_eng.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Let’s Draw - Turtle Graphics' data-toggle="tooltip"><a href="Scratch3 Graphics_eng.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

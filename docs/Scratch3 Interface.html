@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Среда за програмиране на Скрач &#8212; Block-based programming in Scratch - practice lessons</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Кажете ми къде да отида - координати и посока" href="Scratch3 Coordinates.html" />
+    <link rel="prev" title="Блок-базирано програмиране в Скрач - Практически уроци" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'Scratch_eng';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'Scratch_eng';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Block-based programming in Scratch - practice lessons</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="id1">
+<h1>Среда за програмиране на Скрач<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="intro1" src="_images/intro1.png" /></p>
+
+    </p></div></div>
+<p>Искате ли да създадете своя собствена компютърна игра, анимирана история, инструкция или презентация? Скрач е език за програмиране, който ви позволява да създавате всички тези неща и не само!</p>
+<p>За разлика от по-голямата част от често срещаните езици за програмиране, Скрач е визуален език за програмиране - вместо да пишете команди чрез клавиатурата, програмите се създават чрез свързване на цветно кодирани блокове, които представляват различни команди, нещо като създаване на различни обекти чрез използване на LEGO тухли.</p>
+<p>В Скрач се създават проекти. Първата стъпка в създаването на проект е добавянето на спрайтове, които ще участват в него. Различни външност, звуци и поведение могат да бъдат прикрепени към всички спрайтове. Поведението на спрайт е описано от сценария. Проектът съдържа един или повече сценария; всеки е свързан със спрайт или сцена - мястото, където се осъществява проектът.</p>
+<p>За да напишете програма в Скрач, първо е необходимо да се запознаете със средата, в която се създават програмите или интерфейса му.</p>
+<div class="topic">
+<p class="topic-title">Интерфейс за програмиране на Скрач.
+Следващата фигура показва интерфейса на езика за програмиране Скрач.</p>
+<a class="reference internal image-reference" href="_images/fig1_1.png"><img alt="_images/fig1_1.png" class="align-center" src="_images/fig1_1.png" style="width: 800px;" /></a>
+</div>
+<p>Първо ще се запознаем с  главните функции на съставните му части, а в следващите уроци ще се запознаем с други компоненти на средата.</p>
+<p><strong>Stage / Сцена</strong> е мястото, където вашите истории, игри и анимации ще оживеят. Самата сцена е неподвижна, но върху нея има спрайтове, които могат да се движат и взаимодействат помежду си.</p>
+<p><strong>Блоковата палитра</strong> е пространството, в което се съхраняват всички налични команди на езика за програмиране Скрач. Нарича се “палитра”, защото изглежда като палитра, която художник използва, докато рисува. Въпреки това, за разлика от художника, програмиста създава живи снимки с обекти, които си взаимодействат помежду си.</p>
+<p><strong>Зоната на сценариите (scripts)</strong> е място, където се създават сценариите. За да направите сценарий, трябва да плъзнете блокове от палитрата към зоната на сценариите и да ги свържете заедно.</p>
+<p><strong>Списъкът на спрайтовете</strong> показва имена и миниатюри на всички спрайтове във вашия проект.</p>
+<p><strong>Лентата с менюта</strong> ви позволява да задавате команди за управление на проекти и да коригирате самата среда.</p>
+<div class="topic">
+<p class="topic-title">Моята първа програма
+Дори и най-дългите пътувания започват с една стъпка. Първата стъпка в изучаването на език за програмиране би била да напишете програма, която да изпише на екрана думите „Здравей свят“. Така ще започнем да усвояваме Скрач.</p>
+<p>Всеки път, когато Скрач е активиран, <strong>сцената</strong> се създава автоматично и се състои от бял правоъгълник с котка спрайт в него.</p>
+<p>Сцената и спрайтовете са <strong>обекти</strong>, чието поведение е програмирано от команди Скрач. Ние изграждаме сценариите, които описват поведението на обектите, като използваме блокове, които съответстват на езиковите команди. Всеки обект има свое собствено поведение, дори неподвижната сцена, която например може да промени фона му.</p>
+<p>Сцената и спрайтовете могат да бъдат свързани с графики (картини - рисунки, снимки) и <strong>звукови</strong> файлове в допълнение към сценариите. Външният вид на спрайта се нарича <strong>костюм</strong>, а видът на сцената - <strong>фон</strong>.</p>
+</div>
+<p><strong>Списъкът Спрайт</strong> показва миниатюри на всички спрайтове, участващи в проекта. Името на всеки спрайт е написано под миниатюрата.</p>
+<p>Можете да преглеждате и променяте текущата спрайт информация в прозореца над Списъка на спрайтове.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/fig1_2.png"><img alt="_images/fig1_2.png" class="align-center" src="_images/fig1_2.png" style="width: 650px;" /></a>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<ol class="arabic simple">
+<li><p>Името (The Name) на спрайт може да бъде променено чрез въвеждане на ново име в полето за име на спрайт.</p></li>
+<li><p>Позицията (The Position) на спрайта на сцената се определя от координатите му x и y.</p></li>
+<li><p>Дали спрайтът е видим или скрит на сцената, зависи от това какво е поставено в квадратчето Покажи.</p></li>
+<li><p>Размерът (The Size) на спрайт се изразява като процент от първоначалния размер. Числото 100 показва, че Спрайт е нормалния си размер.</p></li>
+<li><p>Посоката (The Direction) указва посоката, в която ще се движи Спрайт. Бялата стрелка в синия кръг показва посоката на спрайта. Можете да промените посоката, като завъртите стрелката или напишете съответното число в полето за посока (0: нагоре, 90: дясно, 180: надолу, -90: наляво). rot_style указва стила на въртене, който може да бъде: наоколо, вляво-надясно или не върти.</p></li>
+</ol>
+
+    </p></div></div>
+<p>За да създадете сценарий, трябва да плъзнете съответните команди от палитрата на команди към зоната на сценариите на активния обект и да ги свържете.</p>
+<p><strong>Активен обект</strong> - спрайт или сцена, се разпознава по факта, че има синя рамка около неговата миниатюра в списъка Спрайт. Всичко, което създаваме: сценарии, които описват поведението, костюми, които описват външния вид, звуци, които ще бъдат чути, когато стартираме нашия проект, е свързано с обекта, който е активен в момента на създаването.</p>
+<p>Сценариите се създават чрез кликване на блокове заедно. Кликването някъде в серия от блокове изпълнява пълния сценарий, който се изпълнява отгоре надолу.</p>
+</div></blockquote>
+<div class="section" id="study">
+<h2><img alt="study" src="_images/study.png" /> Изучете следните примери<a class="headerlink" href="#study" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>Пример 1 - Проектът „Здравей свят“<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Най-простият възможен сценарий ще бъде добавен към котката, запазена марка на Скрач. Състои се от една единствена команда - блок, който позволява на спрайт да казва Здравей свят, тоест текстът ще се появи в речев балон до котката. Ето как става това:</p>
+<p><img alt="1" src="_images/1.png" /> Кликнете върху групата на Външност в блоковете. Ще се появи група от лилави блокове, предназначени за приписване на визуални ефекти на спрайтове.</p>
+<p><img alt="2" src="_images/2.png" /> Завлечете <img alt="say_sec" src="_images/say_sec.png" /> към зоната на сценариите.</p>
+<p><img alt="3" src="_images/3.png" /> След това вместо текста <em>Здравей</em>, въведете <em>Здравей свят</em> и кликнете върху модифицирания блок.</p>
+<a class="reference internal image-reference" href="_images/fig1_3.png"><img alt="_images/fig1_3.png" class="align-center" src="_images/fig1_3.png" style="width: 740px;" /></a>
+<p>Балонът с текста <em>Здравей свят</em> ще остане на сцената до котката за 2 секунди. Както виждате, това е доста лесно.</p>
+<p>Сега ще добавим още няколко <img alt="say_sec" src="_images/say_sec.png" />, за да накараме спрайтът да каже още няколко изречения.</p>
+<p>Ще покажем тук два различни начина да добавите блок, който вече съществува в зоната на сценариите.</p>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>Като повтаряме стъпките, които вече сме направили: още веднъж плъзнете друг <img alt="say_sec" src="_images/say_sec.png" /> от палитрата на блоковете и вместо текста <em>Здравей, аз съм котка</em>.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>Кликнете с десния бутон върху блока в зоната на сценариите, за да отворите менюто за бърз достъп и изберете <em>Duplicate</em> от него. След това напишете желания текст в копието на блока, в нашия пример – <em>Искам да говорим</em>. По този начин можете да работите по-бързо, тъй като можете да копирате няколко блока, които са били свързани преди това, само с един ход.</p></li>
+</ol>
+</li>
+</ul>
+<a class="reference internal image-reference" href="_images/fig1_4.png"><img alt="_images/fig1_4.png" class="align-center" src="_images/fig1_4.png" style="width: 740px;" /></a>
+<p>За да накарате блоковете да се изпълняват автоматично един след друг, трябва да ги поставите заедно в стек. Правим това чрез плъзгане на блокове. Когато блоковете се доближат един до друг, около блока по-горе се появява сянка, което означава, че блоковете ще бъдат свързани. Когато свържем и трите блока в стек и след това кликнем два пъти върху тях, спрайт ще каже и трите изречения едно след друго.</p>
+<p><strong>Управление на проекта</strong></p>
+<p>Забелязахте, че блокът, който сте използвали, има прорез в горната част и вдлъбнатина. Блок, който има тази форма, се нарича <strong>стек блок</strong>. По-голямата част от командите Скрач са дадени на стековите блокове. Първият блок обаче, който показва кое събитие ще задейства сценария, не е необходимо да има прорез в горната част, тъй като няма блокове над него. Тези блокове се наричат <strong>блокове шапки</strong> и повечето от тях могат да бъдат намерени в групата <em>Събития (Events)</em>. Кликнете върху групата Събития в палитрата с блокове и плъзнете блока <img alt="clicked_flag" src="_images/clicked_flag.png" /> към зоната на сценариите. След това поставете този блок върху предварително оформения стек и вашият проект е готов. За да го стартирате, кликнете върху <img alt="g_flag" src="_images/g_flag.png" /> над горния ляв ъгъл на сцената.</p>
+<p><strong>Запазване на проекта</strong></p>
+<p>Ето как можете да запазите проекта на вашия компютър:</p>
+<p><img alt="1" src="_images/1.png" />     Кликнете върху <em>File</em> в лентата с менюта.</p>
+<p><img alt="2" src="_images/2.png" />     Изберете опцията <em>Save to your computer</em>.</p>
+<p><img alt="3" src="_images/3.png" />     В отворения диалогов прозорец изберете папка и въведете името, под което ще запазите проекта си, след което кликнете върху бутона <em>Save</em>.</p>
+<p><strong>Надграждане на проекта</strong></p>
+<p>Вместо да показва балон с текста в него, котката всъщност може да каже това, което е написано. Можете да го направите, като изберете блока <img alt="play_until" src="_images/play_until.png" /> от групата <em>Звуци (Sound)</em>, и след това запишете в звуковия редактор изречението, което искате да каже котката. След като направите това, изберете записаният текст вместо мяу от списъка на този блок.</p>
+<p>В тази версия на Скрач обаче можете да направите повече от това. Сред разширенията има група <em>Text-to-Speech</em>, която позволява на спрайтите да започнат да говорят наистина. Можете да направите това само ако сте свързани с интернет, защото той използва <em>Amazon Web Services</em>.</p>
+</div>
+</div>
+<div class="section" id="ask">
+<h2><img alt="ask" src="_images/ask.png" /> Разбра ли?<a class="headerlink" href="#ask" title="Permalink to this headline">¶</a></h2>
+<p>Объркани ли сте как можете да отговорите на въпросите, които все още не са обяснени ? Просто отворете Скрач и опитайте!</p>
+<div class="section" id="question-1">
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="interface1">
+            <p>Q-33: Какво е името на всички прозорци и икони, които се виждат, когато отворите Скрач?</p>
+
+            <li data-component="answer"  id="interface1_opt_a">сценарий</li><li data-component="feedback" id="interface1_opt_a"></li>
+            
+            <li data-component="answer"  id="interface1_opt_b">обект</li><li data-component="feedback" id="interface1_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="interface1_opt_c">интефейс</li><li data-component="feedback" id="interface1_opt_c">Вярно.</li>
+            
+            <li data-component="answer"  id="interface1_opt_d">код</li><li data-component="feedback" id="interface1_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-2">
+<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>Някои части на интерфейса Скрач са маркирани с числа от 1 до 5.</p>
+<a class="reference internal image-reference" href="_images/q1_2.png"><img alt="_images/q1_2.png" class="align-center" src="_images/q1_2.png" style="width: 600px;" /></a>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="interface2">
+    <span data-component="question">Q-34: Плъзнете името на всяка част от средата до съответната позиция на изображението.</span>
+	<span data-component=feedback>Try again</span>
+
+    <li data-component="draggable" id="interface2_drag1">stage</li>
+    <li data-component="dropzone" for="interface2_drag1">4</li>
+
+    <li data-component="draggable" id="interface2_drag2">blocks palette</li>
+    <li data-component="dropzone" for="interface2_drag2">2</li>
+
+    <li data-component="draggable" id="interface2_drag3">scripts area</li>
+    <li data-component="dropzone" for="interface2_drag3">3</li>
+
+    <li data-component="draggable" id="interface2_drag4">sprite list</li>
+    <li data-component="dropzone" for="interface2_drag4">5</li>
+
+    <li data-component="draggable" id="interface2_drag5">menu bar</li>
+    <li data-component="dropzone" for="interface2_drag5">1</li>
+</ul></div></div>
+<div class="section" id="question-3">
+<h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="interface3">
+            <p>Q-35: Можете ли да направите проект, който няма сцена?</p>
+
+            <li data-component="answer"  id="interface3_opt_a">да</li><li data-component="feedback" id="interface3_opt_a">Грешно. Проектът трябва да има етап с поне един фон.</li>
+            
+            <li data-component="answer" data-correct id="interface3_opt_b">не</li><li data-component="feedback" id="interface3_opt_b">Вярно.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-4">
+<h3>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="interface4">
+            <p>Q-36: Можете ли да направите проект, който няма спрайтове?</p>
+
+            <li data-component="answer" data-correct id="interface4_opt_a">да</li><li data-component="feedback" id="interface4_opt_a">Вярно.</li>
+            
+            <li data-component="answer"  id="interface4_opt_b">не</li><li data-component="feedback" id="interface4_opt_b">Грешно. Проектът може да има само скриптове, които са свързани със сцената.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-5">
+<h3>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="interface5">
+            <p>Q-37:  Можете ли да създадете сцена или спрайт, без да им зададете външност?</p>
+
+            <li data-component="answer"  id="interface5_opt_a">да</li><li data-component="feedback" id="interface5_opt_a">Грешно.</li>
+            
+            <li data-component="answer" data-correct id="interface5_opt_b">не</li><li data-component="feedback" id="interface5_opt_b">Вярно.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-6">
+<h3>Question 6<a class="headerlink" href="#question-6" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="interface6">
+            <p>Q-38: Трябва ли всеки обект в проекта да има поне един сценарий, свързан с него?</p>
+
+            <li data-component="answer"  id="interface6_opt_a">да</li><li data-component="feedback" id="interface6_opt_a">Грешно.</li>
+            
+            <li data-component="answer" data-correct id="interface6_opt_b">не</li><li data-component="feedback" id="interface6_opt_b">Вярно.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-7">
+<h3>Question 7<a class="headerlink" href="#question-7" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="interface7">
+            <p>Q-39: Позволяват ли Зеленият флаг и Червеният знак за стоп да контролирате изпълнението на сценариите?</p>
+
+            <li data-component="answer" data-correct id="interface7_opt_a">да</li><li data-component="feedback" id="interface7_opt_a">Вярно.</li>
+            
+            <li data-component="answer"  id="interface7_opt_b">не</li><li data-component="feedback" id="interface7_opt_b">Грешно.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-8">
+<h3>Question 8<a class="headerlink" href="#question-8" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="interface8">
+            <p>Q-40: Как се казва мястото, където можем да намерим миниатюри на всички спрайтове, участващи в проекта?</p>
+
+            <li data-component="answer"  id="interface8_opt_a">лента с менюта</li><li data-component="feedback" id="interface8_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="interface8_opt_b">спрайт списък</li><li data-component="feedback" id="interface8_opt_b">True.</li>
+            
+            <li data-component="answer"  id="interface8_opt_c">зона на сценариите</li><li data-component="feedback" id="interface8_opt_c"></li>
+            
+            <li data-component="answer"  id="interface8_opt_d">блокова палитра</li><li data-component="feedback" id="interface8_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-9">
+<h3>Question 9<a class="headerlink" href="#question-9" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="interface9">
+            <p>Q-41: Спрайтът може да има един или повече _______, това му позволява да промени външния си вид по време на изпълнение на проекта.</p>
+
+            <li data-component="answer"  id="interface9_opt_a">външност</li><li data-component="feedback" id="interface9_opt_a"></li>
+            
+            <li data-component="answer"  id="interface9_opt_b">облекло</li><li data-component="feedback" id="interface9_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="interface9_opt_c">костюми</li><li data-component="feedback" id="interface9_opt_c">Вярно.</li>
+            
+            <li data-component="answer"  id="interface9_opt_d">маски</li><li data-component="feedback" id="interface9_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-10">
+<h3>Question 10<a class="headerlink" href="#question-10" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="interface10">
+            <p>Q-42: Какво може да се зададе на сцената и спрайтовете?
+(Изберете всички верни отговори)</p>
+
+            <li data-component="answer"  id="interface10_opt_a">презентации</li><li data-component="feedback" id="interface10_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="interface10_opt_b">скриптове</li><li data-component="feedback" id="interface10_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="interface10_opt_c">графични файлове</li><li data-component="feedback" id="interface10_opt_c"></li>
+            
+            <li data-component="answer" data-correct id="interface10_opt_d">звукови файлове</li><li data-component="feedback" id="interface10_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            <p>Време е да изследвате сами.</p>
+</div>
+</div>
+<div class="section" id="try">
+<h2><img alt="try" src="_images/try.png" /> Опитайте!<a class="headerlink" href="#try" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>Упражнение 1 - <em>Проучване на ръководствата</em><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>С кликване върху Tutorials в Menu Bar (1) ще отворите библиотека с кратки инструкции за създаване на различни проекти в Скрач. Изберете ръководството First Steps (2) и гледайте свързаното видео (3), след това като кликнете върху бели стрелки в зелени кръгове (4), можете да прегледате стъпките за създаване на прости проекти, подобни на нашия „Здравей свят“.</p>
+<a class="reference internal image-reference" href="_images/ex1_1.png"><img alt="_images/ex1_1.png" class="align-center" src="_images/ex1_1.png" style="width: 1000px;" /></a>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id4">
+<h3>Упражнение 2 - Спрайт информация<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="1" src="_images/1.png" /> В информацията на активния спрайт променете посоката на движение на спрайта, така че да се издига нагоре. Какво ще се случи на сцената?</p>
+<p><img alt="2" src="_images/2.png" /> Как ще бъде насочен спрайтът, ако зададете стойност от 45 градуса като посока на движение?</p>
+<p><img alt="3" src="_images/3.png" /> С курсора на мишката преместете спрайта и следвайте какво се случва с координатите в информацията на активния спрайт.</p>
+<p><img alt="4" src="_images/4.png" /> Проверете какво се случва със спрайта, ако опцията за скриване е избрана в полето <em>Show</em>. Как можете да върнете спрайта на сцената?</p>
+<p><img alt="5" src="_images/5.png" /> Променете името на активния спрайт.</p>
+
+    </p></div></div>
+<hr class="docutils" />
+<div class="sidebar">
+<p class="sidebar-title">Изберете си спрайт</p>
+<p>Можете да добавите нов спрайт, като кликнете върху бутона, разположен в долния десен ъгъл на спрайт листа.</p>
+<p><img alt="new_sprite" src="_images/fig1_5.png" /></p>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>Упражнение 3 - Въвеждане на нови спрайтове<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="1" src="_images/1.png" /> Импортирайте нов спрайт от Library Sprite.</p>
+<p>Като кликнете върху бутона Изберете спрайт (Choose a Sprite), ще отворите библиотеката. Сега трябва да кликнете върху спрайта, който харесвате - например спрайтът на балерина.</p>
+<p><img alt="2" src="_images/2.png" /> 2. Начертайте нов спрайт, като използвате вградения редактор на изображения.</p>
+<p>Като кликнете върху опцията Paint, вместо раздела <em>Code</em> ще отворите раздела <em>Costumes</em>. Paint Editor (Редакторът на боя), който можете да използвате, за да нарисувате новия си спрайт, ще се отвори там, където преди това е била зоната на сценариите. Когато приключите, просто кликнете върху раздела <em>Code</em>.</p>
+<p><img alt="3" src="_images/3.png" /> Импортирайте няколко спрайта за изненада от <em>библиотеката</em>.</p>
+<p><img alt="4" src="_images/4.png" /> Импортирайте нов спрайт от файл, като кликнете върху опцията <em>Upload Sprite</em>.</p>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id6">
+<h3>Упражнение 4 - Дублиране и изтриване на спрайтове<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="1" src="_images/1.png" /> Кликнете с десния бутон на мишката върху спрайта в листа, изберете опцията дубликат от менюто за бърз достъп и направете 3 копия на спрайта.</p>
+<p><img alt="2" src="_images/2.png" /> Извадете едно от копията, като изберете <em>изтриване/delete</em> от менюто за бърз достъп.</p>
+<p><img alt="3" src="_images/3.png" /> 3. Въведете цифри 50 и 200 в полетата за размер size boxes, така че едно копие да е половин от размера, а другото копие да е двойно по-голямо от оригинала.</p>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id7">
+<h3>Упражнение 5 - Използване на звук<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p><strong>Внимание</strong> Можете да изпълните това упражнение само ако компютърът ви има опция за аудио запис!</p>
+<p>Разгледайте <em>Ръководството за звук</em> и се опитайте да създадете проект, в който спрайтът да изрече д вашия глас фразата “Здравей свят”. Тъй като това упражнение използва Sound Editor (Звуков редактор), който ще представим по-късно, можете да пропуснете това и да се върнете към него по-късно.</p>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="1" src="_images/1.png" /> Отваряне на Скрач.</p>
+<p><img alt="2" src="_images/2.png" /> Кликнете е върху групата Звуци (Sound group) от команди, разположени в палитрата с блокове. Ще се появи група от светло лилави блокове за звуковите ефекти, които могат да бъдат дадени на спрайтовете.</p>
+<p><img alt="3" src="_images/3.png" /> Плъзнете блока <img alt="play_until" src="_images/play_until.png" /> към зоната за сценариите.</p>
+<p><img alt="4" src="_images/4.png" /> Кликнете върху раздела Звук (Sound). Прозорецът на звуковия редактор ще се отвори.</p>
+<p><img alt="5" src="_images/5.png" /> Кликнете върху Избор на звук (Choose a Sound), след което изберете опцията за запис.</p>
+<p><img alt="6" src="_images/6.png" /> Когато се появи диалоговият прозорец Запис (Record), кликнете върху бутона за запис, след това кажете фразата “Здравей свят” и след това спрете записа.</p>
+<p><img alt="7" src="_images/7.png" /> Слушайте записа и ако ви харесва, кликнете върху Запиши (Save). Друг звук, наречен запис1, ще се появи в списъка на звуците, свързани с котешкия спрайт.</p>
+<p><img alt="8" src="_images/8.png" /> Върнете се в раздела Код (Code) и вместо звуковата мяу изберете запис1. Ако кликнете върху зеления флаг, котката ще каже изречението, което сте записали.</p>
+<p><img alt="9" src="_images/9.png" /> Добавете още два блока <img alt="play_until" src="_images/play_until.png" /> и след това добавете към тях записите от още две изречения, които искате да каже котката.</p>
+<p><img alt="10" src="_images/10.png" /> Кликнете блоковете заедно, за да оформите стек и поставете <img alt="clicked_flag" src="_images/clicked_flag.png" /> блок в горната част. Запазете този проект под името „Здравей свят2“.</p>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="text-to-speech">
+<h3>Упражнение 6 - Използване на разширението <em>Text-to-Speech</em><a class="headerlink" href="#text-to-speech" title="Permalink to this headline">¶</a></h3>
+<p><strong>Предупреждение</strong>  Можете да изпълните това упражнение само ако компютърът ви е свързан с интернет!</p>
+<p>Разгледайте ръководството за създаване на анимации, които говорят, след което се опитайте да създадете проект, в който вашият спрайт ще каже „Здравей свят“ с блока <img alt="speak" src="_images/speak.png" />. Това упражнение използва команди, които ще бъдат разработени по-късно, така че можете да го пропуснете и да се върнете към него по-късно.</p>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="1" src="_images/1.png" /> Отваряне на Скрач.</p>
+<p><img alt="2" src="_images/2.png" /> Кликнете на иконата <img alt="extensions" src="_images/extension.png" />, която се намира на дъното на Block Palette. Блоковете <em>Extension</em> ще се появят.</p>
+<p><img alt="3" src="_images/3.png" /> От блоковете <em>Extensions</em> трябва да изберете <img alt="voices_extension" src="_images/voices.png" />. Три нови блока ще се появят в блоковата палитра. Тези блокове ще позволят спрайтът да казва текста, написан в <img alt="speak" src="_images/speak.png" />, да говори на езика, зададен в блока <img alt="set_language" src="_images/set_language.png" />. Можете също така да зададете типа глас, който ще се използва: женски (сопрано или алт) или мъжки (тенор или бас). Това става с блока <img alt="set_voice" src="_images/set_voice.png" />.</p>
+<p><img alt="4" src="_images/4.png" /> Плъзнете блока <img alt="set_language" src="_images/set_language.png" /> в зоната за сценарии.</p>
+<p><img alt="5" src="_images/5.png" /> Плъзнете блока <img alt="set_voice" src="_images/set_voice.png" /> към зоната на сценариите и изберете гласа на спрайт.</p>
+<p><img alt="6" src="_images/6.png" /> Плъзнете блока <img alt="speak" src="_images/speak.png" /> в зоната на сценариите и въведете “Здравей свят” в полето за въвеждане.</p>
+<p><img alt="7" src="_images/7.png" /> Добавете още два <img alt="speak" src="_images/speak.png" /> блока, след което въведете другите две изречения, изречени от котката.</p>
+<p><img alt="8" src="_images/8.png" /> Кликнете блоковете заедно, за да образувате стек и поставете <img alt="clicked_flag" src="_images/clicked_flag.png" /> в горната част.</p>
+<p><img alt="9" src="_images/9.png" /> Запазете този проект под името „Hello World3“.</p>
+
+    </p></div></div>
+</div>
+</div>
+<div class="section" id="bug">
+<h2><img alt="bug" src="_images/bug.png" /> Отстранете грешките!<a class="headerlink" href="#bug" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id8">
+<h3>Грешка 1<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Ученикът искаше да направи своя собствена версия на проекта <em>“Здравей свят”</em>. В него спрайтът трябва да казва едно изречение след друго: <em>Здравей свят, Казвам се Майк</em>, харесвам програмиране. Той прикрепи спрайта към следния сценарий:</p>
+<a class="reference internal image-reference" href="_images/bug1_1.png"><img alt="_images/bug1_1.png" class="align-center" src="_images/bug1_1.png" style="width: 160px;" /></a>
+<p>Но след като щракна върху зеления флаг, спрайт каза само, че <em>Харесвам програмирането</em>. Каква е грешката?</p>
+</div>
+</div>
+<div class="section" id="book">
+<h2><img alt="book" src="_images/book.png" /> Обобщение<a class="headerlink" href="#book" title="Permalink to this headline">¶</a></h2>
+<p>В първия урок се запознахме с основните части на интерфейса на езика за програмиране на Скрач и създадохме, пуснахме и запазихме първата си програма - проект “Hello World”. Правейки упражнения, показахме как можем да накараме спрайтове да казват изречения, които сме записали сами, като използваме Sound Editor или тези, качени от разширението Text to Speech (само ако компютърът е свързан към интернет).</p>
+<p><strong>Scratch projects</strong>: <a class="reference external" href="https://scratch.mit.edu/studios/25119438/">1Studio</a></p>
+<p><strong>Нови понятия:</strong> интерфейс, проект Скрач, активен обект, спрайтове, костюми, сцена, фон, сценарии, блокове.</p>
+<p><strong>Команди</strong>: <img alt="events_blocks" src="_images/events.png" /> - <img alt="clicked_flag" src="_images/clicked_flag.png" />; <img alt="looks_blocks" src="_images/looks.png" /> - <img alt="say_sec" src="_images/say_sec.png" />,  <img alt="say" src="_images/say.png" />; <img alt="sound_blocks" src="_images/sound.png" /> - <img alt="*" src="_images/asterix.png" />
+<img alt="play_until" src="_images/play_until.png" />; <img alt="voices_extension" src="_images/voices.png" /> -  <img alt="*" src="_images/asterix.png" /> <img alt="set_language" src="_images/set_language.png" />,  <img alt="*" src="_images/asterix.png" /> <img alt="set_voice" src="_images/set_voice.png" />,  <img alt="*" src="_images/asterix.png" /> <img alt="speak" src="_images/speak.png" />.</p>
+<p>Забележка. Инструкциите, отбелязани със знака <img alt="*" src="_images/asterix.png" />, ще бъдат обсъдени в следващите уроци.</p>
+</div>
+<div class="section" id="project-create-a-project">
+<h2><img alt="project" src="_images/project.png" /> Create a project<a class="headerlink" href="#project-create-a-project" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id9">
+<h3>Проект 1 - „За мен“<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>Създайте проект, който ще ни каже нещо за вас. Изберете момче или момиче спрайт от библиотеката и прикачете сценарий, който ще накара спрайтът да изрече следните три изречения: „Моето име е…“, „Аз съм на… години“ и „Моето училище се казва…“. Въведете вашата информация вместо точките.</p>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Блок-базирано програмиране в Скрач - Практически уроци' data-toggle="tooltip"><a href="index.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Кажете ми къде да отида - координати и посока' data-toggle="tooltip"><a href="Scratch3 Coordinates.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Блок-базирано програмиране в Скрач - Практически уроци' data-toggle="tooltip"><a href="index.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Кажете ми къде да отида - координати и посока' data-toggle="tooltip"><a href="Scratch3 Coordinates.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

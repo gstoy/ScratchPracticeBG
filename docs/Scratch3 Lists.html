@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Списъци &#8212; Block-based programming in Scratch - practice lessons</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Низове" href="Scratch3 Strings.html" />
+    <link rel="prev" title="Как да програмирате по-бързо - процедури" href="Scratch3 Procedures.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'Scratch_eng';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'Scratch_eng';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Block-based programming in Scratch - practice lessons</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="id1">
+<h1>Списъци<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="intro9" src="_images/intro9.png" /></p>
+
+    </p></div></div>
+<p>В програмите, които създадохме в предишните уроци, използвахме само прости типове данни - всяка променлива запазваше стойността на една част от данните. Въпреки това често ни се налага да съхраняваме цял набор от данни под едно име, например набор от числа. Ако искаме да съхраняваме телефонни номера на 10 наши приятели, ще трябва да създадем 10 променливи, което не е лесно да се поддържа, така че ще използваме сложен тип данни, който в Scratch се нарича <strong>списък</strong>.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Какво е списък?</strong></p>
+<p>Списък е сложна променлива, която се състои от множество елементи - множество променливи. Това могат да бъдат различни видове данни; в този пример те са низове. Създава се подобно на това как се създават обикновени променливи.</p>
+<ol class="arabic simple">
+<li><p>В групата <em>Променливи</em> кликнете върху бутона <em>Направете списък</em>.</p></li>
+<li><p>Ще се появи диалогов прозорец, където трябва да напишете името на списъка и да потвърдите, като щракнете върху бутона <em>OK</em>.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/fig9_1.png"><img alt="_images/fig9_1.png" class="align-center" src="_images/fig9_1.png" style="width: 575px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>На сцената ще се появи празен монитор на списъка, а дъното на този монитор ще има текущата дължина на списъка, написана върху него, която ще бъде 0.</p></li>
+<li><p>Щракването върху знака “+”, разположен в долния десен ъгъл, ще отвори полето, където можете да въведете първия си елемент, а дължината на списъка ще се увеличи с 1.</p></li>
+<li><p>Първият елемент от списъка трябва да се въведе в празното поле.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/fig9_2.png"><img alt="_images/fig9_2.png" class="align-center" src="_images/fig9_2.png" style="width: 370px;" /></a>
+<p>Чрез повторение на този процес може да се въведе желаният брой елементи от списъка.</p>
+<p>В същото време в палитрата с блокове ще се появи блок, свързан със списъка и 11 други блока, които позволяват списъка и неговите елементи да се използват в програмата.</p>
+<a class="reference internal image-reference" href="_images/fig9_3.png"><img alt="_images/fig9_3.png" class="align-center" src="_images/fig9_3.png" style="width: 420px;" /></a>
+
+    </p></div></div>
+<div class="section" id="study">
+<h2><img alt="study" src="_images/study.png" /> Разучи следните примери!<a class="headerlink" href="#study" title="Permalink to this headline">¶</a></h2>
+<p>В проекта, наречен „Викторина“, има списък с въпроси и списък с верни отговори. Въпроси и отговори могат да бъдат въведени предварително или да бъдат качени от текстова база данни. Програмата задава въпросите на случаен принцип и след това проверява дали отговорът, даден от потребителя, е правилен. Ако отговорът е верен, потребителят ще получи точка, а ако не, програмата ще излъчи верния отговор. В крайна сметка въз основа на броя на правилните отговори, потребителят получава оценка.</p>
+<div class="section" id="id2">
+<h3>Пример 1 - Проект “Викторина”<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>В този пример ще илюстрираме как може да се направи тест по математика. Тестът проверява дали участниците могат да определят най-големия общ делител за две или три числа.
+Въпросите са разположени в списъка <em>Числа</em>, а отговорите в списъка <em>GCD</em> (най-голям общ делител). Ще използваме променливата <strong>k</strong>, за да преминем през списъците, стойността на тази променлива се променя от 1 на 8 (броя на елементите в списъка) и ще съхраняваме броя на правилните отговори в променливата <strong>b</strong>.</p>
+<a class="reference internal image-reference" href="_images/fig9_4.png"><img alt="_images/fig9_4.png" class="align-center" src="_images/fig9_4.png" style="width: 440px;" /></a>
+<p>Сценарият за този проект може да видите по-долу.</p>
+<a class="reference internal image-reference" href="_images/fig9_5.png"><img alt="_images/fig9_5.png" class="align-center" src="_images/fig9_5.png" style="width: 565px;" /></a>
+<p>Следващият проект илюстрира как елементите на списъка могат да бъдат избрани на случаен принцип. Ще използваме репортерския блок, който ще върне стойността на елемента от списъка, чийто пореден номер е написан в съответното поле за въвеждане. По този начин, ако генерираме произволно променливата <em>число</em>, въвеждайки това число в полето за въвеждане на последователен номер, ще получим елемента, който е в тази позиция в списъка. Проектът също така илюстрира как произволно генерираните числа могат да бъдат използвани за излъчване на различни съобщения.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id3">
+<h3>Пример 2 - Проект “Глад”<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>В този проект участват 10 спрайта - гладна котка и 9 вида храна, за която котката фантазира.</p>
+<a class="reference internal image-reference" href="_images/fig9_6.png"><img alt="_images/fig9_6.png" class="align-center" src="_images/fig9_6.png" style="width: 460px;" /></a>
+<p>Котката върви наляво и надясно и “мисли” в продължение на 3 секунди едно от 11 изречения, избрани на случаен принцип, от списъка на изреченията, наречени <em>храна</em>.</p>
+<a class="reference internal image-reference" href="_images/fig9_7.png"><img alt="_images/fig9_7.png" class="align-center" src="_images/fig9_7.png" style="width: 220px;" /></a>
+<p>През времето, когато облакът се вижда на сцената <img alt="think_sec" src="_images/think_sec.png" />, изображението на храната, за която котката мисли, се появява в белия облак, разположен в центъра на сцената.</p>
+<a class="reference internal image-reference" href="_images/fig9_8.png"><img alt="_images/fig9_8.png" class="align-center" src="_images/fig9_8.png" style="width: 960px;" /></a>
+<p>Синхронизирането на появата на мисълта за храната и котката за тази конкретна храна ще бъде постигнато с излъчването на съобщения.</p>
+<p>Променливата <em>число</em>, която се генерира на случаен принцип, се използва както за избор на изречението от списъка <em>храна</em>, така и за генериране на съобщението от „1“ до „11“. Никой не реагира на съобщенията “1” и “11”, докато спрайтове, чиито имена са числа между 2 и 9, ще реагират на съобщенията от “2” до “9”.</p>
+<p>Например мишката, която е спрайт “2”, ще реагира на съобщение “2”, птицата, която е спрайт “3”, ще реагира на съобщение “3” и т.н.</p>
+<a class="reference internal image-reference" href="_images/fig9_9.png"><img alt="_images/fig9_9.png" class="align-center" src="_images/fig9_9.png" style="width: 660px;" /></a>
+<p>Реакцията на всеки спрайт е една и съща: те се появяват за 2 секунди, докато мислещият облак на котката се вижда и след това те се скриват отново. Когато щракнете върху зеления флаг, всички спрайтове (с изключение на котката) отиват в положение (0,110), което е центърът на белия облак, и те се скриват.</p>
+<p>Следващата фигура съдържа всички скриптове, добавени към основния спрайт на този проект.</p>
+<a class="reference internal image-reference" href="_images/fig9_10.png"><img alt="_images/fig9_10.png" class="align-center" src="_images/fig9_10.png" style="width: 385px;" /></a>
+<hr class="docutils" />
+<p>Следващият проект илюстрира как можем да разделим всички обекти на групи от желани, нежелани и неутрални. Записът на желаните обекти се съхранява в един списък, а на нежеланите обекти - в друг. Когато обектът е избран, програмата първо проверява към коя група принадлежи: ако е желателно, ще се получат положителни точки, а ако е нежелателно, ще се получат отрицателни точки; ако е неутрален, броят точки няма да се промени. Например, това може да бъде стратегията, ако правите игра за деца, където те трябва да събират колкото се може повече полезни елементи и да избягват опасни предмети (вижте проектните задачи).</p>
+</div>
+<div class="section" id="id4">
+<h3>Пример 3 - Проект “Храна”<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p><strong>Сценарият на проекта</strong></p>
+<p>Основният спрайт на този проект е момиче на име Зара. По време на почивката в училище тя може да хапне нещо, да пие вода или да вземе подарък. Вие избирате какво ще вземе Зара, като кликнете върху обектите, които се появяват на сцената. Ако изберете храна за угояване - сандвич, чипс или поничка, ще получите отрицателни точки. Ако вместо това изберете плод - портокал, банан или ябълка, ще получите положителни точки. Ако решите да вземете вода или подаръка, точките ще останат непроменени.</p>
+<a class="reference internal image-reference" href="_images/fig9_11.png"><img alt="_images/fig9_11.png" class="align-center" src="_images/fig9_11.png" style="width: 400px;" /></a>
+<p>Имената на артикулите, които печелят положителни точки, са в един списък (в нашия случай „плод“), а тези, които печелят отрицателни точки в другия (в нашия случай „нездравословен“).</p>
+<p><strong>Поведение на спрайтовете</strong></p>
+<p>Всички елементи имат едно и също поведение. Когато щракнете върху зеления флаг, те се появяват на произволно избраната позиция от дясната страна на сцената. Когато потребителят кликне върху тях, той присвоява името им на променливата <em>храна</em>, излъчва съобщението <em>взето</em> и скрива.</p>
+<a class="reference internal image-reference" href="_images/fig9_12.png"><img alt="_images/fig9_12.png" class="align-center" src="_images/fig9_12.png" style="width: 815px;" /></a>
+<p>Сценариите, добавени към Zara, също позволяват на програмата да изчисли броя точки в зависимост от това коя храна е избрана.</p>
+<a class="reference internal image-reference" href="_images/fig9_13.png"><img alt="_images/fig9_13.png" class="align-center" src="_images/fig9_13.png" style="width: 495px;" /></a>
+</div>
+<hr class="docutils" />
+<div class="section" id="clumsy-wizard">
+<h3>Пример 4 - Проект “Clumsy Wizard”<a class="headerlink" href="#clumsy-wizard" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>Основният спрайт на тази игра е Clumsy Wizard. Той може да използва вълшебната си пръчка, за да направи няколко копия на едно и също нещо, но често се обърква и забравя точно колко е обещал, така че прави твърде много предмети или недостатъчно.</p>
+<p>Има и неговият асистент, Wizard Girl, който следи отблизо какво е обещал Clumsy Wizard и колко копия е направил, като му напомня дали е направил грешка.</p>
+<a class="reference internal image-reference" href="_images/fig9_14.png"><img alt="_images/fig9_14.png" class="align-center" src="_images/fig9_14.png" style="width: 600px;" /></a>
+<p><strong>Как тромавият магьосник обещава различни неща</strong></p>
+<p>За да позволим на Clumsy Wizard да обещава да прави различни неща, ние трябва да създадем спрайт с тези неща като негови костюми. Освен това, ние трябва да съставим списък с имената на тези неща. В нашия проект ще създадем спрайт, наречен <em>Creature</em>, който може да се появи в 5 различни костюма.</p>
+<a class="reference internal image-reference" href="_images/fig9_15.png"><img alt="_images/fig9_15.png" class="align-center" src="_images/fig9_15.png" style="width: 630px;" /></a>
+<p>За да може Clumsy Wizard да изрече имената на костюмите, ние въведохме списък, наречен <em>неща</em> и в него въведехме 5 имена на костюми. Число между 1 и 5 се генерира на случаен принцип и тогава Clumsy Wizard казва изречение, в което текстът „Сега ще направя“ се съединява със съответния елемент от този списък. Например, ако се генерира номер 2, тромавият магьосник ще каже „Сега ще направя ябълки“, а ако се генерира номер 4, той ще каже „Сега ще направя пеперуди“.</p>
+<p>Следващата фигура показва поведението на спрайта на съветника, когато потребителят кликне върху него. Първо, стойността на променливата <em>число</em> ще бъде генерирана на случаен принцип от интервала [1,5]. След това съветникът казва, че ще направи един от костюмите на спрайта * Creature <em>, по-точно този, чийто пореден номер в списъка е същият като генерираното число. След това той излъчва съобщението *Show off</em>, на което Wizard Girl ще реагира, като попита Clumsy Wizard колко копия на създанието, което възнамерява да направи, въпросът й ще продължи 2 секунди. Ето защо към магьосника е добавен блок, който му позволява да изчака 2 секунди. След тази пауза съветникът ще генерира стойността на променливата <em>how</em> от интервала [1,10].
+Тъй като размерите на костюма на спрайт <em>Creature</em> са зададени на около 50x50 пиксела, решихме, че максималният брой създания, които могат да бъдат „създадени“ от Clumsy Wizard, трябва да е 10. По този начин всички копия ще бъдат видими на сцената. Clumsy Wizard казва колко копия ще създаде и излъчва съобщението <em>create</em>.</p>
+<a class="reference internal image-reference" href="_images/fig9_16.png"><img alt="_images/fig9_16.png" class="align-center" src="_images/fig9_16.png" style="width: 460px;" /></a>
+<p>Следващата фигура представя сценариите, които описват поведението на Момичето на магьосниците. Тя реагира и на двете съобщения, излъчвани от съветника, и излъчва собствено съобщение <em>скрий</em> 4 секунди след като получи съобщението <em>създай</em>. Съобщението <em>скрий</em> е сигналът за спрайта на съществото да премахне своите клонинги и себе си от сцената.</p>
+<a class="reference internal image-reference" href="_images/fig9_17.png"><img alt="_images/fig9_17.png" class="align-center" src="_images/fig9_17.png" style="width: 490px;" /></a>
+<p>Следващата фигура представя скриптите, които описват поведението на спрайт <em>Creature</em>. Този спрайт реагира на 4 различни събития: щракване върху зеления флаг, излъчване на съобщенията <em>create</em> и <em>скриване</em> и събитието за клониране. Когато щракне върху зеления флаг, съществото се скрива и когато получи съобщението <em>скрий</em>, променя стойността на променливата <em>следващ</em>. Тази променлива, за разлика от глобалните променливи <em>число</em> и <em>как</em>, които могат да бъдат използвани от всички спрайтове, е създадена само за да бъде използвана от спрайта <em>Creature</em>, така че е локална променлива. Основната характеристика на локалните променливи е, че те могат да бъдат използвани само от спрайта, за който са създадени. Други спрайтове могат да видят своите стойности, но не могат да ги променят. Променливата <em>next</em> се използва като спусък. Когато стойността му се промени от 0 (начална стойност, която е зададена в началото на реакцията на съобщението <em>create</em>) до 1, унищожаването на клоновете (копия) започва и спрайтът се скрива.</p>
+<a class="reference internal image-reference" href="_images/fig9_18.png"><img alt="_images/fig9_18.png" class="align-center" src="_images/fig9_18.png" style="width: 170px;" /></a>
+<p><strong>Как Clumsy Wizard показва различния брой копия на спрайтове (клонинги)?</strong></p>
+<p>Още едно нещо, което трябва да обясним, е как Clumsy Wizard е в състояние да показва множество копия на определен спрайт (т.е. на костюми на спрайта <em>Creature</em>). За това той използва <strong>клонирането</strong> на спратите. Вече показахме, че спрайтът (и всички скриптове, добавени към него) може да бъде умножен по време на създаването на програмата. Умножението се извършва чрез избиране на опцията <em>дубликат</em> от менюто за бърз достъп, което получавате, когато щракнете с десния бутон върху спрайта в списъка с спрайтове. В Scratch има и опцията, която позволява спрайтът да се умножава по време на изпълнение на програмата. (Подобно е на списъците, към които елементите могат да се добавят както по време на създаването, така и при стартиране на програмата)</p>
+<p>За да клонираме спрайта и да управляваме поведението на клона, използваме инструкциите <img alt="create_clone" src="_images/create_clone.png" /> и <img alt="when_clone" src="_images/when_clone.png" /> от групата <em>Control</em>. В сценария, описващ поведението на спрайта създание, когато получава съобщение на съветника <em>create</em>, спрайтът се появява в левия край на сцената, след което клоновете му се създават и се показват на сцената. Всеки клон се показва на разстояние 50 стъпки от предишния, така че те застават един до друг в редица. Това се постига с цикъла, който се повтаря <em>how-1</em> брой пъти, който заедно с оригиналния спрайт генерира обещаните копия от спрайт-номера. Тъй като променливата <em>next</em> е локална променлива за спрайт, който се клонира, всеки от нейните клонове има своя собствена стойност на тази променлива и всички клонове са видими на сцената, докато променливата <em>next</em> не получи стойността 1 (когато спрайтът получава съобщението <em>скрий</em>). Това е, когато всеки клон се изтрие, а оригиналният спрайт се скрива.</p>
+<a class="reference internal image-reference" href="_images/fig9_19.png"><img alt="_images/fig9_19.png" class="align-center" src="_images/fig9_19.png" style="width: 430px;" /></a>
+<p><strong>Надграждане на проекта Clumsy Wizard2</strong></p>
+<p>Идеята на тази надстройка е да се подреди така, че съветникът да не направи толкова копия на обекта, колкото обеща. Той прави или твърде много, или недостатъчно. Потребителят трябва да каже колко повече или по-малко обекти е създал магьосника, т.е. детето трябва да се научи да добавя и изважда числа до 10. Ние постигаме това чрез генериране на променливата <em>грешка</em>, чиито стойности могат да бъдат цели числа от интервала [ -3,3]. Разбира се, ако генерираната грешка е 0, съветникът ще създаде точния брой копия, които е обещал, но в други случаи ще е необходимо да се определи колко обекти е създал. Следващата фигура показва някои от случаите, когато съветникът се „обърка“.</p>
+<a class="reference internal image-reference" href="_images/fig9_20.png"><img alt="_images/fig9_20.png" class="align-center" src="_images/fig9_20.png" style="width: 610px;" /></a>
+<p>Следващият сценарий описва поведението на създанието.</p>
+<a class="reference internal image-reference" href="_images/fig9_21.png"><img alt="_images/fig9_21.png" class="align-center" src="_images/fig9_21.png" style="width: 410px;" /></a>
+<p>Сценарият, представен по-долу, описва поведението на Wizard Girl.</p>
+<a class="reference internal image-reference" href="_images/fig9_22.png"><img alt="_images/fig9_22.png" class="align-center" src="_images/fig9_22.png" style="width: 550px;" /></a>
+<p>Запазете този модифициран проект под името <em>Clumsy Wizard2</em>.</p>
+<p>Забележка. Ако проектът се използва за практикуване на добавяне и изваждане с числа до 10, ще бъде полезно да се вмъкне “празен” въпрос <img alt="ask_wait" src="_images/ask_wait.png" /> в скрипта, добавен към съветника за младо момиче, вместо към блока за изчакване <img alt="wait_sec" src="_images/wait_sec.png" />. Само когато детето даде отговора, ще натиснем <em>Enter</em> и ще проверим този отговор.</p>
+</div>
+</div>
+<div class="section" id="ask">
+<h2><img alt="ask" src="_images/ask.png" /> Отговори на следните въпроси<a class="headerlink" href="#ask" title="Permalink to this headline">¶</a></h2>
+<p>За всички следващи въпроси се приема, че първоначално списъкът има следните елементи:</p>
+<a class="reference internal image-reference" href="_images/q9_1.png"><img alt="_images/q9_1.png" class="align-center" src="_images/q9_1.png" style="width: 125px;" /></a>
+<div class="section" id="id5">
+<h3>Въпрос 1<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="lista1">
+            <p>Q-43: Какъв е резултатът от изпълнението на командата <img alt="l1" src="_images/l1.png" />? (Изберете всички верни отговори)</p>
+
+            <li data-component="answer" data-correct id="lista1_opt_a">списъкът ще има един по-малко елемент</li><li data-component="feedback" id="lista1_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="lista1_opt_b">оранжевият елемент е на място номер 1 в списъка</li><li data-component="feedback" id="lista1_opt_b"></li>
+            
+            <li data-component="answer"  id="lista1_opt_c">елементът се премества в края на списъка</li><li data-component="feedback" id="lista1_opt_c"></li>
+            
+            <li data-component="answer"  id="lista1_opt_d">последният елемент от списъка е изваден</li><li data-component="feedback" id="lista1_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id6">
+<h3>Въпрос 2<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="lista2">
+            <p>Q-44: Какъв е резултатът от изпълнението на командата <img alt="l2" src="_images/l2.png" />?</p>
+
+            <li data-component="answer"  id="lista2_opt_a">елементът ще бъде добавен в началото на списъка</li><li data-component="feedback" id="lista2_opt_a">Тази команда добавя в края на списъка.</li>
+            
+            <li data-component="answer" data-correct id="lista2_opt_b">елементът ще бъде добавен в края на списъка</li><li data-component="feedback" id="lista2_opt_b">Правилно.</li>
+            
+            <li data-component="answer"  id="lista2_opt_c">елементът ще бъде добавен при условие, че преди не е бил в списъка</li><li data-component="feedback" id="lista2_opt_c">Не се правят проверки.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id7">
+<h3>Въпрос 3<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="lista3">
+            <p>Q-45: Колко пъти спрайтът ще каже „харесвам плодове“?</p>
+<a class="reference internal image-reference" href="_images/q9_3.png"><img alt="_images/q9_3.png" class="align-center" src="_images/q9_3.png" style="width: 220px;" /></a>
+
+            <li data-component="answer"  id="lista3_opt_a">нула</li><li data-component="feedback" id="lista3_opt_a">Списъкът има 3 елемента.</li>
+            
+            <li data-component="answer"  id="lista3_opt_b">еднократно</li><li data-component="feedback" id="lista3_opt_b">Списъкът има 3 елемента.</li>
+            
+            <li data-component="answer"  id="lista3_opt_c">двукратно</li><li data-component="feedback" id="lista3_opt_c">Списъкът има 3 елемента.</li>
+            
+            <li data-component="answer" data-correct id="lista3_opt_d">трикратно</li><li data-component="feedback" id="lista3_opt_d">Правилно.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id8">
+<h3>Въпрос 4<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="lista4">
+            <p>Q-46: Коя команда ще постави елемента <em>ягода</em> на втората позиция в списъка <em>плодове</em>? (Изберете всички верни отговори)</p>
+<a class="reference internal image-reference" href="_images/q9_4.png"><img alt="_images/q9_4.png" class="align-center" src="_images/q9_4.png" style="width: 650px;" /></a>
+
+            <li data-component="answer"  id="lista4_opt_a"></li><li data-component="feedback" id="lista4_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="lista4_opt_b"></li><li data-component="feedback" id="lista4_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="lista4_opt_c"></li><li data-component="feedback" id="lista4_opt_c"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id9">
+<h3>Въпрос 5<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="lista5">
+            <p>Q-47: След изпълнението на кои команди ще се увеличи броят на елементите в списъка? (Изберете всички верни отговори)</p>
+<a class="reference internal image-reference" href="_images/q9_4.png"><img alt="_images/q9_4.png" class="align-center" src="_images/q9_4.png" style="width: 650px;" /></a>
+
+            <li data-component="answer" data-correct id="lista5_opt_a"></li><li data-component="feedback" id="lista5_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="lista5_opt_b"></li><li data-component="feedback" id="lista5_opt_b"></li>
+            
+            <li data-component="answer"  id="lista5_opt_c"></li><li data-component="feedback" id="lista5_opt_c"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id10">
+<h3>Въпрос 6<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="lista6">
+            <p>Q-48: Какъв е резултатът от изпълнението на следните команди?</p>
+<a class="reference internal image-reference" href="_images/q9_6.png"><img alt="_images/q9_6.png" class="align-center" src="_images/q9_6.png" style="width: 300px;" /></a>
+
+            <li data-component="answer" data-correct id="lista6_opt_a">Ако списъкът включва ягода на елемента, неговият размер няма да се промени; в противен случай елементът ягода ще бъде добавен в края на списъка.</li><li data-component="feedback" id="lista6_opt_a">Правилно.</li>
+            
+            <li data-component="answer"  id="lista6_opt_b">Независимо от това дали е включена или не ягода на елемента, тя ще я добави в края на списъка.</li><li data-component="feedback" id="lista6_opt_b">Вписването в списъка се извършва, ако списъкът преди не е имал елемент ягода.</li>
+            
+            <li data-component="answer"  id="lista6_opt_c">Ако списъкът включва ягода на елемента, неговият размер няма да се промени; в противен случай елементът ягода ще бъде добавен в началото на списъка.</li><li data-component="feedback" id="lista6_opt_c">Ако е добавен, ще бъде добавен в края на списъка.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+<div class="section" id="try">
+<h2><img alt="try" src="_images/try.png" /> Опитай!<a class="headerlink" href="#try" title="Permalink to this headline">¶</a></h2>
+<p>В първите 3 упражнения се приема, че имаме списък, наречен <strong>оригинал</strong>, чиито елементи са числа от 1 до 10 (последователно).</p>
+<div class="section" id="id11">
+<h3>Упражнение 1<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Напишете скрипт, който създава списъка, наречен <strong>дубликат</strong> и записва в него всички елементи от съществуващия <strong>оригинален</strong> списък.</p>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id12">
+<h3>Упражнение 2<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Напишете скрипт, който създава списък, наречен <strong>назад</strong> и запишете в него всички елементи от съществуващия списък <strong>оригинал</strong> в обратен ред, т.е. първият елемент от списъка <em>назад</em> трябва да бъде последният елемент на списъка <em>оригинал</em>, вторият - предпоследният от списъка <em>оригинал</em> и така нататък до първия елемент от списъка <em>оригинал</em>, който трябва да бъде последният в списъка <em>назад</em>.</p>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id13">
+<h3>Упражнение 3<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Напишете скрипт, който създава списъка <strong>дори</strong> и записва в него всеки друг елемент от съществуващия списък <strong>оригинал</strong>.</p>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id14">
+<h3>Упражнение 4<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Напишете скрипт, който създава списъка <strong>произволен1</strong> и записва в него 10 числа от интервала [1,100], генериран с произволното число на оператора.</p>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id15">
+<h3>Упражнение 5<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Напишете скрипт, който създава списъка <strong>random2</strong> и записва в него 10 РАЗЛИЧНИ числа от интервала [1,100], генериран с произволното число на оператора.</p>
+
+    </p></div></div>
+</div>
+</div>
+<div class="section" id="bug">
+<h2><img alt="bug" src="_images/bug.png" /> Отстранете грешката!<a class="headerlink" href="#bug" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id16">
+<h3>Грешка<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Ученикът искаше да промени Пример 3 на този урок, така че да има нов списък, наречен <em>изяден</em>, където ще бъдат написани имената на различните видове храни, избрани от Zara. Към Zara той добави скриптовете за управление на движението, с клавиши, със стрелки и скрипта, показан на фигурата по-долу. Фигурата показва и скриптите, добавени към други спрайтове в проекта. Повечето от събитията бяха изпълнени според очакванията; ученикът обаче не успя да запише ябълката и портокала в списъка. Къде е бъгът?</p>
+<a class="reference internal image-reference" href="_images/bug9_1.png"><img alt="_images/bug9_1.png" class="align-center" src="_images/bug9_1.png" style="width: 810px;" /></a>
+
+    <div data-component="reveal" id="sаkrivаnjе24"   data-showtitle="Покажи отговора" data-hidetitle="Скрий отговора">
+    <p><strong>Отговор:</strong></p>
+<p>В командата <code class="docutils literal notranslate"><span class="pre">изчакайте</span> <span class="pre">до</span></code> на скриптите, добавени към ябълката и оранжевите спрайтове, спрайтът, който трябва да ги докосне, не е зададен правилно.</p>
+
+    </div>
+    
+    </p></div></div>
+</div>
+</div>
+<div class="section" id="book">
+<h2><img alt="book" src="_images/book.png" /> Обобщение<a class="headerlink" href="#book" title="Permalink to this headline">¶</a></h2>
+<p>В този урок научихме как да използваме списъци в Scratch - типът данни, който има сложна структура, която позволява да се съхраняват множество стойности едновременно. Видяхме, че елементите на списъка могат да бъдат различни видове данни и че могат да бъдат използвани за избор на един от костюмите на определен спрайт или за избор на един от спрайтите от списъка на спрайтите. С примери за проекти също илюстрирахме синхронизирането на поведението на умножени спрайтове чрез използване на съобщения. Освен това показахме как програмата може да се използва за клониране на спрайтове и как тези клонинги могат да се държат различно, ако спрайтът, който ги е създал, има локални променливи.</p>
+<p><strong>Примери за проекти</strong>: <a class="reference external" href="https://scratch.mit.edu/studios/25119484/">9Studio</a></p>
+<p><strong>Нови концепции</strong>:  списъци, елементи на списъци, дублиакти.</p>
+<p><strong>Нови команди</strong>: <img alt="variables_blocks" src="_images/variables.png" /> - <img alt="add_to" src="_images/add_to.png" />,  <img alt="delete_of" src="_images/delete_of.png" />, <img alt="delete_all" src="_images/delete_all.png" />,  <img alt="insert_at" src="_images/insert_at.png" />,  <img alt="replace_with" src="_images/replace_with.png" />, <img alt="show_list" src="_images/show_list.png" />, <img alt="hide_list" src="_images/hide_list.png" />, <img alt="item_of" src="_images/item_of.png" />,  <img alt="length_of" src="_images/length_of.png" />,  <img alt="list_contains" src="_images/list_contains.png" />.</p>
+<p><img alt="control_blocks" src="_images/control.png" /> - <img alt="when_clone" src="_images/when_clone.png" />, <img alt="create_clone" src="_images/create_clone.png" />, <img alt="delete_clone" src="_images/delete_clone.png" />.</p>
+</div>
+<div class="section" id="project">
+<h2><img alt="project" src="_images/project.png" /> Създайте проект<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id17">
+<h3>Проект 1 - “Тест за история”<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>Заредете списъка с въпроси от текстов файл.</p>
+<ol class="arabic simple">
+<li><p>С помощта на програмата Notepad напишете списък с въпроси за историята, всеки въпрос трябва да бъде написан в отделен ред.</p></li>
+<li><p>Запишете текста като текстов файл, наречен <em>History.txt</em>, с кодирането UTF-8.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/projekat9_1a.png"><img alt="_images/projekat9_1a.png" class="align-center" src="_images/projekat9_1a.png" style="width: 250px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>В Scratch създайте списък, наречен <em>въпроси</em>.</p></li>
+<li><p>Щракнете с десния бутон върху монитора на списъка и от менюто за бърз достъп изберете операцията <em>import</em>.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/projekat9_1b.png"><img alt="_images/projekat9_1b.png" class="align-center" src="_images/projekat9_1b.png" style="width: 230px;" /></a>
+<ol class="arabic simple" start="5">
+<li><p>В полето за име на файл напишете <em>История</em></p></li>
+<li><p>Списъкът с въпроси, които сте писали по-рано в Бележника, ще се появи във вашия списък.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/projekat9_1c.png"><img alt="_images/projekat9_1c.png" class="align-center" src="_images/projekat9_1c.png" style="width: 470px;" /></a>
+<p>След това създайте списък с верни отговори и скрипт, който ще избира произволно въпрос от списъка с въпроси, помолете потребителя да отговори и след това сравнете отговора с правилния отговор от списъка. Ако потребителят отговори правилно, трябва да увеличите броя на точките му.</p>
+</div>
+<div class="section" id="id18">
+<h3>Проект 2 - “Телефонна книга”<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>Създайте три списъка с имена, рождени дни и телефонни номера на приятелите си.
+Напишете скрипт, който проверява дали името, въведено от входа, е включено в списъка. Ако името е в списъка, то трябва да показва датата на раждане и телефонния номер на лицето, чието име е въведено, и ако не, трябва да се покаже съответното съобщение.</p>
+</div>
+<div class="section" id="id19">
+<h3>Проект 3 - “Близнаци”<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>Създайте процедури, които трябва да бъдат свързани в проекта Близнаци.</p>
+<p>Процедурата ** Проверка ** трябва да провери дали числото, зададено като параметър, е просто число.</p>
+<p>Процедурата <strong>Compose</strong> трябва да състави списък, наречен <em>Prime</em>, където ще запише всяко първо число от интервала [2,1000].</p>
+<p>Основната програма трябва да показва всички двойни числа (прости числа, които се различават по 2) от интервала [2,1000].</p>
+</div>
+<div class="section" id="id20">
+<h3>Проект 4 - Игра “Опасни обекти”<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>Създайте игра, в която потребителят (малко дете) трябва да избере няколко предмета, които не са опасни, от групата предложени му предмети. Имената (или поредните номера на костюмите, като в пример 4 от този урок) на опасните обекти на сцената трябва да бъдат записани в списъка <em>опасен</em>.
+Обектите се избират чрез щракване върху тях. Тогава програмата проверява дали този параметър е включен в списъка с опасности.
+Ако потребителят избере обект, който не е опасен, той / тя ще получи положителна точка; в противен случай той / тя ще получи отрицателна точка. Целта е да се съберат поне 3 точки (от например 5). Това е, когато играта трябва да приключи или потребителите трябва да преминат на следващото ниво.</p>
+<p>Играта може да има множество нива, например опасности в кухнята (нож, купа с огън вряща вода и др.), Опасности в задния двор, природата и т.н.</p>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Как да програмирате по-бързо - процедури' data-toggle="tooltip"><a href="Scratch3 Procedures.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Низове' data-toggle="tooltip"><a href="Scratch3 Strings.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Как да програмирате по-бързо - процедури' data-toggle="tooltip"><a href="Scratch3 Procedures.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Низове' data-toggle="tooltip"><a href="Scratch3 Strings.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Последователни стъпки &#8212; Block-based programming in Scratch - practice lessons</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Да рисуваме - Графика на костенурка" href="Scratch3 Graphics.html" />
+    <link rel="prev" title="Кажете ми къде да отида - координати и посока" href="Scratch3 Coordinates.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'Scratch_eng';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'Scratch_eng';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Block-based programming in Scratch - practice lessons</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="id1">
+<h1>Последователни стъпки<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="intro3" src="_images/intro3.png" /></p>
+
+    </p></div></div>
+<p>В предишния урок научихме за командите за движение, а сега ще видим как можем да използваме командите от групата „Външност и събития“. Ще покажем как присвояваме определено поведение на нашия спрайт, като свързваме блокове за формиране на сценарии. Проектите в този урок се състоят от сценарии съставени от поредица последователни стъпки. Можем да кажем, че този тип сценарии имат проста линейна структура.</p>
+<div class="topic">
+<p class="topic-title">Терминологията и визуалната граматика на езика на скрач</p>
+<p>Спрайтовете могат да изпълняват повече от 100 команди. Блоковете, които съответстват на команди, представляват речника на езика на Скрач, а правилата, чрез които те са свързани, съответстват на граматиката му. Блоковете се съхраняват в палитрата на блоковете и са разделени на 10 различни цвята :</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><img alt="motion_blocks" src="_images/motion.png" /> Движение,</p></li>
+<li><p><img alt="looks_blocks" src="_images/looks.png" /> Външност,</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><img alt="sound_blocks" src="_images/sound.png" /> Звук,</p></li>
+<li><p><img alt="events_blocks" src="_images/events.png" /> Събития,</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><img alt="control_blocks" src="_images/control.png" /> Контрол,</p></li>
+<li><p><img alt="sensing_blocks" src="_images/sensing.png" /> Сетива,</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><img alt="operator_blocks" src="_images/operators.png" /> Оператори,</p></li>
+<li><p><img alt="variables_blocks" src="_images/variables.png" /> Променливи,</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><img alt="my_blocks" src="_images/my_blocks.png" /> Моите блокове</p></li>
+<li><p><img alt="extensions" src="_images/extension.png" /> Разширения.</p></li>
+</ul>
+</td></tr></table>
+<p>Блоковете са групирани заедно, за да улеснят потребителите при създаването на сценарии. Независимо колко сложно е поведението на даден спрайт, сценария, който го описва, е съставен от набор от прости операции, съдържащи се в тези 10 вида. Ако знаете какъв тип дейност трябва да извършва спрайтът, можете лесно да изберете правилната група и да вземете от нея съответния блок.</p>
+<p>Има независими и функционални блокове.</p>
+<p><strong>Независимите блокове</strong> съответстват на езикови команди, тоест съответстват на стъпките на алгоритъма. Някои от тях имат полета за въвеждане, където потребителят може да зададе конкретна стойност.</p>
+<p><strong>Функционалните блокове</strong> връщат стойности. Те не могат да стоят независимо в сценарий, те трябва да бъдат вмъкнати в блокови полета, които получават стойности и уточняват техните действия.</p>
+<p>Блоковете са оформени така, че да могат да се свързват само онези, които формират правилна езикова конструкция, тоест Скрач има визуална граматика, която не позволява грешки в синтаксиса.</p>
+<a class="reference internal image-reference" href="_images/fig3_1.png"><img alt="_images/fig3_1.png" class="align-center" src="_images/fig3_1.png" style="width: 300px;" /></a>
+<p><strong>Независими/ Самостоятелни блокове</strong></p>
+<p>В текста ще визираме блокове, които съответстват на стъпките за обработка като <strong>стекови блокове</strong>. Всеки отговаря на една дейност, тоест той отговаря на въпроса КАКВО трябва да се направи. Например блокът <img alt="move_steps" src="_images/move_steps.png" /> командва спрайта да премести определен брой стъпки в моментната му посока. Формата на този блок прилича на тухла Лего, а целият сценарий изглежда като куп тухли.</p>
+<p>Посоченият брой стъпки се въвежда в бялото кръгче - <strong>поле за въвеждане</strong> на блока.</p>
+<p>В блока <img alt="say_sec" src="_images/say_sec.png" /> едното входно поле има форма, подобна на заоблен правоъгълник, а другото има форма на кръг. Полетата за въвеждане на заоблен правоъгълник могат да получават както текстови, така и числови стойности, докато окръжните могат да получават само стойности на числата.</p>
+<p>Блокът <img alt="glide_xy" src="_images/glide_xy.png" /> има три полета за въвеждане.</p>
+<p>Някои от блоковете имат шестоъгълни полета за въвеждане, например контролния блок <img alt="wait_until" src="_images/wait_until.png" />. Тези полета за въвеждане могат да получават само логически стойности (вярно или невярно).</p>
+<p>В групата с <em>контроли на блокове</em> има <strong>С-образни блокове</strong>. Слотът вътре в C-блока е специфичен тип поле за въвеждане, където можете да вмъкнете целия сценарий. Блокът за повторение има две полета за въвеждане: едно за числото и едно за сценария.</p>
+<p>Има също контролен блок, който има E-образна форма и три полета за въвеждане, едно за условието (логическа стойност) и две за сценариите. Първото поле за въвеждане на сценариите дава командата какво трябва да се направи, ако условието е изпълнено, а другото какво трябва да се направи, ако не е изпълнено.</p>
+<p><strong>Блоковете шапка</strong> съответстват на първоначалната крачка на алгоритъм. Те отговарят на въпроса КОГА ще се изпълни сценарият. Тези блокове имат закръглени върхове, те се поставят в горната част на стека и са свързани с блока отдолу чрез бутон в долната част. Блоковете Шапка определят какво трябва да се направи, за да може стекът под него да започне да работи. Можете например да кликнете върху зеления флаг или да натиснете определен клавиш на клавиатурата.</p>
+<p><strong>Cap Блоковете</strong> съответстват на крайната стъпка на алгоритъма. Те са с отвор на върха, но нямат надупчинка отдолу. Тъй като в Скрач може да има повече от един сценарий, свързан с един обект, блокът cap може да спре изпълнението на всички активирани сценарии.</p>
+<p><strong>Функционални блокове</strong></p>
+<p>Функционалните блокове съдържат информация за други блокове. Те често се наричат <strong>репортери</strong>, защото съобщават текущата стойност на променлива. В предишната глава представихме репортерските блокове, които държат текущите координати и посоката на спрайта. Някои репортерски блокове също имат кръгли и заоблени правоъгълни полета за въвеждане <img alt="plus" src="_images/plus.png" /> и <img alt="join" src="_images/join.png" />.</p>
+<p><strong>Логическите блокове</strong> съдържат логически стойности (вярно или невярно). Те имат шестоъгълна форма и могат да се поставят само във входните полета на съответната форма (шестоъгълна или правоъгълна). Както например блока <img alt="equal" src="_images/equal.png" />. В Скрач сложните логически условия могат лесно да бъдат изградени чрез поставяне на логически блокове във входните полета на други такива блокове.</p>
+</div>
+<div class="sidebar">
+<p class="sidebar-title">Програмиране на водещи събития</p>
+<p>Понякога гледането на програми, които стартират, е като гледане на карикатури. Това са програмите, които винаги стартират по един и същи начин, тоест изпълнението не зависи от потребителя. Съществуват обаче програми, които зависят от събитията, създадени от потребителя или от обектите на проекта - спрайтите и сцената. Потребителят, например, може да кликне върху мишката или да натисне един от клавишите на клавиатурата, докато спрайтовете и сцената могат да изпращат и получават съобщения. Блоковете, които активират сценариите, свързани с тези видове действия и съобщения, се намират в групата на събития от блокове.</p>
+</div>
+<div class="topic">
+<p class="topic-title">Функции на блоковете <em>Външност</em> и <em>Събития</em></p>
+<p>Блоковете за <em>движение</em>, които разработихме в предишния урок, могат да се използват само за спрайтове. За разлика от тях, можете да използвате блоковете от групата на Външност, за да управлявате външния вид на спрайта и фона, т.е. външния вид на сцената. Това обаче не се отнася за всички блокове от тази група. Сред тях има такива, които се отнасят само за спрайтове, и тези, които се отнасят само за сцената. Блоковете от групата Събития инициират изпълнението на сценариите.</p>
+<p>В предишните уроци вече научаваме за ефектите на някои от блоковете „Външност и събития“, например, кажете и натиснете клавиш. В този урок ще представим по-подробно блоковете, които позволяват лесна анимация с прилагането на вградени графични ефекти и ще разширим речника на скрач, като използваме нови команди.</p>
+</div>
+<div class="section" id="study">
+<h2><img alt="study" src="_images/study.png" /> Разгледайте следните примери<a class="headerlink" href="#study" title="Permalink to this headline">¶</a></h2>
+<p>Можем да забавляваме приятелите си, като разказваме вицове, а също и като им показваме математически трикове. Следващият проект илюстрира един от тях. Той има само един сценарий с проста линейна структура.</p>
+<div class="section" id="id2">
+<h3>Пример 1 - Проект „Математически трик“<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<ul class="simple">
+<li><p>Стъпка 1: Помислете за едно трицифрено число, където всички цифри са еднакви, напр. 111, 222.</p></li>
+<li><p>Стъпка 2: Добавете тези цифри заедно.</p></li>
+<li><p>Стъпка 3: Разделете трицифрената цифрова форма Стъпка 1 на сумата, получена в Стъпка 2.</p></li>
+<li><p>Стъпка 4: Резултатът е 37.</p></li>
+</ul>
+<p>Сценарият на този проект е доста прост. Спрайтът използва блока <img alt="say_sec" src="_images/say_sec.png" /> за да даде на потребителя първите три заявки, а блокът <img alt="say" src="_images/say.png" /> да съобщи резултата.</p>
+<p>Ще използваме спрайт на момиче, наречено Ейвъри от спрайт библиотеката, този спрайт има два костюма (кликнете върху раздела <em>Костюми</em>, за да ги видите) и след всяка заявка ще дадем команда за промяна на костюма, като използваме блока <img alt="next_costume" src="_images/next_costume.png" />.</p>
+<p>Тъй като потребителят се нуждае от време, за да изчисли какво се изисква от него / нея, в първите два блока ще поставим спрайтът да каже дадения текст за 3 секунди, а в третия ще дадем 5 секунди. Блокът <img alt="say" src="_images/say.png" /> оставя последния текст на екрана, докато не спрем изпълнението на програмата, като щракнем върху знака за спиране - червения осмоъгълник над горния десен ъгъл на сцената.</p>
+<p>Сценарият на този проект е представен на следната фигура.</p>
+<a class="reference internal image-reference" href="_images/fig3_2.png"><img alt="_images/fig3_2.png" class="align-center" src="_images/fig3_2.png" style="width: 435px;" /></a>
+</div>
+<hr class="docutils" />
+<div class="section" id="id3">
+<h3>Пример 2 - Проект „Разговор“<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>Този проект представлява надграждане на проекта „Математик“. В него момичето Ейвъри и момчето Девин представят един и същи математически трик чрез разговор, в който Девин мисли за число 222 и извършва необходимите изчисления, а накрая пита „Как разбра?“. Поведението на двата спрайта се определя от сценариите, които имат проста линейна структура. За да изглежда така, че наистина говорят, сценария на момичето трябва да включва блокове за чакане, докато момчето мисли, а това на момчето трябва да включва блокове за чакане, докато момичетата задават въпросите.</p>
+<p>Сценарият на този проект е представен на следната фигура.</p>
+<a class="reference internal image-reference" href="_images/fig3_3.png"><img alt="_images/fig3_3.png" class="align-center" src="_images/fig3_3.png" style="width: 980px;" /></a>
+<p><strong>Създаване на проекта</strong></p>
+<p><img alt="1" src="_images/1.png" /> Отворете проекта <em>Математик</em>.</p>
+<p><img alt="2" src="_images/2.png" /> Запазете този проект под новото име <em>Разговор</em>.</p>
+<p><strong>Съвет</strong>. Когато създавате нова версия на съществуващ проект, запишете го под ново име в самото начало. По този начин няма да загубите старата версия.</p>
+<p><img alt="3" src="_images/3.png" /> От спрайт библиотеката изберете спрайт на момче на име <em>Девин</em>.</p>
+<p><img alt="4" src="_images/4.png" /> Поставете спрайта на момчето до десния ръб на сцената и променете посоката му в прозореца с информация за спрайт до -90, така че той да е изправен пред момичето спрайт.</p>
+<p><img alt="5" src="_images/5.png" /> Добавете следните сценариите към спрайтовете.</p>
+<a class="reference internal image-reference" href="_images/fig3_4.png"><img alt="_images/fig3_4.png" class="align-center" src="_images/fig3_4.png" style="width: 695px;" /></a>
+<p>В проекта <em>“Математик”</em> момичето казва 4 изречения и 3 пъти сменя костюма си (има 2 костюма). Това означава, че ако стартираме проекта два последователни пъти, момичето няма да се появи с едно и също облекло в началото на двете серии. Тъй като искаме момичето да се появи в началото, носещо един и същ костюм и двата пъти, добавяме съответната команда в горната част на сценария.</p>
+<p><strong>Съвети. Поставете команди в началото на проекта, които определят спрайтите (посочете къде и в кой костюм трябва да се появяват), особено ако спратите се движат по време на изпълнение на проекта.</strong></p>
+<p>Ние координирахме поведението на спрайтите, като вмъкнахме команди за изчакване в техните сценарии.</p>
+<a class="reference internal image-reference" href="_images/fig3_5.png"><img alt="_images/fig3_5.png" class="align-center" src="_images/fig3_5.png" style="width: 800px;" /></a>
+<p><img alt="6" src="_images/6.png" /> Запазете променената версия на проекта.</p>
+<p>Ако искате да знаете отговора на въпроса на момчето „Как разбра?“, Кликнете върху иконата <em>Show Instruction</em>.</p>
+
+    <div data-component="reveal" id="instruction"   data-showtitle="Show the instruction" data-hidetitle="Hide the instruction">
+    <p><strong>Инструкции:</strong></p>
+
+    </div>
+    <p>Момичето го помолило да измисли трицифрено число със същите цифри. Нека наречем тази повтаряща се цифра x. В този случай неизвестното число може да бъде представено като 111х, а сумата от неговите цифри като 3х. Резултатът от операцията по разделяне на числото на сумата от неговите цифри е 111/3 = 37, независимо от първоначалното число.</p>
+<hr class="docutils" />
+<div class="sidebar">
+<p class="sidebar-title">Аритметични изрази в Scratch</p>
+<p>Групата * Оператори * съдържа блокове, които позволяват да се извършват аритметични операции. Например, блокът <img alt="plus" src="_images/plus.png" /> позволява събиране. Ако поставите числа във полетата за въвеждане на този блок, той ще изчисли тяхната сума. Операторите не могат да стоят самостоятелно в сценария, те трябва да бъдат вмъкнати в полето за въвеждане на независим блок. Например, ако ги поставите в полето за въвеждане на блоковете <code class="docutils literal notranslate"><span class="pre">say</span></code> или <code class="docutils literal notranslate"><span class="pre">think</span></code> пресметната стойност ще бъде показана.</p>
+</div>
+</div>
+<div class="section" id="example-3-project-calculation">
+<h3>Example 3 - Project “Calculation”<a class="headerlink" href="#example-3-project-calculation" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>Следващият проект също е надграждане на предишния. В него вместо фиксираното число 222, момчето избира друго трицифрено число с трите еднакви цифри и го използва за извършване на необходимите операции. Това могат да бъдат програми, благодарение на възможността за генериране на произволно число от дадения интервал.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Генериране на случайни числа</strong></p>
+<p>Сред блоковете на <em>Операторите</em> е командата <img alt="pick_random" src="_images/pick_random.png" />. Генерирането на произволно число означава произволен избор на число от интервал. Най-ниското и най-голямото число на този интервал се вмъкват във входните полета на този репортерски блок. Така че, ако тези числа бяха 1 и 10, ще бъде избрано всяко число от интервала [1,10] и, например, ако беше -100 и 100, тогава ще се генерира число от интервала [-100,100].</p>
+
+    </p></div></div>
+<p>В нашия пример в първото поле трябва да въведете номер 1, а във второто число 9.</p>
+<p>В този проект използвахме <strong>променливи</strong>, които ще бъдат въведени в осмия урок. Ето защо той е маркиран като труден. Можете да го пропуснете и да се върнете към него по-късно.</p>
+<p>Ако от друга страна харесвате предизвикателство, нека предварително да кажем нещо по тази тема. Когато казваме променлива, имаме предвид зоната на компютърната памет, където програмата съхранява текущите стойности на данните, с които работи. Тази зона се нарича <strong>Име на променливата</strong> и <strong>стойността на променливата</strong> е това, което се съхранява в нея.</p>
+<p><strong>Създаване на Проект</strong></p>
+<div class="sidebar">
+<p class="sidebar-title">Part of the script added to the boy</p>
+<p><img alt="Devin" src="_images/fig3_6.png" /></p>
+</div>
+<p><img alt="1" src="_images/1.png" /> Отворете проекта за <em>Разговор</em> и го запишете под ново име <em>Калкулация</em>.</p>
+<p><img alt="2" src="_images/2.png" /> Създайте променливата <em>x</em>, която съответства на цифрите на трицифрено число и задайте произволно число от интервала [1,9] като начална стойност.</p>
+<p><img alt="3" src="_images/3.png" /> Създайте променливото число и като първоначална стойност задайте стойността на израза 111*x.</p>
+<p><img alt="4" src="_images/4.png" /> В първия блок <code class="docutils literal notranslate"><span class="pre">мисля</span></code> Мислене на сценария на момчето вмъкнете репортерния блок на променливото <em>число</em> вместо числото 222.</p>
+<p><img alt="n1" src="_images/n1.png" /> <img alt="!=" src="_images/not_equal.png" /> <img alt="n2" src="_images/n2.png" /></p>
+<p><img alt="5" src="_images/5.png" /> Създайте променливата <em>sum</em> и като първоначална стойност задайте стойността на израза x+x+x. Тъй като блокът за добавяне има само две полета за въвеждане, ние ще добавим един блок за добавяне във полето за въвеждане на друг допълнителен блок. (Разбира се, бихме могли да направим същото, използвайки един блок за умножение, защото х+х+х=3*х).</p>
+<a class="reference internal image-reference" href="_images/fig3_7.png"><img alt="_images/fig3_7.png" class="align-center" src="_images/fig3_7.png" style="width: 350px;" /></a>
+<p><img alt="6" src="_images/6.png" /> Във втория блок <code class="docutils literal notranslate"><span class="pre">think</span></code> на сценария на момчето вмъкнете репортера на сумата на променливата вместо текста <em>2+2+2</em>.</p>
+<p><img alt="7" src="_images/7.png" /> Създайте променливия <em>резултат</em> и като първоначална стойност задайте стойността на израза <em>число/сума</em>.</p>
+<p><img alt="8" src="_images/8.png" /> В третия блок на сценария на момчето вмъкнете репортера на променливия <em>резултат</em> вместо числото 37.</p>
+<p><img alt="9" src="_images/9.png" /> Стартирайте проекта няколко пъти, за да проверите дали той генерира различни трицифрени числа.</p>
+<p><img alt="10" src="_images/10.png" /> Запазете променената версия на проекта.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id4">
+<h3>Проект „Ефекти на Спрайта“<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>Следващият проект показва как командата <img alt="change_effect" src="_images/change_effect.png" /> от групата Външност може да повлияе на външния вид на спрайт. Той също така показва блока на събитията, когато този спрайт е кликнат, може да започне изпълнението на сценария.</p>
+<p><strong>Сценарий на проекта</strong></p>
+<p>На сцената има 7 копия на един и същ спрайт. Кликването върху един от тях променя спрайта с помощта на един от седемте графични ефекта. Това е активирано от командата <img alt="change_effect" src="_images/change_effect.png" />. Спрайтът също казва кой ефект е бил използван.</p>
+<div class="sidebar">
+<p class="sidebar-title">Графични ефекти</p>
+<p>Като кликнете върху белия триъгълник в полето за въвеждане,
+ще отворите падащия списък, съдържащ следните
+7 различни ефекта.</p>
+<p><img alt="efekti" src="_images/fig3_8.png" /></p>
+</div>
+<p><strong>Създаване на проекта</strong></p>
+<p><img alt="1" src="_images/1.png" /> Стартирайте нов проект..</p>
+<p><img alt="2" src="_images/2.png" /> Изтрийте спрайта за котки и изберете спрайт <em>Певец1</em> от библиотеката с спрайтове.</p>
+<p><img alt="3" src="_images/3.png" /> Добавете следния сценарий към спрайта.</p>
+<a class="reference internal image-reference" href="_images/fig3_9.png"><img alt="_images/fig3_9.png" class="align-center" src="_images/fig3_9.png" style="width: 240px;" /></a>
+<p><img alt="4" src="_images/4.png" /> Кликнете с десния бутон върху спрайта в списъка с спрайтове, за да отворите менюто за бърз достъп, и изберете опцията <em>дублиране</em>. <em>Певец2</em> спрайт ще се появи в списъка със спрайтове и ще има същия сценарии като спрайта, използван за създаването му.</p>
+<p><img alt="5" src="_images/5.png" /> Променете ефекта в блока <img alt="change_effect" src="_images/change_effect.png" /> на <em>fisheye</em>, и в блока <img alt="say_sec" src="_images/say_sec.png" /> променете текста на <em>fisheye</em>.</p>
+<p><img alt="6" src="_images/6.png" /> Направете същото още 5 пъти, но всеки път изберете друг ефект от падащото меню  и променете съобщението, което спрайтът казва, когато кликнете върху него.</p>
+<p><img alt="7" src="_images/7.png" /> Подредете равномерно спрайтите на сцената и тествайте дали проектът прави това, което е било предвидено, като кликнете върху всеки спрайт.</p>
+<p><img alt="8" src="_images/8.png" /> Всеки път, когато кликнете върху някой от спрайтовете, ще се появи подходящият ефект.</p>
+<p><img alt="9" src="_images/9.png" /> Следователно към сцената трябва да се добави сценарии, който при кликване върху зеления флаг ще отмени промените, като използва блока <img alt="clear_effects" src="_images/clear_effects.png" />.</p>
+<p>Следващата фигура показва появата на спрайтовете след едно или повече приложения със съответния ефект.</p>
+<a class="reference internal image-reference" href="_images/fig3_10.png"><img alt="_images/fig3_10.png" class="align-center" src="_images/fig3_10.png" style="width: 435px;" /></a>
+</div>
+<hr class="docutils" />
+<div class="section" id="id5">
+<h3>Пример 5 - Проект „Сценични ефекти“<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>За разлика от блоковете <em>Движение</em>, блоковете <em>Външност</em> могат да се прилагат и на сцената. Всички сценарии в този проект ще бъдат добавени на сцената. Целта на този проект е да покаже как командата <img alt="change_effect" src="_images/change_effect.png" /> влияе върху външния вид на сцената и да ви даде идеи как можете да го използвате в бъдещите си проекти. За да върнем всичко в нормално състояние, ще добавим блока за изчистване на всички графични ефекти към блока на събитията, когато се кликнете зелено знаме.</p>
+<p><strong>Сценарий на проекта</strong></p>
+<p>Котката е в средата на пустинята. Потребителят може да промени вида на фона, като натисне клавишите с цифри от 1 до 3 на него. Всяко от тези събития съответства на един от графичните ефекти на фона. Следващата фигура показва как изглежда сцената в началото (0) и след натискане на клавишите няколко пъти: 1 - ефект цвят, 2 - ефект рибешко око, 3 - ефект вихър и 4 - ефект пикселат.</p>
+<a class="reference internal image-reference" href="_images/fig3_11.png"><img alt="_images/fig3_11.png" class="align-center" src="_images/fig3_11.png" style="width: 735px;" /></a>
+</div>
+</div>
+<div class="section" id="ask">
+<h2><img alt="ask" src="_images/ask.png" /> Разбра ли?<a class="headerlink" href="#ask" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>Въпрос 1<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="commands_looks">
+            <p>Q-66: Кои от блоковете принадлежат към групата на командите <em>Външност</em>?
+(Изберете всички верни отговори)</p>
+<a class="reference internal image-reference" href="_images/q3_1.png"><img alt="_images/q3_1.png" class="align-center" src="_images/q3_1.png" style="width: 410px;" /></a>
+
+            <li data-component="answer"  id="commands_looks_opt_a"></li><li data-component="feedback" id="commands_looks_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="commands_looks_opt_b"></li><li data-component="feedback" id="commands_looks_opt_b"></li>
+            
+            <li data-component="answer"  id="commands_looks_opt_c"></li><li data-component="feedback" id="commands_looks_opt_c"></li>
+            
+            <li data-component="answer" data-correct id="commands_looks_opt_d"></li><li data-component="feedback" id="commands_looks_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id7">
+<h3>Въпрос 2<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="commands_events">
+            <p>Q-67: Кои от блоковете принадлежат към групата команди на <em>Събития</em>?
+(Изберете всички верни отговори)</p>
+<a class="reference internal image-reference" href="_images/q3_2.png"><img alt="_images/q3_2.png" class="align-center" src="_images/q3_2.png" style="width: 520px;" /></a>
+
+            <li data-component="answer" data-correct id="commands_events_opt_a"></li><li data-component="feedback" id="commands_events_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="commands_events_opt_b"></li><li data-component="feedback" id="commands_events_opt_b"></li>
+            
+            <li data-component="answer"  id="commands_events_opt_c"></li><li data-component="feedback" id="commands_events_opt_c"></li>
+            
+            <li data-component="answer"  id="commands_events_opt_d"></li><li data-component="feedback" id="commands_events_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id8">
+<h3>Въпрос 3<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="commands_control">
+            <p>Q-68: Кой от блоковете принадлежи към  група от команди <em>Контрол</em>?
+(Изберете всички верни отговори)</p>
+<a class="reference internal image-reference" href="_images/q3_3.png"><img alt="_images/q3_3.png" class="align-center" src="_images/q3_3.png" style="width: 505px;" /></a>
+
+            <li data-component="answer" data-correct id="commands_control_opt_a"></li><li data-component="feedback" id="commands_control_opt_a"></li>
+            
+            <li data-component="answer"  id="commands_control_opt_b"></li><li data-component="feedback" id="commands_control_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="commands_control_opt_c"></li><li data-component="feedback" id="commands_control_opt_c"></li>
+            
+            <li data-component="answer"  id="commands_control_opt_d"></li><li data-component="feedback" id="commands_control_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id9">
+<h3>Въпрос 4<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="blocks2">
+            <p>Q-69: Може ли един сценарий да има няколко блока шапки?</p>
+
+            <li data-component="answer"  id="blocks2_opt_a">yes</li><li data-component="feedback" id="blocks2_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="blocks2_opt_b">no</li><li data-component="feedback" id="blocks2_opt_b">Вярно.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id10">
+<h3>Въпрос 5<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="blocks3">
+            <p>Q-70: Как да наречем блоковете, които имат изрез в горната част и неравности в долната част?</p>
+
+            <li data-component="answer"  id="blocks3_opt_a">блокове репортер</li><li data-component="feedback" id="blocks3_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="blocks3_opt_b">стек блокове</li><li data-component="feedback" id="blocks3_opt_b">Вярно.</li>
+            
+            <li data-component="answer"  id="blocks3_opt_c">блокове шапки</li><li data-component="feedback" id="blocks3_opt_c"></li>
+            
+            <li data-component="answer"  id="blocks3_opt_d">cap блокове</li><li data-component="feedback" id="blocks3_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id11">
+<h3>Въпрос 6<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="blocks4">
+            <p>Q-71: Какво наричаме блокове, които държат стойностите и не могат да стоят независимо в сценарий, но те трябва да бъдат вмъкнати в полетата за въвеждане на други блокове?</p>
+
+            <li data-component="answer" data-correct id="blocks4_opt_a">блокове репортер</li><li data-component="feedback" id="blocks4_opt_a">Вярно.</li>
+            
+            <li data-component="answer"  id="blocks4_opt_b">стек блокове</li><li data-component="feedback" id="blocks4_opt_b"></li>
+            
+            <li data-component="answer"  id="blocks4_opt_c">блокове шапки</li><li data-component="feedback" id="blocks4_opt_c"></li>
+            
+            <li data-component="answer"  id="blocks4_opt_d">C-блокове</li><li data-component="feedback" id="blocks4_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id12">
+<h3>Въпрос 7<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="groups_commands">
+    <span data-component="question">Q-72: Като плъзнете правоъгълниците, съберете блоковете с тяхната роля в Скрач.</span>
+	<span data-component=feedback>Try again</span>
+
+    <li data-component="draggable" id="groups_commands_drag1">hat</li>
+    <li data-component="dropzone" for="groups_commands_drag1">define WHEN the script will run</li>
+
+    <li data-component="draggable" id="groups_commands_drag2">reporters</li>
+    <li data-component="dropzone" for="groups_commands_drag2">hold values</li>
+
+    <li data-component="draggable" id="groups_commands_drag3">C-blocks</li>
+    <li data-component="dropzone" for="groups_commands_drag3">receive the script as input</li>
+
+    <li data-component="draggable" id="groups_commands_drag4">stack blocks</li>
+    <li data-component="dropzone" for="groups_commands_drag4">define WHAT should be done</li>
+</ul></div></div>
+<div class="section" id="id13">
+<h3>Въпрос 8<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="аi01">
+            <p>Q-73: Дали <img alt="q3_8a" src="_images/q3_8a.png" /> и <img alt="q3_8b" src="_images/q3_8b.png" /> имат една и съща стойност?</p>
+
+            <li data-component="answer"  id="аi01_opt_a">да</li><li data-component="feedback" id="аi01_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="аi01_opt_b">не</li><li data-component="feedback" id="аi01_opt_b">Вярно.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id14">
+<h3>Въпрос 9<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="аi02">
+            <p>Q-74: Кой от изразите <img alt="q3_9a" src="_images/q3_9a.png" /> и <img alt="q3_9b" src="_images/q3_9b.png" /> има негативна стойност?</p>
+
+            <li data-component="answer"  id="аi02_opt_a">никой</li><li data-component="feedback" id="аi02_opt_a">Грешно. Стойността на вторият е 10/(-1)=-10</li>
+            
+            <li data-component="answer"  id="аi02_opt_b">първият</li><li data-component="feedback" id="аi02_opt_b">Грешно. Стойността на вторият е 5-3=2</li>
+            
+            <li data-component="answer" data-correct id="аi02_opt_c">вторият</li><li data-component="feedback" id="аi02_opt_c">Вярно.</li>
+            
+            <li data-component="answer"  id="аi02_opt_d">и двата</li><li data-component="feedback" id="аi02_opt_d">Грешно. Стойността на вторият е 2.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id15">
+<h3>Въпрос 10<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+        <div class="course-box course-box-question course-content">
+        <div data-component="fillintheblank" id="ai03">
+            <p>Каква е стойността на израза <img alt="q3_10" src="_images/q3_10.png" /> ? <input type="text"></p>
+
+        <script type="application/json">
+            [[{"number": [19, 19], "feedback": "<p>\u0412\u044f\u0440\u043d\u043e.</p>\n"}, {"regex": "^ *x *$", "regexFlags": "", "feedback": "<p>\u0413\u0440\u0435\u0448\u043d\u043e. (7+(8*2))-4 = (7+16)-4 = 23-4 = 19</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </div>
+<div class="section" id="id16">
+<h3>Въпрос 11<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="ai04">
+            <p>Q-75: Каква е стойността на <img alt="q3_11" src="_images/q3_11.png" />?</p>
+
+            <li data-component="answer"  id="ai04_opt_a">45</li><li data-component="feedback" id="ai04_opt_a">Грешно. 5+(2*(7-4)) = 5+2*3 = 5+6 = 11</li>
+            
+            <li data-component="answer" data-correct id="ai04_opt_b">11</li><li data-component="feedback" id="ai04_opt_b">Вярно.</li>
+            
+            <li data-component="answer"  id="ai04_opt_c">15</li><li data-component="feedback" id="ai04_opt_c">Грешно. 5+(2*(7-4)) = 5+2*3 = 5+6 = 11</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id17">
+<h3>Въпрос 12<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="ai05">
+            <p>Q-76: Каква е стойността на израза <img alt="q3_12" src="_images/q3_12.png" />?</p>
+
+            <li data-component="answer"  id="ai05_opt_a">3</li><li data-component="feedback" id="ai05_opt_a">Грешно. ((2+1)*(9-5))/2 = 3*4/2 = 6</li>
+            
+            <li data-component="answer"  id="ai05_opt_b">11</li><li data-component="feedback" id="ai05_opt_b">Грешно. ((2+1)*(9-5))/2 = 3*4/2 = 6</li>
+            
+            <li data-component="answer" data-correct id="ai05_opt_c">6</li><li data-component="feedback" id="ai05_opt_c">Вярно.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+<div class="section" id="try">
+<h2><img alt="try" src="_images/try.png" /> Опитай!<a class="headerlink" href="#try" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id18">
+<h3>Упражнение 1 - Уголемяване<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Създайте проект, в който спрайтът ще става все по-голям и по-малък на сцената. Клавишът със <em>стрелка нагоре</em> трябва да го направи по-голям, а <em>стрелката надолу</em> да го направи по-малък. Направете го така, че при кликване върху <em>зеления флаг</em> спрайтът да се върне към нормалния си размер.</p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="exercise 3_1"   data-showtitle="Покажете инструкцииите" data-hidetitle="Скрийте инструкции">
+    <p><strong>Инструкции:</strong></p>
+<p>Следния скрипт трябва да бъде добавен към спрайта: <img alt="ex3_1" src="_images/ex3_1.png" /></p>
+
+    </div>
+    </div>
+<hr class="docutils" />
+<div class="section" id="id19">
+<h3>Упражнение 2 - Завъртане<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Към спрайт за котки добавете още два спрайта от библиотеката на спрайтите: момичето <em>Ейвъри</em> и момчето <em>Девин</em>. Поставете спрайта вляво, а момчето спрайт надясноот страна на котката. Създайте проект, който ще позволи на котешкия спрайт да завие наляво по посока на момичето, а надясно по посока на момчето. Завъртането наляво трябва да се контролира с левия клавиш със стрелка, а надясно да се върти с десния клавиш със стрелка. Уверете се, че котката не е обърната с главата надолу, когато завие наляво.</p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="exercise 3_2"   data-showtitle="Покажете инструкцииите" data-hidetitle="Скрийте инструкции">
+    <p><strong>Инструкции:</strong></p>
+<p>Следния скрипт трябва да бъде добавен към спрайта котка: <img alt="ex3_2" src="_images/ex3_2.png" /></p>
+
+    </div>
+    </div>
+<hr class="docutils" />
+<div class="section" id="id20">
+<h3>Упражнение 3 - Промяна на цвета на фона<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Създайте проект, който позволява цветът на сцената да се променя всеки път, когато кликнете върху него. Използвайте <em>цветния</em> ефект и се уверете, че кликването върху зеления флаг премахва графичните ефекти.</p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="exercise 3_3"   data-showtitle="Покажете инструкцииите" data-hidetitle="Скрийте инструкции">
+    <p><strong>Instruction:</strong></p>
+<p>Следните скриптове трябва да бъдат добавени към сцената: <img alt="ex3_3" src="_images/ex3_3.png" /></p>
+
+    </div>
+    </div>
+<hr class="docutils" />
+<div class="section" id="id21">
+<h3>Упражнение 4 - Кодиране на аритметични изрази със скоби (1)<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Създайте аритметичен израз в Скрач, който съответства на следния математически израз: (5*(5+4))-(2*(2+3)). Чрез поставяне на съответния репортер блок в полето за въвеждане на блока казвам проверете дали получавате правилната стойност: (5*(5+4))-(2*(2+3))=5*9-2*5=45-10=35</p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="exercise 3_4"   data-showtitle="Покажете инструкцииите" data-hidetitle="Скрийте инструкции">
+    <p><strong>Answer:</strong></p>
+<p><img alt="ex3_4" src="_images/ex3_4.png" /></p>
+
+    </div>
+    </div>
+<hr class="docutils" />
+<div class="section" id="id22">
+<h3>Упражнение 5 - Кодиране на аритметични изрази със (2)<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Създайте аритметичен израз в Скрач, който съответства на следния математически израз: (8/(4-2))*(8-(6/2)) Чрез поставяне на съответния репортер блок във полето за въвеждане на блока <code class="docutils literal notranslate"><span class="pre">say</span></code> тествайте дали получавате правилната стойност: (8/(4-2))*(8-(6/2)) = 8/2*(8-3) = 4*5 = 20.</p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="exercise 3_5"   data-showtitle="Покажете инструкцииите" data-hidetitle="Скрийте инструкции">
+    <p><strong>Answer:</strong></p>
+<p><img alt="ex3_5" src="_images/ex3_5.png" /></p>
+
+    </div>
+    </div>
+</div>
+<div class="section" id="bug">
+<h2><img alt="bug" src="_images/bug.png" /> Отстранете грешката!<a class="headerlink" href="#bug" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id23">
+<h3>Грешка 1<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Въпрос</dt>
+<dd class="field-odd"><p>Правилно ли е синхронизиран следният разговор?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug3_1.png"><img alt="_images/bug3_1.png" class="align-center" src="_images/bug3_1.png" style="width: 650px;" /></a>
+
+    <div data-component="reveal" id="bug3_1"   data-showtitle="Покажете инструкцииите" data-hidetitle="Скрийте инструкции">
+    <p><strong>Answer:</strong></p>
+<p>Таймингът не е коректен. Командите <code class="docutils literal notranslate"><span class="pre">wait</span></code> и <code class="docutils literal notranslate"><span class="pre">say</span></code> трябва да има същото количество секунди в полетата за въвеждане, за да бъде синхронизиран по подходящ начин.</p>
+
+    </div>
+    </div>
+<div class="section" id="id24">
+<h3>Грешка 2<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Въпрос</dt>
+<dd class="field-odd"><p>Ученикът обича да прави всичко според правилата и затова иска да добави командата за стоп към всяка програма. Така решава да добави блока <img alt="stop" src="_images/stop.png" /> към края на сценария в проекта „Математик“. Текстът на последния блок <img alt="say" src="_images/say.png" /> обаче изобщо не се вижда. Как ученикът може да коригира тази грешка и все пак да има командата за спиране в края?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug3_2.png"><img alt="_images/bug3_2.png" class="align-center" src="_images/bug3_2.png" style="width: 430px;" /></a>
+
+    <div data-component="reveal" id="bug3_2"   data-showtitle="Покажете инструкцииите" data-hidetitle="Скрийте инструкции">
+    <p><strong>Answer:</strong></p>
+<p>Командата <cite>кажи Резултатът е 37</cite> моментално се изпълнява и командата` <cite>спри всичко`</cite> се стартира веднага след нея, поради което на практика не можем да видим ефекта от блока` <cite>казвам ‘’. Следователно този блок трябва да бъде заменен с блока `</cite> say__for__seconds ‘’, където текстът трябва например да бъде видим за 5 секунди.</p>
+
+    </div>
+    </div>
+<div class="section" id="id25">
+<h3>Грешка 3<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Въпрос</dt>
+<dd class="field-odd"><p>Ученикът иска спрайтът да се върти, когато натисне клавиша за интервал. Но това не се случва. Къде е грешката?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug3_3.png"><img alt="_images/bug3_3.png" class="align-center" src="_images/bug3_3.png" style="width: 180px;" /></a>
+
+    <div data-component="reveal" id="bug3_3"   data-showtitle="Show the Answer" data-hidetitle="Hide the Answer">
+    <p><strong>Answer:</strong></p>
+<p>Спрайтът се върти, но това се случва твърде бързо, със скоростта, с която компютърът изпълнява команди, така че човешкото око не е в състояние да регистрира движението. Ако искате да видите кога се върти спрайта, трябва да поставите команда за изчакване между командите `` завой надясно ‘’. Така, ще можем да видим спрайта да завива.</p>
+
+    </div>
+    </div>
+</div>
+<div class="section" id="book">
+<h2><img alt="book" src="_images/book.png" /> Обобщение<a class="headerlink" href="#book" title="Permalink to this headline">¶</a></h2>
+<p>В този урок се запознахме с групите и формите на блоковете от блоковата палитра, които се използват за даване на команди на език за програмиране в скрач. Визуалният речник съдържа повече от 100 блока, разделени в 10 групи. Визуалната граматика на скрач се осъществява чрез специфичната форма на блоковете, която не им позволява да се свързват, ако функциите им не са съвместими. Независимите блокове са свързани по такъв начин, че формират сценарии, които определят поведението на съответните обекти, а функционалните блокове задават необходимите стойности.</p>
+<p><strong>Scratch проекти</strong>: <a class="reference external" href="https://scratch.mit.edu/studios/25119441/">3Studio</a></p>
+<p><strong>Нови концпеции</strong>:  събития, действия, аритметични оператори, случайни числа, линейна структура на сценария.</p>
+<p><strong>Scratch команди</strong>: <img alt="events_blocks" src="_images/events.png" /> - <img alt="clicked_sprite" src="_images/clicked_sprite.png" />, <img alt="clicked_stage" src="_images/clicked_stage.png" />; <img alt="control_blocks" src="_images/control.png" /> - <img alt="wait_sec" src="_images/wait_sec.png" />, <img alt="stop" src="_images/stop.png" />;</p>
+<p><img alt="looks_blocks" src="_images/looks.png" /> - <img alt="think_sec" src="_images/think_sec.png" />, <img alt="next_costume" src="_images/next_costume.png" />, <img alt="change_effect" src="_images/change_effect.png" />, <img alt="clear_effects" src="_images/clear_effects.png" />, <img alt="set_size" src="_images/set_size.png" />, <img alt="change_size" src="_images/change_size.png" />;</p>
+<p><img alt="operator_blocks" src="_images/operators.png" /> - <img alt="plus" src="_images/plus.png" />, <img alt="minus" src="_images/minus.png" />, <img alt="multiply" src="_images/multiply.png" />, <img alt="divide" src="_images/divide.png" />, <img alt="pick_random" src="_images/pick_random.png" />; <img alt="variables_blocks" src="_images/variables.png" /> - <img alt="*" src="_images/asterix.png" /> <img alt="set_var" src="_images/set_var.png" />.</p>
+<p>Забележка. Блоковете маркирани съз знака <img alt="*" src="_images/asterix.png" /> ще бъдат дикутирани в следващите уроци.</p>
+</div>
+<div class="section" id="project">
+<h2><img alt="project" src="_images/project.png" /> Създайте проекти<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id26">
+<h3>Проект 1 - „Гений“<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>Създайте този проект въз основа на примера <em>Математик</em>.</p>
+<p>Започнете нов проект, който ще наречете <em>Гений</em>. Изберете основния спрайт от библиотеката с спрайт и фона от библиотеката на фона. Спрайтът трябва да даде следните задачи.</p>
+<ol class="arabic simple">
+<li><p>„Помислете за всяко трицифрено число.“</p></li>
+<li><p>„Подредете цифрите от най-високото до най-ниското - това ще бъде първото число.“</p></li>
+<li><p>„Подредете цифрите от най-ниското до най-високото - това ще бъде второто число.“</p></li>
+<li><p>„Извадете второто число от първото число.“</p></li>
+<li><p>„Запомнете резултата и след това прехвърлете цифрите му.“</p></li>
+<li><p>„Това ново число добавя към резултата, който сте запомнили преди.</p></li>
+<li><p>„Броят, който имаш е 1089.“</p></li>
+</ol>
+</div>
+<div class="section" id="id27">
+<h3>Проект 2 - „Шоколадова торта“<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>Започнете нов проект, който ще наречете шоколадова торта. Това трябва да е анимация, при който пекарят обяснява рецепта (алгоритъм) за приготвяне на шоколадова торта.</p>
+<p>За тази анимация ще ви трябват следните спрайтове: хлебар, яйца, брашно, захар, шоколад, купа, миксер, фурна, торти. Намерете подходящите изображения на вашия компютър или в Интернет и ги персонализирайте, за да отговарят на вашия проект (изчистете фона, направете ги по-големи или по-малки …).</p>
+<p>Осигурете синхронизацията на сценариите, като добавите командата за чакане към всички обекти и зададете подходящото време. Единственият спрайт, който трябва да бъде на сцената през цялото време, е спрайтът за хлебар. Той чете рецептата (алгоритъма) и определя кога ще се появят или изчезнат други спрайтове.</p>
+<ol class="arabic simple">
+<li><p>Хлебарят е сам на сцената. Той казва: „Ето алгоритъма за приготвяне на шоколадова торта!“ (2 секунди)</p></li>
+<li><p>Хлебарят казва следното: “Вземете яйцата, брашното, захарта и шоколада.” В този момент на сцената трябва да се появят яйца, брашно, захар и шоколад. Тази сцена трябва да продължи 2 секунди.</p></li>
+<li><p>Хлебарят казва следното: „Сложете всичко в купа и комбинирайте с миксера.“ В този момент яйцата, брашното, захарта и шоколадът изчезват от сцената и се появяват купата и миксерът. Тази сцена трябва да продължи 2 секунди.</p></li>
+<li><p>Хлебарят казва следното: „Сложете купата в загрятата фурна.“ В този момент купата и миксера изчезват от сцената и фурната се появява. Тази сцена трябва да продължи 2 секунди.</p></li>
+<li><p>Хлебарят казва следното: “Печете тортата 30 минути.” Нищо не се променя на сцената. Тази сцена трябва да продължи 2 секунди.</p></li>
+<li><p>Хлебарят казва следното: “Сервирайте тортата.” В този момент фурната изчезва от сцената и се появява тортата. Тази сцена трябва да продължи 2 секунди.</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Кажете ми къде да отида - координати и посока' data-toggle="tooltip"><a href="Scratch3 Coordinates.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Да рисуваме - Графика на костенурка' data-toggle="tooltip"><a href="Scratch3 Graphics.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Кажете ми къде да отида - координати и посока' data-toggle="tooltip"><a href="Scratch3 Coordinates.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Да рисуваме - Графика на костенурка' data-toggle="tooltip"><a href="Scratch3 Graphics.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

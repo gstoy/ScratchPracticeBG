@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Scratch Programming Environment &#8212; Block-based programming in Scratch - practice lessons</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tell Me Where To Go - Coordinates And Direction" href="Scratch3 Coordinates_eng.html" />
+    <link rel="prev" title="Block-based programming in Scratch - practice lessons" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'Scratch_eng';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'Scratch_eng';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Block-based programming in Scratch - practice lessons</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="scratch-programming-environment">
+<h1>Scratch Programming Environment<a class="headerlink" href="#scratch-programming-environment" title="Permalink to this headline">¶</a></h1>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="intro1" src="_images/intro1.png" /></p>
+
+    </p></div></div>
+<p>Would you like to create your own computer game, animated story, instruction or presentation? Scratch is a programming language that enables you to create all of these things, and more.</p>
+<p>Unlike the majority of common programming languages, Scratch is a <em>visual</em> programming language – instead of typing commands by using the keyboard, programs are created by connecting color coded blocks, which represent different commands, something like making different objects by using LEGO bricks.</p>
+<p>In Scratch, <strong>projects</strong> are created. The first step in creating a project is adding Sprites that will participate in it. Different looks, sounds and behaviors can be attached to all of the sprites. The behavior of a sprite is described by the <strong>Script</strong>. The project contains one or more scripts; each is associated with a sprite or a stage - the place where the project takes place.</p>
+<p>In order to write a program in Scratch, first, it is necessary to get to know the environment in which the programs are created or its <strong>interface</strong>.</p>
+<div class="topic">
+<p class="topic-title first">Scratch Programming Interface.</p>
+<p>The following Figure shows the interface of the Scratch programming language.</p>
+<a class="reference internal image-reference" href="_images/fig1_1.png"><img alt="_images/fig1_1.png" class="align-center" src="_images/fig1_1.png" style="width: 800px;" /></a>
+<p>First, we will learn about the basic functions of its main parts, and in the following lessons we will get to know other components of the environment.</p>
+<p><strong>The Stage</strong> is the place where your stories, games and animations will come to life. The stage itself is stationary, but it has sprites on it that can move and interact with one another.</p>
+<p><strong>The Blocks Palette</strong> is the area where all available commands of the Scratch programming language are kept. It is called “palette” because it looks like a palette a painter uses while painting. However, unlike a painter, a programmer creates live pictures with objects that interact with each other.</p>
+<p><strong>Scripts Area</strong> is a place where the scripts are created. To make a script, you need to drag blocks from the Blocks Palette to the Scripts Area and snap them together.</p>
+<p><strong>The Sprite List</strong> displays names and thumbnails of all sprites in your project.</p>
+<p><strong>The Menu Bar</strong> allows you to set project management commands and adjust the environment itself.</p>
+</div>
+<div class="topic">
+<p class="topic-title first">My First Program</p>
+<p>Even the longest journeys begin with a single step. That first step in learning a programming language would be to write a program which would display the words “Hello World” on the screen. This is how we will start mastering Scratch.</p>
+<p>Whenever Scratch is activated, the <strong>stage</strong> is automatically created, and it is composed of a white rectangle with a cat <strong>sprite</strong> in it.</p>
+<p>The stage and sprites are <strong>objects</strong> whose behavior is programmed by Scratch commands. We build <strong>scripts</strong>, which describe the behavior of the objects, by using blocks, which correspond to language commands. Every object has its own behavior, even the stationary stage, which, for example, can change its backdrop.</p>
+<p>Stages and sprites can be associated with <strong>graphics</strong> (pictures - drawings, photos) and <strong>sound</strong> files in addition to scripts. The look of a sprite is called the <strong>costume</strong>, and the look of the stage a <strong>backdrop</strong>.</p>
+<p><strong>The Sprite list</strong> shows thumbnails of all the sprites involved in the project. The name of each sprite is written below the thumbnail.</p>
+<p>You can view and modify the current sprite information in the window above the Sprite List.</p>
+<a class="reference internal image-reference" href="_images/fig1_2.png"><img alt="_images/fig1_2.png" class="align-center" src="_images/fig1_2.png" style="width: 650px;" /></a>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<ol class="arabic simple">
+<li><p>The <em>Name</em> of the sprite can be changed by typing a new name in the sprite’s name field.</p></li>
+<li><p>The <em>Position</em> of the sprite on the stage is defined by its coordinates x and y.</p></li>
+<li><p>Whether the sprite is visible or hidden on the Stage, depends on what is checked in the <em>Show</em> checkbox.</p></li>
+<li><p>The <em>Size</em> of the sprite is expressed as a percentage of the original size. The number 100 indicates that the Sprite is viewed in its normal size.</p></li>
+<li><p>The <em>Direction</em> indicates the direction in which the Sprite will move. The white arrow in the blue circle shows the direction of the sprite. You can change the direction by rotating the arrow or typing the appropriate number in the direction field (0: up, 90: right, 180: down, -90: left). <img alt="rot_style" src="_images/rot_style.png" /> indicates the rotation style, which can be: <em>all around</em>, <em>left-right</em>, or <em>don’t rotate</em>.</p></li>
+</ol>
+
+    </p></div></div>
+<p>To create a script, you need to drag the appropriate commands from the command palette to the script area of the active object and link them.</p>
+<p><strong>An active object</strong> - a sprite or a stage, is recognized by the fact that there is a blue frame around its thumbnail in the Sprite list. Everything we create: scripts that describe behavior, costumes that describe the look, sounds that will be heard when we run our project, is associated with the object that is active in the moment of creation.</p>
+<p>Scripts are created by snapping blocks together. Clicking anywhere within a series of blocks runs the complete script, which is executed from top to bottom.</p>
+</div>
+<div class="section" id="study-study-the-following-examples">
+<h2><img alt="study" src="_images/study.png" /> Study the following examples<a class="headerlink" href="#study-study-the-following-examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-1-the-hello-world-project">
+<h3>Example 1 - The “Hello World” Project<a class="headerlink" href="#example-1-the-hello-world-project" title="Permalink to this headline">¶</a></h3>
+<p>The simplest possible script will be added to the Scratch trademark cat. It consists of a single command - a block that allows the Sprite to say <em>Hello World</em>, that is, the text will appear in a speech bubble next to the cat. This is how you do it:</p>
+<p><img alt="1" src="_images/1.png" /> Click on the <em>Looks</em> group of blocks located in the Blocks Palette. A group of purple blocks, designed for attributing visual effects to sprites, will appear.</p>
+<p><img alt="2" src="_images/2.png" /> Drag the <img alt="say_sec" src="_images/say_sec.png" /> block to the script area.</p>
+<p><img alt="3" src="_images/3.png" /> Then, instead of the text <em>Hello</em>, type <em>Hello World</em> and click on the modified block.</p>
+<a class="reference internal image-reference" href="_images/fig1_3.png"><img alt="_images/fig1_3.png" class="align-center" src="_images/fig1_3.png" style="width: 740px;" /></a>
+<p>The speech bubble with the text <em>Hello World</em> will remain on the Stage next to the cat for 2 seconds. As you can see, it is quite simple.</p>
+<p>Now we are going to add a few more <img alt="say_sec" src="_images/say_sec.png" /> blocks to make our sprite say a few more sentences.</p>
+<p>We will show here two different ways you can add a block that already exists in the scripts area.</p>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>By repeating the steps we have already done: one more time, drag another <img alt="say_sec" src="_images/say_sec.png" /> block from the Blocks Palette and instead of the text <em>Hello</em> type <em>I am a cat</em>.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>Right-click on the block in the Scripts Area to open the shortcut menu and select <em>Duplicate</em> from it. Then write the text you want in the copy of the block, in our example - <em>I like to walk</em>. This way you can work faster, since you can copy multiple blocks that have been previously linked, with just one move.</p></li>
+</ol>
+</li>
+</ul>
+<a class="reference internal image-reference" href="_images/fig1_4.png"><img alt="_images/fig1_4.png" class="align-center" src="_images/fig1_4.png" style="width: 740px;" /></a>
+<p>To make the blocks run automatically one after the other, you need to put them together in a stack. We do this by dragging blocks. When the blocks get close to one another, a shadow appears around the block above, which means that the blocks will be connected. When we connect all three blocks in a stack and then double click on them, the Sprite will say all three sentences one after another.</p>
+<p><strong>Running the Project</strong></p>
+<p>You noticed that the block you used had a notch at the top and a bump on the bottom. A block that has this shape is called a <strong>stack block</strong>. Most of the Scratch commands are assigned to stack blocks. However, the first block, which indicates which event will trigger the script, does not need to have a notch at the top, since there are no blocks above it. These blocks are called <strong>hat blocks</strong> and most of them can be found in the <em>Events</em> group. Click on the <em>Events</em> group in the Blocks Palette and drag the <img alt="clicked_flag" src="_images/clicked_flag.png" /> block to the Scripts Area. Then place this block on top of the previously formed stack, and your project is done. To run it click on <img alt="g_flag" src="_images/g_flag.png" /> above the top left corner of the stage.</p>
+<p><strong>Saving the Project</strong></p>
+<p>This is how you can save the project on your computer:</p>
+<p><img alt="1" src="_images/1.png" /> Click on <em>File</em> in the Menu Bar.</p>
+<p><img alt="2" src="_images/2.png" /> Select the option <em>Save to your computer</em>.</p>
+<p><img alt="3" src="_images/3.png" /> In the opened dialogue window, select a folder and enter the name under which you will save your project, and then click the <em>Save</em> button.</p>
+<p><strong>Upgrading the Project</strong></p>
+<p>Instead of displaying a speech bubble with the text in it, the cat can actually say what is written. You can do this by selecting the <img alt="play_until" src="_images/play_until.png" /> block from the <em>Sound</em> group, and then recording in the sound editor the sentence you want the cat to say. After you have done this, select the recorded speech instead of <em>meow</em> from the drop-down list of this block.</p>
+<p>However, in this version of Scratch, you can do more than that. Among the extensions, there is a <em>Text-to-Speech</em> group that allows sprites to start speaking for real. You can do this only if you are connected to the Internet because it uses <em>Amazon Web Services</em>.</p>
+</div>
+</div>
+<div class="section" id="ask-did-you-understand">
+<h2><img alt="ask" src="_images/ask.png" /> Did you understand?<a class="headerlink" href="#ask-did-you-understand" title="Permalink to this headline">¶</a></h2>
+<p>Are you confused as to how you can answer the questions which have not been explained in the text yet? Simply open Scratch and try!</p>
+<div class="section" id="question-1">
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="interface1">
+            <p>Q-20: What is the name of all windows and icons, which are visible when you open Scratch?</p>
+
+            <li data-component="answer"  id="interface1_opt_a">script</li><li data-component="feedback" id="interface1_opt_a"></li>
+            
+            <li data-component="answer"  id="interface1_opt_b">object</li><li data-component="feedback" id="interface1_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="interface1_opt_c">interface</li><li data-component="feedback" id="interface1_opt_c">True.</li>
+            
+            <li data-component="answer"  id="interface1_opt_d">code</li><li data-component="feedback" id="interface1_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-2">
+<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>Some parts of the Scratch interface are marked with numbers from 1 to 5.</p>
+<a class="reference internal image-reference" href="_images/q1_2.png"><img alt="_images/q1_2.png" class="align-center" src="_images/q1_2.png" style="width: 600px;" /></a>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="interface2">
+    <span data-component="question">Drag the name of each part of the environment to the corresponding position in the image.</span>
+	<span data-component=feedback>Try again</span>
+
+    <li data-component="draggable" id="interface2_drag1">stage</li>
+    <li data-component="dropzone" for="interface2_drag1">4</li>
+
+    <li data-component="draggable" id="interface2_drag2">blocks palette</li>
+    <li data-component="dropzone" for="interface2_drag2">2</li>
+
+    <li data-component="draggable" id="interface2_drag3">scripts area</li>
+    <li data-component="dropzone" for="interface2_drag3">3</li>
+
+    <li data-component="draggable" id="interface2_drag4">sprite list</li>
+    <li data-component="dropzone" for="interface2_drag4">5</li>
+
+    <li data-component="draggable" id="interface2_drag5">menu bar</li>
+    <li data-component="dropzone" for="interface2_drag5">1</li>
+</ul></div></div>
+<div class="section" id="question-3">
+<h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="interface3">
+            <p>Q-21: Can you make a project that doesn’t have a stage?</p>
+
+            <li data-component="answer"  id="interface3_opt_a">yes</li><li data-component="feedback" id="interface3_opt_a">False. Project needs to have а stage with at least one backdrop.</li>
+            
+            <li data-component="answer" data-correct id="interface3_opt_b">no</li><li data-component="feedback" id="interface3_opt_b">True.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-4">
+<h3>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="interface4">
+            <p>Q-22: Can you make a project that doesn’t have sprites?</p>
+
+            <li data-component="answer" data-correct id="interface4_opt_a">yes</li><li data-component="feedback" id="interface4_opt_a">True.</li>
+            
+            <li data-component="answer"  id="interface4_opt_b">no</li><li data-component="feedback" id="interface4_opt_b">False. The project can have only scripts which are associated with the stage.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-5">
+<h3>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="interface5">
+            <p>Q-23:  Can you create a stage or a sprite without assigning a look to them?</p>
+
+            <li data-component="answer"  id="interface5_opt_a">yes</li><li data-component="feedback" id="interface5_opt_a">False. The object needs to have at least one look, the stage - backdrop, and the sprite - costume.</li>
+            
+            <li data-component="answer" data-correct id="interface5_opt_b">no</li><li data-component="feedback" id="interface5_opt_b">True.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-6">
+<h3>Question 6<a class="headerlink" href="#question-6" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="interface6">
+            <p>Q-24: Does every object in the project need to have at least one script associated with it?</p>
+
+            <li data-component="answer"  id="interface6_opt_a">yes</li><li data-component="feedback" id="interface6_opt_a">False. Some sprites and stages can just be decoration for the project.</li>
+            
+            <li data-component="answer" data-correct id="interface6_opt_b">no</li><li data-component="feedback" id="interface6_opt_b">True.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-7">
+<h3>Question 7<a class="headerlink" href="#question-7" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="interface7">
+            <p>Q-25: Do the Green Flag and the Red Stop Sign allow you to control script execution?</p>
+
+            <li data-component="answer" data-correct id="interface7_opt_a">yes</li><li data-component="feedback" id="interface7_opt_a">True.</li>
+            
+            <li data-component="answer"  id="interface7_opt_b">no</li><li data-component="feedback" id="interface7_opt_b">False. The project starts running when you click on the Green Flag, and it stops when you click on the Red Stop Sign.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-8">
+<h3>Question 8<a class="headerlink" href="#question-8" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="interface8">
+            <p>Q-26: What is the name of the place where we can find thumbnails of all sprites participating in the project?</p>
+
+            <li data-component="answer"  id="interface8_opt_a">menu bar</li><li data-component="feedback" id="interface8_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="interface8_opt_b">sprite list</li><li data-component="feedback" id="interface8_opt_b">True.</li>
+            
+            <li data-component="answer"  id="interface8_opt_c">scripts area</li><li data-component="feedback" id="interface8_opt_c"></li>
+            
+            <li data-component="answer"  id="interface8_opt_d">blocks palette</li><li data-component="feedback" id="interface8_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-9">
+<h3>Question 9<a class="headerlink" href="#question-9" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="interface9">
+            <p>Q-27: The sprite can have one or more _______, this enables it to change its appearance during the running of the project.</p>
+
+            <li data-component="answer"  id="interface9_opt_a">looks</li><li data-component="feedback" id="interface9_opt_a"></li>
+            
+            <li data-component="answer"  id="interface9_opt_b">suits</li><li data-component="feedback" id="interface9_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="interface9_opt_c">costumes</li><li data-component="feedback" id="interface9_opt_c">True.</li>
+            
+            <li data-component="answer"  id="interface9_opt_d">masks</li><li data-component="feedback" id="interface9_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-10">
+<h3>Question 10<a class="headerlink" href="#question-10" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="interface10">
+            <p>Q-28: What can be assigned to stages and sprites?
+(Select all correct answers)</p>
+
+            <li data-component="answer"  id="interface10_opt_a">presentations</li><li data-component="feedback" id="interface10_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="interface10_opt_b">scripts</li><li data-component="feedback" id="interface10_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="interface10_opt_c">graphics files</li><li data-component="feedback" id="interface10_opt_c"></li>
+            
+            <li data-component="answer" data-correct id="interface10_opt_d">sound files</li><li data-component="feedback" id="interface10_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            <p>It’s time to explore.</p>
+</div>
+</div>
+<div class="section" id="try-try-it">
+<h2><img alt="try" src="_images/try.png" /> Try it!<a class="headerlink" href="#try-try-it" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-1-exploring-tutorials">
+<h3>Exercise 1 - Exploring <em>Tutorials</em><a class="headerlink" href="#exercise-1-exploring-tutorials" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>By clicking on <em>Tutorials</em> in the Menu Bar (1) you will open a library of short instructions for creating different projects in Scratch. Select the tutorial <em>First Steps</em> (2) and watch the associated video (3), then by clicking on white arrows in green circles (4) you can review the steps for creating simple projects similar to our “Hello World”.</p>
+<a class="reference internal image-reference" href="_images/ex1_1.png"><img alt="_images/ex1_1.png" class="align-center" src="_images/ex1_1.png" style="width: 1000px;" /></a>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="exercise-2-sprite-information">
+<h3>Exercise 2 - Sprite Information<a class="headerlink" href="#exercise-2-sprite-information" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="1" src="_images/1.png" /> In the active sprite’s information, change the direction of movement of the sprite so that it goes up. What will happen on the stage?</p>
+<p><img alt="2" src="_images/2.png" /> How will the sprite be directed if you set a value of 45 degrees as the direction of movement?</p>
+<p><img alt="3" src="_images/3.png" /> With the mouse-pointer move the sprite and follow what is happening with the coordinates in the active sprite’s information.</p>
+<p><img alt="4" src="_images/4.png" /> Check what happens to the sprite if the option for it to be hidden is selected in the <em>Show</em> box. How can you get the sprite back on the stage?</p>
+<p><img alt="5" src="_images/5.png" /> Change the name of the active sprite.</p>
+
+    </p></div></div>
+<hr class="docutils" />
+<div class="sidebar">
+<p class="sidebar-title">Choose a Sprite</p>
+<p>You can add a new Sprite by clicking on the button located in the bottom right corner of the Sprite List.</p>
+<p><img alt="new_sprite" src="_images/fig1_5.png" /></p>
+</div>
+</div>
+<div class="section" id="exercise-3-introducing-new-sprites">
+<h3>Exercise 3 - Introducing New Sprites<a class="headerlink" href="#exercise-3-introducing-new-sprites" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="1" src="_images/1.png" /> Import a new sprite from the Sprite Library.</p>
+<p>By clicking on the <em>Choose a Sprite</em> button you will open the Sprite Library. Now you need to click on the sprite you like - for example, the ballerina sprite.</p>
+<p><img alt="2" src="_images/2.png" /> Draw a new sprite using the built-in image editor.</p>
+<p>By clicking on the <em>Paint</em> option, instead of the <em>Code</em> tab you will open the <em>Costumes</em> tab. The Paint Editor, which you can use to draw your new sprite, will open where the Script Area was previously. When you are done just click the <em>Code</em> tab.</p>
+<p><img alt="3" src="_images/3.png" /> Import a few surprise sprites from the Sprite Library.</p>
+<p><img alt="4" src="_images/4.png" /> Import a new sprite from a file by clicking the <em>Upload Sprite</em> option.</p>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="exercise-4-duplicating-and-deleting-sprites">
+<h3>Exercise 4 - Duplicating and Deleting Sprites<a class="headerlink" href="#exercise-4-duplicating-and-deleting-sprites" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="1" src="_images/1.png" /> Right-click on the sprite in the Sprite List, choose the option <em>duplicate</em> from the shortcut menu and make 3 copies of the sprite.</p>
+<p><img alt="2" src="_images/2.png" /> Remove one of the copies by choosing <em>delete</em> from the shortcut menu.</p>
+<p><img alt="3" src="_images/3.png" /> Enter numbers 50 and 200 in the <em>size</em> boxes so that one copy is half the size and one copy is double the size of the original.</p>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="exercise-5-using-sound">
+<h3>Exercise 5 - Using Sound<a class="headerlink" href="#exercise-5-using-sound" title="Permalink to this headline">¶</a></h3>
+<p><strong>Warning.</strong> You can complete this exercise only if your computer has an audio recording option!</p>
+<p>Explore the Tutorial <em>Record sound</em>, and try to create a project where the sprite will say the phrase “Hello World” in your voice. As this exercise uses the Sound Editor which we will introduce later, you can skip this and come back to it later.</p>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="1" src="_images/1.png" /> Open Scratch.</p>
+<p><img alt="2" src="_images/2.png" /> Click on <em>Sound</em> group of commands located in the Blocks Palette. A group of light purple blocks for the sound effects that can be assigned to the sprites will appear.</p>
+<p><img alt="3" src="_images/3.png" /> Drag the <img alt="play_until" src="_images/play_until.png" /> block to the Scripts Area.</p>
+<p><img alt="4" src="_images/4.png" /> Click on the <em>Sound</em> tab. The Sound Editor window will open.</p>
+<p><img alt="5" src="_images/5.png" /> Click on <em>Choose a Sound</em>, then select the recording option.</p>
+<p><img alt="6" src="_images/6.png" /> When the Recording dialogue box appears, click on the <em>record</em> button, then say the phrase “Hello World” and then stop recording.</p>
+<p><img alt="7" src="_images/7.png" /> Listen to the recording and if you like it click <em>Save</em>. Another sound named <em>recording1</em> will appear in the list of sounds associated with the cat sprite.</p>
+<p><img alt="8" src="_images/8.png" /> Go back to the <em>Code</em> tab and instead of the sound <em>meow</em> choose <em>recording1</em>. If you click on the green flag, the cat will say the sentence you recorded.</p>
+<p><img alt="9" src="_images/9.png" /> Add two more <img alt="play_until" src="_images/play_until.png" /> blocks, then add to them the recordings of two more sentences you want the cat to say.</p>
+<p><img alt="10" src="_images/10.png" /> Snap the blocks together to form a stack and place <img alt="clicked_flag" src="_images/clicked_flag.png" /> block on the top. Save this project under the name “Hello World2”.</p>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="exercise-6-using-the-extension-text-to-speech">
+<h3>Exercise 6 - Using the Extension <em>Text to Speech</em><a class="headerlink" href="#exercise-6-using-the-extension-text-to-speech" title="Permalink to this headline">¶</a></h3>
+<p><strong>Warning.</strong>  You can complete this exercise only if your computer is connected to the Internet!</p>
+<p>Explore the Tutorial <em>Create Animations that Talk</em> then try to create a project in which your sprite will say “Hello World” with the <img alt="speak" src="_images/speak.png" /> block. This exercise uses commands which will be elaborated later, so you can skip this exercise also, and come back to it after.</p>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="1" src="_images/1.png" /> Open Scratch.</p>
+<p><img alt="2" src="_images/2.png" /> Click on the <img alt="extensions" src="_images/extension.png" /> icon located on the bottom of the Block Palette. The <em>Extension</em> blocks will appear.</p>
+<p><img alt="3" src="_images/3.png" /> From the <em>Extensions</em> blocks you need to select <img alt="voices_extension" src="_images/voices.png" />. Three new blocks will appear in the block palette. These blocks will enable the sprite to say the text written in the block input field <img alt="speak" src="_images/speak.png" />, in the language set in the <img alt="set_language" src="_images/set_language.png" /> block. You can also set the type of voice which will be used: female (soprano or alt) or male (tenor or bass). This is done with the <img alt="set_voice" src="_images/set_voice.png" /> block.</p>
+<p><img alt="4" src="_images/4.png" /> Drag the <img alt="set_language" src="_images/set_language.png" /> block to the scripts area.</p>
+<p><img alt="5" src="_images/5.png" /> Drag the <img alt="set_voice" src="_images/set_voice.png" /> block to the scripts area and choose the voice of the Sprite.</p>
+<p><img alt="6" src="_images/6.png" /> Drag the <img alt="speak" src="_images/speak.png" /> block to the scripts area and type in <em>Hello World</em> into its input field.</p>
+<p><img alt="7" src="_images/7.png" /> Add two more <img alt="speak" src="_images/speak.png" /> blocks, then type in the other two sentences spoken by the cat.</p>
+<p><img alt="8" src="_images/8.png" /> Snap the blocks together to form a stack and place the <img alt="clicked_flag" src="_images/clicked_flag.png" /> block on the top.</p>
+<p><img alt="9" src="_images/9.png" /> Save this project under the name “Hello World3”.</p>
+
+    </p></div></div>
+</div>
+</div>
+<div class="section" id="bug-debug-it">
+<h2><img alt="bug" src="_images/bug.png" /> Debug it!<a class="headerlink" href="#bug-debug-it" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bug-1">
+<h3>Bug 1<a class="headerlink" href="#bug-1" title="Permalink to this headline">¶</a></h3>
+<p>The pupil wanted to make his/her own version of the project “Hello World”. In it, the sprite should say one sentence after another: <em>Hello World</em>, <em>My name is Mike</em>, <em>I like programming</em>. He attached the sprite to the following script.</p>
+<a class="reference internal image-reference" href="_images/bug1_1.png"><img alt="_images/bug1_1.png" class="align-center" src="_images/bug1_1.png" style="width: 160px;" /></a>
+<p>But after clicking on the green flag, the Sprite said only <em>I like programming</em>. What’s the bug?</p>
+</div>
+</div>
+<div class="section" id="book-summary">
+<h2><img alt="book" src="_images/book.png" /> Summary<a class="headerlink" href="#book-summary" title="Permalink to this headline">¶</a></h2>
+<p>In the first lesson we got to know the main parts of the Scratch programming language interface, and we created, ran and saved our first program - project “Hello World”. By doing exercises, we showed how we can make sprites say sentences we recorded ourselves by using the Sound Editor or those uploaded from the Text to Speech extension (only if the computer is connected to the internet).</p>
+<p><strong>Scratch projects</strong>: <a class="reference external" href="https://scratch.mit.edu/studios/25119438/">1Studio</a></p>
+<p><strong>New concepts</strong>:  interface, Scratch project, active object, sprites, costumes, stage, backdrop, scripts, blocks.</p>
+<p><strong>Scratch commands</strong>: <img alt="events_blocks" src="_images/events.png" /> - <img alt="clicked_flag" src="_images/clicked_flag.png" />; <img alt="looks_blocks" src="_images/looks.png" /> - <img alt="say_sec" src="_images/say_sec.png" />,  <img alt="say" src="_images/say.png" />; <img alt="sound_blocks" src="_images/sound.png" /> - <img alt="*" src="_images/asterix.png" />
+<img alt="play_until" src="_images/play_until.png" />; <img alt="voices_extension" src="_images/voices.png" /> -  <img alt="*" src="_images/asterix.png" /> <img alt="set_language" src="_images/set_language.png" />,  <img alt="*" src="_images/asterix.png" /> <img alt="set_voice" src="_images/set_voice.png" />,  <img alt="*" src="_images/asterix.png" /> <img alt="speak" src="_images/speak.png" />.</p>
+<p>Note. Instructions marked with the <img alt="*" src="_images/asterix.png" /> sign will be discussed in the lessons that follow.</p>
+</div>
+<div class="section" id="project-create-a-project">
+<h2><img alt="project" src="_images/project.png" /> Create a project<a class="headerlink" href="#project-create-a-project" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="project-1-about-me">
+<h3>Project 1 - “About me”<a class="headerlink" href="#project-1-about-me" title="Permalink to this headline">¶</a></h3>
+<p>Create a project that will tell us something about you. Choose a boy or a girl sprite from the Sprite library and attach a script that will make the sprite say the following three sentences: “My name is …”, “I’m … years old” and “My school is called …”. Insert your information instead of the dots.</p>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Block-based programming in Scratch - practice lessons' data-toggle="tooltip"><a href="index.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Tell Me Where To Go - Coordinates And Direction' data-toggle="tooltip"><a href="Scratch3 Coordinates_eng.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Block-based programming in Scratch - practice lessons' data-toggle="tooltip"><a href="index.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Tell Me Where To Go - Coordinates And Direction' data-toggle="tooltip"><a href="Scratch3 Coordinates_eng.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

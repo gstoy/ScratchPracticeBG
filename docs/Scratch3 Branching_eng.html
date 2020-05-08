@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Yes Or No - Making Decisions &#8212; Block-based programming in Scratch - practice lessons</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'Scratch_eng';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'Scratch_eng';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Block-based programming in Scratch - practice lessons</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="yes-or-no-making-decisions">
+<h1>Yes Or No - Making Decisions<a class="headerlink" href="#yes-or-no-making-decisions" title="Permalink to this headline">¶</a></h1>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="intro6" src="_images/intro6.png" /></p>
+
+    </p></div></div>
+<p>In this lesson, we are going to learn how to use command blocks that enable branching and how to build complex conditions based on which decisions are made. We will systematize the blocks that enable the realization of the basic elements of the program logic in Scratch. We will get to know more blocks from the <em>Sensing</em> group, as well as show how to use the image editor in vector mode.</p>
+<div class="topic">
+<p class="topic-title first">Commands with Branches</p>
+<p>In projects that have a simple linear structure, each command runs only once.
+In the previous lesson, we learned about the C-blocks - blocks describing the cycle, which allow other commands, which are inserted into them, to run multiple times. Apart from the blocks describing the cycle, the blocks that enable branching also have an entrance for a script. Depending on whether the branching condition is fulfilled, the entered commands will be executed or not.</p>
+<p>The branching command that corresponds to the C-block has one script entrance, in addition to the logical expression input field. While the branching command that corresponds to the E-block has two script entrances. If the branching condition has been fulfilled, the first command will allow the running of commands entered into the <em>if…then</em> “mouth”, and if not, these commands will not be executed, and the program will proceed to the <em>else</em> part of the block, which describes what should be done in case the condition has not been fulfilled.</p>
+<a class="reference internal image-reference" href="_images/fig6_1.png"><img alt="_images/fig6_1.png" class="align-center" src="_images/fig6_1.png" style="width: 500px;" /></a>
+<p>The second conditional branching command skips some commands depending on whether the branch condition has been fulfilled or not. If the condition is fulfilled, the commands from the NO branch will not run. If the condition is not fulfilled, the commands from the YES branch will not run.</p>
+<p>Therefore, unlike the simple linear programs, where each command runs exactly once, and loops where there are commands that can run multiple times (within the loop body), in programs with branches there are commands that will not run, not even once.</p>
+<a class="reference internal image-reference" href="_images/fig6_2.png"><img alt="_images/fig6_2.png" class="align-center" src="_images/fig6_2.png" style="width: 520px;" /></a>
+</div>
+<div class="topic">
+<p class="topic-title first">The Basic Elements of the Program Logic in Scratch</p>
+<p>As we said previously, the scripts describe the behavior of the objects to which they are attached. All behavior scenarios, however complex, are made up of combinations of basic elements of the program logic, these are:</p>
+<ul class="simple">
+<li><p>steps sequences,</p></li>
+<li><p>repetition and</p></li>
+<li><p>branching.</p></li>
+</ul>
+<p>In computer science, instead of the term <em>script</em> we use the term <strong>algorithm</strong>. The term algorithm has been known for centuries, but it gained a special meaning with the introduction of computers. We can say that an algorithm is any set of understandable and precise instructions on how to solve a given task.</p>
+<p>Crossing the street, preparing food by following a recipe, making a phone call, solving a math problem - everything comes down to execution of individual elementary operations in a given order. In algorithms, these elementary operations are called <strong>commands</strong>, <strong>steps</strong> or <strong>orders</strong>.</p>
+<p>An algorithm can be given, more or less precisely, by using words. However, a graphical record of an algorithm provides a much better insight into the structure and order in which the instructions are executed. The graphical scheme, which indicates with its symbols the nature of individual algorithmic steps, is called a <strong>block diagram</strong>. Block diagrams use special symbols to record individual types of algorithmic steps.</p>
+</div>
+<div class="sidebar">
+<p class="sidebar-title">Symbols of Certain Types of Algorithmic Steps</p>
+<p><img alt="simboli" src="_images/fig6_3.png" /></p>
+</div>
+<p>The main goal of a block diagram is to indicate the sequence of execution of individual algorithmic steps. It provides a clear link between the details and the whole of the algorithm and makes it easy to detect errors in its structure.</p>
+<p>The structure of an algorithm can be linear, or it can include branches or loops. In algorithms with a simple linear structure, the steps are executed one after the other, from start to finish. In algorithms with branches, there are several alternative execution routes. Depending on the data, some steps will not be performed at all. In algorithms with loops, some steps can be performed multiple times.</p>
+<p>The following figure shows a block diagram for calculating the value of <em>x</em> based on a given input value, with the use of three algorithm types: with simple linear, with branches and with loops.</p>
+<a class="reference internal image-reference" href="_images/fig6_4.png"><img alt="_images/fig6_4.png" class="align-center" src="_images/fig6_4.png" style="width: 600px;" /></a>
+<p>The examples are taken from the mathematics textbook for the second grade of primary school. Try to answer the following questions based on them.</p>
+<ul class="simple">
+<li><p>What will be the value of <em>х</em> after the execution of each of the algorithms if the input value is <em>а=5</em>, and what if it is <em>а=16</em>?</p></li>
+<li><p>In an algorithm with branches, which of the steps will not be performed if <em>а=5</em>, and which if <em>а=16</em>?</p></li>
+<li><p>How many times will the addition <em>х=х+3</em> be performed in an algorithm with loops if <em>а=5</em>, and how many times if <em>а=16</em>?</p></li>
+</ul>
+<p>The following figures show how these algorithms would be written in Scratch.</p>
+<p>The first algorithm, which has a linear structure, corresponds to the script that has a sequence of steps.</p>
+<a class="reference internal image-reference" href="_images/fig6_5.png"><img alt="_images/fig6_5.png" class="align-center" src="_images/fig6_5.png" style="width: 690px;" /></a>
+<p>The second algorithm, which has branches, corresponds to the script that has branches.</p>
+<a class="reference internal image-reference" href="_images/fig6_6.png"><img alt="_images/fig6_6.png" class="align-center" src="_images/fig6_6.png" style="width: 950px;" /></a>
+<p>The third algorithm, which has loops, corresponds to the script that has commands for repetition.</p>
+<a class="reference internal image-reference" href="_images/fig6_7.png"><img alt="_images/fig6_7.png" class="align-center" src="_images/fig6_7.png" style="width: 755px;" /></a>
+<p><strong>Scripts in Scratch look like algorithms written with block diagrams.</strong></p>
+<div class="topic">
+<p class="topic-title first">Functions of blocks from the group <em>Sensing</em></p>
+<p>The <em>Sensing</em> group is made up of blocks that allow the project to accept input from different devices, much like humans use senses to collect information from their environment. There are blocks, which store data that correspond to the data a person would collect with the sense of touch, sight or hearing. Some blocks in this group allow different actions to be triggered depending on the sprite’s position, as well as depending on time, date, etc. In this lesson, we will introduce the blocks that:</p>
+<ul class="simple">
+<li><p>store information about the position of the sprite relative to the mouse pointer and other objects,</p></li>
+<li><p>enable input data by using the keyboard,</p></li>
+<li><p>store information on ongoing operations performed by the mouse and keyboard.</p></li>
+</ul>
+<p>The remaining blocks from the <em>Sensing</em> group will be introduced in the following lessons, and a full overview of their functions is given in the part <em>Appendix</em>.</p>
+</div>
+<div class="section" id="study-study-the-following-examples">
+<h2><img alt="study" src="_images/study.png" /> Study the following examples<a class="headerlink" href="#study-study-the-following-examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-1-project-selection">
+<h3>Example 1 - Project “Selection”<a class="headerlink" href="#example-1-project-selection" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>In this project, the old wizard needs to choose an assistant.</p>
+<a class="reference internal image-reference" href="_images/fig6_8.png"><img alt="_images/fig6_8.png" class="align-center" src="_images/fig6_8.png" style="width: 300px;" /></a>
+<p>He can’t decide on his own which assistant to choose, so he asks the user to help him by entering the number of one of the candidates.</p>
+<a class="reference internal image-reference" href="_images/fig6_9.png"><img alt="_images/fig6_9.png" class="align-center" src="_images/fig6_9.png" style="width: 475px;" /></a>
+<p>This value is compared with the conditional statement containing the candidate number. If the user enters number 1, the wizard will turn to the left, toward the candidate number 1; otherwise, he will turn to the right toward the candidate number 2.</p>
+<a class="reference internal image-reference" href="_images/fig6_10.png"><img alt="_images/fig6_10.png" class="align-center" src="_images/fig6_10.png" style="width: 400px;" /></a>
+<p>The complete script describing the behavior of the wizard is presented in the figure below.</p>
+<a class="reference internal image-reference" href="_images/fig6_11.png"><img alt="_images/fig6_11.png" class="align-center" src="_images/fig6_11.png" style="width: 300px;" /></a>
+</div>
+<div class="section" id="example-2-project-dangerous-snowflakes">
+<h3>Example 2 - Project “Dangerous Snowflakes”<a class="headerlink" href="#example-2-project-dangerous-snowflakes" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>The <em>Dangerous Snowflakes</em> project is a simple game where the user tries to save the Snowman from large, dangerous, and continuously falling snowflakes.
+The user uses the arrow keys on the keyboard to guide the Snowman from left to right trying to avoid snowflakes that fall at different speeds and angles from the top of the screen.
+If a snowflake touches the Snowman, it will swell up, its shape will become deformed, and the game will be over.</p>
+<p><strong>Sprites and Backdrops</strong></p>
+<p>When you start this new project, load the <em>Slopes</em> backdrop and sprites <em>Snowflake</em> and <em>Snowman</em> from the library.
+Place the Snowman sprite in the lower right corner of the stage, and you can start programming.</p>
+<p><strong>Behavior of a Snowflake</strong></p>
+<p>To introduce uncertainty, it is necessary to enable the snowflakes to appear at different places and fall at different speeds and in different directions.
+We will achieve this by using the block <img alt="pick_random" src="_images/pick_random.png" />.</p>
+<p>A snowflake should appear at the top of the stage and glide to the bottom. The following commands describe this movement.</p>
+<a class="reference internal image-reference" href="_images/fig6_12.png"><img alt="_images/fig6_12.png" class="align-center" src="_images/fig6_12.png" style="width: 600px;" /></a>
+<p>The first command places the snowflake in the position for which the x coordinate will be generated randomly. The third command sets the position towards which the snowflake will glide between 0.5 and 3.5 seconds; when it reaches this position, the snowflake will disappear.</p>
+<p>We will insert this stack of commands into the loop, which will repeat until the snowflake touches the Snowman. When the snowflake touches the Snowman, the game will be over.</p>
+<a class="reference internal image-reference" href="_images/fig6_13.png"><img alt="_images/fig6_13.png" class="align-center" src="_images/fig6_13.png" style="width: 620px;" /></a>
+<p><strong>Behavior of the Snowman</strong></p>
+<p>The Snowman has three scripts attached to it - reactions to the user clicking on the green flag, and pressing the right or the left arrow key on the keyboard.</p>
+<p>In the beginning, the Snowman gives instructions for how to play the game, and in the forever loop checks whether it has been touched by a snowflake.
+If the answer is yes, it will broadcast that the game is over, and it will stop the running of all scripts.</p>
+<a class="reference internal image-reference" href="_images/fig6_14.png"><img alt="_images/fig6_14.png" class="align-center" src="_images/fig6_14.png" style="width: 650px;" /></a>
+<p>To make the game more attractive, we will add special effects. This can be done by using the blocks from the group <em>Looks</em>.</p>
+<p>As we saw in Example 2 of the lesson <em>Sequencing</em>, the command <img alt="change_effect" src="_images/change_effect.png" /> can change the sprite in multiple ways.</p>
+<p>When the snowflake touches the Snowman, we will change its size and apply the effects fisheye and color. We will repeat these changes five times, pausing briefly after each change (figure A).
+To make sure that the Snowman is not deformed when the program starts running again, in the beginning, we will clear all graphic effects and set the size to 100% (figure B).</p>
+<a class="reference internal image-reference" href="_images/fig6_15.png"><img alt="_images/fig6_15.png" class="align-center" src="_images/fig6_15.png" style="width: 490px;" /></a>
+</div>
+<div class="section" id="example-3-project-day-and-night">
+<h3>Example 3 - Project “Day and Night”<a class="headerlink" href="#example-3-project-day-and-night" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>In this project, two sprites, a cat and a dog, behave differently depending on whether it is day or night.</p>
+<p>There are two small houses on the stage; one belongs to the cat and one to the dog. There are two backdrops added to them - <em>day</em> and <em>night</em>.</p>
+<p>On the backdrop <em>day</em> you can see the sun, light blue sky and grass.
+On the backdrop <em>night</em> everything, except for the houses, is dark blue, and you can see stars and a waxing crescent moon in the sky. The day and night backdrops alternate every 5 seconds.</p>
+<p>When it is daytime, the cat and the dog come out of their houses and chase one another. The cat runs around in a circle and the dog points toward the cat and tries to come closer to it.</p>
+<p>When it is night-time, the cat and the dog go back to their houses and keep still.</p>
+<a class="reference internal image-reference" href="_images/fig6_16.png"><img alt="_images/fig6_16.png" class="align-center" src="_images/fig6_16.png" style="width: 500px;" /></a>
+<p><strong>Creating Sprites</strong></p>
+<p>Delete the <em>Sprite1</em> and then upload the <em>Dog2</em> sprite and the <em>Cat2</em> sprite, from the library.
+The dog has three costumes, but we will use only the first two, so you can delete the third. The cat has only one costume, and since we want to make a motion animation, we will have to draw another one.
+To create the second costume for the cat, we will use the paint editor in the vector mode. By right-clicking on the cat sprite, we will open the shortcut menu from which we can select the option <em>Duplicate</em>.</p>
+<p>This way we get a new costume, <em>Cat3</em>, which we will change with the steps presented in the following figure.</p>
+<a class="reference internal image-reference" href="_images/fig6_17.png"><img alt="_images/fig6_17.png" class="align-center" src="_images/fig6_17.png" style="width: 380px;" /></a>
+<p><strong>Creating the Backdrop</strong></p>
+<p>Click on the button <em>Choose a Backdrop</em> (on the right, next to the sprite list), and then choose the option <em>Paint</em>.
+From the palette, containing vector tools choose <img alt="v_rectan" src="_images/v_rectan.png" />, and the drawing mode should have the fill color turned off. Draw a small house, as shown in the following figure.</p>
+<a class="reference internal image-reference" href="_images/fig6_18.png"><img alt="_images/fig6_18.png" class="align-center" src="_images/fig6_18.png" style="width: 380px;" /></a>
+<p>Since you used the tool <img alt="v_group" src="_images/v_group.png" /> to group the objects, which make up the house, you can use the tool <img alt="copy" src="_images/copy.png" /> to duplicate it. Once you have done this, put the copy in the lower right corner of the stage, and the original house in the upper left corner.
+Then set the size of both sprites so they can fit inside their houses.</p>
+<p>Now, we will move on to painting, and we will use the tool <img alt="v_fill" src="_images/v_fill.png" />. The application of this tool, when it comes to filling in certain areas, is not the same as in the raster (bitmap) mode.
+If the area is not closed, in raster mode the paint will “leak” onto the whole image. In vector mode, this does not happen - you will not be able to paint it at all.
+This is why you should first “close” the area you want to paint.
+This is done by using the tool <img alt="v_select" src="_images/v_select.png" />, you should click on the image, and then you select the part of the image that is not connected (2) and attach it to the rest of the image (3). Then, by using the tool <img alt="v_fill" src="_images/v_fill.png" />, you can paint both the interior (4) and the lines that form the area (5).</p>
+<a class="reference internal image-reference" href="_images/fig6_19.png"><img alt="_images/fig6_19.png" class="align-center" src="_images/fig6_19.png" style="width: 500px;" /></a>
+<p>Since we used the tool <img alt="v_rectan" src="_images/v_rectan.png" /> for drawing, there shouldn’t be any problems when we paint.
+In the following figure, you can see the result of painting parts of the house and how it is done.</p>
+<a class="reference internal image-reference" href="_images/fig6_20.png"><img alt="_images/fig6_20.png" class="align-center" src="_images/fig6_20.png" style="width: 380px;" /></a>
+<p>When you finish painting the houses, multiply this background.</p>
+<p>We will add to the first backdrop, so it represents night-time, and to the second, so it represents daytime.</p>
+<p><strong>Creating the night-time backdrop</strong></p>
+<p>Draw a filled dark blue rectangle across the entire stage, then using the tool <em>Back</em> <img alt="v_back" src="_images/v_back.png" /> set this rectangle behind both houses. The same thing can be done with the tool <em>Layer back</em> <img alt="v_backward" src="_images/v_backward.png" />, but you will have to click on the stage as many times as there are layers in the image.
+When both houses are visible, you can start drawing the moon and the stars.</p>
+<p>A waxing crescent moon can be drawn by first drawing a filled yellow circle (1) and then partially drawing a larger circle filled with the backdrop color (2) over it.</p>
+<p>A star can be created by drawing a white triangle (3), which we can then duplicate and rotate (4) and finally fill in the entire shape with white (5).</p>
+<a class="reference internal image-reference" href="_images/fig6_21.png"><img alt="_images/fig6_21.png" class="align-center" src="_images/fig6_21.png" style="width: 400px;" /></a>
+<p>Now you can copy the finished stars and arrange them around the stage, some of them you can make smaller and some larger. With this, the night-time backdrop is finished.</p>
+<a class="reference internal image-reference" href="_images/fig6_22.png"><img alt="_images/fig6_22.png" class="align-center" src="_images/fig6_22.png" style="width: 380px;" /></a>
+<p><strong>Creating the daytime backdrop</strong></p>
+<p>Draw the sun with the tool <img alt="v_circle" src="_images/v_circle.png" />, and for the rays, you can use the tool <img alt="v_line" src="_images/v_line.png" />. Then draw a large rectangle filled in with light blue color, the width of the rectangle should be the same as the stage. Place it as many layers back as necessary to see all the details on the stage.
+(If you were to draw the sky first, and the sun second, you would be able to put the sky rectangle in the appropriate layer faster. This way you need to go back underneath all the rays of the sun).</p>
+<p>Then draw a rectangle filled with green, as wide as the stage, draw grass as send it to the background of the image.</p>
+<p>The process of creating the daytime backdrop is presented in the figure below.</p>
+<a class="reference internal image-reference" href="_images/fig6_23.png"><img alt="_images/fig6_23.png" class="align-center" src="_images/fig6_23.png" style="width: 500px;" /></a>
+<p>Since we are done creating the backdrop daytime, we can now start writing the script, which will define the behavior of the sprites.</p>
+<p><strong>Synchronization of events in the Project Day and Night</strong></p>
+<p>In this project, the behavior is dictated by the backdrop. It broadcasts the messages <em>day</em> and <em>night</em>, to which both sprites respond.</p>
+<a class="reference internal image-reference" href="_images/fig6_24.png"><img alt="_images/fig6_24.png" class="align-center" src="_images/fig6_24.png" style="width: 250px;" /></a>
+<p>The following figures represent scripts added to the sprites, from which you can see how they react to these messages.</p>
+<a class="reference internal image-reference" href="_images/fig6_25.png"><img alt="_images/fig6_25.png" class="align-center" src="_images/fig6_25.png" style="width: 680px;" /></a>
+<a class="reference internal image-reference" href="_images/fig6_26.png"><img alt="_images/fig6_26.png" class="align-center" src="_images/fig6_26.png" style="width: 680px;" /></a>
+</div>
+</div>
+<div class="section" id="ask-did-you-understand">
+<h2><img alt="ask" src="_images/ask.png" /> Did you understand?<a class="headerlink" href="#ask-did-you-understand" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="question-1">
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="if01">
+            <p>Q-1: Will the sprite say <em>Hello</em> after the execution of the condition command?</p>
+<a class="reference internal image-reference" href="_images/q6_01.png"><img alt="_images/q6_01.png" class="align-center" src="_images/q6_01.png" style="width: 250px;" /></a>
+
+            <li data-component="answer" data-correct id="if01_opt_a">yes</li><li data-component="feedback" id="if01_opt_a"></li>
+            
+            <li data-component="answer"  id="if01_opt_b">no</li><li data-component="feedback" id="if01_opt_b">The condition 1=1 is not fulfilled.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-2">
+<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="if02">
+            <p>Q-2: Will the sprite say <em>Hello</em> after the execution of the condition command?</p>
+<a class="reference internal image-reference" href="_images/q6_02.png"><img alt="_images/q6_02.png" class="align-center" src="_images/q6_02.png" style="width: 255px;" /></a>
+
+            <li data-component="answer"  id="if02_opt_a">yes</li><li data-component="feedback" id="if02_opt_a">Since the value of the expression 1=2 is always false, the command from the YES branch will never run.</li>
+            
+            <li data-component="answer" data-correct id="if02_opt_b">no</li><li data-component="feedback" id="if02_opt_b"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-3">
+<h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="if03">
+            <p>Q-3: Which of the user’s answers will allow the execution of the command in the YES branch?</p>
+<a class="reference internal image-reference" href="_images/q6_03.png"><img alt="_images/q6_03.png" class="align-center" src="_images/q6_03.png" style="width: 215px;" /></a>
+
+            <li data-component="answer"  id="if03_opt_a">5</li><li data-component="feedback" id="if03_opt_a">False 5<5</li>
+            
+            <li data-component="answer" data-correct id="if03_opt_b">-5</li><li data-component="feedback" id="if03_opt_b">True.</li>
+            
+            <li data-component="answer" data-correct id="if03_opt_c">0</li><li data-component="feedback" id="if03_opt_c">True.</li>
+            
+            <li data-component="answer"  id="if03_opt_d">10</li><li data-component="feedback" id="if03_opt_d">False 10<5.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-4">
+<h3>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="if04">
+            <p>Q-4: What will the sprite say if, when asked <em>Is it raining?</em>, the user answers <em>Yes</em>?</p>
+<a class="reference internal image-reference" href="_images/q6_04.png"><img alt="_images/q6_04.png" class="align-center" src="_images/q6_04.png" style="width: 310px;" /></a>
+
+            <li data-component="answer" data-correct id="if04_opt_a">Bring an umbrella.</li><li data-component="feedback" id="if04_opt_a"></li>
+            
+            <li data-component="answer"  id="if04_opt_b">Nothing will be said</li><li data-component="feedback" id="if04_opt_b">In that case, the condition for branching is fulfilled.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-5">
+<h3>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="if05">
+            <p>Q-5: What will the sprite say after the execution of the condition command?</p>
+<a class="reference internal image-reference" href="_images/q6_05.png"><img alt="_images/q6_05.png" class="align-center" src="_images/q6_05.png" style="width: 315px;" /></a>
+
+            <li data-component="answer" data-correct id="if05_opt_a">The condition is fulfilled.</li><li data-component="feedback" id="if05_opt_a"></li>
+            
+            <li data-component="answer"  id="if05_opt_b">The condition is not fulfilled.</li><li data-component="feedback" id="if05_opt_b">Since the value of the expression А=А is always true, the command from the YES branch will be executed.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-6">
+<h3>Question 6<a class="headerlink" href="#question-6" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="if06">
+            <p>Q-6: Will the sprite appear after the execution of the condition command?</p>
+<a class="reference internal image-reference" href="_images/q6_06.png"><img alt="_images/q6_06.png" class="align-center" src="_images/q6_06.png" style="width: 165px;" /></a>
+
+            <li data-component="answer"  id="if06_opt_a">yes</li><li data-component="feedback" id="if06_opt_a">Since the value of the expression А=B is always false, the command from the NO branch will be executed.</li>
+            
+            <li data-component="answer" data-correct id="if06_opt_b">no</li><li data-component="feedback" id="if06_opt_b"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-7">
+<h3>Question 7<a class="headerlink" href="#question-7" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="if07">
+            <p>Q-7: What is the result of the execution of the block commands (А) and (В)?</p>
+<a class="reference internal image-reference" href="_images/q6_07.png"><img alt="_images/q6_07.png" class="align-center" src="_images/q6_07.png" style="width: 600px;" /></a>
+
+            <li data-component="answer"  id="if07_opt_a">different regardless of the position of the sprite</li><li data-component="feedback" id="if07_opt_a">In both cases, the condition that has to be fulfilled for the sentence "You are in the center of the stage" to be said, is the same.</li>
+            
+            <li data-component="answer" data-correct id="if07_opt_b">the same regardless of the position of the sprite</li><li data-component="feedback" id="if07_opt_b"></li>
+            
+            <li data-component="answer"  id="if07_opt_c">different if the y is not 0</li><li data-component="feedback" id="if07_opt_c">In this case, the condition is not fulfilled in any of the blocks (A) or (B), and "You are in the center of the stage" will not be said.</li>
+            
+            <li data-component="answer"  id="if07_opt_d">different if the x is not 0</li><li data-component="feedback" id="if07_opt_d">In this case, the condition is not fulfilled in any of the blocks (A) or (B), and "You are in the center of the stage" will not be said.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-8">
+<h3>Question 8<a class="headerlink" href="#question-8" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="if08">
+            <p>Q-8: Which of the condition commands has the right condition for the statement - location coordinates of the sprite are (0,0), i.e. the sprite is in the center of the stage? (Select all correct answers)</p>
+<a class="reference internal image-reference" href="_images/q6_08.png"><img alt="_images/q6_08.png" class="align-center" src="_images/q6_08.png" style="width: 1020px;" /></a>
+
+            <li data-component="answer" data-correct id="if08_opt_a"></li><li data-component="feedback" id="if08_opt_a">Explicitly determines that х=0 and у=0.</li>
+            
+            <li data-component="answer"  id="if08_opt_b"></li><li data-component="feedback" id="if08_opt_b">These are the coordinates of some of the points on the diagonal of the coordinate system, they can be (0,0), but they don't have to be.</li>
+            
+            <li data-component="answer"  id="if08_opt_c"></li><li data-component="feedback" id="if08_opt_c">These are the coordinates of some of the points on the x-axis or y-axis. It may also be the point where they intersect, but it does not have to be.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-9">
+<h3>Question 9<a class="headerlink" href="#question-9" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="if09">
+            <p>Q-9: In the project <em>Making a Decision</em> we showed how the operation <em>mod</em> is used to check whether a certain number can be divided by 2.
+Which of the following conditions allows you to check whether the number you enter can be divided by 6? (Select all correct answers)</p>
+<a class="reference internal image-reference" href="_images/q6_09.png"><img alt="_images/q6_09.png" class="align-center" src="_images/q6_09.png" style="width: 640px;" /></a>
+
+            <li data-component="answer" data-correct id="if09_opt_a"></li><li data-component="feedback" id="if09_opt_a">The remainder, after the number has been divided by 6, is 0.</li>
+            
+            <li data-component="answer"  id="if09_opt_b"></li><li data-component="feedback" id="if09_opt_b">The number 2 and 3 satisfy this condition, but they cannot be divided by 6.</li>
+            
+            <li data-component="answer"  id="if09_opt_c"></li><li data-component="feedback" id="if09_opt_c">The number 11 satisfies this condition, but it cannot be divided by 6.</li>
+            
+            <li data-component="answer" data-correct id="if09_opt_d"></li><li data-component="feedback" id="if09_opt_d">The number can be divided by both prime factors of the number 6.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+<div class="section" id="try-try-it">
+<h2><img alt="try" src="_images/try.png" /> Try it!<a class="headerlink" href="#try-try-it" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-1">
+<h3>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>When the user is expected to enter some kind of information, we need to ask a question that suggests the expected form of the answer, for example: “Enter your date of birth (dd/mm/yy)”.
+Formulate the input questions for entering:</p>
+<p>а) A number between 1 and 10</p>
+<ol class="loweralpha simple" start="2">
+<li><p>A number between -1.0 and 2.25</p></li>
+<li><p>Name and surname</p></li>
+<li><p>Weight</p></li>
+<li><p>Height</p></li>
+</ol>
+
+    </p></div></div>
+</div>
+<div class="section" id="exercise-2">
+<h3>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>The program, which should calculate the ideal weight, requires the user to enter his/her weight (in kg) and height (in cm).
+Write parts of the program that check if the user has entered the correct weight data, e.g. from the interval [40,160] and height, e.g. [140,210].</p>
+
+    </p></div></div>
+</div>
+<div class="section" id="exercise-3">
+<h3>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Write what should be the arguments of the operation <img alt="pick_random" src="_images/pick_random.png" /> for it to generate numbers from the set:</p>
+<p>а) {0, 1}</p>
+<ol class="loweralpha simple" start="2">
+<li><p>{0, 1, 2, 3, … , 10}</p></li>
+<li><p>{–2, 0, 2, 4, 6, 8}</p></li>
+<li><p>{0, 10, 20, 30, … , 100}</p></li>
+<li><p>{0, 0.1, 0.15, 0.26, 0.38, … , 1.0}</p></li>
+</ol>
+<p>Check your answers by testing what will the appropriate operation return for each example in the loop that should be repeated 5 times.</p>
+
+    <div data-component="reveal" id="упутство11"   data-showtitle="Show the instruction" data-hidetitle="Hide the instruction">
+    <p><strong>Instruction:</strong></p>
+<p>The whole block of commands is given for the example a), and for the others, only the part which generates numbers that should be inserted into the block <code class="docutils literal notranslate"><span class="pre">say</span></code>.</p>
+<p>From example e), you can see that it is enough to put just one limit that has a decimal point to generate decimal numbers.</p>
+<a class="reference internal image-reference" href="_images/ex6_3.png"><img alt="_images/ex6_3.png" class="align-center" src="_images/ex6_3.png" style="width: 400px;" /></a>
+
+    </div>
+    
+    </p></div></div>
+</div>
+<div class="section" id="exercise-4">
+<h3>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Write the condition command with a complex condition equivalent to the following compositions of condition commands:</p>
+<a class="reference internal image-reference" href="_images/ex6_4.png"><img alt="_images/ex6_4.png" class="align-center" src="_images/ex6_4.png" style="width: 530px;" /></a>
+<p>Check your answers by testing them in the Scratch environment.</p>
+
+    </p></div></div>
+</div>
+<div class="section" id="exercise-5">
+<h3>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Create a mini-project called <em>Greater</em> in which the sprite asks the user to insert a number between 1 and 100.
+The program chooses a number (by using the random number operator block) also between 1 and 100 and then tells the user whose number is greater.
+The dialogue should be initiated by clicking on the sprite.</p>
+
+    <div data-component="reveal" id="упутство12"   data-showtitle="Show the instruction" data-hidetitle="Hide the instruction">
+    <p><strong>Instruction:</strong></p>
+<a class="reference internal image-reference" href="_images/ex6_5.png"><img alt="_images/ex6_5.png" class="align-center" src="_images/ex6_5.png" style="width: 390px;" /></a>
+
+    </div>
+    
+    </p></div></div>
+</div>
+</div>
+<div class="section" id="bug-debug-it">
+<h2><img alt="bug" src="_images/bug.png" /> Debug it!<a class="headerlink" href="#bug-debug-it" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bug-1">
+<h3>Bug 1<a class="headerlink" href="#bug-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Question</dt>
+<dd class="field-odd"><p>The student wanted to create a script that allowed the movement of the sprite to be controlled by arrows. He/she wrote the program shown in the figure on the left.
+Then the student noticed that the command <img alt="move_steps" src="_images/move_steps.png" /> is repeated 4 times, so he/she changed the script into the program presented in the figure on the right. However, the student did not achieve the desired behavior of the sprite. Where did the student make a mistake?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug6_1.png"><img alt="_images/bug6_1.png" class="align-center" src="_images/bug6_1.png" style="width: 500px;" /></a>
+
+    <div data-component="reveal" id="сакривање13"   data-showtitle="Show the answer" data-hidetitle="Hide the answer">
+    <p><strong>Answer:</strong></p>
+<p>In the changed program, the command <img alt="move_steps" src="_images/move_steps.png" /> will run continuously and the sprite will move in the direction that was chosen last, regardless of whether the key with that direction has been pressed or not.</p>
+
+    </div>
+    </div>
+<div class="section" id="bug-2">
+<h3>Bug 2<a class="headerlink" href="#bug-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Question</dt>
+<dd class="field-odd"><p>The student wanted to change the behavior of the candidates for the position of wizard’s assistant in the project “Selection”. When the wizard chooses the girl, the boy should think to himself “Why did you choose her?”. This is why he/she added the following script to the boy sprite. However, the added thought was put at the very beginning of the program, before the wizard chose anyone. How can you coordinate the activities of the boy and the wizard?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug6_2.png"><img alt="_images/bug6_2.png" class="align-center" src="_images/bug6_2.png" style="width: 220px;" /></a>
+
+    <div data-component="reveal" id="сакривање16"   data-showtitle="Show the answer" data-hidetitle="Hide the answer">
+    <p><strong>Answer:</strong></p>
+<p>One way is to make the wizard broadcast the message that he has made his decision, and then allow the boy to react when he receives this message. Of course, if we don’t want the boy to react when the wizard chooses him, then we have to expand this communication by adding the part where the program will check which of the candidates was selected.</p>
+<a class="reference internal image-reference" href="_images/ans6_2.png"><img alt="_images/ans6_2.png" class="align-center" src="_images/ans6_2.png" style="width: 595px;" /></a>
+
+    </div>
+    </div>
+<div class="section" id="bug-3">
+<h3>Bug 3<a class="headerlink" href="#bug-3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Question</dt>
+<dd class="field-odd"><p>The student wanted his sprite, which is controlled with the arrow keys left and right, to keep saying the word “left” while it is on the left half of the stage, and the word “right” while it is on the right half of the stage. He/she added the following scripts to the sprite, but it kept saying the same word no matter where on the stage it was located. What should be changed in the scripts?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug6_3.png"><img alt="_images/bug6_3.png" class="align-center" src="_images/bug6_3.png" style="width: 510px;" /></a>
+
+    <div data-component="reveal" id="сакривање17"   data-showtitle="Show the answer" data-hidetitle="Hide the answer">
+    <p><strong>Answer:</strong></p>
+<p>The program checks on which half of the stage the sprite is located only at the beginning. This check should be inserted into a forever loop.</p>
+<a class="reference internal image-reference" href="_images/ans6_3.png"><img alt="_images/ans6_3.png" class="align-center" src="_images/ans6_3.png" style="width: 240px;" /></a>
+
+    </div>
+    </div>
+</div>
+<div class="section" id="book-summary">
+<h2><img alt="book" src="_images/book.png" /> Summary<a class="headerlink" href="#book-summary" title="Permalink to this headline">¶</a></h2>
+<p>In this lesson, we learned about the branching commands that allow you to create branching scripts. We introduced the blocks from the <em>Sensing</em> group and showed how the command for entering data by using the keyboard is executed in Scratch. We also learned how to synchronize the behavior of sprites by using message broadcasting. Furthermore, we showed how to use tool in the vector mode of the built-in paint editor.</p>
+<p><strong>New concepts</strong>:  structure with branches, complex condition.</p>
+<p><strong>Scratch commands</strong>: <img alt="control_blocks" src="_images/control.png" /> - <img alt="if_then" src="_images/if_then.png" />, <img alt="if_then_else" src="_images/if_then_else.png" />, <img alt="wait_until" src="_images/wait_until.png" />; <img alt="looks_blocks" src="_images/looks.png" /> - <img alt="switch_backdrop" src="_images/switch_backdrop.png" />, <img alt="backdrop" src="_images/backdrop.png" />; <img alt="sensing_blocks" src="_images/sensing.png" /> - <img alt="touching" src="_images/touching.png" />; <img alt="operator_blocks" src="_images/operators.png" /> - <img alt="equal" src="_images/equal.png" /></p>
+</div>
+<div class="section" id="project-create-a-projects">
+<h2><img alt="project" src="_images/project.png" /> Create a projects<a class="headerlink" href="#project-create-a-projects" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="project-1-falling-apples">
+<h3>Project 1 – “Falling Apples”<a class="headerlink" href="#project-1-falling-apples" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>Create a game with a scenario similar to the project “Dangerous Snowflakes”. The main sprite of this project should be a boy sprite, whose movement is controlled with the left and right arrow keys. He should avoid apples that appear at random positions in the upper part of the stage and glide down to random positions in the lower part of the stage. If an apple touches the boy at any point, the game will be over, if they don’t touch him, they hide and reappear in the upper part of the stage and glide down. The glide speed should also be set randomly, for example, between 1 and 3 seconds. To make the game more exciting, once you are done making the first apple sprite, multiply it, so there are, for example, 3 apples repeating the appropriate behavior.</p>
+</div>
+<div class="section" id="project-2-hungry-shark">
+<h3>Project 2 - “Hungry Shark”<a class="headerlink" href="#project-2-hungry-shark" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>Create a project in which the shark sprite is chasing fish. The shark should cruise left to right constantly, and when the space bar is pressed, it should move upward. If the shark sprite touches a fish, the fish will disappear, and then reappear after 3 to 5 seconds in a random position. Different duration of the pause between the disappearance and the reappearance of a fish and different locations can be achieved by using the operation <em>random number</em>. The shark sprite (Shark2) has three costumes, so changing the costume can represent the reaction of the shark when it touches a fish. Attribute different movement to the fish sprites, crab sprite and the jellyfish sprite. The jellyfish should move up and down, the crab should move left and right, and fish should move at different speeds. All sprites - shark, different types of fish, the crab and the jellyfish, as well as the backdrop can be taken from the sprites and backdrop libraries. You can make different types of fish by using different costumes of the sprite <em>Fish</em>.</p>
+</div>
+<div class="section" id="project-3-a-dog-and-a-cat">
+<h3>Project 3 - “A dog and a cat”<a class="headerlink" href="#project-3-a-dog-and-a-cat" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>Create a project where you will use two sprites - a dog and a cat, as well as two backdrops. In the beginning, the cat slowly moves left and right between the edges of the stage, and its thoughts should appear in the cloud of the block <code class="docutils literal notranslate"><span class="pre">think</span></code>. After 10 seconds, the dog sprite should appear, it starts barking, and it scares the cat. The cat starts running and when it reaches the edge of the stage with the first backdrop, the second backdrop should appear. When the cat crosses the whole stage with the new backdrop it should disappear, this means that the cat managed to hide. Only when this is done, the dog will appear on the stage, stop and a question mark will appear in the cloud of the block <code class="docutils literal notranslate"><span class="pre">think</span></code>.</p>
+<p>To create this project, you will need to:</p>
+<ul class="simple">
+<li><p>write scripts describing the behavior of the cat sprite,</p></li>
+<li><p>upload the dog sprite from the sprite library and add a barking audio file to it along with scripts describing its behavior,</p></li>
+<li><p>upload two backdrops, <em>Playing Field</em> and <em>Garden-rock</em>: the first where the cat meets the dog and the second where the cat escapes when it hears the dog’s barking,</p></li>
+<li><p>synchronize dog’s barking and the cat’s reaction to it - cat runs away,</p></li>
+<li><p>synchronize the “behavior” of the two backdrops, i.e. the moment when they change.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,232 @@
+
+.. |bug| image:: ../_images/icons/bug.png
+
+.. |book| image:: ../_images/icons/book.png
+
+.. |ask| image:: ../_images/icons/ask.png
+
+.. |try| image:: ../_images/icons/try.png
+
+.. |project| image:: ../_images/icons/project.png
+
+.. |study| image:: ../_images/icons/study.png
+
+
+.. |delete| image:: ../_images/icons/delete.png
+
+.. |redo| image:: ../_images/icons/redo.png
+
+.. |fill| image:: ../_images/icons/fill.png
+
+.. |flip_h| image:: ../_images/icons/flip_h.png
+
+.. |flip_v| image:: ../_images/icons/flip_v.png
+
+.. |paste| image:: ../_images/icons/paste.png
+
+.. |copy| image:: ../_images/icons/copy.png
+
+.. |vector_bmp| image:: ../_images/icons/vector_bmp.png
+
+.. |bmp_vector| image:: ../_images/icons/bmp_vector.png
+
+
+.. |center| image:: ../_images/icons/center.png
+
+.. |name| image:: ../_images/icons/name.png
+
+.. |outline| image:: ../_images/icons/outline.png
+
+.. |b_size| image:: ../_images/icons/b_size.png
+
+.. |swap| image:: ../_images/icons/swap.png
+
+.. |rot_style| image:: ../_images/icons/rot_style.png
+
+.. |b_back| image:: ../_images/icons/b_back.png
+
+.. |b_sprite| image:: ../_images/icons/b_sprite.png
+
+.. |b_sound| image:: ../_images/icons/b_sound.png
+
+.. |g_flag| image:: ../_images/icons/g_flag.png
+
+.. |s_language| image:: ../_images/icons/language.png
+
+.. |tutorial| image:: ../_images/icons/tutorial.png
+
+
+
+
+.. |r_brush| image:: ../_images/icons/r_brush.png
+
+.. |r_line| image:: ../_images/icons/r_line.png
+
+.. |r_rectan| image:: ../_images/icons/r_rectan.png
+
+.. |r_circle| image:: ../_images/icons/r_circle.png
+
+.. |r_text| image:: ../_images/icons/r_text.png
+
+.. |r_fill| image:: ../_images/icons/r_fill.png
+
+.. |r_eraser| image:: ../_images/icons/r_eraser.png
+
+.. |r_select| image:: ../_images/icons/r_select.png
+
+.. |v_select| image:: ../_images/icons/v_select.png
+
+.. |v_reshape| image:: ../_images/icons/v_reshape.png
+
+.. |v_brush| image:: ../_images/icons/v_brush.png
+
+.. |v_line| image:: ../_images/icons/v_line.png
+
+.. |v_rectan| image:: ../_images/icons/v_rectan.png
+
+.. |v_circle| image:: ../_images/icons/v_circle.png
+
+.. |v_text| image:: ../_images/icons/v_text.png
+
+.. |v_fill| image:: ../_images/icons/v_fill.png
+
+.. |v_eraser| image:: ../_images/icons/v_eraser.png
+
+.. |v_forward| image:: ../_images/icons/v_forward.png
+
+.. |v_backward| image:: ../_images/icons/v_backward.png
+
+.. |v_front| image:: ../_images/icons/v_front.png
+
+.. |v_back| image:: ../_images/icons/v_back.png
+
+.. |v_group| image:: ../_images/icons/v_group.png
+
+.. |v_ungroup| image:: ../_images/icons/v_ungroup.png
+
+.. |v_curved| image:: ../_images/icons/v_curved.png
+
+.. |v_pointed| image:: ../_images/icons/v_pointed.png
+
+
+
+.. |code| image:: ../_images/icons/code.png
+
+.. |s_costume| image:: ../_images/icons/costume.png
+
+.. |echo| image:: ../_images/icons/echo.png
+
+.. |faster| image:: ../_images/icons/faster.png
+
+.. |louder| image:: ../_images/icons/louder.png
+
+.. |min| image:: ../_images/icons/min.png
+
+.. |max| image:: ../_images/icons/max.png
+
+.. |sound| image:: ../_images/icons/sound.png
+
+.. |stand| image:: ../_images/icons/stand.png
+
+.. |s_stop| image:: ../_images/icons/s_stop.png
+
+.. |play| image:: ../_images/icons/play.png
+
+.. |reverse| image:: ../_images/icons/reverse.png
+
+.. |robot| image:: ../_images/icons/robot.png
+
+.. |slower| image:: ../_images/icons/slower.png
+
+.. |softer| image:: ../_images/icons/softer.png
+
+.. |s_broadcast| image:: ../_images/icons/broadcast.png
+
+.. |receive| image:: ../_images/icons/receive.png
+
+.. |trim| image:: ../_images/icons/trim.png
+
+.. |zoom| image:: ../_images/icons/zoom.png
+
+.. |requires| image:: ../_images/icons/requires.png
+
+
+.. |1| image:: ../_images/icons/1.png
+
+.. |2| image:: ../_images/icons/2.png
+
+.. |3| image:: ../_images/icons/3.png
+
+.. |4| image:: ../_images/icons/4.png
+
+.. |5| image:: ../_images/icons/5.png
+
+.. |6| image:: ../_images/icons/6.png
+
+.. |7| image:: ../_images/icons/7.png
+
+.. |8| image:: ../_images/icons/8.png
+
+.. |9| image:: ../_images/icons/9.png
+
+.. |10| image:: ../_images/icons/10.png
+
+.. |11| image:: ../_images/icons/11.png
+
+.. |12| image:: ../_images/icons/12.png
+
+
+.. |ok| image:: ../_images/icons/ok.png
+
+.. |*| image:: ../_images/icons/asterix.png
+
+.. |!=| image:: ../_images/icons/not_equal.png
+
+.. |?| image:: ../_images/icons/q.png
+
+
+.. |intro1| image:: ../_images/icons/intro1.png
+
+.. |intro2| image:: ../_images/icons/intro2.png
+
+.. |intro3| image:: ../_images/icons/intro3.png
+
+.. |intro4| image:: ../_images/icons/intro4.png
+
+.. |intro5| image:: ../_images/icons/intro5.png
+
+.. |intro6| image:: ../_images/icons/intro6.png
+
+.. |intro7| image:: ../_images/icons/intro7.png
+
+.. |intro8| image:: ../_images/icons/intro8.png
+
+.. |intro9| image:: ../_images/icons/intro9.png
+
+.. |intro10| image:: ../_images/icons/intro10.png
+
+.. |intro11| image:: ../_images/icons/intro11.png
+
+
+.. |intro1s| image:: ../_images/icons/intro1s.png
+
+.. |intro2s| image:: ../_images/icons/intro2s.png
+
+.. |intro3s| image:: ../_images/icons/intro3s.png
+
+.. |intro4s| image:: ../_images/icons/intro4s.png
+
+.. |intro5s| image:: ../_images/icons/intro5s.png
+
+.. |intro6s| image:: ../_images/icons/intro6s.png
+
+.. |intro7s| image:: ../_images/icons/intro7s.png
+
+.. |intro8s| image:: ../_images/icons/intro8s.png
+
+.. |intro9s| image:: ../_images/icons/intro9s.png
+
+.. |intro10s| image:: ../_images/icons/intro10s.png
+
+.. |intro11s| image:: ../_images/icons/intro11s.png
+

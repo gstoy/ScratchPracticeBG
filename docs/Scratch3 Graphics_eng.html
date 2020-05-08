@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Let’s Draw - Turtle Graphics &#8212; Block-based programming in Scratch - practice lessons</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Repeating Steps" href="Scratch3 Repeating_eng.html" />
+    <link rel="prev" title="Sequencing Steps" href="Scratch3 Sequencing_eng.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'Scratch_eng';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'Scratch_eng';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Block-based programming in Scratch - practice lessons</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="let-s-draw-turtle-graphics">
+<h1>Let’s Draw - Turtle Graphics<a class="headerlink" href="#let-s-draw-turtle-graphics" title="Permalink to this headline">¶</a></h1>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="intro4" src="_images/intro4.png" /></p>
+
+    </p></div></div>
+<p>In the previous lessons, we learned how we could move the sprite by using our mouse and keyboard. Now, we will learn how we can make our sprite leave a mark while moving. We will use various examples to explore the functions of blocks from the group called <em>Pen</em>, which allow the sprite to leave a mark on the stage when it moves. This type of drawing is called turtle graphics. We have also learned how we can synchronize the behavior of our sprites by adding wait blocks to their scripts. In this lesson we will show a more efficient way of doing this - synchronizing sprites by exchanging messages.</p>
+<div class="topic">
+<p class="topic-title first">Turtle Graphics</p>
+<p>Scratch is one of the modern programming languages that include turtle graphics options, introduced for the first time in the <em>Logo</em> language some fifty years ago.</p>
+<p><em>Logo</em> enabled the control of a turtle device, a type of robot, which was connected to the computer. The turtle could move on a horizontal surface back and forth and change its direction and orientation. If a piece of paper was placed under the turtle, it could leave a mark, thus forming graphics called the <em>turtle graphics</em>.</p>
+<p>This way of setting an image as a collection of figures, together with their data (parameters), which define how the figure will be drawn and where it will be placed is called <strong>vector graphics</strong>.</p>
+<p>Unlike the vector graphics, in the <strong>raster graphics</strong> the image is stored as a rectangular grid of pixels - bitmaps. Bitmaps are technically characterized by the width and height of the image in pixels, and the number of bits needed to store the color of the pixels. For example, if there are only 16 colors, you need 4 bits per pixel to store the color. Raster graphics are resolution- dependent. They cannot be enlarged without the loss of quality of the image.</p>
+<p>In Scratch, every sprite has the option to behave like the Logo turtle: you can determine their position, direction and orientation of movement, and they can leave a mark when they move. The size, the shape and the color of the sprite do not affect the mark they leave, because the sprites are drawing with a pen. The sprite can also be invisible or composed of only one dot, and this does not affect its drawing.</p>
+</div>
+<div class="topic">
+<p class="topic-title first">Functions of the <em>Pen</em> blocks</p>
+<p>The <em>Pen</em> group of blocks, which enable the sprites to leave a mark when they move, i.e. to support the turtle graphics are located among the extensions.</p>
+<p>In order to use blocks from this group, you need to:</p>
+<ol class="arabic simple">
+<li><p>Click on the <img alt="extensions" src="_images/extension.png" /> icon in the bottom left corner of the blocks palette.</p></li>
+<li><p>Select the <em>Pen</em> extension from the opened gallery.</p></li>
+<li><p>The icon and the blocks will appear in the blocks palette.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/fig4_1.png"><img alt="_images/fig4_1.png" class="align-center" src="_images/fig4_1.png" style="width: 740px;" /></a>
+<p>The <em>Pen</em> group includes the following blocks:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><img alt="erase_all" src="_images/erase_all.png" /> - erases all marks made by the pen</p></li>
+<li><p><img alt="stamp" src="_images/stamp.png" /> - stamps the image of the sprite on the stage</p></li>
+<li><p><img alt="pen_up" src="_images/pen_up.png" /> - lifts the pen up</p></li>
+<li><p><img alt="pen_down" src="_images/pen_down.png" /> - puts the pen down</p></li>
+<li><p><img alt="set_color" src="_images/set_color.png" /> - sets the color of the pen</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><img alt="set_pen" src="_images/set_pen.png" />- sets the drawing parameters</p></li>
+<li><p><img alt="change_pen" src="_images/change_pen.png" /> - changes the drawing parameters</p></li>
+<li><p><img alt="set_pen_size" src="_images/set_pen_size.png" /> - sets the size (thickness) of the pen mark</p></li>
+<li><p><img alt="change_pen_size" src="_images/change_pen_size.png" /> - changes the size (thickness) of the pen mark</p></li>
+</ul>
+</td></tr></table>
+<p>If you add the <img alt="pen_down" src="_images/pen_down.png" /> block to your sprite, from then on, the sprite will leave a mark on the stage whenever it moves. When you add the <img alt="pen_up" src="_images/pen_up.png" /> block, it will stop leaving the mark until you add the <img alt="pen_down" src="_images/pen_down.png" /> block again. The look of the mark is determined by the drawing parameters. The drawing parameters include the size (thickness), color, saturation, brightness and transparency of the mark left by the pen.</p>
+<p>Note.  <img alt="erase_all" src="_images/erase_all.png" /> <img alt="!=" src="_images/not_equal.png" /> <img alt="hide" src="_images/hide.png" />. The first block refers to drawings and the second to the sprites.</p>
+</div>
+<div class="topic">
+<p class="topic-title first">Using messages for synchronization</p>
+<p>The behavior is always triggered by an event, which can be an action or receipt of a message. In the previous lessons and projects, we used the <code class="docutils literal notranslate"><span class="pre">wait</span></code> block when we wanted to synchronize the behavior of our sprites. In the “Calculation” project we enabled our girl and boy sprites to have a synchronized conversation - when the girl was speaking, the boy was listening and vice versa.</p>
+<p>We will now show how the actions of the sprites (and the stage) can be coordinated, depending on whether a broadcast message event has occurred.
+You noticed that we didn’t say that we <strong>send</strong> a message, but that we <strong>broadcast</strong> it. This is because, in Scratch, the message is directed to all objects, and not just one. Broadcasting and receiving messages in Scratch is achieved with the following blocks <img alt="broadcast" src="_images/broadcast.png" />, <img alt="broadcast_wait" src="_images/broadcast_wait.png" /> and <img alt="when_receive" src="_images/when_receive.png" /> from the <em>Events</em> group.</p>
+</div>
+<div class="section" id="study-study-the-following-examples">
+<h2><img alt="study" src="_images/study.png" /> Study the following examples<a class="headerlink" href="#study-study-the-following-examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-1-project-drawing-a-line">
+<h3>Example 1 - Project “Drawing a Line”<a class="headerlink" href="#example-1-project-drawing-a-line" title="Permalink to this headline">¶</a></h3>
+<p>We will create a project in which we will draw a line that is 10 pixels wide and 300 pixels long. We will choose the Pencil sprite from the sprites library, and we will delete the cat sprite. Since we want the mark to be positioned along the tip of the Pencil sprite, we will move the center of the costume to the top. We can do this by opening the <em>Costume</em> tab. The available tools will appear on the left side of the drawing display; in our case, these will be vector tools because we chose a vector sprite (1). Use the <img alt="v_select" src="_images/v_select.png" /> to select the whole sprite (2), and then drag the sprite so that the tip of the pencil is above the sign <img alt="center" src="_images/center.png" /> which indicates the center of the screen (3).</p>
+<a class="reference internal image-reference" href="_images/fig4_2.png"><img alt="_images/fig4_2.png" class="align-center" src="_images/fig4_2.png" style="width: 900px;" /></a>
+<p>First, you need to erase everything that was previously drawn by using the <img alt="erase_all" src="_images/erase_all.png" /> block, place the pencil in the starting position from which it will start drawing, set the color, and the size of the pen, and then use the <code class="docutils literal notranslate"><span class="pre">pen</span> <span class="pre">down</span></code> block to allow the pencil sprite to leave a mark when it moves. You need to add the <code class="docutils literal notranslate"><span class="pre">pen</span> <span class="pre">up</span></code> block at the end to stop the sprite from leaving a mark in the process of returning to the starting position, each time the program runs.</p>
+<p>There are two ways to set the color of the pen:</p>
+<ul class="simple">
+<li><p>by using the <img alt="set_color" src="_images/set_color.png" /> block, where you can select a color by clicking on the input field</p></li>
+<li><p>by using the <img alt="set_pen" src="_images/set_pen.png" /> block, where you can select a color by inserting a number into the second input field.</p></li>
+</ul>
+<p>In this project, we will use the first option.</p>
+<a class="reference internal image-reference" href="_images/fig4_3.png"><img alt="_images/fig4_3.png" class="align-center" src="_images/fig4_3.png" style="width: 750px;" /></a>
+<p>Clicking on the input field of the block for setting the pen color, we open the drop-down menu where we will find sliders with color components: number attached to the color, saturation and brightness, and at the bottom we will see a tool - a pipette for collecting color samples (1). The desired color can be set by moving the sliders or by clicking on the pipette. If you click on the pipette, a stage with a magnifier on it that has a circle in the center will light up (2). To choose a color, we need to place the center of the circle above the part of the stage where that color is located and then click on it. We will get the same result, as shown in Figure (3).</p>
+<p>Note. You can find more information on the HSB color mode, which uses the components: hue, saturation and brightness, in the part <em>Appendix</em>.</p>
+<p>The result of the running of the script and the script itself are presented in the Figure below.</p>
+<a class="reference internal image-reference" href="_images/fig4_4.png"><img alt="_images/fig4_4.png" class="align-center" src="_images/fig4_4.png" style="width: 470px;" /></a>
+</div>
+<hr class="docutils" />
+<div class="section" id="example-2-project-free-hand-drawing">
+<h3>Example 2 - Project “Free-hand Drawing”<a class="headerlink" href="#example-2-project-free-hand-drawing" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>This project should illustrate how we use drawing commands and show that the mark does not depend on the size of the sprite, nor on whether the sprite is visible or hidden. The pen is doing the drawing, so it does not matter which sprite is holding it. This time we will choose the <em>Ladybug 1</em> sprite from the sprites library.</p>
+<p>The script, which is activated by clicking on the green flag, allows the ladybug to follow the mouse-pointer for the duration of the running. At the beginning of the script, all drawings from previous running of the project will be erased from the stage, and the pen will be raised. The <code class="docutils literal notranslate"><span class="pre">pen</span> <span class="pre">down</span></code> command will be added to the <em>when down arrow is pressed</em> event block, and the <code class="docutils literal notranslate"><span class="pre">pen</span> <span class="pre">up</span></code> command will be added to the <em>when up arrow is pressed</em> event block. This way we will make sure that the sprite will not leave any marks when it moves until we press the <em>down arrow</em> key. The sprite will stop leaving marks when we press the <em>up arrow</em> key.</p>
+<p>The scripts added to the ladybug are presented in the Figure below. The drawing would be performed the same way even if the block <img alt="hide" src="_images/hide.png" /> was inserted where the red arrow in the Figure is pointing, but then the sprite wouldn’t be visible, and it would appear that the drawing is being done by the mouse-pointer.</p>
+<a class="reference internal image-reference" href="_images/fig4_5.png"><img alt="_images/fig4_5.png" class="align-center" src="_images/fig4_5.png" style="width: 380px;" /></a>
+<p>Of course, it would be more natural if we didn’t have to press the keys of the keyboard to lower and lift the pen, but just draw while holding the mouse button pressed, and then stop drawing by lifting the finger. This type of drawing is achieved by the following script.</p>
+<a class="reference internal image-reference" href="_images/fig4_6.png"><img alt="_images/fig4_6.png" class="align-center" src="_images/fig4_6.png" style="width: 195px;" /></a>
+<p>The effects of the <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">then</span> <span class="pre">else</span></code> command will be elaborated in the lesson number 6 of this manual. For now, let’s just say that the script in this E-block will either execute the <img alt="goto" src="_images/goto.png" /> and <code class="docutils literal notranslate"><span class="pre">pen</span> <span class="pre">down</span></code> command from the upper slot, or the <code class="docutils literal notranslate"><span class="pre">pen</span> <span class="pre">up</span></code> from the lower slot. Which command is being executed will depend on whether the mouse button is pressed or not, which is determined by the value set in the <img alt="mouse_down" src="_images/mouse_down.png" /> block. This block belongs to the <em>Sensing</em> group, and it reports whether the value is true or false.  Hexagonal function blocks that report only the values <em>true</em> or <em>false</em> are called <strong>Boolean blocks</strong>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="example-3-project-follow-my-trace">
+<h3>Example 3 - Project “Follow my Trace”<a class="headerlink" href="#example-3-project-follow-my-trace" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>In this project, the movement of the ladybug is guided by the use of arrow keys, like in example 3, of the <em>Stage Coordinates</em> lesson. The mark left by the ladybug is a broken line made of horizontal and vertical lines. The following Figure includes the project scripts and the look of the stage after one project execution.</p>
+<a class="reference internal image-reference" href="_images/fig4_7.png"><img alt="_images/fig4_7.png" class="align-center" src="_images/fig4_7.png" style="width: 415px;" /></a>
+<div class="sidebar">
+<p class="sidebar-title">Color Coding with Numbers</p>
+<p>Every whole number from the interval [0,199] corresponds to a particular color. For example, 0 is red, 30 is yellow, 70 green, 130 blue, and 170 magenta. Color numbering in Scratch is based on the order of colors in the spectrum.</p>
+<p><img alt="krug_boje" src="_images/fig4_8.png" /></p>
+</div>
+<p><strong>Upgrading the project</strong></p>
+<p>We will change the project so that the sprite that we will use for drawing moves more freely, like in example 4 of the <em>Stage Coordinates</em> lesson. We will add the setting which will allow the color and size of the pen to change in a random manner every 5 seconds, this way we will create a more attractive mark. To set the pen color randomly, we will have to use a different command to the one we used in the previous example. This time we will use the <img alt="set_pen" src="_images/set_pen.png" /> block, where the color is set by a number.</p>
+<p>The following figure represents a script that sets the initial values and the appearance of the stage after the modified project finished running ​​(the script is activated by clicking on the green flag). The <code class="docutils literal notranslate"><span class="pre">repeat</span> <span class="pre">forever</span></code> block contains commands that set the color and size of the pen in a “random” manner.</p>
+<a class="reference internal image-reference" href="_images/fig4_9.png"><img alt="_images/fig4_9.png" class="align-center" src="_images/fig4_9.png" style="width: 265px;" /></a>
+<hr class="docutils" />
+<p>The following example shows how we can draw different styles of lines for underlining, by using the repetition command to specify the number of times an action is repeated, which we will introduce in the next lesson.</p>
+</div>
+<div class="section" id="example-4-project-lines">
+<h3>Example 4 - Project “Lines”<a class="headerlink" href="#example-4-project-lines" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>In the <em>Lines</em> project we will draw a purple line, 400 pixels long and 2 pixels wide, starting from the point (-200,0) in five different styles.</p>
+<a class="reference internal image-reference" href="_images/fig4_10.png"><img alt="_images/fig4_10.png" class="align-center" src="_images/fig4_10.png" style="width: 150px;" /></a>
+<p>The sprite drawing the line is invisible. It will appear in the upper left corner of the stage, only when it finishes drawing the line, and it will say how the line was drawn.
+The drawing is activated by the <img alt="clicked_key" src="_images/clicked_key.png" /> event block, the script for the first style is activated by pressing number 1 on the keyboard, the second style by pressing 2, and so on.</p>
+<p>Clicking on the green flag erases everything that was previously on the stage, sets values ​​for the color and size of the pen, sprite appears and gives instructions on how to start the project.</p>
+<p>Each of the scripts associated with keys 1-5 on the keyboard first erases everything that was previously drawn on the stage, hides the sprite, draws the line in the given style, and then shows the sprite in the upper left corner of the stage, which tells us how the line was drawn.</p>
+<p>The first style is a continuous straight line. This can be done immediately, by giving just one command “go 400 steps”, but to make this last almost as long as other scripts we added the repeat command, so the sprite would move 10 steps 40 times.</p>
+<p>The second style - the sprite repeats the same pattern 100 times: it moves 1 step with the pen down, and 3 with the pen up.</p>
+<p>The third style - the sprite repeats the same pattern 50 times: it moves 3 steps with the pen down and, and 5 with the pen up.</p>
+<p>The fourth style - the sprite repeats the same pattern 40 times: it moves 6 steps with the pen down and, and 4 with the pen up.</p>
+<p>The fifth style - the sprite repeats the same pattern 25 times: it moves 6 steps with the pen down and, and 4 with the pen up, 2 steps with the pen down, and 4 with the pen up.</p>
+<p>In the Figure below you will find the scripts for the events <em>when the green flag is clicked</em>, <em>when 1 key is pressed</em>, and <em>when 2 key is pressed</em>.</p>
+<a class="reference internal image-reference" href="_images/fig4_11.png"><img alt="_images/fig4_11.png" class="align-center" src="_images/fig4_11.png" style="width: 470px;" /></a>
+<p>Note that repetition commands do not shorten program running time, but only allow the programmer to write programs more clearly and concisely.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="example-5-project-the-family">
+<h3>Example 5 - Project “The Family”<a class="headerlink" href="#example-5-project-the-family" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>In this project, a Chick is introducing its family: mother hen, father rooster, brother, and sister. At the beginning we only see one chick we named Lisa, and the rest of the sprites are hidden. First, Lisa introduces her mother, Marge. When she says her name, the mother will appear and broadcast that she is there. Then, Lisa introduces her father, Homer. Homer also appears when he “hears” his name, and then “answers” with a message containing his name. Her brother Bart and her sister Maggie are introduced to the stage in a similar fashion. The synchronization of the sprite appearances and broadcasting is achieved with messages. When Lisa introduces someone, she broadcasts the message. The sprites are “listening”, and when they receive the appropriate message, they appear and broadcast a message announcing their name. When Lisa receives that message - response, she continues with the introduction of the next family member.</p>
+<p>The following Figure shows how the appearances of the sprites are synchronized with messages.</p>
+<a class="reference internal image-reference" href="_images/fig4_12.png"><img alt="_images/fig4_12.png" class="align-center" src="_images/fig4_12.png" style="width: 600px;" /></a>
+<p><strong>Sprite preparation</strong></p>
+<div class="sidebar">
+<p class="sidebar-title">Layout of the Sprites on the Stage</p>
+<a class="reference internal image-reference" href="_images/fig4_13.png"><img alt="_images/fig4_13.png" class="align-center" src="_images/fig4_13.png" style="width: 400px;" /></a>
+</div>
+<p><img alt="1" src="_images/1.png" /> For this next presentation you will need the following characters: Lisa, Marge, Homer, Bart and Maggie. For Lisa, Bart and Maggie we will use the <em>Chick</em> sprite, for the mom we will use the <em>Hen</em> sprite, and for the dad, we will use the <em>Rooster</em> sprite from the sprites library. Once you have added the sprites, change their names so they correspond to our project.</p>
+<a class="reference internal image-reference" href="_images/fig4_14.png"><img alt="_images/fig4_14.png" class="align-center" src="_images/fig4_14.png" style="width: 400px;" /></a>
+<p><img alt="2" src="_images/2.png" /> Select the <em>Farm</em> backdrop from the backdrop library.</p>
+<p><img alt="3" src="_images/3.png" /> Place the Lisa sprite in the middle in the upper part of the stage.</p>
+<p><img alt="4" src="_images/4.png" /> Place the Marge sprite in the lower left part, and put Maggie, who you need to make smaller, next to her.</p>
+<p><img alt="5" src="_images/5.png" /> Place the Homer sprite in the lower right part of the stage and turn him so he is facing to the left. Make the Bart sprite larger and place him between Maggie and his dad, and turn him so he is facing to the left.</p>
+<p>The scripts added to the sprites are presented in the following Figure.</p>
+<a class="reference internal image-reference" href="_images/fig4_15.png"><img alt="_images/fig4_15.png" class="align-center" src="_images/fig4_15.png" style="width: 850px;" /></a>
+</div>
+</div>
+<div class="section" id="ask-did-you-understand">
+<h2><img alt="ask" src="_images/ask.png" /> Did you understand?<a class="headerlink" href="#ask-did-you-understand" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="question-1">
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="turtle1">
+            <p>Q-14: Scratch is the first programming language to introduce the turtle graphics options.</p>
+
+            <li data-component="answer"  id="turtle1_opt_a">yes</li><li data-component="feedback" id="turtle1_opt_a">The Logo programming language introduced the turtle graphics.</li>
+            
+            <li data-component="answer" data-correct id="turtle1_opt_b">no</li><li data-component="feedback" id="turtle1_opt_b">Correct.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-2">
+<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="turtle2">
+            <p>Q-15: The block <code class="docutils literal notranslate"><span class="pre">erase</span> <span class="pre">all</span></code> from the <em>Pen</em> group has the same function as the block <code class="docutils literal notranslate"><span class="pre">hide</span></code> from the group <em>Looks</em>.</p>
+
+            <li data-component="answer"  id="turtle2_opt_a">yes</li><li data-component="feedback" id="turtle2_opt_a">No, the first one refers to the drawings, and the second to the sprites.</li>
+            
+            <li data-component="answer" data-correct id="turtle2_opt_b">no</li><li data-component="feedback" id="turtle2_opt_b">Correct.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-3">
+<h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="turtle3">
+            <p>Q-16: If you add the <code class="docutils literal notranslate"><span class="pre">pen</span> <span class="pre">down</span></code> block to a script of a particular sprite, it will continue to leave a mark when moving.</p>
+
+            <li data-component="answer" data-correct id="turtle3_opt_a">yes</li><li data-component="feedback" id="turtle3_opt_a">Correct.</li>
+            
+            <li data-component="answer"  id="turtle3_opt_b">no</li><li data-component="feedback" id="turtle3_opt_b"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-4">
+<h3>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="commands_pen1">
+            <p>Q-17: Which of the blocks belong to the <em>Pen</em> group of blocks?
+(Select all correct answers)</p>
+<a class="reference internal image-reference" href="_images/q4_4.png"><img alt="_images/q4_4.png" class="align-center" src="_images/q4_4.png" style="width: 600px;" /></a>
+
+            <li data-component="answer"  id="commands_pen1_opt_a"></li><li data-component="feedback" id="commands_pen1_opt_a"></li>
+            
+            <li data-component="answer"  id="commands_pen1_opt_b"></li><li data-component="feedback" id="commands_pen1_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="commands_pen1_opt_c"></li><li data-component="feedback" id="commands_pen1_opt_c"></li>
+            
+            <li data-component="answer" data-correct id="commands_pen1_opt_d"></li><li data-component="feedback" id="commands_pen1_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-5">
+<h3>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="commands_pen2">
+            <p>Q-18: Each of these blocks changes something. Which one will change the mark left by the pen while drawing?
+(Select all correct answers)</p>
+<a class="reference internal image-reference" href="_images/q4_5.png"><img alt="_images/q4_5.png" class="align-center" src="_images/q4_5.png" style="width: 705px;" /></a>
+
+            <li data-component="answer" data-correct id="commands_pen2_opt_a"></li><li data-component="feedback" id="commands_pen2_opt_a"></li>
+            
+            <li data-component="answer"  id="commands_pen2_opt_b"></li><li data-component="feedback" id="commands_pen2_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="commands_pen2_opt_c"></li><li data-component="feedback" id="commands_pen2_opt_c"></li>
+            
+            <li data-component="answer"  id="commands_pen2_opt_d"></li><li data-component="feedback" id="commands_pen2_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-6">
+<h3>Question 6<a class="headerlink" href="#question-6" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="pen1">
+            <p>Q-19: In some programs the sprite doesn’t leave a mark when moving? Why does this happen?
+(Select all correct answers)</p>
+
+            <li data-component="answer" data-correct id="pen1_opt_a">the pen down block is not activated</li><li data-component="feedback" id="pen1_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="pen1_opt_b">the pen up block is activated</li><li data-component="feedback" id="pen1_opt_b"></li>
+            
+            <li data-component="answer"  id="pen1_opt_c">the sprite is hidden</li><li data-component="feedback" id="pen1_opt_c"></li>
+            
+            <li data-component="answer"  id="pen1_opt_d">the block erase all is activated</li><li data-component="feedback" id="pen1_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-7">
+<h3>Question 7<a class="headerlink" href="#question-7" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="pen2">
+    <span data-component="question">By dragging the rectangles, pair the blocks with the groups they belong to.</span>
+	<span data-component=feedback>Try again</span>
+
+    <li data-component="draggable" id="pen2_drag1">hide</li>
+    <li data-component="dropzone" for="pen2_drag1">Looks</li>
+
+    <li data-component="draggable" id="pen2_drag2">erase all</li>
+    <li data-component="dropzone" for="pen2_drag2">Pen</li>
+
+    <li data-component="draggable" id="pen2_drag3">ask_and wait</li>
+    <li data-component="dropzone" for="pen2_drag3">Sensing</li>
+
+    <li data-component="draggable" id="pen2_drag4">point towards</li>
+    <li data-component="dropzone" for="pen2_drag4">Motion</li>
+</ul></div></div>
+<div class="section" id="question-8">
+<h3>Question 8<a class="headerlink" href="#question-8" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="pen3">
+    <span data-component="question">Every whole number in the interval [0,199] corresponds to a color.
+By dragging the rectangles, pair the colors with their code number.</span>
+	<span data-component=feedback>Try again</span>
+
+    <li data-component="draggable" id="pen3_drag1">red</li>
+    <li data-component="dropzone" for="pen3_drag1">0</li>
+
+    <li data-component="draggable" id="pen3_drag2">yellow</li>
+    <li data-component="dropzone" for="pen3_drag2">30</li>
+
+    <li data-component="draggable" id="pen3_drag3">green</li>
+    <li data-component="dropzone" for="pen3_drag3">70</li>
+
+    <li data-component="draggable" id="pen3_drag4">blue</li>
+    <li data-component="dropzone" for="pen3_drag4">130</li>
+</ul></div></div>
+</div>
+<div class="section" id="try-try-it">
+<h2><img alt="try" src="_images/try.png" /> Try it!<a class="headerlink" href="#try-try-it" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-1">
+<h3>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>What are the following programs drawing?</p>
+<a class="reference internal image-reference" href="_images/ex4_1.png"><img alt="_images/ex4_1.png" class="align-center" src="_images/ex4_1.png" style="width: 390px;" /></a>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="answer1"   data-showtitle="Show the Answer" data-hidetitle="Hide the Answer">
+    <p><strong>Answer:</strong></p>
+<a class="reference internal image-reference" href="_images/ans4_1.png"><img alt="_images/ans4_1.png" class="align-center" src="_images/ans4_1.png" style="width: 300px;" /></a>
+
+    </div>
+    </div>
+<hr class="docutils" />
+<div class="section" id="exercise-2">
+<h3>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Create a script which will enable the following drawing.</p>
+<p>Move the sprite to the position (-50,30), put the pen down, than add blocks which enable following relative movements:</p>
+<p>1 →, 1 ↓, 2 →, 1 ↑, 1 →, 2 ↓, 4 ←, 2 ↑.</p>
+<p>The entry 5 → means that the sprite should move 10 steps to the right 5 times, and the entry 1 ↑ that the sprite should move 10 steps up 1 time.
+For adding motion commands, we will also use the signs ← and ↓.</p>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="exercise-3">
+<h3>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Create a script, which will only use the absolute motion commands (and the pen down commands) for drawing the same image as in the exercise 2 program.</p>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="exercise-4">
+<h3>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Graphic Dictation 1</strong></p>
+<p>This is the first of the <em>graphic dictation</em> exercises. First, you will have to do a bit of programming,and enter a lot of data from the keyboard.
+Later, this type of task will require more programming, and a lot less data entry.</p>
+<p>Create a project, which allows you to guide the sprite with the arrow keys on your keyboard, like in example 3 of this lesson:</p>
+<ul class="simple">
+<li><p>the right arrow moves the sprite 10 steps to the right,</p></li>
+<li><p>the left arrow moves the sprite 10 steps to the left,</p></li>
+<li><p>the up arrow moves the sprite 10 steps up,</p></li>
+<li><p>the down arrow moves the sprite 10 steps down.</p></li>
+</ul>
+<p>Make sure that the sprite is hidden and the stage is cleared.</p>
+<p>Move the sprite to the position (-50,30), this is going to be the starting point, put the pen down, then type the following series of arrows:</p>
+<p>1 →, 1 ↓, 2 →, 1 ↑, 1 →, 2 ↓, 5 →, 2 ↑, 1 ←, 1 ↑,</p>
+<p>2 →, 8 ↓, 1 ←, 2 ↑, 1 ←, 2 ↓, 1 ←, 2 ↑, 3 ←, 2 ↓,</p>
+<p>1 ←, 2 ↑, 1 ←, 2 ↓, 1 ←, 3 ↑, 1 ←, 4 ↑.</p>
+<p>If you followed the instructions well, you should return to your starting point.</p>
+<p>What did you draw?</p>
+
+    <div data-component="reveal" id="answer4"   data-showtitle="Show the Answer" data-hidetitle="Hide the Answer">
+    <p><strong>Answer:</strong></p>
+<a class="reference internal image-reference" href="_images/ans4_4.png"><img alt="_images/ans4_4.png" class="align-center" src="_images/ans4_4.png" style="width: 130px;" /></a>
+
+    </div>
+    
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="exercise-5">
+<h3>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Graphic Dictation 2</strong></p>
+<p>All settings from the Graphics Dictation 1 still apply, but the algorithm for drawing is the following:</p>
+<p>Move the sprite to the starting point (-60,40), put the pen down and draw:</p>
+<p>3 →, 1 ↑, 1 →, 4 ↓, 6 →, 1 ↑, 1 →, 1 ↓, 1 ←,</p>
+<p>7 ↓, 1 ←, 3 ↑, 5 ←, 3 ↓, 1 ←, 7 ↑, 3 ←, 3 ↑.</p>
+<p>If you followed the instructions well, you should return to your starting point.</p>
+<p>What did you draw?</p>
+<blockquote>
+<div>
+    <div data-component="reveal" id="answer5"   data-showtitle="Show the Answer" data-hidetitle="Hide the Answer">
+    <p><strong>Answer:</strong></p>
+<a class="reference internal image-reference" href="_images/ans4_5.png"><img alt="_images/ans4_5.png" class="align-center" src="_images/ans4_5.png" style="width: 135px;" /></a>
+
+    </div>
+    </div></blockquote>
+
+    </p></div></div>
+</div>
+</div>
+<div class="section" id="bug-debug-it">
+<h2><img alt="bug" src="_images/bug.png" /> Debug it!<a class="headerlink" href="#bug-debug-it" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bug-1">
+<h3>Bug 1<a class="headerlink" href="#bug-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<dl class="field-list">
+<dt class="field-odd">Question</dt>
+<dd class="field-odd"><p>The pupil has written a program which is supposed to draw a line 300 pixels long, where the first 100 pixels are red, second 100 pixels are green, and the last 100 pixels are blue.</p>
+<p>When he ran the script nothing happened. What is the problem?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug4_1.png"><img alt="_images/bug4_1.png" class="align-center" src="_images/bug4_1.png" style="width: 190px;" /></a>
+
+    <div data-component="reveal" id="hiding21"   data-showtitle="Show the Answer" data-hidetitle="Hide the Answer">
+    <p><strong>Answer:</strong></p>
+<p>The <img alt="pen_down" src="_images/pen_down.png" /> block was not added.</p>
+
+    </div>
+    </div>
+<div class="section" id="bug-2">
+<h3>Bug 2<a class="headerlink" href="#bug-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Question</dt>
+<dd class="field-odd"><p>The pupil has written a program which is supposed to draw a blue line 300 pixels long, where the first 100 pixels are 10 pixels wide, second 100 pixels are 20 pixels wide, and the last 100 are 30 pixels wide.
+When he first ran the program everything was fine, but every time after that when he would run the programme the line was alway 30 pixels wide. What is the problem?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug4_2.png"><img alt="_images/bug4_2.png" class="align-center" src="_images/bug4_2.png" style="width: 205px;" /></a>
+
+    <div data-component="reveal" id="hiding22"   data-showtitle="Show the Answer" data-hidetitle="Hide the Answer">
+    <p><strong>Answer:</strong></p>
+<p>At the end of the first run, the size of the pen is set at 30, the pen is located at the end of the line in the spot (200,0), and it is not up.
+Therefore, when the program runs for the second time, the pen will go back to the starting position with the pen size set at 30 pixels, so if it draws over the same mark with a smaller pen size the new mark won’t be visible.
+The mistake will be corrected if the pen is lifted up before it goes back to its starting position.</p>
+
+    </div>
+    </div>
+<div class="section" id="bug-3">
+<h3>Bug 3<a class="headerlink" href="#bug-3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Question</dt>
+<dd class="field-odd"><p>The pupil has written a program which is supposed to draw a blue line 300 pixels long, where the first 100 pixels are 10 pixels wide, second 100 pixels are 20 pixels wide, and the last 100 are 30 pixels wide. Every time he/she ran the program the mark was the same, not with the required size changes, but much larger. What is the problem?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug4_3.png"><img alt="_images/bug4_3.png" class="align-center" src="_images/bug4_3.png" style="width: 205px;" /></a>
+
+    <div data-component="reveal" id="hiding23"   data-showtitle="Show the Answer" data-hidetitle="Hide the Answer">
+    <p><strong>Answer:</strong></p>
+<p>The <img alt="change_pen_size" src="_images/change_pen_size.png" /> command should not have been used with the parameters 20 and 30, but with increasing the size by 10, or instead of that command use the <img alt="set_pen_size" src="_images/set_pen_size.png" /> block with the parameters 20 and 30.</p>
+
+    </div>
+    </div>
+</div>
+<div class="section" id="book-summary">
+<h2><img alt="book" src="_images/book.png" /> Summary<a class="headerlink" href="#book-summary" title="Permalink to this headline">¶</a></h2>
+<p>In this lesson, we introduced the turtle graphics, which represent an example of the vector graphics. In Scratch, every sprite has a pen with which it can draw while moving on the stage. This virtual pen has the shape of a round brush, and we can change its size, color, saturation, brightness and transparency. With different examples and exercises we learned how to use and connect <em>Motion</em> and <em>Pen</em> blocks to create different drawings. We have also learned how to use commands for repetition to create scripts which are shorter and more efficient. The commands for repetition will be further elaborated in the next lesson. In the last example, we showed how we could synchronize the behavior of the sprites by exchanging messages. The mechanism of exchanging messages can also be used for the realization of procedures, which will be explained in the next lesson.</p>
+<p><strong>Scratch projects</strong>: <a class="reference external" href="https://scratch.mit.edu/studios/25119442/">4Studio</a></p>
+<p><strong>New concepts</strong>:  turtle graphics, vector and raster graphics, color coding, broadcasting and receiving messages.</p>
+<p><strong>Scratch commands</strong>: <img alt="pen_extension" src="_images/pen.png" /> - <img alt="erase_all" src="_images/erase_all.png" />, <img alt="pen_up" src="_images/pen_up.png" />, <img alt="pen_down" src="_images/pen_down.png" />, <img alt="set_color" src="_images/set_color.png" />, <img alt="change_pen" src="_images/change_pen.png" />, <img alt="set_pen" src="_images/set_pen.png" />, <img alt="change_pen_size" src="_images/change_pen_size.png" />,| <img alt="set_pen_size" src="_images/set_pen_size.png" />; <img alt="sensing_blocks" src="_images/sensing.png" /> - <img alt="*" src="_images/asterix.png" /> <img alt="mouse_down" src="_images/mouse_down.png" />;</p>
+<p><img alt="looks_blocks" src="_images/looks.png" /> - <img alt="hide" src="_images/hide.png" />, <img alt="show" src="_images/show.png" />; <img alt="events_blocks" src="_images/events.png" /> - <img alt="when_receive" src="_images/when_receive.png" />, <img alt="broadcast" src="_images/broadcast.png" />, <img alt="broadcast_wait" src="_images/broadcast_wait.png" />;</p>
+<p><img alt="control_blocks" src="_images/control.png" /> - <img alt="*" src="_images/asterix.png" /> <img alt="if_then_else" src="_images/if_then_else.png" />, <img alt="*" src="_images/asterix.png" /> <img alt="repeat" src="_images/repeat.png" />.</p>
+<p>Note. Blocks marked with the <img alt="*" src="_images/asterix.png" /> sign will be discussed in the lessons that follow.</p>
+</div>
+<div class="section" id="project-create-a-projects">
+<h2><img alt="project" src="_images/project.png" /> Create a projects<a class="headerlink" href="#project-create-a-projects" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="project-1-lightning">
+<h3>Project 1 - “Lightning”<a class="headerlink" href="#project-1-lightning" title="Permalink to this headline">¶</a></h3>
+<p>Create a project where the <em>Lightning</em> sprite will draw with its tip. Once you have added the sprite from the sprites library, set the center of its costume to be on the top. Add scripts which define how it should move and set the drawing parameters.</p>
+</div>
+<div class="section" id="project-2-black-and-white-world">
+<h3>Project 2 - “Black and White World”<a class="headerlink" href="#project-2-black-and-white-world" title="Permalink to this headline">¶</a></h3>
+<p>Create a project based on the “Free-hand Drawing” project. The stage should have a black backdrop. You can make the backdrop black by using <img alt="r_fill" src="_images/r_fill.png" /> tool in the raster mode of the paint editor to pour black paint on the desired backdrop. The sprite doing the drawing should be hidden, and the pen color should be white.</p>
+</div>
+<div class="section" id="project-3-my-family">
+<h3>Project 3 - “My Family”<a class="headerlink" href="#project-3-my-family" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>Start a new project which you will call <em>My family</em>. This should be an animation introducing the members of your family. For this presentation, you will need the following sprites: presenter (you), mom, dad, brother, sister (depending on the actual members of your family). Use photos or select images of sprites, which will represent the members of your family and customize them to fit the project (make them smaller or larger, arrange them around the stage and turn them, if necessary). All sprites should hide when the green flag is clicked and wait until they are introduced by the presenter and then appear on the stage in the previously set position. Synchronize the appearance of the sprites by using messages, as shown in the example “Family”. The presenter is the only sprite appearing on the stage the whole time. He/she will say his/her name first, and then introduce the rest of the family.</p>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Sequencing Steps' data-toggle="tooltip"><a href="Scratch3 Sequencing_eng.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Repeating Steps' data-toggle="tooltip"><a href="Scratch3 Repeating_eng.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Sequencing Steps' data-toggle="tooltip"><a href="Scratch3 Sequencing_eng.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Repeating Steps' data-toggle="tooltip"><a href="Scratch3 Repeating_eng.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,361 @@
+
+.. |motion_blocks| image:: ../_images/blocks/motion.png
+
+
+.. |move_steps| image:: ../_images/blocks/move_steps.png
+
+.. |turn_right| image:: ../_images/blocks/turn_right.png
+
+.. |turn_left| image:: ../_images/blocks/turn_left.png
+
+.. |point_direction| image:: ../_images/blocks/point_direction.png
+
+.. |point_towards| image:: ../_images/blocks/point_towards.png
+
+.. |goto_xy| image:: ../_images/blocks/goto_xy.png
+
+.. |goto| image:: ../_images/blocks/goto.png
+
+.. |glide_xy| image:: ../_images/blocks/glide_xy.png
+
+.. |glide_to| image:: ../_images/blocks/glide_to.png
+
+.. |change_x| image:: ../_images/blocks/change_x.png
+
+.. |set_x| image:: ../_images/blocks/set_x.png
+
+.. |change_y| image:: ../_images/blocks/change_y.png
+
+.. |set_y| image:: ../_images/blocks/set_y.png
+
+.. |if_edge| image:: ../_images/blocks/if_edge.png
+
+.. |rotation_style| image:: ../_images/blocks/rotation_style.png
+
+.. |x_position| image:: ../_images/blocks/x_position.png
+
+.. |y_position| image:: ../_images/blocks/y_position.png
+
+.. |direction| image:: ../_images/blocks/direction.png
+
+
+.. |events_blocks| image:: ../_images/blocks/events.png
+
+
+.. |clicked_flag| image:: ../_images/blocks/clicked_flag.png
+
+.. |clicked_key| image:: ../_images/blocks/clicked_key.png
+
+.. |clicked_sprite| image:: ../_images/blocks/clicked_sprite.png
+
+.. |clicked_stage| image:: ../_images/blocks/clicked_stage.png
+
+.. |when_backdrop| image:: ../_images/blocks/when_backdrop.png
+
+.. |when_greater| image:: ../_images/blocks/when_greater.png
+
+.. |when_receive| image:: ../_images/blocks/when_receive.png
+
+.. |broadcast| image:: ../_images/blocks/broadcast.png
+
+.. |broadcast_wait| image:: ../_images/blocks/broadcast_wait.png
+
+
+.. |looks_blocks| image:: ../_images/blocks/looks.png
+
+
+.. |say| image:: ../_images/blocks/say.png
+
+.. |say_sec| image:: ../_images/blocks/say_sec.png
+
+.. |think| image:: ../_images/blocks/think.png
+
+.. |think_sec| image:: ../_images/blocks/think_sec.png
+
+.. |show| image:: ../_images/blocks/show.png
+
+.. |hide| image:: ../_images/blocks/hide.png
+
+.. |switch_costume| image:: ../_images/blocks/switch_costume.png
+
+.. |next_costume| image:: ../_images/blocks/next_costume.png
+
+.. |switch_backdrop| image:: ../_images/blocks/switch_backdrop.png
+
+.. |switch_backdrop_wait| image:: ../_images/blocks/switch_backdrop_wait.png
+
+.. |next_backdrop| image:: ../_images/blocks/next_backdrop.png
+
+.. |change_effect| image:: ../_images/blocks/change_effect.png
+
+.. |set_effect| image:: ../_images/blocks/set_effect.png
+
+.. |clear_effects| image:: ../_images/blocks/clear_effects.png
+
+.. |change_size| image:: ../_images/blocks/change_size.png
+
+.. |set_size| image:: ../_images/blocks/set_size.png
+
+.. |goto_layer| image:: ../_images/blocks/goto_layer.png
+
+.. |go_layers| image:: ../_images/blocks/go_layers.png
+
+.. |costume| image:: ../_images/blocks/costume.png
+
+.. |backdrop| image:: ../_images/blocks/backdrop.png
+
+.. |size| image:: ../_images/blocks/size.png
+
+
+.. |control_blocks| image:: ../_images/blocks/control.png
+
+
+.. |wait_sec| image:: ../_images/blocks/wait_sec.png
+
+.. |repeat| image:: ../_images/blocks/repeat.png
+
+.. |forever| image:: ../_images/blocks/forever.png
+
+.. |if_then| image:: ../_images/blocks/if_then.png
+
+.. |if_then_else| image:: ../_images/blocks/if_then_else.png
+
+.. |wait_until| image:: ../_images/blocks/wait_until.png
+
+.. |repeat_until| image:: ../_images/blocks/repeat_until.png
+
+.. |stop| image:: ../_images/blocks/stop.png
+
+.. |when_clone| image:: ../_images/blocks/when_clone.png
+
+.. |create_clone| image:: ../_images/blocks/create_clone.png
+
+.. |delete_clone| image:: ../_images/blocks/delete_clone.png
+
+
+.. |sound_blocks| image:: ../_images/blocks/sound.png
+
+
+.. |start_sound| image:: ../_images/blocks/start_sound.png
+
+.. |play_until| image:: ../_images/blocks/play_until.png
+
+.. |stop_sounds| image:: ../_images/blocks/stop_sounds.png
+
+.. |change_volume| image:: ../_images/blocks/change_volume.png
+
+.. |set_volume| image:: ../_images/blocks/set_volume.png
+
+.. |change_sound_effect| image:: ../_images/blocks/change_sound_effect.png
+
+.. |set_sound_effect| image:: ../_images/blocks/set_sound_effect.png
+
+.. |clear_sound_effect| image:: ../_images/blocks/clear_sound_effect.png
+
+.. |volume| image:: ../_images/blocks/volume.png
+
+
+.. |sensing_blocks| image:: ../_images/blocks/sensing.png
+
+
+.. |touching| image:: ../_images/blocks/touching.png
+
+.. |touching_color| image:: ../_images/blocks/touching_color.png
+
+.. |color_touching_color| image:: ../_images/blocks/color_touching_color.png
+
+.. |distance_to| image:: ../_images/blocks/distance_to.png
+
+.. |ask_wait| image:: ../_images/blocks/ask_wait.png
+
+.. |answer| image:: ../_images/blocks/answer.png
+
+.. |key_pressed| image:: ../_images/blocks/key_pressed.png
+
+.. |mouse_down| image:: ../_images/blocks/mouse_down.png
+
+.. |mouse_x| image:: ../_images/blocks/mouse_x.png
+
+.. |mouse_y| image:: ../_images/blocks/mouse_y.png
+
+.. |loudness| image:: ../_images/blocks/loudness.png
+
+.. |timer| image:: ../_images/blocks/timer.png
+
+.. |reset_timer| image:: ../_images/blocks/reset_timer.png
+
+.. |set_drag| image:: ../_images/blocks/set_drag.png
+
+.. |parameter_of| image:: ../_images/blocks/parameter_of.png
+
+.. |time_unit| image:: ../_images/blocks/time_unit.png
+
+.. |days_since| image:: ../_images/blocks/day_since.png
+
+.. |username| image:: ../_images/blocks/username.png
+
+
+.. |operator_blocks| image:: ../_images/blocks/operators.png
+
+
+.. |plus| image:: ../_images/blocks/plus.png
+
+.. |minus| image:: ../_images/blocks/minus.png
+
+.. |multiply| image:: ../_images/blocks/multiply.png
+
+.. |divide| image:: ../_images/blocks/divide.png
+
+.. |pick_random| image:: ../_images/blocks/pick_random.png
+
+.. |less| image:: ../_images/blocks/less.png
+
+.. |equal| image:: ../_images/blocks/equal.png
+
+.. |greater| image:: ../_images/blocks/greater.png
+
+.. |and| image:: ../_images/blocks/and.png
+
+.. |or| image:: ../_images/blocks/or.png
+
+.. |not| image:: ../_images/blocks/not.png
+
+.. |text_contains| image:: ../_images/blocks/text_contains.png
+
+.. |join| image:: ../_images/blocks/join.png
+
+.. |letter| image:: ../_images/blocks/letter.png
+
+.. |length_text| image:: ../_images/blocks/length_text.png
+
+.. |mod| image:: ../_images/blocks/mod.png
+
+.. |round| image:: ../_images/blocks/round.png
+
+.. |function| image:: ../_images/blocks/function.png
+
+
+
+.. |variables_blocks| image:: ../_images/blocks/variables.png
+
+
+.. |set_var| image:: ../_images/blocks/set_var.png
+
+.. |change_var| image:: ../_images/blocks/change_var.png
+
+.. |show_var| image:: ../_images/blocks/show_var.png
+
+.. |hide_var| image:: ../_images/blocks/hide_var.png
+
+.. |variable| image:: ../_images/blocks/variable.png
+
+
+.. |add_to| image:: ../_images/blocks/add_to.png
+
+.. |delete_of| image:: ../_images/blocks/delete_of.png
+
+.. |delete_all| image:: ../_images/blocks/delete_all.png
+
+.. |insert_at| image:: ../_images/blocks/insert_at.png
+
+.. |replace_with| image:: ../_images/blocks/replace_with.png
+
+.. |show_list| image:: ../_images/blocks/show_list.png
+
+.. |hide_list| image:: ../_images/blocks/hide_list.png
+
+.. |list| image:: ../_images/blocks/list.png
+
+.. |item_of| image:: ../_images/blocks/item_of.png
+
+.. |length_of| image:: ../_images/blocks/length_of.png
+
+.. |item_index| image:: ../_images/blocks/item_index.png
+
+.. |list_contains| image:: ../_images/blocks/list_contains.png
+
+
+.. |my_blocks| image:: ../_images/blocks/my_blocks.png
+
+
+.. |define_block| image:: ../_images/blocks/define_block.png
+
+.. |custom_block| image:: ../_images/blocks/custom_block.png
+
+
+
+.. |extensions| image:: ../_images/blocks/extension.png
+
+
+
+.. |music_extension| image:: ../_images/blocks/music.png
+
+
+.. |play_drum| image:: ../_images/blocks/play_drum.png
+
+.. |rest_for| image:: ../_images/blocks/rest_for.png
+
+.. |play_note| image:: ../_images/blocks/play_note.png
+
+.. |set_instrument| image:: ../_images/blocks/set_instrument.png
+
+.. |set_tempo| image:: ../_images/blocks/set_tempo.png
+
+.. |change_tempo| image:: ../_images/blocks/change_tempo.png
+
+.. |tempo| image:: ../_images/blocks/tempo.png
+
+
+.. |pen_extension| image:: ../_images/blocks/pen.png
+
+
+.. |erase_all| image:: ../_images/blocks/erase_all.png
+
+.. |stamp| image:: ../_images/blocks/stamp.png
+
+.. |pen_up| image:: ../_images/blocks/pen_up.png
+
+.. |pen_down| image:: ../_images/blocks/pen_down.png
+
+.. |set_color| image:: ../_images/blocks/set_color.png
+
+.. |change_pen| image:: ../_images/blocks/change_pen.png
+
+.. |set_pen| image:: ../_images/blocks/set_pen.png
+
+.. |change_pen_size| image:: ../_images/blocks/change_pen_size.png
+
+.. |set_pen_size| image:: ../_images/blocks/set_pen_size.png
+
+
+.. |video_extension| image:: ../_images/blocks/video.png
+
+
+.. |when_video_motion| image:: ../_images/blocks/when_video_motion.png
+
+.. |turn_video| image:: ../_images/blocks/turn_video.png
+
+.. |video_transparency| image:: ../_images/blocks/video_transparency.png
+
+.. |video_motion| image:: ../_images/blocks/video_motion.png
+
+
+.. |voices_extension| image:: ../_images/blocks/voices.png
+
+
+.. |speak| image:: ../_images/blocks/speak.png
+
+.. |set_voice| image:: ../_images/blocks/set_voice.png
+
+.. |set_language| image:: ../_images/blocks/set_language.png
+
+
+.. |translate_extension| image:: ../_images/blocks/translate.png
+
+
+.. |translate_to| image:: ../_images/blocks/translate_to.png
+
+.. |language| image:: ../_images/blocks/language.png
+
+
+

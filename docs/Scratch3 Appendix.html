@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Апендикс &#8212; Block-based programming in Scratch - practice lessons</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Низове" href="Scratch3 Strings.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'Scratch_eng';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'Scratch_eng';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Block-based programming in Scratch - practice lessons</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="id1">
+<h1>Апендикс<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="intro11s" src="_images/intro11s.png" /></p>
+
+    </p></div></div>
+<div class="section" id="id2">
+<h2>Блокови функции<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>В Scratch формата на блок гарантира, че когато блоковете са свързани, те могат да формират само скриптове, които са синтактично правилни. Има независими блокове и функционални блокове. Независимите блокове (блокове с шапки, стекове, C-блокове и блокиращи блокове) съответстват на езиковите команди. Функционалните блокове (репортери и логически блокове) съхраняват стойности на независими блокове. В урок 3 говорихме за различните видове блокове и сега ще ви представим функциите на основните блокови групи и някои от групите, разположени в частта Разширения.</p>
+<div class="section" id="id3">
+<h3>Блокове за движение<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="motion_blocks" src="_images/motion.png" /> Motion</p>
+<p><img alt="fig11_1" src="_images/fig11_1.png" /></p>
+</div>
+<p>Командите, присвоени на тези блокове, могат да се изпълняват само от спрайтове. Сцената е неподвижна, поради което не може да изпълнява команди за движение. В групата <em>Motion</em> има 18 блока, един повече, отколкото във версията Scratch 2.0. Блокът <img alt="glide_to" src="_images/glide_to.png" /> беше добавен.</p>
+<p>За да ги улеснят, блоковете, които изпълняват подобни функции, стоят близо един до друг и образуват подгрупи. Функциите на подгрупите са следните:</p>
+<ol class="arabic simple">
+<li><p>преместване на спрайт по права линия или в кръг,</p></li>
+<li><p>преместване на спрайт в определено положение,</p></li>
+<li><p>насочване на спрайт към нещо,</p></li>
+<li><p>преместване на спрайт чрез промяна на координатите му,</p></li>
+<li><p>поддържане на спрайт в границите на сцената,</p></li>
+<li><p>задаване на стил на въртене на спрайтовете,</p></li>
+<li><p>съхраняване на текущите координати на спрайта.</p></li>
+</ol>
+<p>Блоковете, принадлежащи към първите шест групи, са стекови блокове, докато седмата група представлява репортери, чиято функция е да съхраняват данни. Те не могат да стоят сами; те се вмъкват във входните полета на други блокове, като по този начин се уточняват техните действия.</p>
+<p>Блоковете от първата група извършват относително движение, движение по отношение на текущото положение и посока. За разлика от тези блокове, тези от втората група преместват спрайта до определена точка на сцената, независимо от текущото й положение. Този тип движение се нарича абсолютно движение.</p>
+<p>Няколко типа данни могат да бъдат въведени във входните полета на блокове за движение: стойности на координатите на дестинация, ъгъл на завъртане, брой стъпки или продължителност на движение. Една стъпка съответства на един пиксел. Времето се изразява в секунди, а ъглите в градуси.</p>
+<p>В някои от блоковете дестинацията се избира от падащия списък на блока. Това може да бъде показалеца на мишката, някои други спрайтове, участващи в проекта, както и точка, чиито координати се генерират произволно.</p>
+<p>Блокът <img alt="rotation_style" src="_images/rotation_style.png" /> има три опции за стил на завъртане: <em>наоколо</em>, <em>наляво-надясно</em> и <em>не се върти</em>. Първият вариант означава, че спрайтът може да се изправи срещу всеки от 360 градуса. <em>Вляво-вдясно</em> означава, че спрайтът може да бъде обърнат само наляво или надясно, а всяка друга посока е деактивирана. Последната опция означава, че спрайтът винаги е изправен.</p>
+<p>Блоковете от групата <em>Движение</em> са разработени в урок 2 от този урок.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id4">
+<h3>Бловове за Външност<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="looks_blocks" src="_images/looks.png" /> Looks</p>
+<p><img alt="fig11_2" src="_images/fig11_2.png" /></p>
+</div>
+<p>Блоковете от тази група контролират появата на спрайтове. Седем от 21 блока от тази група контролират появата на сцената.
+Двадесет блока са видими, когато спрайт е във фокус, и три блокови подгрупи, когато етапът е във фокус. Блокът <img alt="switch_backdrop_wait" src="_images/switch_backdrop_wait.png" />, който позволява фонът да се промени и да изчака, докато това се случи, може да се види само когато етапът е активен (не се вижда, когато спрайт е на фокус). Останалите блокове, които могат да бъдат прикрепени към сцената, също могат да се видят в този случай. Функциите на подгрупите са следните:</p>
+<ol class="arabic simple">
+<li><p>показване на това, което спрайт казва за мислене,</p></li>
+<li><p>смяна на костюма на спрайта и фона на сцената,</p></li>
+<li><p>промяна на размера на спрайт,</p></li>
+<li><p>работа с графични ефекти, които могат да бъдат прикрепени към спрайтове и сцената,</p></li>
+<li><p>показване или скриване на спрайт,</p></li>
+<li><p>поставянето на спрайт в определения слой на изображението,</p></li>
+<li><p>репортери, които показват текущия костюм и размера на спрайта, както и текущия фон на сцената.</p></li>
+</ol>
+<p>Графичните ефекти, които могат да се добавят към спрайта, са:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>color - променя цвета на спрайта,</p></li>
+<li><p>fisheye - създава впечатление, че спрайт се вижда през широкоъгълна леща,</p></li>
+<li><p>whirl - усуква спрайта около централната му точка,</p></li>
+<li><p>pixelate - пикселира спрайта,</p></li>
+<li><p>mosaic - създава множество по-малки изображения на спрайта,</p></li>
+<li><p>brightness - променя яркостта на спрайта, и</p></li>
+<li><p>ghost - променя прозрачността на спрайта.</p></li>
+</ul>
+</td></tr></table>
+<p>Промяната на цвета например може да даде илюзията, че спрайтът изразява емоции или мига, може да изглежда, че се е появило съвсем ново нещо. Ако използвате промяна на цвета с командата `` печат``, можете да направите атрактивни шарки, например дъга.</p>
+<p>Използвайки ефекта „fisheye“, можете да създадете илюзия, че спрайтът се движи към или извън екрана, става по-дебел и други подобни. Може да се използва като преход между костюмите.</p>
+<p>Ефектът на вихъра може да символизира пътуване във времето, телепортация, световъртеж, гадене.</p>
+<p>Ефектът на пикселиране прави спрайтите да изглеждат като при първите версии на компютърните игри, когато мониторите са с ниска разделителна способност; може да се използва и за цензура или блокиране на спрайта на сцената.</p>
+<p>Мозаечният ефект се използва за размножаване на спрайтове без клониране.</p>
+<p>Променяйки яркостта на спрайта, той може да създаде впечатление за светене или може да стане по-тъмен, а призрачният ефект може да направи спрайт невидим за потребителя, но други спрайтове все още могат да го засекат на сцената.</p>
+<p>Блокове <img alt="goto_layer" src="_images/goto_layer.png" /> и <img alt="go_layers" src="_images/go_layers.png" /> се различават от блоковете, изпълняващи подобни функции в предишната версия на Scratch.</p>
+<p>Когато етапът е на фокус, можете да видите 8 блока, разделени на 3 подгрупи: за промяна на фона, за задаване на графични ефекти за фона и репортера, който показва текущия фон. Фонът <code class="docutils literal notranslate"><span class="pre">Backdrop</span> <span class="pre">Name</span></code>, който съществуваше във версия Scratch 2.0, не е включен в новата версия.</p>
+<p>Блоковете от групата <em>Изглежда</em> са разработени в урок 3 от този урок.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id5">
+<h3>Блокове за звук<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="sound_blocks" src="_images/sound.png" /> Sound</p>
+<p><img alt="fig11_3" src="_images/fig11_3.png" /></p>
+</div>
+<p>В проектите могат да се използват два вида звуци: звуци и ноти. Блоковете от тази група могат да се използват за работа със звуци, а блоковете от разширението <em>Music</em> за работа с ноти. Звуците са достъпни само чрез импортиране, запис или от вградена библиотека от звуци. Те се играят с помощта на звуковите блокове, които контролират силата на звука, темпото и др. Групата <em>Sound</em> е значително модифицирана в сравнение с това как е била организирана във версия Scratch 2.0. Някои от блоковете от тази група бяха преместени в разширението <em>Music</em>. Групата <em>Звук</em> има 9 блока, които са разделени на 3 подгрупи. Те могат да се прилагат както на спрайтове, така и на фона.</p>
+<p>Функциите на подгрупите са следните:</p>
+<ol class="arabic simple">
+<li><p>пускане, спиране и възпроизвеждане на звуци,</p></li>
+<li><p>прилагане на звукови ефекти,</p></li>
+<li><p>контролиране на силата на звука.</p></li>
+</ol>
+<p><strong>Стартиране, спиране и възпроизвеждане на звуци</strong></p>
+<p>Блокът <img alt="play_until" src="_images/play_until.png" /> възпроизвежда специфичен звук, спирайки скрипта, докато не приключи. За разлика от този блок, блокът <img alt="start_sound" src="_images/start_sound.png" /> възпроизвежда звук, без да спира паузата. Ето защо блокът “стартира звук” обикновено се използва за обявяване на действие, информиране на спрайт, че е постигната цел или подчертаване на определени събития.</p>
+<p>От друга страна, блоковете “играят до” обикновено се използват за възпроизвеждане на “фонова музика”. Този блок се поставя в блока <code class="docutils literal notranslate"><span class="pre">завинаги</span></code> и подходящата музика се възпроизвежда по време на цялото изпълнение на програмата. Може да се използва и за пауза на изпълнението на скрипта вместо на контролния блок <code class="docutils literal notranslate"><span class="pre">изчакайте</span></code>.</p>
+<p>Блокът “стоп звуци” ще спре всички звуци, които се изпълняват в момента - на всички спрайтове и на сцената. Например, ако проектът предлага опцията за музика, този блок се използва за изключване на музиката. Също така е обичайно всички звуци да бъдат спрени преди проектът да премине към следващата сцена и други подобни.</p>
+<p><strong>Прилагане на звукови ефекти</strong></p>
+<p>В Scratch 3.0 бяха въведени блокове, които задават и променят звукови ефекти. Въпреки че новият звуков редактор осигурява повече звукови ефекти (вижте по-долу в секцията за звуков редактор), блоковете поддържат само два: настройка и промяна на височината и преместване на аудио наляво или надясно.</p>
+<p><strong>Контрол на звука</strong></p>
+<p>Тези блокове засягат само спрайта (или фона), на който са присвоени. Например, щракването върху спрайт може да намали силата на звука, ако спрайтът става все по-малък, като по този начин изглежда като че ли спрайтът се отдалечава от потребителя. Освен това, ако се използват блокове от разширението <em>Music</em>, някои части от композицията може да се чуят по-силни, а други по-тихи.</p>
+<p>Осем от тези блокове са стекови блокове, а един е репортерски блок, който съхранява информацията за силата на звука на звука.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id6">
+<h3>Блокове Събития<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="events_blocks" src="_images/events.png" /> Events</p>
+<p><img alt="fig11_4" src="_images/fig11_4.png" /></p>
+</div>
+<p>Блоковете в тази група се използват за задействане на изпълнението на скрипта и изпращане и получаване на съобщения. В тази група има 9 блока и те са разделени на 3 подгрупи. Тъй като в тази версия на Scratch, видео сензорът е преместен в частта за разширения, той е премахнат от падащото меню на блока <img alt="when_greater" src="_images/when_greater.png" />.</p>
+<p>Функциите на подгрупите са следните:</p>
+<ol class="arabic simple">
+<li><p>задействане на скриптове със специфична дейност, извършвана от потребителя,</p></li>
+<li><p>задействане на скриптове, когато конкретно условие е изпълнено по време на изпълнение на проекта,</p></li>
+<li><p>даване на възможност за излъчване и получаване на съобщения.</p></li>
+</ol>
+<p>** Задействане на скриптове с дейности, извършвани от потребителя **</p>
+<p>Потребителят може да започне изпълнението на проекта, като натисне бутона <img alt="g_flag" src="_images/g_flag.png" />, един от спрайтите, участващи в проекта, фона или чрез натискане на един от клавишните клавиши. Проектът обикновено се задейства при щракване върху зеления флаг, това е когато всички скриптове, които започват с този блок, ще бъдат активирани. Това са скриптове, които изпълняват различни инициализации и след това предават управлението на други скриптове. Например, те изтриват всички елементи от списъка, нулират променливите, задават сцени, като показват или скриват спрайтове и променят костюмите си, изтриват всичко нарисувано на сцената, пускат фоновата музика и др. Докато е напълно възможно да създавате проекти, без да използвате това блок, не се препоръчва. Единственият начин да се стартира проект, без да се използва този блок, е да се активират скриптове, които започват с някакъв друг блок от тази подгрупа. В този случай проектът ще продължи само докато не бъдат завършени скриптите, които зависят от първоначалните скриптове.</p>
+<p>Забележка. Блокът <img alt="clicked_stage" src="_images/clicked_stage.png" /> се вижда само когато сцената е на фокус.</p>
+<p><strong>Задействане на скриптове, когато конкретно условие е изпълнено по време на изпълнение на проекта</strong></p>
+<p>Някои от събитията, които могат да задействат изпълнението на скриптове, започващи с един от блоковете от тази група, са промяна на фона, изтичане на определен период от време или увеличаване на силата на звука над определено ниво.</p>
+<p><strong>Излъчване и получаване на съобщения</strong></p>
+<p>Излъчването на съобщения е основният механизъм за координиране на поведението на спрайтите, участващи в даден проект, и може да се използва и за реализиране на процедури. Излъчването се използва за извикване на скриптове, които трябва да се активират, когато са изпълнени определени условия. Сценариите, които започват с блока <img alt="when_receive" src="_images/when_receive.png" /> ще бъде извикан, след като посоченото съобщение бъде излъчено. Ако същото съобщение се излъчва, докато скриптът все още работи, текущото изпълнение ще бъде спряно и скриптът ще започне да се изпълнява отново от началото. Следователно, ако поставим блока, който излъчва съобщението, на което скриптът отговаря, в скрипта, който започва с блока <code class="docutils literal notranslate"><span class="pre">когато</span> <span class="pre">получи</span></code>, имаме ситуация, в която скриптът се обажда. Това се нарича <strong>рекурсия</strong> и може да се използва за създаване на фрактали, вечни контури и други подобни.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id7">
+<h3>Контролни Блокове<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="control_blocks" src="_images/control.png" /> Control</p>
+<p><img alt="fig11_5" src="_images/fig11_5.png" /></p>
+</div>
+<p>Блоковете от тази група контролират изпълнението на скриптове. Те дават възможност за разклоняване, повторение и работа с спрайтови клонове и могат да спрат изпълнението на скриптове. Общо има 11 блока, един е начален (шапка) блок, два са блокове с капачки, три са блокове на стека, пет са С-блокове, а `` ако тогава друго ‘’ е блок с форма на Е. Те са разделени на пет подгрупи, чиито функции са следните:</p>
+<ol class="arabic simple">
+<li><p>блок за чакане (пауза на скрипта),</p></li>
+<li><p>блокове за повторение,</p></li>
+<li><p>блокове с клони,</p></li>
+<li><p>блок за условни повторения,</p></li>
+<li><p>блок за спиране на скрипта,</p></li>
+<li><p>блокове, използвани за работа с клонове.</p></li>
+</ol>
+<p>Функциите на тези блокове са разяснени в уроци 5, 6 и 7 от този урок.</p>
+<p><strong>Работа с клонинги</strong></p>
+<p>Клонирането е функция, която позволява спрайтът да създаде копие от себе си, докато проектът работи. Всеки клонинг(копие) има същите костюми, звуци и сценарии като оригинала, но иначе е независим. Клонирането е различна форма на щамповане, защото клонингите са отделни спрайтове, които могат да изпълняват скриптове и да се държат според тези скриптове. Те се различават и от спрайтите, създадени с опцията за дублиране, тъй като обикновените дубликати са постоянни и се появяват в списъка с спрайтове, докато клонингите не, и те изчезват, когато проектът приключи.</p>
+<p>Клонирането се използва винаги, когато проектът има подобни спрайтове, които правят подобни неща. Тъй като клонингите са направени от проекта, а не от потребителя, клонирането освобождава потребителя да не прави същите промени във всеки от многото спрайтове. Например, клонирането може да се използва за създаване на множество приятели и врагове спрайтове в игри, както и за специални ефекти като фойерверки и сняг.</p>
+<p>Клоновете обикновено извършват действие, когато са създадени. Блокът <img alt="when_clone" src="_images/when_clone.png" /> задейства скрипта, който започва да се изпълнява, когато се създаде клонинга(копието). Множество скриптове, започващи с този блок, могат да бъдат добавени към един и същ спрайт и всички те ще се изпълняват едновременно, когато се създаде клонинга(копието). Самият скрипт може да работи на няколко клонинга(копието) наведнъж. Някои от действията, които този блок може да извърши, включват поставяне на клонинга(копието) в произволна позиция, преместване на клонинга(копието), докато той се сблъска с друг спрайт.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id8">
+<h3>Блокове за Сетива<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="sensing_blocks" src="_images/sensing.png" /> Sensing</p>
+<p><img alt="fig11_6" src="_images/fig11_6.png" /></p>
+</div>
+<p>Тази група е съставена от блокове, които позволяват на проекта да приема информация от различни устройства, подобно на това как човешките сетива събират информация от своята среда.
+Има 18 блока в групата <em>Sensing</em>. Три блока, които бяха във версия Scratch 2.0 и които се отнасят за движение за редактиране на видео и наблюдение, регистрирани от видео, вече не са включени, но блокът <img alt="set_drag" src="_images/set_drag.png" /> беше добавен. Този блок регулира дали спрайт на цял екран може да се влачи или не, което беше предварително коригирано в информацията на спрайта. Блоковете, свързани с откриването на видеоклипове, са преместени в съответното разширение.</p>
+<p>Тези блокове са разделени на 6 подгрупи със следните функции:</p>
+<ol class="arabic simple">
+<li><p>съхраняване на информация за разстоянието на спрайта спрямо показалеца на мишката или други обекти,</p></li>
+<li><p>въвеждане на входни данни от клавиатурата,</p></li>
+<li><p>съхраняване на информация за текущите операции на показалеца на мишката и клавиатурата,</p></li>
+<li><p>съхраняване на текущата стойност на силата на звука,</p></li>
+<li><p>работа с таймер,</p></li>
+<li><p>запаметяване на параметри на спратите и сцената,</p></li>
+<li><p>съхраняване на информация за текущото време и потребителя.</p></li>
+</ol>
+<p>Само три блока от тази група могат да стоят самостоятелно, останалите са функционални блокове. Следователно блоковете от първата група се вмъкват в контролни блокове, които трябва да дават възможност за изпълнение на различни дейности в зависимост от позицията на спрайта. Блоковете от втората група съответстват на информацията, която човек събира с чувството на допир, а на третата група съответства на информацията, която се събира от чувството на слуха. Таймерът може да се използва за ограничаване на времето за игра в игра или времето, необходимо за изпълнение на тестова задача. Блокът, който съхранява параметрите на спрайтове и сцената, може да предостави много данни за всички обекти, които участват в проекта. Информация, която човек би събирал чрез зрението и компютър с видеокамера, може да се използва, ако разширението <em>Video Sensing</em> се добави към проекта.</p>
+<p>Ние сме разработили функциите на повечето блокове в тази група чрез примерите в предишните уроци. Тук само ще споменем функциите на логически блокове и репортери за текущото време.</p>
+<p><strong>Логически блокове</strong></p>
+<p>В тази група има 5 логически блока. Всеки от тези блокове може да върне само една от две стойности: вярна или невярна, в зависимост от това дали условието е изпълнено или не. Логическите блокове се поставят във входните полета на шестоъгълната форма на контролните блокове.</p>
+<p><strong>Текущо време и информация за потребителя</strong></p>
+<p>Репортерският блок <img alt="time_unit" src="_images/time_unit.png" /> може да даде следната информация за текущото време.</p>
+<a class="reference internal image-reference" href="_images/fig11_6b.png"><img alt="_images/fig11_6b.png" class="align-center" src="_images/fig11_6b.png" style="width: 200px;" /></a>
+</div>
+<hr class="docutils" />
+<div class="section" id="id9">
+<h3>Блокове Оператори<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="operator_blocks" src="_images/operators.png" /> Operators</p>
+<p><img alt="fig11_7" src="_images/fig11_7.png" /></p>
+</div>
+<p>В групата <em>Оператори</em> няма независими блокове, които биха отговаряли на езиковите команди. Всички блокове са функционални блокове, т.е. те съхраняват стойностите на число, низ или логически изрази и те се вмъкват в подходящи полета за въвеждане на независими блокове или други функционални блокове. Блокът <img alt="text_contains" src="_images/text_contains.png" /> е нов блок в тази група, който връща стойностите <em>true</em> или <em>false</em> в зависимост от това дали низът съдържа дадения символ или не.</p>
+<p>В групата има 18 блока <em>Оператори</em> - 11 репортери и 7 логически (логически) блока, които позволяват следните видове операции:</p>
+<ol class="arabic simple">
+<li><p>основните аритметични операции - събиране, изваждане, умножение и деление,</p></li>
+<li><p>генериране на произволни числа,</p></li>
+<li><p>сравнения - по-голямо от, по-малко от, равно на,</p></li>
+<li><p>изграждане на сложни логически изрази,</p></li>
+<li><p>операции със струни,</p></li>
+<li><p>цели числа,</p></li>
+<li><p>изчисляване на стойността на математическите функции.</p></li>
+</ol>
+<p>Основните аритметични операции могат да се извършват с цели и реални числа. Само делението на нула (делител = 0) може да доведе до проблеми, тъй като няма числа, които, умножени по нула, биха дали число, различно от нула (коефициент*делител = дивидент). Ето защо разделението по нула трябва да бъде предотвратено в програмите. Показахме как това може да се постигне в проекта <em>Млад математик</em> от урок 7 от този практикум.</p>
+<p>В резултат на делението на нула, Scratch интерпретаторът връща една от стойностите <em>Infinity</em>, <em>NaN</em> (не число) или <em>-Infinity</em>, в зависимост от това дали дивидентът е положително число, нула или отрицателно число ,</p>
+<p>Ние обяснихме използването на случайни числа, логически изрази и сложни логически изрази, образувани от логическите операции <em>и</em>, <em>или</em> и <em>не</em> с примерите, представени в предишните уроци.</p>
+<p>Операциите, използвани с низовете, позволяват съединяването на два низа, като се избират символи, разположени в определени позиции в низа, се определя дължината на низа и се проверява дали низът съдържа указания символ. Операцията, извършена на струни, беше разяснена в урок 9 от този урок.</p>
+<p>Целите операции, поддържани в Scratch, са изчисляването на остатъка в целочисленото деление и закръглянето на числата.</p>
+<p>Математически функции, които могат да бъдат избрани от падащия списък на блока <img alt="function" src="_images/function.png" /> са:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>abs</p></li>
+<li><p>floor</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>ceiling</p></li>
+<li><p>sqrt</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>sin</p></li>
+<li><p>cos</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>tan</p></li>
+<li><p>asin</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>acos</p></li>
+<li><p>atan</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>e^</p></li>
+<li><p>10^</p></li>
+</ul>
+</td></tr></table>
+</div>
+<hr class="docutils" />
+<div class="section" id="id10">
+<h3>Блокове за Променливи и Списъци<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="variables_blocks" src="_images/variables.png" /> Variables and Lists</p>
+<p><img alt="fig11_8" src="_images/fig11_8.png" /></p>
+</div>
+<p>Функциите на подгрупите са следните:</p>
+<p>За променливи</p>
+<ol class="arabic simple">
+<li><p>репортери за променливите на потребителя,</p></li>
+<li><p>настройване и промяна на стойността на променлива,</p></li>
+<li><p>показване и скриване на променливи репортери на сцената.</p></li>
+</ol>
+<p>За списъци</p>
+<ol class="arabic simple" start="4">
+<li><p>репортери за списъци с потребители,</p></li>
+<li><p>добавяне на елементи в края на списъка,</p></li>
+<li><p>операции, извършени в списъка,</p></li>
+<li><p>информация за връщането на списъка,</p></li>
+<li><p>показване и скриване на репортери от списъка на сцената.</p></li>
+</ol>
+<p>Операциите, които се поддържат за работа със списъци, са:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>изтриване на елемент от определена позиция в списъка,</p></li>
+<li><p>изтриване на всички елементи от определен списък,</p></li>
+<li><p>вмъкване на елементи в списъка на дадени позиции, и</p></li>
+<li><p>замяна на артикули в определени позиции.</p></li>
+</ul>
+</td></tr></table>
+<p>За списъка може да се получи следната информация:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>кой артикул е в посочената позиция,</p></li>
+<li><p>каква е позицията (в списъка) на посочения артикул,</p></li>
+<li><p>дължината на списъка (брой елементи в списъка) и</p></li>
+<li><p>дали елемент е включен в списък или не.</p></li>
+</ul>
+</td></tr></table>
+<p>Променливите и списъците могат да бъдат глобални - те могат да се използват от всички спрайтове или локални - могат да се използват само от един спрайт. Променливите и списъците, създадени за етапа, са видими за всички спрайтове.</p>
+<p>Текущите стойности на променливите могат да бъдат проследявани на сцената чрез променливи монитори. Променливите монитори могат да са в три различни форми:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>показване на стойността с името на променливата,</p></li>
+<li><p>голям дисплей на стойността без съответното име на променливата,</p></li>
+<li><p>дисплей, съдържащ плъзгача, която може да се използва за промяна на стойността на променливата.</p></li>
+</ul>
+</td></tr></table>
+<p>Променливите са разработени в урок 7 и списъци в урок 9 от този урок.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id11">
+<h3>Моите блокове<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="my_blocks" src="_images/my_blocks.png" /> My blocks</p>
+<p><img alt="fig11_9" src="_images/fig11_9.png" /></p>
+</div>
+<p>Опцията за потребителя да направи свои собствени блокове и по този начин да приложи процедури, беше въведена за първи път във версия Scratch 2.0. В новата версия на Scratch цветът и формата на блоковете на потребителя бяха променени.</p>
+<p>Определеният блок е първият блок, който ще се появи, когато потребителят поиска да въведе нов блок. Действията, които трябва да се извършват от този нововъведен блок, трябва да се добавят към дефиниращия блок. Тогава стек блок ще се появи в блоковата палитра с името, присвоено му в определението. Новият дефиниран от потребителя блок може допълнително да се използва като всеки друг блок.</p>
+<p>Новият блок може да има полета за въвеждане. <em>Параметри</em> се вмъкват във полето за въвеждане на заглавието на дефиницията. Процедурите могат да имат повече от един параметър. Когато новият блок се използва за извикване на процедура, в полетата за въвеждане потребителят ще въведе <em>аргументи</em>. Аргументите заместват всеки вид на съответните параметри в процедурата.</p>
+<p>Създаването и използването на въведените блокове са разяснени в урок 8 от този урок.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id12">
+<h3>Бокове на разширението Молив<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="pen_extension" src="_images/pen.png" /> Pen</p>
+<p><img alt="fig11_10" src="_images/fig11_10.png" /></p>
+</div>
+<p>В Scratch на всеки спрайт може да бъде определена позиция, посока и ориентация на движение и той може да остави отпечатък по време на движение. По този начин размерът, формата и цветът на спрайта не оказват влияние върху следата, оставена от спрайтовата рисунка с химикалка. Спрайтът може да бъде невидим или може да се състои от една точка, но това не влияе на неговата рисунка. Способността на спрайт да оставя отпечатък по време на движение се основава на блокове от тази група. Изображенията, които са създадени от спрайтове, се съхраняват като колекция от фигури, заедно с техните параметри. Изображенията, определени по този начин, се наричат ​​*векторна графика*.</p>
+<p>Блоковете в разширението <em>Pen</em> са разделени на 5 подгрупи. Командата Shade pen от предишните версии е извадена и вместо да зададете цвета на писалката само по номер, цветът вече се определя от нюанс, наситеност и яркост. Всички блокове от тази група са стекови блокове.</p>
+<p>Функциите на подгрупите са:</p>
+<ol class="arabic simple">
+<li><p>изтриване на всичко нарисувано (премахване на всички маркировки на писалката от сцената),</p></li>
+<li><p>щамповане на спрайт,</p></li>
+<li><p>поставяне на писалката нагоре или надолу,</p></li>
+<li><p>настройка и промяна на атрибутите на писалката,</p></li>
+<li><p>настройка и промяна на размера на писалката (дебелина).</p></li>
+</ol>
+<p>Графичният редактор в тази версия на Scratch работи с така наречения цветен модел HSB (Hue, Saturation, Brightness). Това означава, че цветът е изграден с 3 компонента: нюанс, насищане и яркост. Цветовият нюанс показва цветното число в спектралната палитра, тоест самия цвят. Описва се в цветен кръг, в който ъгълът 0° представлява червения цвят (цветното число е нула), а ъгълът 180° представлява синьо-зеления цвят, наречен циан (цвят номер 100). Наситеността се отнася до интензивността на цвета - колкото по-голяма е наситеността, толкова по-чист е цветът. Наситеността може да бъде от 0 до 100%, като 0% интензитет представлява бял цвят и 100% интензитет чист цвят. Яркостта на цвета зависи от количеството на черния цвят, смесен с наблюдавания цвят.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id13">
+<h3>Блоковете от текст към реч и разширенията за превод<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="voices_extension" src="_images/voices.png" /> Text to Speech and <img alt="translate_extension" src="_images/translate.png" /> Translate</p>
+<p><img alt="fig11_11" src="_images/fig11_11.png" /></p>
+</div>
+<p><strong>Текст към Реч</strong></p>
+<p>Това разширение може да се ползва само ако компютърът е свързан с Интернет <img alt="requires" src="_images/requires.png" />, защото използва Amazon Web Services.</p>
+<p>Когато избереш <img alt="voices_extension" src="_images/voices.png" /> от групата <em>Разширения</em>, в блоковата палитра ще се появят три нови блока. Те позволяват на спрайт да казва текста, вмъкнат във полето за въвеждане на първия блок, на езика, зададен от потребителя с третия блок от тази група. Потребителят може също така да зададе гласа, който всъщност ще говори текста: женски (сопрано или алто) или мъжки (тенор или бас). Това е зададено от друг блок от тази група.</p>
+<p><strong>Разширение превод</strong></p>
+<p>Това разширение може да се ползва само ако компютърът е свързан с Интернет <img alt="requires" src="_images/requires.png" />, защото използва Google.</p>
+<p>Когато избереш <img alt="translate_extension" src="_images/translate.png" /> от групата <em>Разширения</em>, в палитрата с блокове се появяват два нови блока. Те позволяват текстът, написан на един език, да бъде преведен на друг език. Блокът | език | показва кой език е зададен в Scratch. Текст, написан на текущия език в първото поле за въвеждане на блока | translate_to | се превежда на езика, избран от падащия списък на второто поле за въвеждане. Ако преводният блок е поставен във полето за въвеждане на блока <code class="docutils literal notranslate"><span class="pre">казвам</span></code> или <code class="docutils literal notranslate"><span class="pre">мисля</span></code>, потребителят може да види превода.</p>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>Използване на вградения графичен редактор<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<p>Scratch има вграден редактор на цветове, който можете да използвате за създаване и промяна на спрайтове, костюми и фонове. Този редактор поддържа два различни режима на рисуване: растер (растерна карта) и вектор.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Компютрите могат да съхраняват изображения по два начина: растерни и векторни.</p>
+<p>В <strong>растерна графика</strong> изображението се съхранява като правоъгълна мрежа от пиксели - растерна карта. Растерното изображение се определя технически от ширината и височината на спрайта в пиксели и броя на битовете, необходими за съхраняване на цвета на пикселите. Например, ако имаме 16 цвята, са нужни 4 бита на пиксел за съхранение на цвета му. Растерната графика зависи от разделителната способност. Растерните изображения не могат да бъдат увеличени, без да се загуби качеството на изображението.</p>
+<p>Този недостатък се преодолява чрез прилагането на <strong>векторната графика</strong>, която съхранява изображение като съвкупност от фигури заедно с неговите данни (параметри), които определят как фигурата ще бъде нарисувана и къде ще бъде разположена. Графиката на костенурката е пример за векторната графика.</p>
+<p>Следващата фигура показва увеличено изображение на линия, нарисувана по тези два начина.</p>
+<a class="reference internal image-reference" href="_images/fig11_12.png"><img alt="_images/fig11_12.png" class="align-center" src="_images/fig11_12.png" style="width: 210px;" /></a>
+
+    </p></div></div>
+<div class="section" id="id15">
+<h3>Потребителски Интерфейс<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<p>Следващата фигура показва оформлението на вградения редактор на цветове във векторен и растерен режим.</p>
+<a class="reference internal image-reference" href="_images/fig11_13.png"><img alt="_images/fig11_13.png" class="align-center" src="_images/fig11_13.png" style="width: 1200px;" /></a>
+<div class="sidebar">
+<p class="sidebar-title">Нови Костюми</p>
+<p><img alt="novi" src="_images/fig11_14.png" /></p>
+</div>
+<p><strong>Зона на костюмите</strong></p>
+<p>Вляво е областта на костюма (1) с икони за всеки костюм и поредния номер на костюма. В долната част на областта на костюмите е бутон за създаване на нови костюми. За да редактирате различни костюми в редактора на бои, просто кликнете върху иконата на желания костюм и съответното изображение ще се появи в областта за редактиране - област за рисуване или платно (7).</p>
+<p>Можете да добавите нов костюм (или фон), като задържите курсора на мишката върху бутона <img alt="b_sprite" src="_images/b_sprite.png" /> разположен в долната част на тази област с показалеца на мишката и избиране на една от опциите, които ще се покажат. Можете да изберете костюм от библиотеката с костюми, да нарисувате свой собствен, да изтеглите файл с изображения от вашия компютър, да направите снимка или да изберете „костюм за изненада“, който е избран на случаен принцип от библиотеката с костюми.</p>
+<p>Забележка. Библиотеката с костюми съдържа индивидуални костюми на всички спрайтове, намиращи се в библиотеката на спрайтове.</p>
+<div class="sidebar">
+<p class="sidebar-title">Промяна на режима на работа</p>
+<p><img alt="vector_bmp" src="_images/vector_bmp.png" /></p>
+<p><img alt="bmp_vector" src="_images/bmp_vector.png" /></p>
+</div>
+<p><strong>Преобразуване на векторния режим в растерен режим и обратно</strong></p>
+<p>Под долния ляв ъгъл на областта за рисуване е бутонът (2), който превключва редактора от един режим в друг. Инструментите, специфични за конкретния режим, могат да бъдат намерени в лявата част на екрана до зоната на рисуване, в нашата фигура векторният режим е маркиран с (5), а растерният (растерния) режим с (6). Опциите могат да се видят над зоната на рисуване (платното). Някои от тях са общи за двата режима на работа, на фигурата тези опции са рамкирани с червени правоъгълници (3), а някои от тях се отнасят само за векторния режим, като са рамкирани със сиви правоъгълници (4).</p>
+</div>
+<div class="section" id="id16">
+<h3>Общи опции<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<p>Тези опции са разположени над зоната на рисуване.</p>
+<div class="sidebar">
+<p class="sidebar-title">Смяна на цвета</p>
+<p><img alt="promena_boje" src="_images/fig11_15.png" /></p>
+</div>
+<p><img alt="fill" src="_images/fill.png" /> <strong>Смяна на цвета</strong></p>
+<p>Щракването върху полето за въвеждане на блока, което се използва за задаване на цвета, ще отвори падащо меню, съдържащо плъзгачи: цвят, наситеност и яркост, а под тях инструмента пипета за вземане на проби от цвят. Можете да зададете желания цвят, като преместите плъзгача или щракнете върху инструмента очи.</p>
+<p>Преместването на плъзгача <em>color</em> променя оттенъка на цвета (например, от червено до синьо). Този инструмент е най-често използваният, тъй като има най-голямата разлика между цветовете.
+Придвижването на плъзгача <em>наситеност</em> променя интензитета на цвета: наситеността 100 е избраният цвят, 50 - по-светъл цвят, а 0 - е напълно бял.
+Преместването на плъзгача <em>яркост</em> променя колко тъмен е цветът: яркостта 0 е напълно черна, докато 100 е избраният цвят.</p>
+<p>Когато щракнете върху инструмента за очи, се появява лупа с кръг в центъра.
+За да изберете желания цвят, трябва да позиционирате центъра на лупата над частта от зоната за рисуване, върху която е разположен този цвят, и щракнете върху.</p>
+<p>Над трите плъзгача има четири опции. Те позволяват различни начини за запълване на зона с цвят. Дадена област може да бъде запълнена равномерно с плътен цвят или като градиент, с различни нюанси на цвят. Ако щракнете върху някоя от опциите, различни от опцията за плътен цвят, ще се появят два избрани цвята: <img alt="swap" src="_images/swap.png" />. Като щракнете върху първия или втория цвят, можете да ги зададете. Кликването на <em>swap</em> между двата цвята променя реда им. Опциите за запълване са: плътен цвят, вертикален наклон, хоризонтален наклон или градиент на кръг.</p>
+<p><img alt="size" src="_images/size.png" /> <strong>Промяна размера на молива</strong></p>
+<p>Има поле за въвеждане, за да изберете размера (дебелината) на писалката. Можете да въведете размера или да използвате стрелките отстрани, за да го промените. Колкото по-голям е броят, толкова по-дебела е линията.</p>
+<p><img alt="name" src="_images/name.png" /> <strong>Кръщаване на костюмите</strong></p>
+<p>Името на костюма е важно за организацията, а понякога и за програмирането на проекта. Тъй като на всеки костюм е присвоен собствен пореден номер, не се препоръчва да назовавате костюмите, като използвате само номера, без други символи. За да назовете костюм, трябва да кликнете върху текстовата лента в горния ляв ъгъл на редактора на бои и да въведете новото име.</p>
+<p><img alt="copy" src="_images/copy.png" /> <strong>Copying and</strong> <img alt="paste" src="_images/paste.png" /> <strong>Pasting</strong></p>
+<p>Вторият ред опции включва бутони за копиране и поставяне. Опцията за копиране копира избраната област, докато пастата я поставя някъде другаде. Можете също да използвате клавишните комбинации: Ctrl + C за копиране и Ctrl + V за поставяне. Първо изберете правоъгълната област, която искате да копирате и след това я плъзнете до мястото, където искате да поставите копието.</p>
+<p><img alt="redo" src="_images/redo.png" /> <strong>Undo and Redo</strong></p>
+<p>Вдясно до името на костюма има два бутона, наречени отмяна и повтор. Тези бутони ви позволяват да отмените последното действие или да повторите действието, което сте отменили преди това. Бутонът за повторение не може да се използва, ако не е използван бутон за отмяна. Ако излезете от редактора на бои, всичко, което сте направили в него, ще стане постоянно и може да се отмени само ръчно. Клавишната комбинация за опцията за отмяна е Ctrl + Z.</p>
+<p><img alt="flip_h" src="_images/flip_h.png" /> <strong>Horizontal</strong>  <img alt="flip_v" src="_images/flip_v.png" /> <strong>and Vertical Flipping</strong></p>
+<p>Когато изберете обект, има възможност да го завъртите хоризонтално или вертикално. Във втория ред от опции има два бутона с две стрелки, всеки насочен към пунктирна линия. Този отляво обръща избрания обект хоризонтално, а този отдясно вертикално.</p>
+</div>
+<div class="section" id="id17">
+<h3>Опции за векторния редактор<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<p>Тези опции са достъпни само когато графичният редактор е във векторен режим и не се появяват, когато е в растерен.</p>
+<p><strong>Прецизно движение на обекта</strong></p>
+<p>Когато в векторния редактор е избран обект, клавишите със стрелки могат да се използват за преместването му точно по един пиксел. В растерния редактор, потребителят може да използва клавишите със стрелки, за да премества избрани области. Тази опция може да бъде полезна, ако искате да направите точен чертеж или да подравните различни обекти.</p>
+<div class="sidebar">
+<p class="sidebar-title">Промяна на контура</p>
+<p><img alt="promena_konture" src="_images/fig11_16.png" /></p>
+</div>
+<p><img alt="outline" src="_images/outline.png" /> <strong>Контури</strong></p>
+<p>Вдясно от опцията, използвана за настройка на цвета, има падащо меню, което позволява на потребителя да променя очертанията на обектите. Това падащо меню има три плъзгача, но за разлика от менюто за настройка на цветовете, тук потребителят няма възможност да смеси два различни цвята. Вдясно до това падащо меню има поле за въвеждане, където потребителят може да избере дебелината на контура. Можете да въведете число или да използвате стрелките, за да го промените.</p>
+<p><strong>Налагане на изображението</strong></p>
+<p>Можем да използваме следната аналогия, за да обясним как са представени спрайтовете на сцената. Представете си, че всеки спрайт е нарисуван на отделен лист прозрачно фолио и че всички листове са подредени върху този, върху който е нарисуван фона. В Scratch тези прозрачни листове фолио отговарят на <strong>слоеве</strong>. Всеки път, когато спрайт се движи, той ще покрива изображенията, начертани на слоевете отдолу.</p>
+<p>В горната дясна част на редактора на бои има четири бутона, които ви позволяват да местите обекти през различни слоеве:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><img alt="v_forward" src="_images/v_forward.png" /> moves the object one layer forward (in front of the current one),</p></li>
+<li><p><img alt="v_front" src="_images/v_front.png" /> moves the object all the way in front,</p></li>
+<li><p><img alt="v_backward" src="_images/v_backward.png" /> moves the object one layer backward (behind the current one),</p></li>
+<li><p><img alt="v_back" src="_images/v_back.png" /> moves the object all the way back.</p></li>
+</ul>
+</td></tr></table>
+<p><img alt="v_group" src="_images/v_group.png" /> <strong>Групиране</strong> <img alt="v_ungroup" src="_images/v_ungroup.png" /> <strong>и Разгрупиране</strong></p>
+<p>Тази опция се използва за групиране на множество обекти в едно цяло. Когато има много обекти, които трябва да преместите наведнъж, може да бъде полезно да ги групирате. По този начин всички те могат да бъдат преместени или изтрити едновременно. За да изберете обекти, щракнете и плъзнете показалеца на мишката върху желаните обекти (или задръжте клавиша Shift на клавиатурата и щракнете върху всеки обект), след което щракнете върху опцията за групиране. От този момент нататък всички обекти ще бъдат третирани като един обект.</p>
+<p>Опцията за разгрупиране прави обратното - избраната група може да бъде разбита на по-малки части. Този бутон ще стане видим, след като сте избрали група обекти и ще ви позволи да ги разгрупирате.</p>
+<p><img alt="v_curved" src="_images/v_curved.png" /> <strong>Curved</strong> <img alt="v_pointed" src="_images/v_pointed.png" /> <strong>or Pointed</strong></p>
+<p>Когато използвате инструмента за преобразуване, вдясно от очертанията има две опции, които ви позволяват да направите шпонките или извити, като елипса, или заострени, като правоъгълник. Това е полезно, когато създавате форми с извити и заострени ръбове. Ако е избрана повече от една точка (задръжте клавиша Shift и кликнете върху повече от един), определената промяна ще бъде приложена към всички избрани точки.</p>
+</div>
+<div class="section" id="id18">
+<h3>Работа в растерен режим<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title">Инструменти за растер</p>
+<p><img alt="rasterski" src="_images/fig11_17.png" /></p>
+</div>
+<p><img alt="r_brush" src="_images/r_brush.png" /> <strong>Рисуване със свободна ръка</strong></p>
+<p>Можете да зададете цвета и размера (дебелината) на четката за боя с подходящи опции. Използвайте опциите за отмяна и повторение, ако направите грешка. Можете също така да използвате гумата за коригиране на грешки.</p>
+<p><img alt="r_line" src="_images/r_line.png" /> <strong>Рисуване на права линия</strong></p>
+<p>Можете да промените дебелината на линията с подходяща опция. Натиснете Shift и плъзнете, за да нарисувате хоризонтални или вертикални линии.</p>
+<p><img alt="r_circle" src="_images/r_circle.png" /> <strong>Рисуване на елипса</strong></p>
+<p>Можете да нарисувате куха (очертана) или пълна (с цвят) елипса. Натиснете Shift и плъзнете, за да нарисувате кръг. С подходящите опции можете да изберете стила на запълване и да промените дебелината на контура.</p>
+<p><img alt="r_rectan" src="_images/r_rectan.png" /> <strong>Рисуване на правоъгълник</strong></p>
+<p>Можете да нарисувате кух (очертан) или запълнен (с цвят) правоъгълник. Натиснете Shift и плъзнете, за да нарисувате правоъгълник. С подходящите опции можете да изберете стила на запълване и да промените дебелината на контура.</p>
+<div class="sidebar">
+<p class="sidebar-title">Текст</p>
+<p><img alt="tekst" src="_images/fig11_18.png" /></p>
+</div>
+<p><img alt="r_text" src="_images/r_text.png" /> <strong>Писане на текст</strong></p>
+<p>Щракнете навсякъде в областта за рисуване (платното) и когато се появи курсорът, напишете желания текст. След това щракнете извън текстовата област. Инструментът за избор автоматично избира текста, така че можете да промените неговия размер и ориентация. Можете да използвате полето за измерване, което се показва на външния ръб на полето за избор (кръгове и стрелки около текста), за да промените размера и да промените ориентацията на текста.</p>
+<p><img alt="r_fill" src="_images/r_fill.png" />  <strong>Запълване на затворени зони с цвят</strong></p>
+<p>Можете да запълните областта равномерно с един цвят или като градиент, с нюанси на цветовете, като използвате подходящата опция за запълване.</p>
+<p><img alt="r_eraser" src="_images/r_eraser.png" /> <strong>Инструмент за изтриване</strong></p>
+<p>Можете да зададете размера на гумата, като използвате подходящата опция. Изтритите области стават прозрачни.</p>
+<p><img alt="r_select" src="_images/r_select.png" /> <strong>Избор на правоъгълна зона</strong></p>
+<p>Избраната област може да бъде:</p>
+<ol class="arabic simple">
+<li><p>плъзнете на ново място,</p></li>
+<li><p>направени по-големи, направени по-малки или завъртени,</p></li>
+<li><p>изтрива се с натискане на клавиша Del на клавиатурата.</p></li>
+</ol>
+</div>
+<div class="section" id="id19">
+<h3>Работа във векторен режим<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title">Векторни инструменти</p>
+<p><img alt="vektorski" src="_images/fig11_19.png" /></p>
+</div>
+<p><img alt="v_select" src="_images/v_select.png" /> <strong>Избор на обект</strong></p>
+<p>Този инструмент се използва за преместване, изтриване, оразмеряване и въртене на обекти. Когато щракнете върху обект, около него ще се появи рамка <img alt="izbor_objekta" src="_images/fig11_20.png" />, което показва, че обектът е избран.</p>
+<p>Ако искате да изберете няколко обекта наведнъж, щракнете върху левия бутон на мишката и плъзнете мишката върху желания обект или задръжте клавиша Shift и щракнете върху всеки обект, който искате да изберете едновременно.
+Когато преместите курсора близо до центъра на обекта, той променя формата си и се превръща в ръка, което означава, че можете да местите обекта наоколо върху платното. Обектът може да се премества и с клавишите със стрелки на клавиатурата.
+Избраният обект може да бъде изтрит чрез натискане на клавиша Del. Обектите могат да бъдат преоразмерени с полетата за измерване, които се появяват на външния ръб на полето за избор.
+За да завъртите обект, хванете и плъзнете стрелките за въртене.</p>
+<p><img alt="v_reshape" src="_images/v_reshape.png" /> <strong>Промяна на формата на обект</strong></p>
+<p>Щракнете върху обекта, който искате да прекроите и на периметъра на обекта ще се появи набор от контролни точки, както е показано на фигура (1). Кликнете върху една от контролните точки и плъзнете (2). С щракване върху контура на обекта можете да създадете други контролни точки (3). Можете да изтриете контролна точка, като приведете курсора към нея (4). Избраната точка ще промени цвета и след това трябва да кликнете върху нея (5). Бутоните <img alt="v_curved" src="_images/v_curved.png" /> и <img alt="v_pointed" src="_images/v_pointed.png" />, оито се появяват в опциите, ви позволяват да извиете или насочите контура на обекта.</p>
+<a class="reference internal image-reference" href="_images/fig11_21.png"><img alt="_images/fig11_21.png" class="align-center" src="_images/fig11_21.png" style="width: 680px;" /></a>
+<p><img alt="v_brush" src="_images/v_brush.png" /> <strong>Рисуване със свободна ръка</strong></p>
+<p>This tool is similar to the corresponding tool in raster mode. Hold the mouse cursor and move it to draw a curved line. Instead of pixels, the spline here is defined by a set of control points. You can change the appearance of the line with the tool <em>Reshape</em>.</p>
+<p><img alt="v_eraser" src="_images/v_eraser.png" /> <strong>Гумичка</strong></p>
+<p>Този инструмент е подобен на съответния инструмент в растерен режим.</p>
+<p><img alt="v_fill" src="_images/v_fill.png" /> <strong>Запълване на затворени зони с цвят или оцветяване на контура на обект</strong></p>
+<p>Инструментът за боядисване във векторен режим работи по различен начин, отколкото в растерния режим, където инструментът запълва всяка избрана затворена зона. Кофата за векторен режим работи само с векторни обекти. След като изберете този инструмент, можете да промените цвета или контура на даден обект, като щракнете върху него.</p>
+<p><img alt="v_text" src="_images/v_text.png" /> <strong>Писане на текст</strong></p>
+<p>Кликнете върху инструмента и след това навсякъде върху платното; когато се появи курсор, започнете да пишете желания текст. След като приключите, щракнете навсякъде извън областта на текста. Инструментът <em>Select</em> автоматично ще избере текста, така че можете да промените неговия размер и ориентация. За разлика от текста в растерния режим, текстът, създаден във векторен режим, може да бъде редактиран по всяко време, дори и след излизане от редактора на боя. За да можете да променяте съдържанието му, трябва само да изберете текста.</p>
+<p><img alt="v_line" src="_images/v_line.png" /> <strong>Рисуване на права линия</strong></p>
+<p>Линията се определя от две контролни точки в двата края. За да нарисувате линия, щракнете и задръжте мишката там, където искате линията да започне, и плъзнете, за да нарисувате линията до крайната точка. За да нарисувате хоризонтална или вертикална линия, задръжте клавиша Shift, докато влачите мишката.</p>
+<p>За да начертаете извита линия, първо трябва да нарисувате права линия, след това изберете инструмента <em>Reshape</em>, натиснете Shift и щракнете където и да е на линията, за да създадете нова точка и след това плъзнете новата контролна точка. Това е начин за формиране на извита линия.</p>
+<p><img alt="v_circle" src="_images/v_circle.png" /> <strong>Рисуване на елипса</strong></p>
+<p>Използвайте този инструмент, ако искате да нарисувате елипса в избрания за рисуване цвят. Щракнете, за да маркирате горния ляв ъгъл, след което плъзнете (задръжте клавиша за смяна, докато рисувате с инструмента за елипса), докато получите желания размер. Можете да промените стила на запълване (запълнен или празен) и дебелината на линията, като използвате бутоните в областта с опции. Създадената елипса има 4 равномерно разположени контролни точки.</p>
+<p><img alt="v_rectan" src="_images/v_rectan.png" /> <strong>Рисуване на правоъгълник</strong></p>
+<p>Използвайте този инструмент, ако искате да нарисувате правоъгълник в цвета, избран за рисуване. Кликнете, за да подчертаете горния ляв ъгъл, след това плъзнете (задръжте клавиша за смяна, докато рисувате с инструмента за правоъгълник), докато получите желания размер. Можете да промените стила на запълване (запълнен или празен) и дебелината на линията, като използвате бутоните в областта с опции. Създаденият правоъгълник има 4 контролни точки, по една от всеки край.</p>
+</div>
+</div>
+<div class="section" id="id20">
+<h2>Използване на вградения звуков редактор<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<p>Звуковият редактор позволява на потребителите да редактират и ремиксират звуците. В музиката терминът <em>remix</em> се използва за обозначаване на нова, модифицирана версия на музикална композиция.</p>
+<div class="section" id="id21">
+<h3>Потребителски интерфейс<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<p>Прозорецът за звуков редактор е разделен на две области: списък със звуци (1) и област за редактиране (2).</p>
+<a class="reference internal image-reference" href="_images/fig11_22.png"><img alt="_images/fig11_22.png" class="align-center" src="_images/fig11_22.png" style="width: 880px;" /></a>
+<div class="sidebar">
+<p class="sidebar-title">Нов звук</p>
+<p><img alt="novi_zvuk" src="_images/fig11_23.png" /></p>
+</div>
+<p><strong>Списък със звуци</strong></p>
+<p>Списъкът със звуци се намира в лявата част на прозореца и се използва за избор на звуци, които ще бъдат редактирани в областта за редактиране. Избирате звук, като щракнете върху него. Около иконата на избрания звук ще се появи дебел син контур, подобен на този около активния спрайт в списъка с спрайтове. В горния ляв ъгъл на активния спрайт се появява “x”, което позволява изтриването му.</p>
+<p>В долната част на областта има бутон <img alt="b_sound" src="_images/b_sound.png" />, който дава възможност за въвеждане на нови звуци.</p>
+<p><strong>Редактор</strong></p>
+<p>Областта за редактиране има лента отгоре (3), графично представяне на звук в средата (4) и лента отдолу (5), която съдържа 7 инструмента.</p>
+<p>В горната лента са инструментите, които редактират звука, но не добавят никакви ефекти. Това са:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>поле за име на звука,</p></li>
+<li><p>бутон за връщане назад и напред,</p></li>
+<li><p>бутон <img alt="trim" src="_images/trim.png" />, който изтрива избрани части от звука.</p></li>
+</ul>
+</td></tr></table>
+<p>В долната лента са инструментите, които правят специални ефекти, докато звукът се възпроизвежда:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><img alt="faster" src="_images/faster.png" /> - по-бързо,</p></li>
+<li><p><img alt="slower" src="_images/slower.png" /> - по-бавно,</p></li>
+<li><p><img alt="echo" src="_images/echo.png" /> - ехо,</p></li>
+<li><p><img alt="robot" src="_images/robot.png" /> - робот,</p></li>
+<li><p><img alt="louder" src="_images/louder.png" /> - по-силно,</p></li>
+<li><p><img alt="softer" src="_images/softer.png" /> - по-меко и</p></li>
+<li><p><img alt="reverse" src="_images/reverse.png" /> - наобратно.</p></li>
+</ul>
+</td></tr></table>
+<p>Увеличаването на звука по-бързо или по-бавно се постига чрез възпроизвеждане на по-високата или долната нота, вместо действителната. Ехо ефектът се постига чрез възпроизвеждане на звука след 0,15 секунди.</p>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Низове' data-toggle="tooltip"><a href="Scratch3 Strings.html">Previous chapter</a></li>
+    
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Низове' data-toggle="tooltip"><a href="Scratch3 Strings.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

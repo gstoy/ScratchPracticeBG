@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Repeating Steps &#8212; Block-based programming in Scratch - practice lessons</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Let’s Draw - Turtle Graphics" href="Scratch3 Graphics_eng.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'Scratch_eng';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'Scratch_eng';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Block-based programming in Scratch - practice lessons</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="repeating-steps">
+<h1>Repeating Steps<a class="headerlink" href="#repeating-steps" title="Permalink to this headline">¶</a></h1>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="intro5" src="_images/intro5.png" /></p>
+
+    </p></div></div>
+<p>In the line drawing examples of the previous lesson, we used the repetition commands to get our sprites, moving with the pen down, to draw what we wanted, with less writing.
+For example, instead of adding 400 commands to draw a dotted line that is 400 pixels long, we added only five: four which repeat a pattern, and the fifth which sets the number of required repetitions.</p>
+<p>In this lesson, we will connect the repetition commands to the motion and looks commands, so we can create different animations. In addition, we will introduce a command which allows you to enter input data, and blocks that store the values ​​of logical expressions.</p>
+<div class="topic">
+<p class="topic-title first">Blocks which enable repetition</p>
+<p>One of the simplest examples of repetition commands is the command for the description of the so-called “forever loop”. The repeating commands make up the <strong>loop body</strong>. Their running can be stopped only by stopping the program.</p>
+<a class="reference internal image-reference" href="_images/fig5_1.png"><img alt="_images/fig5_1.png" class="align-center" src="_images/fig5_1.png" style="width: 310px;" /></a>
+<p>For example, if you want to achieve an illusion that the cat is walking, the ballerina is dancing, and the butterfly is flying, all you need to do is add a script to them that repeats the blocks <img alt="next_costume" src="_images/next_costume.png" /> and <img alt="wait_sec" src="_images/wait_sec.png" /> in a forever loop.</p>
+<p>Of course, a sprite should have at least two costumes and the wait period should be short, for example, 2 tenths of a second (0.2). The wait command between the costume changes is necessary so we can observe the change in the appearance.
+The human eye is not able to register changes at the speed the computer makes them. That is why we are “halting” the appearance of the costume by using the wait command, until our eye registers the previous image.</p>
+<p>In the examples presented in the previous lesson we used the so-called “counting loops”. These are repetitions that know in advance how many times the loop body will be executed.</p>
+<a class="reference internal image-reference" href="_images/fig5_2.png"><img alt="_images/fig5_2.png" class="align-center" src="_images/fig5_2.png" style="width: 350px;" /></a>
+<p>In Scratch, there is also a command to describe a loop when the number of repetitions is not known in advance, but depends on whether the condition for exiting the loop is fulfilled.</p>
+<a class="reference internal image-reference" href="_images/fig5_3.png"><img alt="_images/fig5_3.png" class="align-center" src="_images/fig5_3.png" style="width: 365px;" /></a>
+<p>The condition for skipping loop body commands (the condition for exiting), is checked at the beginning of every loop, so there is a possibility that the loop will not be executed even once, if it is determined that the condition is fulfilled during the first check.
+It may also happen that the loop will continue running indefinitely if the condition for exiting the loop is never fulfilled.</p>
+</div>
+<div class="section" id="study-study-the-following-examples">
+<h2><img alt="study" src="_images/study.png" /> Study the following examples<a class="headerlink" href="#study-study-the-following-examples" title="Permalink to this headline">¶</a></h2>
+<div class="sidebar">
+<p class="sidebar-title">Sprite Dimensions</p>
+<p><img alt="star" src="_images/fig5_4.png" /></p>
+</div>
+<p>We saw that the stage is 480 pixels wide, 360 pixels high, and that every spot on the stage can be accessed by using its coordinates. In the following examples we will create images by stamping our sprites on specific locations. Of course, we can draw our own sprite shapes by using the paint editor - for example, a red circle, or a blue square, but since we want the images to be as attractive as possible, we will use the <em>Star</em> sprite - a yellow star from the sprites library.</p>
+<p>To fine-tune the images, we will modify the star slightly. The original size of the star is 47х48 pixels, which we can see if we go to the <em>Costumes</em> tab.</p>
+<p>We need the sprite size to be 40x40, that way exactly 12 stars fit in the space between the left and the right edge of the stage (480:40), and exactly 9 between the upper and lower edge (360:40). Furthermore, we want the sprite to be evenly filled with one color and not to have a contour line.</p>
+<div class="sidebar">
+<p class="sidebar-title">Editing Sprites</p>
+<p><img alt="change" src="_images/fig5_5.png" /></p>
+</div>
+<p><strong>How we edit sprites</strong></p>
+<p><img alt="1" src="_images/1.png" /> We use the <img alt="v_select" src="_images/v_select.png" /> tool to select the whole sprite</p>
+<p><img alt="2" src="_images/2.png" /> Remove the contour line (set the thickness of the line to 0)</p>
+<p><img alt="3" src="_images/3.png" /> We select the inner star and delete it</p>
+<p><img alt="4" src="_images/4.png" /> We select the whole sprite and set the size to 40х40.</p>
+<p>This customized star will be the only sprite used in the following examples.</p>
+<p>The following example illustrates how stacking multiple loops can be used to construct complex loops. It also shows how using the tools of the built-in paint editor in vector mode can be used to edit sprites. The project itself consists of several simple tasks.</p>
+<div class="section" id="example-1-project-stars">
+<h3>Example 1 - Project “Stars”<a class="headerlink" href="#example-1-project-stars" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<div class="sidebar">
+<p class="sidebar-title">Image 1</p>
+<p><img alt="fig1" src="_images/fig5_6.png" /></p>
+</div>
+<div class="topic">
+<p class="topic-title first">Task 1</p>
+<p>Write a program which will draw 4 stars side by side, from the left to the right edge of the stage, they should all be differently colored and their size should be 120 pixels. The drawing should be done by using the <img alt="stamp" src="_images/stamp.png" /> command.</p>
+<p>The desired result of completing the task can be seen in Image 1.</p>
+<p>This result can be achieved by completing the following steps:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><img alt="1" src="_images/1.png" />       we enlarge the sprite 300% so now the star has the dimensions 120х120,</p></li>
+<li><p><img alt="2" src="_images/2.png" />       we position the sprite so that the left side of the star is right next to the left edge of the stage: х=-180,</p></li>
+<li><p><img alt="3" src="_images/3.png" />       we leave a stamp,</p></li>
+<li><p><img alt="4" src="_images/4.png" />       we move the sprite its width to the right (120 steps),</p></li>
+<li><p><img alt="5" src="_images/5.png" />       we change the color of the sprite (using the change color effect command),</p></li>
+<li><p><img alt="6" src="_images/6.png" />       we leave a stamp,</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><img alt="7" src="_images/7.png" />       we move the sprite its width to the right (120 steps),</p></li>
+<li><p><img alt="8" src="_images/8.png" />       we change the color of the sprite (using the change color effect command),</p></li>
+<li><p><img alt="9" src="_images/9.png" />       we leave a stamp,</p></li>
+<li><p><img alt="10" src="_images/10.png" /> we move the sprite its width to the right (120 steps),</p></li>
+<li><p><img alt="11" src="_images/11.png" /> we change the color of the sprite (using the change color effect command),</p></li>
+<li><p><img alt="12" src="_images/12.png" /> we leave a stamp.</p></li>
+</ul>
+</td></tr></table>
+<p>We can see that we repeated the steps 4-6 three times. We could have done the same with less writing, as the following Figure illustrates.</p>
+<a class="reference internal image-reference" href="_images/fig5_7.png"><img alt="_images/fig5_7.png" class="align-center" src="_images/fig5_7.png" style="width: 500px;" /></a>
+<p>The <img alt="repeat" src="_images/repeat.png" /> block from the <em>Control</em> group allows us to stack the required script just once and set how many times it should repeat.</p>
+<p>This block is an example of the so-called <strong>C-blocks</strong>, whose shape reminds us of the letter C. The slot inside a C-block takes a script in like an input field. Therefore, this block has two input fields: one for the number of repetitions and the other for the script.</p>
+</div>
+<div class="sidebar">
+<p class="sidebar-title">Image 2</p>
+<p><img alt="fig2" src="_images/fig5_8.png" /></p>
+</div>
+<div class="topic">
+<p class="topic-title first">Task 2</p>
+<p>Write a program which will draw 12 stars side by side, from the left to the right edge of the stage, as shown in Image 2, the size of the stars should be 40x40.</p>
+<p>This task will be similar to the previous one, but we don’t need to change the dimensions of the sprite. First, we need to put our sprite in the position x=-220, y=0, and then stamp it. After this, we should repeat the steps 4-6 from the previous task 11 times, with the difference that we would move the sprite 40 instead of 120 steps. How much time would it take to write this simple program without using the command for repetition?</p>
+<p>The solution to the task is given in the following Figure.</p>
+<a class="reference internal image-reference" href="_images/fig5_9.png"><img alt="_images/fig5_9.png" class="align-center" src="_images/fig5_9.png" style="width: 215px;" /></a>
+</div>
+<div class="sidebar">
+<p class="sidebar-title">Image 3</p>
+<p><img alt="fig3" src="_images/fig5_10.png" /></p>
+</div>
+<div class="topic">
+<p class="topic-title first">Task 3</p>
+<p>Write a program which will draw 15 differently colored stars one on top of the other in the center of the stage, the size of the first star should be 320x320 (800% larger than the original), and each one after that should be smaller by 50, as is presented in the Image 3.</p>
+<p>However, when we say smaller by 50, we mean 750%, 700% … larger than the original (and not 50 pixels smaller, or 50% of 800%). In order to avoid mixing the new image with the one made during the previous run, we need to add the erase all command at the beginning.</p>
+<p>The solution to the task is given in the following Figure.</p>
+<a class="reference internal image-reference" href="_images/fig5_11.png"><img alt="_images/fig5_11.png" class="align-center" src="_images/fig5_11.png" style="width: 225px;" /></a>
+</div>
+<div class="sidebar">
+<p class="sidebar-title">Image 4</p>
+<p><img alt="fig4" src="_images/fig5_12.png" /></p>
+</div>
+<div class="topic">
+<p class="topic-title first">Task 4</p>
+<p>Write a program that will draw a frame around the stage made up of differently colored stars, as seen in Image 4.</p>
+<p>We can devise a solution by connecting solutions to 4 simpler problems.</p>
+<ol class="arabic simple">
+<li><p>Drawing stars along the top edge of the stage left to right.</p></li>
+<li><p>Drawing stars along the right edge of the stage top to bottom.</p></li>
+<li><p>Drawing stars along the bottom edge of the stage right to left.</p></li>
+<li><p>Drawing the stars along the left edge of the stage bottom to top.</p></li>
+</ol>
+<p>The first problem was solved in Task 2. The only thing you need to do is change the values which define the starting position of the star, instead of у=0 put у=160.
+The second problem can easily be solved by changing the orientation of the sprite, instead of moving to the right it should move down. The blocks for moving, changing color, and stamping should be repeated 8 times.
+The third and the fourth problem can be solved similarly you only need to change the orientation  of the sprite and how many times it should leave a stamp. The solution for the entire task, as well as the parts showing the solution for the third and fourth problem, are given in the Figure below.</p>
+<a class="reference internal image-reference" href="_images/fig5_13.png"><img alt="_images/fig5_13.png" class="align-center" src="_images/fig5_13.png" style="width: 450px;" /></a>
+<p>The structure of the solution to this task, where multiple loops are strung together, is called <strong>linear composition</strong>.</p>
+</div>
+<div class="sidebar">
+<p class="sidebar-title">Image 5</p>
+<p><img alt="fig5" src="_images/fig5_14.png" /></p>
+</div>
+<div class="topic">
+<p class="topic-title first">Task 5</p>
+<p>Write a program which will draw 4 stars side by side, from the left to the right edge of the stage, the size of the star should be 120 pixels. Each star should be composed of multiple stars of various sizes and colors, as the star from Task 3.</p>
+<p>The result should look like Image 5.</p>
+<p>The solution to this task has a complex structure. We will have to insert the loop form Task 3, which stamps smaller stars on top of larger ones, into the loop that should be repeated 4 times, which draws large stars side by side, like in Task 1. The complete solution is presented in the following Figure.</p>
+<a class="reference internal image-reference" href="_images/fig5_15.png"><img alt="_images/fig5_15.png" class="align-center" src="_images/fig5_15.png" style="width: 255px;" /></a>
+<p>The structure of the solution to this task, where one loop is inserted into another, is called a <strong>nested composition</strong>.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="example-2-project-geometric-shapes">
+<h3>Example 2 - Project “Geometric Shapes”<a class="headerlink" href="#example-2-project-geometric-shapes" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>In this project, we will show how we can draw regular geometric shapes - triangles, squares, pentagons, and hexagons.</p>
+<p>Regular polygons have sides that are all equal and interior angles that are all equal. We will draw the polygons starting from the top in the center of the screen, with sides that are 100 pixels long.</p>
+<p>Let’s start by drawing a square. We will send the pen to the center of the screen, to the position (0,0), then we will put the pen down and repeat the following commands 4 times: move 100 steps, turn 90 degrees.</p>
+<p>If we know that the sum of all exterior angles of a regular polygon is 360 <sup>о</sup> (see figure below), we can easily stack command blocks which will draw triangles, pentagons, and hexagons.</p>
+<a class="reference internal image-reference" href="_images/fig5_16.png"><img alt="_images/fig5_16.png" class="align-center" src="_images/fig5_16.png" style="width: 650px;" /></a>
+<p>Parts of the scripts used for drawing the mentioned polygons are presented in the following Figure.</p>
+<a class="reference internal image-reference" href="_images/fig5_17.png"><img alt="_images/fig5_17.png" class="align-center" src="_images/fig5_17.png" style="width: 680px;" /></a>
+<p><strong>Note</strong>. You can also use the turn left command and try to draw a square or a hexagon in the position presented in the picture above.</p>
+<p>As in the previous example, clicking on the green flag erases everything that was previously on stage, sets values ​​for the color and size of the pen and gives instructions on how to use the project.</p>
+<p>Since we want to keep the instruction on the stage, we will design a backdrop that has the instruction written on it, by using the built-in paint editor. The look of the stage after the running of the program is depicted in the following Figure.</p>
+<a class="reference internal image-reference" href="_images/fig5_18.png"><img alt="_images/fig5_18.png" class="align-center" src="_images/fig5_18.png" style="width: 480px;" /></a>
+<p>Each script associated with the keys 3-6 on the keyboard will erase all previously made marks, hide the sprite, and then draw the corresponding polygon.</p>
+<p>On the following Figure, you can see the scripts for starting the program and drawing a triangle and a square.</p>
+<a class="reference internal image-reference" href="_images/fig5_19.png"><img alt="_images/fig5_19.png" class="align-center" src="_images/fig5_19.png" style="width: 600px;" /></a>
+<p><strong>Upgrading the Project</strong></p>
+<p>We will upgrade the project so that it draws a geometric shape given by the user with the input data. In this version of the project, the drawing parameters are set by clicking on the green flag. Then the user is asked to type in the number of the sides of the polygon he/she wants to draw.</p>
+<p>The input data block <img alt="ask_wait" src="_images/ask_wait.png" /> is located in the <em>Sensing</em> group.</p>
+<p>After executing this command, Scratch remembers what the user put in the space called <img alt="answer" src="_images/answer.png" />.</p>
+<p>It is expected that the user will type in one of the numbers between 3 and 6, however, if the user inputs a number which is not in this interval, the program will not work properly, and this should be prevented.</p>
+<p>One of the ways to control the input data is to repeat the question until the user inputs a number from the correct interval.</p>
+<a class="reference internal image-reference" href="_images/fig5_20.png"><img alt="_images/fig5_20.png" class="align-center" src="_images/fig5_20.png" style="width: 380px;" /></a>
+<p>Once the correct input data has been received, it will be used to calculate the number of repetitions and the turning angle, therefore, all four polygons can be drawn with the same commands.</p>
+<a class="reference internal image-reference" href="_images/fig5_21.png"><img alt="_images/fig5_21.png" class="align-center" src="_images/fig5_21.png" style="width: 380px;" /></a>
+<p>We will use parts of the previous projects for our next project. In it, we will show how we can use the nested composition of counting loops to draw effective images produced by repeating patterns. The pattern can be repeated after a certain number of steps - that way we will get the so-called decorative edges. Patterns can be repeated after turning to create an angle or after the combination of both movements.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="example-3-project-ornaments">
+<h3>Example 3 - Project “Ornaments”<a class="headerlink" href="#example-3-project-ornaments" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>If we repeat the counting loop that draws a regular pentagon from the previous example multiple times, we will draw an ornament - a more complex image composed of pentagons. For example, if we draw 20 such pentagons, moving from the left to the right edge of the stage, we will draw the following decorative border.</p>
+<a class="reference internal image-reference" href="_images/fig5_22.png"><img alt="_images/fig5_22.png" class="align-center" src="_images/fig5_22.png" style="width: 705px;" /></a>
+<p>The drawing of the pentagon is enabled by the loop (2), which has been inserted into the exterior loop (1). The exterior loop is repeated 20 times. Every time the exterior loop runs, one pentagon is drawn in the current position of the pen, after which the sprite moves to the right with the pen up (3). The sprite moves only half of the length of the pentagon’s side, which is why the pentagons overlap.</p>
+<p>However, if we repeat the drawing of the pentagons while changing the direction of the sprite before drawing each pentagon, so the sprite turns in a full circle, we will get the following ornament.</p>
+<a class="reference internal image-reference" href="_images/fig5_23.png"><img alt="_images/fig5_23.png" class="align-center" src="_images/fig5_23.png" style="width: 405px;" /></a>
+<p>Since a full circle has 360 degrees, and the sprite turns 15 degrees after each pentagon (2) with the pen up (3), we need to repeat this procedure 24 times; therefore, the exterior loop (1) is repeated 24 times.
+If between drawings, the sprite changes an angle and also moves 10 steps, we will get a slightly different ornament.</p>
+<a class="reference internal image-reference" href="_images/fig5_24.png"><img alt="_images/fig5_24.png" class="align-center" src="_images/fig5_24.png" style="width: 345px;" /></a>
+<p>If we repeat the second ornament 4 times, going from the left to the right edge of the stage, we will get the image below.</p>
+<a class="reference internal image-reference" href="_images/fig5_25.png"><img alt="_images/fig5_25.png" class="align-center" src="_images/fig5_25.png" style="width: 755px;" /></a>
+<p>Therefore, the drawing of the last decorative border is achieved with the nested composition which has 3 loops: the interior loop draws one pentagon (3), the middle loop (2) repeats the drawing of the pentagon and turns the sprite with the pen up 24 times, and the exterior loop (1) repeats the drawing of the circular ornament and moves the sprite with the pen up for the value of the ornament diameter.</p>
+<p>This project allows us to draw each of the ornaments by pressing one of the keys 1-4 on the keyboard. In addition to these 4 scripts, there is a script which is triggered by clicking on the green flag, and one which is triggered with the message <em>instruction</em>. The message <em>instruction</em> is broadcast by each script at the end of the running process. When the sprite receives this message, it appears near the top of the screen and gives the instruction for drawing the ornament.</p>
+<a class="reference internal image-reference" href="_images/fig5_26.png"><img alt="_images/fig5_26.png" class="align-center" src="_images/fig5_26.png" style="width: 450px;" /></a>
+</div>
+</div>
+<div class="section" id="ask-did-you-understand">
+<h2><img alt="ask" src="_images/ask.png" /> Did you understand?<a class="headerlink" href="#ask-did-you-understand" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="question-1">
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="loop01">
+            <p>Q-29:  Is the condition that allows exiting from a loop called the loop body?</p>
+
+            <li data-component="answer"  id="loop01_opt_a">yes</li><li data-component="feedback" id="loop01_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="loop01_opt_b">no</li><li data-component="feedback" id="loop01_opt_b">Correct.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-2">
+<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="loop02">
+            <p>Q-30:  Is stopping the program the only way to stop the running of the forever loop?</p>
+
+            <li data-component="answer" data-correct id="loop02_opt_a">yes</li><li data-component="feedback" id="loop02_opt_a">Correct.</li>
+            
+            <li data-component="answer"  id="loop02_opt_b">no</li><li data-component="feedback" id="loop02_opt_b"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-3">
+<h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="loop03">
+            <p>Q-31:  Does the <code class="docutils literal notranslate"><span class="pre">repeat</span> <span class="pre">until</span></code> command know in advance how many times the loop body will be repeated?</p>
+
+            <li data-component="answer"  id="loop03_opt_a">yes</li><li data-component="feedback" id="loop03_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="loop03_opt_b">no</li><li data-component="feedback" id="loop03_opt_b">Correct.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-4">
+<h3>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="loop04">
+            <p>Q-32: Which of these forever loops allows the sprite to move left-right and look right, if the <img alt="goto_xy" src="_images/goto_xy.png" />, <img alt="point_towards" src="_images/point_towards.png" /> and <img alt="rotation_style" src="_images/rotation_style.png" /> commands were previously executed? (Select all correct answers).</p>
+<a class="reference internal image-reference" href="_images/q5_4.png"><img alt="_images/q5_4.png" class="align-center" src="_images/q5_4.png" style="width: 665px;" /></a>
+
+            <li data-component="answer" data-correct id="loop04_opt_a"></li><li data-component="feedback" id="loop04_opt_a"></li>
+            
+            <li data-component="answer"  id="loop04_opt_b"></li><li data-component="feedback" id="loop04_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="loop04_opt_c"></li><li data-component="feedback" id="loop04_opt_c"></li>
+            
+            <li data-component="answer"  id="loop04_opt_d"></li><li data-component="feedback" id="loop04_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-5">
+<h3>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="loop05">
+            <p>Q-33: Which of these forever loops allows the sprite to change constantly between two positions: legs up and legs down, if the <img alt="goto_xy" src="_images/goto_xy.png" />, <img alt="point_towards" src="_images/point_towards.png" /> and <img alt="rotation_style2" src="_images/rotation_style2.png" /> commands were previously executed? (Select all correct answers).</p>
+<a class="reference internal image-reference" href="_images/q5_5.png"><img alt="_images/q5_5.png" class="align-center" src="_images/q5_5.png" style="width: 690px;" /></a>
+
+            <li data-component="answer"  id="loop05_opt_a"></li><li data-component="feedback" id="loop05_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="loop05_opt_b"></li><li data-component="feedback" id="loop05_opt_b"></li>
+            
+            <li data-component="answer"  id="loop05_opt_c"></li><li data-component="feedback" id="loop05_opt_c"></li>
+            
+            <li data-component="answer" data-correct id="loop05_opt_d"></li><li data-component="feedback" id="loop05_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-6">
+<h3>Question 6<a class="headerlink" href="#question-6" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="for01">
+            <p>Q-34: Which of these counting loops allows the sprite to make 80 steps? (Select all correct answers).</p>
+<a class="reference internal image-reference" href="_images/q5_6.png"><img alt="_images/q5_6.png" class="align-center" src="_images/q5_6.png" style="width: 565px;" /></a>
+
+            <li data-component="answer" data-correct id="for01_opt_a"></li><li data-component="feedback" id="for01_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="for01_opt_b"></li><li data-component="feedback" id="for01_opt_b"></li>
+            
+            <li data-component="answer"  id="for01_opt_c"></li><li data-component="feedback" id="for01_opt_c"></li>
+            
+            <li data-component="answer" data-correct id="for01_opt_d"></li><li data-component="feedback" id="for01_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-7">
+<h3>Question 7<a class="headerlink" href="#question-7" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="for02">
+            <p>Q-35: Which of these counting loops allows the sprite to make 80 steps? (Select all correct answers).</p>
+<a class="reference internal image-reference" href="_images/q5_7.png"><img alt="_images/q5_7.png" class="align-center" src="_images/q5_7.png" style="width: 595px;" /></a>
+
+            <li data-component="answer"  id="for02_opt_a"></li><li data-component="feedback" id="for02_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="for02_opt_b"></li><li data-component="feedback" id="for02_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="for02_opt_c"></li><li data-component="feedback" id="for02_opt_c"></li>
+            
+            <li data-component="answer"  id="for02_opt_d"></li><li data-component="feedback" id="for02_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-8">
+<h3>Question 8<a class="headerlink" href="#question-8" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<a class="reference internal image-reference" href="_images/q5_8.png"><img alt="_images/q5_8.png" class="align-center" src="_images/q5_8.png" style="width: 300px;" /></a>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="repeat1">
+            <p>Q-36: What will the sprite say if the user’s answer to the question <em>What’s your name</em> is <em>END</em>?</p>
+
+            <li data-component="answer"  id="repeat1_opt_a">Hello END</li><li data-component="feedback" id="repeat1_opt_a">Scratch doesn't make a distinction between upper and lower case letters, therefore, the condition for exiting the loop has been fulfilled.</li>
+            
+            <li data-component="answer"  id="repeat1_opt_b">What's your name</li><li data-component="feedback" id="repeat1_opt_b">This is the message for entering and not exiting.</li>
+            
+            <li data-component="answer" data-correct id="repeat1_opt_c">Goodbye</li><li data-component="feedback" id="repeat1_opt_c">Correct.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-9">
+<h3>Question 9<a class="headerlink" href="#question-9" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="repeat2">
+            <p>Q-37: Which of these stacks will allow the sprite to say <em>Hello</em> if the user inputs the value 0?</p>
+<a class="reference internal image-reference" href="_images/q5_9.png"><img alt="_images/q5_9.png" class="align-center" src="_images/q5_9.png" style="width: 500px;" /></a>
+
+            <li data-component="answer" data-correct id="repeat2_opt_a">A</li><li data-component="feedback" id="repeat2_opt_a">Correct.</li>
+            
+            <li data-component="answer"  id="repeat2_opt_b">B</li><li data-component="feedback" id="repeat2_opt_b">That is the condition for entering the loop in this stack of commands.</li>
+            
+            <li data-component="answer"  id="repeat2_opt_c">both</li><li data-component="feedback" id="repeat2_opt_c">The thing that is the condition for exiting the loop in (A) is, at the same time, the condition for entering the loop in (B).</li>
+            
+            <li data-component="answer"  id="repeat2_opt_d">none</li><li data-component="feedback" id="repeat2_opt_d">The stack (А) allows the sprite to say Hello under the given condition.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="repeat2b">
+            <p>Q-38: How many times will the loop body (А) run, if the user inputs the answers to the question in the following order: 1, 2, 3, 0.</p>
+
+            <li data-component="answer"  id="repeat2b_opt_a">not once</li><li data-component="feedback" id="repeat2b_opt_a">The condition for exiting the loop wasn't fulfilled for the first 3 answers.</li>
+            
+            <li data-component="answer"  id="repeat2b_opt_b">2 times</li><li data-component="feedback" id="repeat2b_opt_b">The condition for exiting the loop wasn't fulfilled for number 3 either.</li>
+            
+            <li data-component="answer" data-correct id="repeat2b_opt_c">3 times</li><li data-component="feedback" id="repeat2b_opt_c">Correct.</li>
+            
+            <li data-component="answer"  id="repeat2b_opt_d">4 times</li><li data-component="feedback" id="repeat2b_opt_d">When the condition for exiting the loop is fulfilled the commands from the loop body are not executed.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="question-10">
+<h3>Question 10<a class="headerlink" href="#question-10" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<a class="reference internal image-reference" href="_images/q5_10.png"><img alt="_images/q5_10.png" class="align-center" src="_images/q5_10.png" style="width: 385px;" /></a>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="repeat5">
+            <p>Q-39: Which letter marks the condition that will enable the check of the entered data to be correct?</p>
+
+            <li data-component="answer" data-correct id="repeat5_opt_a"></li><li data-component="feedback" id="repeat5_opt_a">Correct.</li>
+            
+            <li data-component="answer"  id="repeat5_opt_b"></li><li data-component="feedback" id="repeat5_opt_b">For example, it will accept 7 as a correct entry.</li>
+            
+            <li data-component="answer"  id="repeat5_opt_c"></li><li data-component="feedback" id="repeat5_opt_c">For example, it won't accept 3 as a correct entry.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+<div class="section" id="try-try-it">
+<h2><img alt="try" src="_images/try.png" /> Try it!<a class="headerlink" href="#try-try-it" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-1">
+<h3>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Open Necklace</strong>. Create a project which displays a string of circles of different color and size starting from the left edge of the stage.</p>
+<a class="reference internal image-reference" href="_images/ex5_1.png"><img alt="_images/ex5_1.png" class="align-center" src="_images/ex5_1.png" style="width: 240px;" /></a>
+
+    <div data-component="reveal" id="instruction2"   data-showtitle="Show the Instruction" data-hidetitle="Hide the Instruction">
+    <p><strong>Instruction:</strong></p>
+<p>The image is achieved by changing the color of the pen and putting it down, the size of the pen should be 80, the sprite holding it should be hidden, and its starting position should be (-200,0).
+The loop should be repeated 5 times, and in it the sprite should move 80 steps with the pen up, and increase the pen color number by 30, and then put the pen down.
+The starting value of the pen color should be 0. You need to arrange for the previous drawing to be erased when the green flag is clicked.</p>
+
+    </div>
+    
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="exercise-2">
+<h3>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Closed Necklace</strong>. Create a project which draws a closed sequence of 12 circles of different color. The size of the pen should be 50.</p>
+<a class="reference internal image-reference" href="_images/ex5_2.png"><img alt="_images/ex5_2.png" class="align-center" src="_images/ex5_2.png" style="width: 200px;" /></a>
+
+    <div data-component="reveal" id="instruction3"   data-showtitle="Show the Instruction" data-hidetitle="Hide the Instruction">
+    <p><strong>Instruction:</strong></p>
+<p>The image is achieved by changing the color of the pen and putting it down, the size of the pen should be 50, the sprite holding it should be hidden, and its starting position should be (-50,50).
+The loop should be repeated 12 times, and in it the sprite should move 50 steps with the pen up, turn 30 degrees and increase the pen color number by 15, and then put the pen down to leave a mark. The starting value of the pen color should be 0. You need to arrange for the previous drawing to be erased when the green flag is clicked.</p>
+
+    </div>
+    
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="exercise-3">
+<h3>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Series of Circles</strong>. Create a project which displays a series of circles of different color and size, starting from the left edge of the stage.</p>
+<a class="reference internal image-reference" href="_images/ex5_3.png"><img alt="_images/ex5_3.png" class="align-center" src="_images/ex5_3.png" style="width: 240px;" /></a>
+
+    <div data-component="reveal" id="instruction4"   data-showtitle="Show the Instruction" data-hidetitle="Hide the Instruction">
+    <p><strong>Instruction:</strong></p>
+<p>The image is achieved by changing the size and the color of the pen and putting it down, the sprite holding the pen should be hidden, and its starting position should be (-200,0).
+The starting value for the pen color should be 0 and for the pen size 80. The loop should be repeated 5 times, and in it the number of the pen color should be increased by 30, and the size of the pen should be decreased by 10.
+The sprite should move 80 steps to the right, with the pen up, of course. The <em>wait</em> command should also be added to the loop, so you can follow the process more easily.
+You need to arrange for the previous drawing to be erased when the green flag is clicked.</p>
+
+    </div>
+    
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="exercise-4">
+<h3>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Concentric Circles</strong>. Create a project which displays a series of concentric circles of different colors in the center of the stage.</p>
+<a class="reference internal image-reference" href="_images/ex5_4.png"><img alt="_images/ex5_4.png" class="align-center" src="_images/ex5_4.png" style="width: 200px;" /></a>
+
+    <div data-component="reveal" id="instruction5"   data-showtitle="Show the Instruction" data-hidetitle="Hide the Instruction">
+    <p><strong>Instruction:</strong></p>
+<p>The image is achieved with changing the size and color of the pen and putting it down, the sprite holding it should be hidden and it should be placed in the center of the stage.
+The loop should be repeated 8 times, and in it the number of the pen color should be increased by 25 and the size of the pen should be decreased by 30. The starting value for the pen color should be 0 (red), and for the size 240 (the largest size).
+The <em>wait</em> command should also be added to the loop, so you can follow the process more easily.
+The pen should be lowered after each change.
+You need to arrange for the previous drawing to be erased when the green flag is clicked.</p>
+
+    </div>
+    
+    </p></div></div>
+</div>
+</div>
+<div class="section" id="bug-debug-it">
+<h2><img alt="bug" src="_images/bug.png" /> Debug it!<a class="headerlink" href="#bug-debug-it" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bug-1">
+<h3>Bug 1<a class="headerlink" href="#bug-1" title="Permalink to this headline">¶</a></h3>
+<p>The pupil wanted the sprite to walk between the left and the right edge of the stage.
+This is why he/she added the constant changing of the costume and moving 10 steps until reaching the edge, when the sprite turns.
+However, the pupil doesn’t like the fact that the sprite is walking upside-down towards the left edge of the stage. What should be done to fix this mistake?</p>
+<a class="reference internal image-reference" href="_images/bug5_1.png"><img alt="_images/bug5_1.png" class="align-center" src="_images/bug5_1.png" style="width: 145px;" /></a>
+
+    <div data-component="reveal" id="hiding10"   data-showtitle="Show the Answer" data-hidetitle="Show the Answer">
+    <p><strong>Answer:</strong></p>
+<p>This can be fixed by adding the <img alt="rotation_style" src="_images/rotation_style.png" /> block to the sprite’s script.</p>
+
+    </div>
+    </div>
+<div class="section" id="bug-2">
+<h3>Bug 2<a class="headerlink" href="#bug-2" title="Permalink to this headline">¶</a></h3>
+<p>The pupil wanted his butterfly sprite, which has two costumes - one with raised and one with lowered wings, to glide flapping its wings between two random positions.
+However, his program did not enable this. The butterfly glided between two positions, but its wings were either lowered or raised. Where did the pupil go wrong?</p>
+<a class="reference internal image-reference" href="_images/bug5_2.png"><img alt="_images/bug5_2.png" class="align-center" src="_images/bug5_2.png" style="width: 245px;" /></a>
+
+    <div data-component="reveal" id="hiding8"   data-showtitle="Show the Answer" data-hidetitle="Show the Answer">
+    <p><strong>Answer:</strong></p>
+<p>Two scripts, which would run in parallel, should have been created.</p>
+<a class="reference internal image-reference" href="_images/ans5_2.png"><img alt="_images/ans5_2.png" class="align-center" src="_images/ans5_2.png" style="width: 400px;" /></a>
+
+    </div>
+    </div>
+</div>
+<div class="section" id="book-summary">
+<h2><img alt="book" src="_images/book.png" /> Summary<a class="headerlink" href="#book-summary" title="Permalink to this headline">¶</a></h2>
+<p>In this lesson, we covered commands for repetition. With examples of different projects we illustrated how to use each of the three types of loops: forever loop, counting loop - where we know the number of repetitions in advance, and the condition loop - where a pattern will be repeated until a certain condition has been fulfilled. We also showed that two or more loops could be combined to run one after another (linear composition), or one can be inserted into the other (nested composition). Furthermore, we learned how to use the data input command.</p>
+<p><strong>Scratch projects</strong>: <a class="reference external" href="https://scratch.mit.edu/studios/25119445/">5Studio</a></p>
+<p><strong>New concepts</strong>: loop, loop body, the exit condition, forever loop, counting loop, condition loop, linear composition of loops, nested loop composition, data input command.</p>
+<p><strong>Scratch commands</strong>: <img alt="control_blocks" src="_images/control.png" /> - <img alt="forever" src="_images/forever.png" />, <img alt="repeat" src="_images/repeat.png" />, <img alt="repeat_until" src="_images/repeat_until.png" />; <img alt="pen_extension" src="_images/pen.png" /> - <img alt="stamp" src="_images/stamp.png" />;</p>
+<p><img alt="sensing_blocks" src="_images/sensing.png" /> - <img alt="ask_wait" src="_images/ask_wait.png" />, <img alt="answer" src="_images/answer.png" />; <img alt="operator_blocks" src="_images/operators.png" /> - <img alt="less" src="_images/less.png" />, <img alt="greater" src="_images/greater.png" />, <img alt="and" src="_images/and.png" />.</p>
+</div>
+<div class="section" id="project-create-a-projects">
+<h2><img alt="project" src="_images/project.png" /> Create a projects<a class="headerlink" href="#project-create-a-projects" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="project-1-hexagon">
+<h3>Project 1 - “Hexagon”<a class="headerlink" href="#project-1-hexagon" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>Create a project which will draw a hexagon; the length of the sides should be generated randomly from the interval [100,200].</p>
+</div>
+<div class="section" id="project-2-squares">
+<h3>Project 2 - “Squares”<a class="headerlink" href="#project-2-squares" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>Create a project which offers to draw a square whose sides are parallel to the coordinate axes, or form a 45 <sup>о</sup> angle with the coordinate axes.
+The selection should be made with the key 1 or 2 on the keyboard. The instruction on how to use the program should be written on the stage backdrop, like in example 2.
+The length of the side should be 100 pixels.</p>
+</div>
+<div class="section" id="project-3-triangles">
+<h3>Project 3 - “Triangles”<a class="headerlink" href="#project-3-triangles" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>Write a project which offers to draw the following types of triangles:</p>
+<p>а) equilateral,
+b) isosceles,
+c) right,
+d) acute,
+e) obtuse.</p>
+<p>The project should have an instruction, which indicates which key triggers the drawing of which type of triangle.</p>
+<p>Plan the coordinates for each triangle, and then draw the sides with the <code class="docutils literal notranslate"><span class="pre">glide</span></code> command.</p>
+</div>
+<div class="section" id="project-4-quadrilaterals">
+<h3>Project 4 - “Quadrilaterals”<a class="headerlink" href="#project-4-quadrilaterals" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>Write a project which offers to draw the following types of quadrilaterals:</p>
+<ol class="loweralpha simple">
+<li><p>square,</p></li>
+<li><p>rectangle,</p></li>
+<li><p>rhomb,</p></li>
+<li><p>parallelogram,</p></li>
+<li><p>trapezoid.</p></li>
+</ol>
+<p>Plan the drawing, so all of the quadrilaterals mentioned above are drawn on the stage at the end of running process.</p>
+<p>The instruction for the use of the program should appear on the stage when the green flag is clicked.</p>
+<p>Events that trigger the drawing of particular types of quadrilaterals should be associated with keyboard keys of your choice.</p>
+<p>Note. “Quadrilaterals” are elaborated in the mathematics curriculum for the sixth grade.</p>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Let’s Draw - Turtle Graphics' data-toggle="tooltip"><a href="Scratch3 Graphics_eng.html">Previous chapter</a></li>
+    
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Let’s Draw - Turtle Graphics' data-toggle="tooltip"><a href="Scratch3 Graphics_eng.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

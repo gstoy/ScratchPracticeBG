@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Низове &#8212; Block-based programming in Scratch - practice lessons</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Апендикс" href="Scratch3 Appendix.html" />
+    <link rel="prev" title="Списъци" href="Scratch3 Lists.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'Scratch_eng';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'Scratch_eng';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Block-based programming in Scratch - practice lessons</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="id1">
+<h1>Низове<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="intro10" src="_images/intro10.png" /></p>
+
+    </p></div></div>
+<p>В този урок ще покажем как стринг променливите могат да се използват за решаване на различни видове задачи. В същото време ще научим как Scratch съхранява низове и функции на блокове, използвани за работа с низове.</p>
+<p>Низът представлява поредица от знаци, които се обработват с една единица данни. Струните имат широко приложение в програмирането. Можем да създаваме програми, които комбинират, сравняват, сортират, кодират и по друг начин обработват текст. Трябва да имате предвид, че числата също могат да бъдат третирани като низове, но в този случай ние не се занимаваме със стойности, които представляват, а със символи - цифри, от които се състоят.</p>
+<div class="topic">
+<p class="topic-title">Операции, изпълнявани на низове</p>
+<p>За да разберем по-добре тези операции, ще покажем резултата от всяка операция, извършена на низове s1=BANANA and s2=ANA.</p>
+<p>В езиците за програмиране операциите, които най-често се изпълняват на низове, са следните:</p>
+<ul>
+<li><dl class="simple">
+<dt>определяне на дължината на низа</dt><dd><p><code class="docutils literal notranslate"><span class="pre">length</span> <span class="pre">of</span> <span class="pre">s1</span></code> → 6</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>сравняване на низове</dt><dd><p>определяне кой е пръв по азбучен ред</p>
+<p><code class="docutils literal notranslate"><span class="pre">s1&lt;s2</span> <span class="pre">?</span></code> → false</p>
+<p>това е невярно, защото „BANANA“ идва след „ANA“ по азбучен ред,</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>свързващи (съединяващи) низове</dt><dd><p><code class="docutils literal notranslate"><span class="pre">join</span> <span class="pre">s1</span> <span class="pre">and</span> <span class="pre">s2</span></code> →BАNАNААNА,</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>избор на знак, заемащ определена позиция в текста</dt><dd><p><code class="docutils literal notranslate"><span class="pre">letter</span> <span class="pre">3</span> <span class="pre">of</span> <span class="pre">s1</span></code> → N,</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>съдържа?</dt><dd><p>проверява дали низът s1 съдържа низа s2</p>
+<p><code class="docutils literal notranslate"><span class="pre">s2</span> <span class="pre">in</span> <span class="pre">s1</span> <span class="pre">?</span></code> → true</p>
+<p>това е вярно, защото “BANANA” съдържа “ANA”,</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>позиция</dt><dd><p>определяне на първата позиция в низа, която съдържа втория низ</p>
+<p>pos(s1,s2): <code class="docutils literal notranslate"><span class="pre">position</span> <span class="pre">s2</span> <span class="pre">in</span> <span class="pre">s1</span></code> → 2,</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>копиране</dt><dd><p>създаване на нов низ от даден брой знаци d, започващ от дадена позиция p в началния низ</p>
+<p>copy(s,p,d): <code class="docutils literal notranslate"><span class="pre">copy</span> <span class="pre">from</span> <span class="pre">s1</span> <span class="pre">characters</span> <span class="pre">4</span> <span class="pre">starting</span> <span class="pre">from</span> <span class="pre">3</span></code> → NАNА,</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>изтриване</dt><dd><p>промяна на низ s1 чрез поставяне на низ s2 в низа s1, като се започне от дадената позиция p в началния низ</p>
+<p>delete(s1,p,d): <code class="docutils literal notranslate"><span class="pre">delete</span> <span class="pre">from</span> <span class="pre">s1</span> <span class="pre">characters</span> <span class="pre">3</span> <span class="pre">starting</span> <span class="pre">from</span> <span class="pre">4</span></code> → BАNА,</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt> вмъкване</dt><dd><p>промяна на низ s1 чрез поставяне на низ s2 в низа s1, като се започне от дадената позиция p</p>
+<p>insert(s1,s2,p): <code class="docutils literal notranslate"><span class="pre">insert</span> <span class="pre">s2</span> <span class="pre">into</span> <span class="pre">s1</span> <span class="pre">starting</span> <span class="pre">from</span> <span class="pre">3</span></code> → BААNАNАNА.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Последните четири не са вградени операции в Scratch. В примера „Низови операции“ обаче ще покажем как можем сами да ги реализираме.</p>
+</div>
+<div class="section" id="study">
+<h2><img alt="study" src="_images/study.png" /> Разучете следните примери<a class="headerlink" href="#study" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>Пример 1 - Проект “Папагал”<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>Основният спрайт в този проект е папагал. Първо, папагалът пита потребителя неговото име и след това изчаква потребителя да напише името си и натиснете * Enter * или кликнете върху отметката, разположена в десния ъгъл на полето за отговор. Тогава папагалът поздравява потребителя с името си и казва какво е първата буква на името и колко букви има в името. Разговорът между спрайта и потребителя е представен на фигурата по-долу.</p>
+<a class="reference internal image-reference" href="_images/fig10_1.png"><img alt="_images/fig10_1.png" class="align-center" src="_images/fig10_1.png" style="width: 430px;" /></a>
+<p>За да създадем този проект, използвахме операции, които избират първата буква от името и определят колко букви са в името.</p>
+<p>След изпълнение на командата <img alt="ask_wait" src="_images/ask_wait.png" />, Scratch съхранява серията от символи, въведени от потребителя, в пространството, наречено <img alt="answer" src="_images/answer.png" />.</p>
+<p>Следващата фигура показва как се съхранява отговорът, кои операции се използват за извличане на информация, излъчвана от спрайта, като изходни данни с командата <code class="docutils literal notranslate"><span class="pre">say</span></code>.</p>
+<a class="reference internal image-reference" href="_images/fig10_2.png"><img alt="_images/fig10_2.png" class="align-center" src="_images/fig10_2.png" style="width: 600px;" /></a>
+<p>Третата операция, използвана за съставяне на изходното съобщение, е <img alt="join" src="_images/join.png" />.</p>
+<p>Сценарият на проекта <em>Parrot</em> е представен на фигурата по-долу.</p>
+<a class="reference internal image-reference" href="_images/fig10_3.png"><img alt="_images/fig10_3.png" class="align-center" src="_images/fig10_3.png" style="width: 475px;" /></a>
+<p>Следващият проект ще ви покаже как можете да използвате стринг операции за извличане на конкретни цифри, които формират числа.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id3">
+<h3>Пример 2 - Проект “Обменни цифри”<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p><strong>Сценарий на проекта</strong></p>
+<p>Основната част на този проект е скрипт, който обменя първата цифра и третата цифра в трицифрено естествено число <em>x</em>, въведено през входа.</p>
+<p>Презентаторът, който е основният спрайт в този проект, моли потребителя да въведе трицифрено число. Програмата проверява дали е въведен трицифрен номер. Ако не, заявката ще се повтаря, докато не бъде въведено трицифрено число. След това се извличат първата и третата цифра и новата <em>обърнат</em> номер се формира там, където са разменени първата и третата цифра. Този нов номер се създава с помощта на две операции <img alt="join" src="_images/join.png" />.
+В крайна сметка водещият излъчва оригинала и новосформираното число.</p>
+<p>Сценарият на проекта е представен на следната фигура.</p>
+<a class="reference internal image-reference" href="_images/fig10_4.png"><img alt="_images/fig10_4.png" class="align-center" src="_images/fig10_4.png" style="width: 645px;" /></a>
+<hr class="docutils" />
+<p>Следващият проект проверява дали въведената дума е палиндром. Палиндром е дума или фраза, която чете същото отляво надясно и отдясно на ляво. Например, думата “мадам” е палиндром. Подобно е определено число, което е палиндром. Например 12321 е палиндром.</p>
+</div>
+<div class="section" id="id4">
+<h3>Пример 3 - Проект “Палиндром”<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>Презентаторът моли потребителя да въведе дума. Променливата <em>d</em> получава дължината на думата като стойност. Програмата сравнява първата с последната буква, втората с предпоследната и така нататък до средата на думата. Променливата <em>i</em>, чиято първоначална стойност е 0 и която се увеличава с 1 в цикъла, позволява тези сравнения да се извършват със следната проверка.</p>
+<a class="reference internal image-reference" href="_images/fig10_5.png"><img alt="_images/fig10_5.png" class="align-center" src="_images/fig10_5.png" style="width: 485px;" /></a>
+<p>Променливата <em>p</em> показва броя на проверките. Ако една от проверките установи, че буквите, които се сравняват, не са еднакви, думата не е палиндром и това ще бъде регистрирано чрез присвояване на 0 на променливата <em>pal</em> (която е зададена на 1 в началото) ,
+След като програмата направи проверка на всички двойки букви, тя ще напише съобщение, в което се казва дали думата е палиндром или не (<em>pal</em> = 1 да, в противен случай не).</p>
+<p>Скриптът за проекта <em>Палиндром</em> е представен на следната фигура.</p>
+<a class="reference internal image-reference" href="_images/fig10_6.png"><img alt="_images/fig10_6.png" class="align-center" src="_images/fig10_6.png" style="width: 495px;" /></a>
+</div>
+<hr class="docutils" />
+<div class="section" id="id5">
+<h3>Пример 4 - Проект “„Низови операции”<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>В този проект потребителят е помолен да избере една от операциите: <em>копиране</em> или <em>изтриване</em>. Въвеждането се изисква в зависимост от това какво е било избрано и след това се изписва резултатът от операцията. Операцията се задава чрез натискане на съответния бутон, който след това излъчва операцията. Когато бъде получено съобщението, идентифициращо избраната операция, ще се изпълни скриптът, който изпълнява дадената операция.
+В проекта участват два спрайта: бутон <em>Копиране</em> за създаване на копия и <em>Изтриване</em> за изтриване. Скриптът, който извършва изтриване, е малко по-опростен. Въз основа на въведените стойности за броя знаци и позициите, от които са взети, се създава нов низ s2. Този низ е празен в началото и се установява чрез добавяне на един знак наведнъж от дадена част от началния низ.</p>
+<a class="reference internal image-reference" href="_images/fig10_7.png"><img alt="_images/fig10_7.png" class="align-center" src="_images/fig10_7.png" style="width: 330px;" /></a>
+<p>Сценариите, добавени към разпискатана съобщението <em>Копие</em> са представени на следната фигура. Въвеждането на данни и формирането на изходното съобщение се представят като отделни процедури. Тези процедури могат да се използват и когато се поиска опцията <em>Delete</em>.</p>
+<a class="reference internal image-reference" href="_images/fig10_8.png"><img alt="_images/fig10_8.png" class="align-center" src="_images/fig10_8.png" style="width: 680px;" /></a>
+<p>Скриптът за изтриване прави обратното - той формира низ от частите, разположени пред и зад маркираните знаци. Също така започва с празен низ. Първо, той записва знаци от частта отпред, които са последвани от символи от частта отзад.</p>
+</div>
+</div>
+<div class="section" id="ask">
+<h2><img alt="ask" src="_images/ask.png" /> Отговори на следните въпроси<a class="headerlink" href="#ask" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>Въпрос 1<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string1">
+            <p>Q-77:  Може ли низ да съдържа знаци за аритметични операции?</p>
+
+            <li data-component="answer" data-correct id="string1_opt_a">да</li><li data-component="feedback" id="string1_opt_a">Вярно.</li>
+            
+            <li data-component="answer"  id="string1_opt_b">не</li><li data-component="feedback" id="string1_opt_b"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id7">
+<h3>Въпрос 2<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string2">
+            <p>Q-78: Какъв ще бъде резултатът от операцията <code class="docutils literal notranslate"><span class="pre">letter</span> <span class="pre">2</span> <span class="pre">of</span> <span class="pre">LENA</span></code>?</p>
+
+            <li data-component="answer"  id="string2_opt_a">L</li><li data-component="feedback" id="string2_opt_a">Това е буква 1.</li>
+            
+            <li data-component="answer" data-correct id="string2_opt_b">Е</li><li data-component="feedback" id="string2_opt_b">Вярно.</li>
+            
+            <li data-component="answer"  id="string2_opt_c">N</li><li data-component="feedback" id="string2_opt_c">Това е буква 3.</li>
+            
+            <li data-component="answer"  id="string2_opt_d">А</li><li data-component="feedback" id="string2_opt_d">Това е буква 4.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id8">
+<h3>Въпрос 3<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<a class="reference internal image-reference" href="_images/q10_3.png"><img alt="_images/q10_3.png" class="align-center" src="_images/q10_3.png" style="width: 680px;" /></a>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string3">
+            <p>Q-79:   Низът ще каже ли същото по време на изпълнение на командите A и B?</p>
+
+            <li data-component="answer"  id="string3_opt_a">да</li><li data-component="feedback" id="string3_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="string3_opt_b">не</li><li data-component="feedback" id="string3_opt_b">Вярно.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id9">
+<h3>Въпрос 4<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string4">
+            <p>Q-80:  Какъв ще бъде резултатът от операцията  <code class="docutils literal notranslate"><span class="pre">length</span> <span class="pre">of</span> <span class="pre">LENA</span></code>?</p>
+
+            <li data-component="answer"  id="string4_opt_a">L</li><li data-component="feedback" id="string4_opt_a">Това ще бъде постигнато с писмото за операция от.</li>
+            
+            <li data-component="answer"  id="string4_opt_b">LENA</li><li data-component="feedback" id="string4_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="string4_opt_c">4</li><li data-component="feedback" id="string4_opt_c">Вярно.</li>
+            
+            <li data-component="answer"  id="string4_opt_d">Дължината на LENA</li><li data-component="feedback" id="string4_opt_d">Това ще бъде постигнато чрез присъединяване на тези две думи.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id10">
+<h3>Въпрос 5<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string5">
+            <p>Q-81: Какъв ще бъде резултатът от операцията <code class="docutils literal notranslate"><span class="pre">join</span> <span class="pre">BA</span> <span class="pre">and</span> <span class="pre">NANA</span></code>?</p>
+
+            <li data-component="answer"  id="string5_opt_a">BАNА</li><li data-component="feedback" id="string5_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="string5_opt_b">BАNАNА</li><li data-component="feedback" id="string5_opt_b">Вярно.</li>
+            
+            <li data-component="answer"  id="string5_opt_c">NАBАNА</li><li data-component="feedback" id="string5_opt_c"></li>
+            
+            <li data-component="answer"  id="string5_opt_d">NАNАBА</li><li data-component="feedback" id="string5_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="id11">
+<h3>Въпрос 6<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/q10_6.png"><img alt="_images/q10_6.png" class="align-center" src="_images/q10_6.png" style="width: 680px;" /></a>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="string6">
+    <span data-component="question">Q-82: Чрез плъзгане свържете командите със стойностите за връщане.</span>
+	<span data-component=feedback>Try again</span>
+
+    <li data-component="draggable" id="string6_drag1">A</li>
+    <li data-component="dropzone" for="string6_drag1">A</li>
+
+    <li data-component="draggable" id="string6_drag2">B</li>
+    <li data-component="dropzone" for="string6_drag2">nothing returns</li>
+
+    <li data-component="draggable" id="string6_drag3">C</li>
+    <li data-component="dropzone" for="string6_drag3">1</li>
+
+    <li data-component="draggable" id="string6_drag4">D</li>
+    <li data-component="dropzone" for="string6_drag4">7</li>
+</ul></div></div>
+</div>
+<div class="section" id="try">
+<h2><img alt="try" src="_images/try.png" /> Опитай!<a class="headerlink" href="#try" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id12">
+<h3>Упражнение 1<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Създайте програма, която ще формира число от същите цифри, както в естественото число <strong>n</strong>, но го подреди в обратен ред.</p>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id13">
+<h3>Упражнение 2<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Напишете програма, която определя сумата от цифрите и броя на цифрите за естественото число ** n ** (1 &lt;= n &lt;1000). Например:</p>
+<ul class="simple">
+<li><p>n = 12 сумата на цифрите 3, а броят на цифрите е 2;</p></li>
+<li><p>n = 102 сумата на цифрите 3, а броят на цифрите е 3.</p></li>
+</ul>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id14">
+<h3>Упражнение 3<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Напишете програма, която ще направи списък на всички трицифрени номера на Армстронг. Числото се счита за число на Армстронг, ако е равно на сумата от кубовете на неговите цифри.</p>
+
+    </p></div></div>
+</div>
+</div>
+<div class="section" id="book">
+<h2><img alt="book" src="_images/book.png" /> Обобщение<a class="headerlink" href="#book" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>В този урок ние представихме типа данни, наречен низ и най-често срещаните операции, извършвани върху този тип данни. Чрез примерите на проекта показахме как променливите на низа могат да се използват за решаване на различни типове проблеми и как да се работи с низови операции, които са вградени в Scratch.</p>
+</div></blockquote>
+<p><strong>Примери за проекти</strong>: <a class="reference external" href="https://scratch.mit.edu/studios/25119486/">10Studio</a></p>
+<p><strong>Нови концепци</strong>: низ, палиндром.</p>
+<p><strong>Нови команди</strong>: <img alt="operator_blocks" src="_images/operators.png" /> - <img alt="text_contains" src="_images/text_contains.png" />, <img alt="letter" src="_images/letter.png" />, <img alt="length_text" src="_images/length_text.png" />.</p>
+</div>
+<div class="section" id="project">
+<h2><img alt="project" src="_images/project.png" /> Създай проект<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id15">
+<h3>Проект 1 - “Кодиране”<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>Създайте проект, който кодира и декодира въведения текст по следния начин.</p>
+<p>Списъкът „оригинал“ съхранява 26 букви от азбуката в редовен ред. Списъкът “код” съхранява 26 букви в произволен ред, различен от този в списъка “оригинал”. За да се затрудни процесът на декодиране, ако има гласна в някаква позиция в един от списъците, в другия списък също трябва да има гласна в същата позиция.
+Потребителят въвежда текста, който проектът трябва да кодира и декодира в зависимост от това дали потребителят е натиснал бутона „кодиране“ или „декодиране“.</p>
+<p>Например, ако буквите в списъците “оригинал” и “код” са в следните реда:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>A</p></td>
+<td><p>B</p></td>
+<td><p>C</p></td>
+<td><p>D</p></td>
+<td><p>E</p></td>
+<td><p>F</p></td>
+<td><p>G</p></td>
+<td><p>H</p></td>
+<td><p>I</p></td>
+<td><p>J</p></td>
+<td><p>K</p></td>
+<td><p>L</p></td>
+<td><p>M</p></td>
+<td><p>N</p></td>
+<td><p>O</p></td>
+<td><p>P</p></td>
+<td><p>Q</p></td>
+<td><p>R</p></td>
+<td><p>S</p></td>
+<td><p>T</p></td>
+<td><p>U</p></td>
+<td><p>V</p></td>
+<td><p>W</p></td>
+<td><p>X</p></td>
+<td><p>Y</p></td>
+<td><p>Z</p></td>
+</tr>
+<tr class="row-even"><td><p>V</p></td>
+<td><p>U</p></td>
+<td><p>B</p></td>
+<td><p>G</p></td>
+<td><p>D</p></td>
+<td><p>Q</p></td>
+<td><p>X</p></td>
+<td><p>Y</p></td>
+<td><p>Z</p></td>
+<td><p>E</p></td>
+<td><p>Ј</p></td>
+<td><p>K</p></td>
+<td><p>L</p></td>
+<td><p>O</p></td>
+<td><p>М</p></td>
+<td><p>N</p></td>
+<td><p>А</p></td>
+<td><p>W</p></td>
+<td><p>P</p></td>
+<td><p>R</p></td>
+<td><p>S</p></td>
+<td><p>Т</p></td>
+<td><p>F</p></td>
+<td><p>H</p></td>
+<td><p>C</p></td>
+<td><p>I</p></td>
+</tr>
+</tbody>
+</table>
+<p>и потребителят въведе текст MASK, програмата ще го кодира като LVPJ.</p>
+<p>Ако обаче входният текст MASK трябва да бъде декодиран, програмата ще го превърне в ОQUL.</p>
+</div>
+<div class="section" id="id16">
+<h3>Проект 2 - „Назад“<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>Създайте проект, при който потребителят е помолен да въведе колко думи иска да трансформира (n), след което въвежда име в цикъла, което ще бъде повторено n брой пъти, името се въвежда в списъка “имена” и след това се трансформира в низ, получен, когато името се чете от дясно на ляво, след което ще бъде въведено в списъка “назад”.</p>
+<p>Например, ако потребителят въведе n = 3 и след това име: LENA, MARIO, KATARINA; списъкът “назад” трябва да съдържа:
+ANEL, OIRAM и ANIRATAK.</p>
+</div>
+<div class="section" id="id17">
+<h3>Проект 3 - “Числа”<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>Създайте проект, който прави списък на всички трицифрени числа, който може да бъде разделен на числото, получено при изваждането на средната цифра.</p>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Списъци' data-toggle="tooltip"><a href="Scratch3 Lists.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Апендикс' data-toggle="tooltip"><a href="Scratch3 Appendix.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Списъци' data-toggle="tooltip"><a href="Scratch3 Lists.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Апендикс' data-toggle="tooltip"><a href="Scratch3 Appendix.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
